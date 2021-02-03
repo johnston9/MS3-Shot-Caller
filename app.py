@@ -18,6 +18,11 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+def get_depts():
+    depts = mongo.db.depts.find()
+    return render_template("depts.html", depts=depts)
+
+
 @app.route("/get_camera")
 def get_camera():
     camera = mongo.db.camera_dept.find()
