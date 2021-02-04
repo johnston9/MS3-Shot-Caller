@@ -20,23 +20,27 @@
             <a href="{{ url_for('get_depts') }}" class="brand-logo">Shot Caller</a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_depts') }}">Home</a></li>
-                <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
-                <li><a href="#">Latest Updates</a></li>
+                {% if session.user %}
+                    <li><a href="{{ url_for('get_depts') }}">Home</a></li>
+                    <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
+                    <li><a href="#">Latest Updates</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% endif %}
                 <li><a href="#">Manage Site</a></li>
-                <li><a href="#">Log Out</a></li>
             </ul>
             </div>
         </nav>
   
         <!--sidenav-->
         <ul class="sidenav matt-black" id="mobile-demo">
-            <li><h4 class="center-align offwhite">Shot Caller</h4></li>
-            <li><a href="{{ url_for('get_depts') }}">Home</a></li>
-            <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
-            <li><a href="#">Latest Updates</a></li>
-            <li><a href="#">Manage Site</a></li>
-            <li><a href="#">Log Out</a></li>           
+            {% if session.user %}
+                <li><h4 class="center-align aqua">Shot Caller</h4></li>
+                <li><a href="{{ url_for('get_depts') }}">Home</a></li>
+                <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
+                <li><a href="#">Latest Updates</a></li>
+                <li><a href="{{ url_for('logout') }}">Log Out</a></li> 
+            {% endif %} 
+            <li><a href="#">Manage Site</a></li>         
         </ul>
     </header>
 

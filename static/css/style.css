@@ -1,19 +1,22 @@
+/*---------general ----------*/
 .row {
     margin-bottom: 0px;
 }
 
-.input-field {
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 0;
+.no-mar {
+    margin-bottom: 0 ;
 }
 
+/*---------colours----------*/
 .shadow-light {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
+.aqua {
+    background-color: aquamarine;
+}
 
-#shot {
-    margin-bottom: 75px;
+.matt-black {
+    background-color: #3b444b;
 }
 
 .body-back{
@@ -24,24 +27,24 @@
     color: #F5F5F5;
 }
 
+/*---------register/login pages----------*/
+
+.input-field {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#shot {
+    margin-bottom: 75px;
+}
+
 .login-form {
     background-color: #3b444b;
     padding: 0px 24px 10px 24px;
-}
-
-.no-mar {
-    margin-bottom: 0 ;
 }
 
 .or-login a:hover {
     color: aquamarine;
 }
 
-/*---------nav----------*/
-.aqua {
-    background-color: aquamarine;
-}
-
-.matt-black {
-    background-color: #3b444b;
-}

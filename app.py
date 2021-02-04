@@ -81,7 +81,12 @@ def user_home(username):
     # make sure session user's username exists in db
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    return render_template("user_home.html", username=username)
+    
+    # make sure user is checked, logged in and in session
+    if session["user"]:
+        return render_template("user_home.html", username=username)
+
+    return redirect(url_for("login"))
 
 
 @app.route("/get_depts")
@@ -94,6 +99,14 @@ def get_depts():
 def get_camera():
     camera = mongo.db.camera_dept.find()
     return render_template("camera.html", camera=camera)
+
+
+@app.route("/logout")
+def logout():
+    # delete user session cookie
+    flash("Logout successful")
+    session.pop("user")
+    return redirect(url_for("login"))
 
 
 if __name__ == "__main__":
