@@ -9,16 +9,16 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     <title>Shot Caller</title>
 </head>
-<body class="login-back">
-    <h1 id="shot" class="center-align login-text">Shot Caller</h1>
+<body class="body-back">
+    <h1 id="shot" class="center-align offwhite">Shot Caller</h1>
 
     <div>
         <!-- flash message display -->
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
-                    <div class="row flashes">
-                        <h4 class="login-back login-text center-align">{{ message }}</h4>
+                    <div class="row">
+                        <h4 class="matt-black offwhite center-align">{{ message }}</h4>
                     </div>
                 {% endfor %}
             {% endif %}
@@ -27,8 +27,8 @@
     
     <!--register-->
         <div class="row">
-            <div class="col s12 m5">
-                <h5 class=" center-align login-text">Log In</h5>
+            <div class="col s12 m6 offset-m3">
+                <h5 class=" center-align offwhite">Log In</h5>
                 <form method="POST" action="{{ url_for('login') }}">
                     <div class= "login-form"> 
                         <!-- username -->
@@ -59,9 +59,9 @@
         </div>
 
         <div class="row">
-        <div class="col s12">
+        <div class="col s12 or-login">
             <p class="center-align">
-                <a href="{{ url_for('register') }}" class="login-text">Or Register</a>
+                <a href="{{ url_for('register') }}" class="offwhite">Register here</a>
             </p>
         </div>
     </div>

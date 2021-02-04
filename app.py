@@ -22,7 +22,7 @@ mongo = PyMongo(app)
 @app.route("/login", methods=["GET", "POST"])
 def login():
     if request.method == "POST":
-        # check db for matching username 
+        # check db for matching username
         old_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -31,15 +31,17 @@ def login():
             if check_password_hash(
                 old_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    flash("Hi {}".format(request.form.get("username")))
+                    return redirect(url_for(
+                        "user_home", username=session["user"]))
             else:
                 # invalid password match
-                flash("Incorrect Username and/or Password")
+                flash("Entry Incorrect")
                 return redirect(url_for("login"))
 
         else:
             # username doesn't exist
-            flash("Incorrect Username and/or Password")
+            flash("Entry Incorrect")
             return redirect(url_for("login"))
 
     return render_template("login.html")
@@ -68,9 +70,18 @@ def register():
             # set session cookie to this username
             session["user"] = request.form.get("username").lower()
             flash("Welcome aboard")
+            return redirect(url_for("user_home", username=session["user"]))
         else:
             flash("invalid key")
     return render_template("register.html")
+
+
+@app.route("/user_home/<username>", methods=["GET", "POST"])
+def user_home(username):
+    # make sure session user's username exists in db
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("user_home.html", username=username)
 
 
 @app.route("/get_depts")

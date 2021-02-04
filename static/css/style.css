@@ -16,11 +16,11 @@
     margin-bottom: 75px;
 }
 
-.login-back{
+.body-back{
     background-color: #353839; 
 }
 
-.login-text {
+.offwhite {
     color: #F5F5F5;
 }
 
@@ -31,4 +31,17 @@
 
 .no-mar {
     margin-bottom: 0 ;
+}
+
+.or-login a:hover {
+    color: aquamarine;
+}
+
+/*---------nav----------*/
+.aqua {
+    background-color: aquamarine;
+}
+
+.matt-black {
+    background-color: #3b444b;
 }
