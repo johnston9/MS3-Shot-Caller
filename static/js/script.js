@@ -1,6 +1,6 @@
 /*
-    Materialize jQuery CSS initialization
-*/
+    jQuery for Materialize initialization
+*/  
 
 $(document).ready(function(){
     $('.sidenav').sidenav({edge: "right"});
