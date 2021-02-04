@@ -19,24 +19,51 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
+@app.route("/login", methods=["GET", "POST"])
+def login():
+    if request.method == "POST":
+        # check db for matching username 
+        old_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if old_user:
+            # use Wertzeug to check stored password matches user input
+            if check_password_hash(
+                old_user["password"], request.form.get("password")):
+                    session["user"] = request.form.get("username").lower()
+                    flash("Welcome, {}".format(request.form.get("username")))
+            else:
+                # invalid password match
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("login"))
+
+        else:
+            # username doesn't exist
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("login"))
+
+    return render_template("login.html")
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
         if request.form.get("key").lower() == app.register_key:
 
             # check to see if username is taken
-            existing_user = mongo.db.users.find_one(
+            old_user = mongo.db.users.find_one(
                 {"username": request.form.get("username").lower()})
 
-            if existing_user:
+            if old_user:
                 flash("Username taken try again")
                 return redirect(url_for("register"))
 
-            register = {
+            new_user = {
                 "username": request.form.get("username").lower(),
-                "password": generate_password_hash(request.form.get("password"))
+                "password": generate_password_hash(
+                    request.form.get("password"))
             }
-            mongo.db.users.insert_one(register)
+            mongo.db.users.insert_one(new_user)
 
             # set session cookie to this username
             session["user"] = request.form.get("username").lower()
