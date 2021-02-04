@@ -11,25 +11,47 @@
 </head>
 <body class="login-back">
     <h1 id="shot" class="center-align login-text">Shot Caller</h1>
+
+    <div>
+        <!-- flash message display -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4 class="login-back login-text center-align">{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>
     
     <!--register-->
         <div class="row">
             <div class="col s12 m5">
                 <h5 class=" center-align login-text">Register</h5>
                 <form method="POST" action="{{ url_for('register') }}">
-                    <div class="card-panel login-form"> 
+                    <div class= "card-panel login-form"> 
                         <!-- username -->
                         <div class="row">
                             <div class="input-field col s12">
-                                <input id="username" name="username" type="text" class="validate">
+                                <input id="username" name="username" type="text" minlength="8"
+                                    maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                                 <label for="username">Username</label>
                             </div>
                         </div>
                         <!-- password -->
                         <div class="row">
                             <div class="input-field col s12">
-                            <input id="password" name="password" type="password" class="validate">
+                            <input id="password" name="password" type="password" minlength="8"
+                                maxlength="16" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                             <label for="password">Password</label>
+                            </div>
+                        </div>
+                        <!-- key -->
+                        <div class="row">
+                            <div class="input-field col s12">
+                            <input id="key" name="key" type="text" class="validate" required>
+                            <label for="key">Key</label>
                             </div>
                         </div>
                         <!-- register button-->
