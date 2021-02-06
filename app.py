@@ -97,9 +97,23 @@ def get_depts():
 
 @app.route("/get_dep/<dep>")
 def get_dep(dep):
-    camera = list(mongo.db.camera_dept.find())
-    print(camera)
-    return render_template("dep.html", camera=camera)
+    if dep == "camera":
+        depart = list(mongo.db.camera_dept.find())
+    elif dep == "cast":
+        depart = list(mongo.db.cast.find())
+    elif dep == "locations":
+        depart = list(mongo.db.locations.find())
+    elif dep == "production":
+        depart = list(mongo.db.production.find())
+    elif dep == "script":
+        depart = list(mongo.db.script.find())
+    elif dep == "set":
+        depart = list(mongo.db.set.find())
+    elif dep == "wardrobe":
+        depart = list(mongo.db.wardrobe.find())
+        print(depart)
+
+        return render_template("dep.html", camera=camera)
 
 
 @app.route("/logout")

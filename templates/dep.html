@@ -2,21 +2,21 @@
 {% block content %}
 
     <ul class="collapsible collapsible-border">
-        {% for cam in camera %}
+        {% for dep in depart %}
                 <li>
                 <div class="collapsible-header matt-black offwhite">
                     <i class="fas fa-caret-down"></i>
-                    <strong>{{ cam.poster }}</strong> - {{ cam.job_title }}  {{ cam.subject }} 
-                    {% if cam.is_priority == "on" %}
+                    <strong>{{ dep.poster }}</strong> - {{ dep.job_title }}  {{ dep.subject }} 
+                    {% if dep.is_priority == "on" %}
                             <i class="fas fa-exclamation-circle aqua tooltipped"
                                 data-position="right" data-tooltip="PRIORITY!"></i>
                         {% endif %}
                     
-                    {{ cam.is_priority }}
+                    {{ dep.is_priority }}
                 </div>
                 <div class="collapsible-body matt-black offwhite">
-                    <p>{{ cam.message }}</p>
-                    {{ cam.date }}
+                    <p>{{ dep.message }}</p>
+                    {{ dep.date }}
                 </div>
                 </li>
         {% endfor %}
