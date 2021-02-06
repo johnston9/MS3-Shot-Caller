@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% for dept in depts %}
-        {{ dept.dept_name }}<br>
-    {% endfor %}
+    <div class="collection">
+        {% for dept in depts %}
+            <a href="{{ url_for('get_dep', dep=dept.dept_name) }}"  class="collection-item">{{ dept.dept_name }}</a>
+        {% endfor %}
+    </div>
     
 {% endblock %}

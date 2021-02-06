@@ -1,29 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
-        <div class="col s12 m6 offset-m3">
-            <div class="card-panel matt-black offwhite">
-                <h3 class="center-align ">Camera Dept</h3>
-                <form class="" method="POST" action="{{ url_for('get_camera') }}">
-                    <div class="input-field">
-                    <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="date" name="date" type="text"
-                        class="datepicker validate" required>
-                    <label for="date">Pick Date</label>
-                    </div>
-
-                    <button type="submit" class="btn-small light-blue darken-1 text-shadow">
-                        go <i class="fas fa-plus-square right"></i>
-                    </button>
-                </form>
-            </div>
-        </div>
-    </div>
-
     <ul class="collapsible collapsible-border">
         {% for cam in camera %}
-            {% if cam.date == date %}
                 <li>
                 <div class="collapsible-header matt-black offwhite">
                     <i class="fas fa-caret-down"></i>
@@ -40,7 +19,6 @@
                     {{ cam.date }}
                 </div>
                 </li>
-            {% endif %}
         {% endfor %}
     </ul>
     

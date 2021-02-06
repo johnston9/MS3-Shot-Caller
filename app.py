@@ -95,14 +95,11 @@ def get_depts():
     return render_template("depts.html", depts=depts)
 
 
-@app.route("/get_camera", methods=["GET", "POST"])
-def get_camera():
+@app.route("/get_dep/<dep>")
+def get_dep(dep):
     camera = list(mongo.db.camera_dept.find())
-    if request.method == "POST":
-        date = request.form.get("date")
-        print(date)
-        return render_template("camera.html", camera=camera, date=date)
-    return render_template("camera.html", camera=camera)
+    print(camera)
+    return render_template("dep.html", camera=camera)
 
 
 @app.route("/logout")
