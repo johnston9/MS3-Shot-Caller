@@ -23,10 +23,12 @@
                 {% if session.user %}
                     <li><a href="{{ url_for('get_depts') }}">Home</a></li>
                     <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
-                    <li><a href="{{ url_for('get_camera') }}">Camera</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                    {% if session.user|lower == "admin"|lower %}
+                        <li><a href="#">Manage Site</a></li>
+                    {% endif %}    
                 {% endif %}
-                <li><a href="#">Manage Site</a></li>
+                
             </ul>
             </div>
         </nav>
@@ -37,7 +39,6 @@
                 <li><h4 class="center-align aqua">Shot Caller</h4></li>
                 <li><a href="{{ url_for('get_depts') }}">Home</a></li>
                 <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
-                <li><a href="{{ url_for('get_camera') }}">Camera</a></li>
                 <li><a href="{{ url_for('logout') }}">Log Out</a></li> 
             {% endif %} 
             <li><a href="#">Manage Site</a></li>         
