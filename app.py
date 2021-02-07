@@ -95,10 +95,13 @@ def get_depts():
     return render_template("depts.html", depts=depts)
 
 
-@app.route("/get_dep/<dep>")
+@app.route("/get_dep/<dep>", methods=["GET", "POST"])
 def get_dep(dep):
     depart = list(mongo.db[dep].find())
-    print(depart)
+    if request.method == "POST":
+        date = request.form.get("date")
+        return render_template(
+            "dep.html", depart=depart, date=date)
     return render_template("dep.html", depart=depart)
 
 
