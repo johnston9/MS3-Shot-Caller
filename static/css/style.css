@@ -15,6 +15,10 @@
     background-color: aquamarine;
 }
 
+.crimson {
+    background-color: crimson;
+}
+
 .matt-black {
     background-color: #3b444b;
 }
@@ -49,8 +53,15 @@
 }
 
 
-
 .collapsible-border {
     border-color: crimson;
+}
+
+.collection .collection-item {
+    background-color: #11293b;
+}
+
+.collection .collection-item .col-two {
+    background-color: #3b444b;
 }
 

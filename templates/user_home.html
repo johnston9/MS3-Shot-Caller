@@ -11,4 +11,25 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col s12 m4 offset-m1">
+            <a href="{{ url_for('get_depts') }}"> 
+                <div class="card-panel matt-black">
+                    <h3 class="center-align matt-black offwhite">
+                    Read Messages
+                    </h3>
+                </div>
+            </a>
+        </div>
+        <div class="col s12 m4 offset-m1">
+            <a href="{{ url_for('add_message') }}"> 
+                <div class="card-panel matt-black">
+                    <h3 class="center-align matt-black offwhite">
+                    Add Message
+                    </h3>
+                </div>
+            </a>
+        </div>
+    </div>
+
 {% endblock %}

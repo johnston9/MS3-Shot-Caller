@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="offwhite center-align">New Message</h3>
+
+    <div class="row card-panel blue-grey lighten-5">
+        <form class="col s12" method="POST" action="{{ url_for('add_message') }}">
+            <div class="row">
+				<div class="input-field col s12">
+                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+					<select id="department_name" name="department_name" class="validate" required>
+                        <option value="" disabled selected>Select Department</option>
+                        {% for dep in depts %}
+                            <option value="">{{ dep.dept_name }}</option>
+                        {% endfor %}
+                    </select>
+					<label for="department_name">Department</label>
+				</div>
+			</div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                    <input id="subject" name="subject" minlength="1" maxlength="20"
+                        type="text" class="validate" required>
+                    <label for="subject">Subject</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                    <textarea id="message" name="message" minlength="5"
+                        maxlength="300" class="materialize-textarea validate" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+            </div>
+			<div class="row">
+				<div class="input-field col s12">
+					<div class="switch">
+                        <i class="fas fa-exclamation-triangle prefix light-blue-text text-darken-4"></i>
+						<label for="is_priority">
+                            <input type="checkbox" id="is_priority" name="is_priority">
+                            <span class="lever"></span>
+                            Is Priority
+                        </label>
+					</div>
+				</div>
+            </div>
+            <div class="row">
+                <div class="center-align">
+                    <button type="submit" class="col s6 offset-s3 btn-small body-back text-shadow">
+                        Add Message <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+{% endblock %}

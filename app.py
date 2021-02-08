@@ -62,6 +62,8 @@ def register():
 
             new_user = {
                 "username": request.form.get("username").lower(),
+                "firstname": request.form.get("firstname").lower(),
+                "lastname": request.form.get("lastname").lower(),
                 "password": generate_password_hash(
                     request.form.get("password"))
             }
@@ -111,6 +113,12 @@ def logout():
     flash("Logout successful")
     session.pop("user")
     return redirect(url_for("login"))
+
+
+@app.route("/add_message")
+def add_message():
+    depts = mongo.db.depts.find().sort("dept_name", 1)
+    return render_template("add_message.html", depts=depts)
 
 
 if __name__ == "__main__":

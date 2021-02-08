@@ -3,7 +3,13 @@
 
     <div class="collection">
         {% for dept in depts %}
-            <a href="{{ url_for('get_dep', dep=dept.dept_name) }}"  class="collection-item">{{ dept.dept_name }}</a>
+            {% if loop.index % 2 != 0 %}    
+                <a href="{{ url_for('get_dep', dep=dept.dept_name) }}"  class="collection-item blue-grey-text text-lighten-5">{{ dept.dept_name }} <div class="secondary-content"><i class="fas fa-angle-right offwhite"></i></div></a>
+            {% else %} 
+                <a href="{{ url_for('get_dep', dep=dept.dept_name) }}"  class="collection-item blue-grey darken-4 blue-grey-text text-lighten-5">{{ dept.dept_name }}<div class="secondary-content"><i class="fas fa-angle-right offwhite"></i></div></a>
+            {% endif %} 
+
+
         {% endfor %}
     </div>
     
