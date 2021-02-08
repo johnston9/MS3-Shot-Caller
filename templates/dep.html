@@ -4,9 +4,9 @@
         <div class="row">
         <div class="col s12 m6 offset-m3">
             <div class="card-panel matt-black">
-            {% for dep in depart %}
-            <h3 class="center-align offwhite">{{ dep.dept_name }}</h3>
-            <form class="" method="POST" action="{{ url_for('get_dep', dep=dep.dept_name) }}">
+         
+            <h3 class="center-align offwhite">{{ dep }}</h3>
+            <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
                 <div class="input-field">
                     <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
                     <input id="date" name="date" type="text"
@@ -18,26 +18,27 @@
                 </button>
                 </div>
             </form>
-             {% endfor %}
+             
             </div>
         </div>
     </div>
 
+    <h5 class="center-align offwhite">{{ day }}</h5>
     <ul class="collapsible collapsible-border">
-        {% for dep in depart %}
-            {% if dep.date == date %}
+        {% for dept in depart %}
+            {% if dept.date == date %}
                 <li>
                 <div class="collapsible-header matt-black offwhite">
                     <i class="fas fa-caret-down"></i>
-                    <strong>from -----   {{ dep.poster }}</strong> ----- {{ dep.job_title }} ----- SUBJECT - {{ dep.subject }} 
-                        ------- {% if dep.is_priority == "on" %}
+                    <strong>from -----   {{ dept.poster }}</strong> ----- {{ dept.job_title }} ----- SUBJECT - {{ dept.subject }} 
+                        ------- {% if dept.is_priority == "on" %}
                         <i class="fas fa-exclamation-circle aqua tooltipped"
                             data-position="right" data-tooltip="PRIORITY!"></i>
                     {% endif %}
                 </div>
                 <div class="collapsible-body matt-black offwhite">
-                    <p>{{ dep.message }}</p>
-                    {{ dep.date }}
+                    <p>{{ dept.message }}</p>
+                    {{ dept.date }}
                 </div>
                 </li>
             {% endif %}

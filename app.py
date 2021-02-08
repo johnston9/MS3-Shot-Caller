@@ -1,4 +1,5 @@
 import os
+import datetime
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -62,8 +63,9 @@ def register():
 
             new_user = {
                 "username": request.form.get("username").lower(),
-                "firstname": request.form.get("firstname").lower(),
-                "lastname": request.form.get("lastname").lower(),
+                "firstname": request.form.get("firstname"),
+                "lastname": request.form.get("lastname"),
+                "job_title": request.form.get("job_title"),
                 "password": generate_password_hash(
                     request.form.get("password"))
             }
@@ -71,7 +73,8 @@ def register():
 
             # set session cookie to this username
             session["user"] = request.form.get("username").lower()
-            flash("Welcome aboard")
+            flash("Welcome aboard, {}".format(
+                            request.form.get("username")))
             return redirect(url_for("user_home", username=session["user"]))
         else:
             flash("invalid key")
@@ -99,12 +102,18 @@ def get_depts():
 
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])
 def get_dep(dep):
+    dep = dep
     depart = list(mongo.db[dep].find())
+    day = datetime.datetime.now()
+    today = day.strftime("%d %B, %Y")
+    print(today)
     if request.method == "POST":
         date = request.form.get("date")
+        print(date)
         return render_template(
-            "dep.html", depart=depart, date=date)
-    return render_template("dep.html", depart=depart)
+            "dep.html", dep=dep, depart=depart, date=date, day=date)
+    return render_template(
+        "dep.html", dep=dep, depart=depart, date=today, day="TODAY")
 
 
 @app.route("/logout")
@@ -115,8 +124,31 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_message")
+@app.route("/add_message", methods=["GET", "POST"])
 def add_message():
+    if request.method == "POST":
+        mes_is_priority = "on" if request.form.get("is_priority") else "off"
+        day = datetime.datetime.now()
+        mes_date = day.strftime("%d %B, %Y")
+        mes_dept = request.form.get("department_name")
+        user = mongo.db.users.find_one({"username": session["user"]})
+        first = user["firstname"]
+        last = user["lastname"]
+        mes_poster = f"{first} {last}"
+        mes_job = user["job_title"]
+        message = {
+            "dept_name": mes_dept,
+            "date": mes_date,
+            "poster": mes_poster,
+            "job_title": mes_job,
+            "subject": request.form.get("subject"),
+            "message": request.form.get("message"),
+            "is_priority": mes_is_priority,
+        }
+        mongo.db[mes_dept].insert_one(message)
+        flash("Message Added")
+        return redirect(url_for("user_home", username=session["user"]))
+
     depts = mongo.db.depts.find().sort("dept_name", 1)
     return render_template("add_message.html", depts=depts)
 

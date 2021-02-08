@@ -11,7 +11,7 @@
 					<select id="department_name" name="department_name" class="validate" required>
                         <option value="" disabled selected>Select Department</option>
                         {% for dep in depts %}
-                            <option value="">{{ dep.dept_name }}</option>
+                            <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
                         {% endfor %}
                     </select>
 					<label for="department_name">Department</label>
