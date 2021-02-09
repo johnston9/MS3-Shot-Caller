@@ -93,7 +93,7 @@ def user_home(username):
 
     return redirect(url_for("login"))
 
-
+ 
 @app.route("/get_depts")
 def get_depts():
     depts = mongo.db.depts.find()
@@ -106,7 +106,6 @@ def get_dep(dep):
     depart = list(mongo.db[dep].find())
     day = datetime.datetime.now()
     today = day.strftime("%d %B, %Y")
-    print(today)
     if request.method == "POST":
         date = request.form.get("date")
         print(date)
@@ -114,6 +113,13 @@ def get_dep(dep):
             "dep.html", dep=dep, depart=depart, date=date, day=date)
     return render_template(
         "dep.html", dep=dep, depart=depart, date=today, day="TODAY")
+
+
+@app.route("/get_image/", methods=["GET", "POST"])
+def get_image():
+    images = list(mongo.db.images.find())
+    return render_template(
+        "images.html", images=images)
 
 
 @app.route("/logout")
