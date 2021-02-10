@@ -5,8 +5,8 @@
         <div class="col s12 m6 offset-m3">
             <div class="card-panel matt-black">
          
-            <h3 class="center-align offwhite">Images</h3>
-            <form class="" method="POST" action="{{ url_for('get_image') }}">
+            <h3 class="center-align offwhite">Script</h3>
+            <form class="" method="POST" action="{{ url_for('get_script') }}">
                 <div class="input-field">
                     
                 
@@ -20,10 +20,9 @@
         </div>
     </div>
 
-    <div class="pic">
-        {% for im in images %}
-            <img src=" {{ im.image_src }} " alt="image">
-            <p> {{ im.image_des }} </p>
+    <div>
+        {% for draft in script %}
+            <a href="{{ draft.script}}">Latest Draft</a>
         {% endfor %}  
         
     </div>

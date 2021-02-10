@@ -83,13 +83,12 @@ def register():
 
 @app.route("/user_home/<username>", methods=["GET", "POST"])
 def user_home(username):
-    # make sure session user's username exists in db
+    script = mongo.db.latest_script.find()
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
-    
-    # make sure user is checked, logged in and in session
     if session["user"]:
-        return render_template("user_home.html", username=username)
+        return render_template(
+            "user_home.html", username=username, script=script)
 
     return redirect(url_for("login"))
 
