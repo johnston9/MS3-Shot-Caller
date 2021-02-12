@@ -32,7 +32,6 @@ def login():
             if check_password_hash(
                 old_user["password"], request.form.get("password")):
                     session["user"] = request.form.get("username").lower()
-                    flash("Hi {}".format(request.form.get("username")))
                     return redirect(url_for(
                         "user_home", username=session["user"]))
             else:
