@@ -138,15 +138,19 @@ def add_message():
         user = mongo.db.users.find_one({"username": session["user"]})
         first = user["firstname"]
         last = user["lastname"]
+        username = session["user"]
         mes_poster = f"{first} {last}"
         mes_job = user["job_title"]
         message = {
             "dept_name": mes_dept,
             "date": mes_date,
             "poster": mes_poster,
+            "username": username,
             "job_title": mes_job,
             "subject": request.form.get("subject"),
             "message": request.form.get("message"),
+            "image_src": request.form.get("image_src"),
+            "image_des": request.form.get("image_des"),
             "is_priority": mes_is_priority,
         }
         mongo.db[mes_dept].insert_one(message)
@@ -155,6 +159,38 @@ def add_message():
 
     depts = mongo.db.depts.find().sort("dept_name", 1)
     return render_template("add_message.html", depts=depts)
+
+
+@app.route("/edit_message/<message_id>/<depart>", methods=["GET", "POST"])
+def edit_message(message_id, depart):
+    if request.method == "POST":
+        mes_is_priority = "on" if request.form.get("is_priority") else "off"
+        day = datetime.datetime.now()
+        mes_date = day.strftime("%d %B, %Y")
+        mes_dept = request.form.get("department_name")
+        user = mongo.db.users.find_one({"username": session["user"]})
+        first = user["firstname"]
+        last = user["lastname"]
+        mes_poster = f"{first} {last}"
+        mes_job = user["job_title"]
+        edit = {
+            "dept_name": mes_dept,
+            "date": mes_date,
+            "poster": mes_poster,
+            "job_title": mes_job,
+            "subject": request.form.get("subject"),
+            "message": request.form.get("message"),
+            "image_src": request.form.get("image_src"),
+            "image_des": request.form.get("image_des"),
+            "is_priority": mes_is_priority,
+        }
+        mongo.db[mes_dept].update({"_id": ObjectId(message_id)}, edit)
+        flash("Message Updated")
+        return redirect(url_for("user_home", username=session["user"]))
+
+    message = mongo.db[depart].find_one({"_id": ObjectId(message_id)})
+    depts = mongo.db.depts.find().sort("dept_name", 1)
+    return render_template("edit_message.html", message=message, depts=depts)
 
 
 if __name__ == "__main__":

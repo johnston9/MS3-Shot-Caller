@@ -29,23 +29,29 @@
 
 <h5 class="center-align offwhite">{{ day }}</h5>
 <ul class="collapsible collapsible-border">
-    {% for dept in depart %}
-    {% if dept.date == date %}
+    {% for message in depart %}
+    {% if message.date == date %}
     <li>
         <div class="collapsible-header matt-black offwhite">
             <i class="fas fa-caret-down"></i>
-            <strong>from ----- {{ dept.poster }}</strong> ----- {{ dept.job_title }} ----- SUBJECT - {{ dept.subject }}
-            ------- {% if dept.is_priority == "on" %}
+            <strong>from ----- {{ message.poster }}</strong> ----- {{ message.job_title }} ----- SUBJECT - {{ message.subject }}
+            ------- {% if message.is_priority == "on" %}
             <i class="fas fa-exclamation-circle aqua tooltipped" data-position="right" data-tooltip="PRIORITY!"></i>
             {% endif %}
         </div>
         <div class="collapsible-body matt-black offwhite">
-            <p>{{ dept.message }}</p>
-            <div class="pic">
-                <img src=" {{ dept.image_src }} " alt="image">
-                <p> {{ dept.image_des }} </p>
-            </div>
-            {{ dept.date }}
+            <p>{{ message.message }}</p>
+            {% if message.image_src %}
+                <div class="pic">
+                    <img src=" {{ dept.image_src }} " alt="image">
+                    <p> {{ message.image_des }} </p>
+                </div>
+            {% endif %}
+            {{ message.date }}
+            {% if session.user|lower == message.username|lower %}
+                <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small">Edit</a>
+                <a href="" class="btn-small">Delete</a>
+            {% endif %}
         </div>
     </li>
     {% endif %}

@@ -1,18 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="offwhite center-align">New Message</h3>
+    <h3 class="offwhite center-align">Edit Message</h3>
 
     <div class="row card-panel blue-grey lighten-5">
-        <form class="col s12" method="POST" action="{{ url_for('add_message') }}">
+        <form class="col s12" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}">
             <!--select department-->
             <div class="row">
 				<div class="input-field col s12">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
 					<select id="department_name" name="department_name" class="validate" required>
-                        <option value="" disabled selected>Select Department</option>
+                        <option value="" disabled>Select Department</option>
                         {% for dep in depts %}
-                            <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
+                            {% if dep.dept_name == message.dept_name %}
+                                <option value="{{ dep.dept_name }}" selected>{{ dep.dept_name }}</option>
+                            {% else %}
+                                <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
 					<label for="department_name">Department</label>
@@ -23,7 +27,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <input id="subject" name="subject" minlength="1" maxlength="20"
-                        type="text" class="validate" required>
+                        value="{{ message.subject }}" type="text" class="validate" required>
                     <label for="subject">Subject</label>
                 </div>
             </div>
@@ -32,7 +36,9 @@
                 <div class="input-field col s12">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <textarea id="message" name="message" minlength="5"
-                        maxlength="300" class="materialize-textarea validate" required></textarea>
+                        maxlength="300" class="materialize-textarea validate" required>
+                        {{- message.message -}}
+                    </textarea>
                     <label for="message">Message</label>
                 </div>
             </div>
@@ -41,7 +47,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <input id="image_src" name="image_src" minlength="20" maxlength="30"
-                        type="text" class="validate">
+                        value="{{ message.image_src }}" type="text" class="validate">
                     <label for="image_src">Image SRC</label>
                 </div>
             </div>
@@ -50,7 +56,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <input id="image_des" name="image_des" minlength="1" maxlength="30"
-                        type="text" class="validate">
+                        value="{{ message.image_des }}" type="text" class="validate">
                     <label for="image_des">Image Reference</label>
                 </div>
             </div>
@@ -60,7 +66,11 @@
 					<div class="switch">
                         <i class="fas fa-exclamation-triangle prefix light-blue-text text-darken-4"></i>
 						<label for="is_priority">
-                            <input type="checkbox" id="is_priority" name="is_priority">
+                            {% if message.is_priority == "on" %}
+                                <input type="checkbox" id="is_priority" name="is_priority" checked>
+                            {% else %}
+                                <input type="checkbox" id="is_priority" name="is_priority">
+                            {% endif %}
                             <span class="lever"></span>
                             Is Priority
                         </label>
@@ -70,7 +80,7 @@
             <div class="row">
                 <div class="center-align">
                     <button type="submit" class="col s6 offset-s3 btn-small body-back text-shadow">
-                        Add Message <i class="fas fa-chevron-right"></i>
+                        Edit Message <i class="fas fa-chevron-right"></i>
                     </button>
                 </div>
             </div>
