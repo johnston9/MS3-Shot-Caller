@@ -200,6 +200,20 @@ def delete_message(message_id, depart):
     return redirect(url_for("get_dep", dep=depart))
 
 
+@app.route("/add_script", methods=["GET", "POST"])
+def add_script():
+    if request.method == "POST":
+        latest = {
+            "script": request.form.get("script_name")
+        }
+        mongo.db.latest_script.update(
+            {"_id": ObjectId("6024322aa03feadff9c2a279")}, latest)
+        flash("Script Successfully Updated")
+        return redirect(url_for("user_home", username=session["user"]))
+
+    return render_template("add_script.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
