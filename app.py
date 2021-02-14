@@ -82,7 +82,7 @@ def register():
 
 @app.route("/user_home/<username>", methods=["GET", "POST"])
 def user_home(username):
-    script = mongo.db.latest_script.find()
+    script = list(mongo.db.latest_script.find())
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
@@ -200,18 +200,19 @@ def delete_message(message_id, depart):
     return redirect(url_for("get_dep", dep=depart))
 
 
-@app.route("/add_script", methods=["GET", "POST"])
-def add_script():
+@app.route("/add_script/<script_id>", methods=["GET", "POST"])
+def add_script(script_id):
+    script = list(mongo.db.latest_script.find())
     if request.method == "POST":
         latest = {
             "script": request.form.get("script_name")
         }
         mongo.db.latest_script.update(
-            {"_id": ObjectId("6024322aa03feadff9c2a279")}, latest)
+            {"_id": ObjectId(script_id)}, latest)
         flash("Script Successfully Updated")
         return redirect(url_for("user_home", username=session["user"]))
 
-    return render_template("add_script.html")
+    return render_template("add_script.html", script=script)
 
 
 if __name__ == "__main__":

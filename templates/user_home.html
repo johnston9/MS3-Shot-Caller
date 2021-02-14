@@ -4,14 +4,17 @@
     {% if session.user|lower == "admin"|lower %}
             <div class="row">
                 <div class="col s4">
-                    <a href="{{ url_for('add_script') }}"> 
-                        <div class="top-box">
-                            <h5 class="center-align">
-                            Upload new script
-                            </h5>
-                        </div>
-                    </a>
+                    {% for draft in script %}
+                        <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
+                            <div class="top-box">
+                                <h5 class="center-align">
+                                Upload new script
+                                </h5>
+                            </div>
+                        </a>
+                    {% endfor %} 
                 </div>
+
                 <div class="col s4">
                     <a href="{{ url_for('get_image') }}"> 
                         <div class="top-box">
