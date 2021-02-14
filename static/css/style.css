@@ -43,6 +43,10 @@
     padding: 10px;
 }
 
+.btn-small {
+    margin: 5px;
+}
+
 /*---------colours----------*/
 .shadow-light {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
@@ -105,5 +109,11 @@
 
 .collection .collection-item .col-two {
     background-color: #3b444b;
+}
+
+/*---------------messages-----------*/
+
+.confirm-delete {
+    display: none;
 }
 

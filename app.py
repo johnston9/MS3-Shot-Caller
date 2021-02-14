@@ -186,11 +186,18 @@ def edit_message(message_id, depart):
         }
         mongo.db[mes_dept].update({"_id": ObjectId(message_id)}, edit)
         flash("Message Updated")
-        return redirect(url_for("user_home", username=session["user"]))
+        return redirect(url_for("get_dep", dep=mes_dept))
 
     message = mongo.db[depart].find_one({"_id": ObjectId(message_id)})
     depts = mongo.db.depts.find().sort("dept_name", 1)
     return render_template("edit_message.html", message=message, depts=depts)
+
+
+@app.route("/delete_message/<message_id>/<depart>")
+def delete_message(message_id, depart):
+    mongo.db[depart].remove({"_id": ObjectId(message_id)})
+    flash("Message Deleted")
+    return redirect(url_for("get_dep", dep=depart))
 
 
 if __name__ == "__main__":

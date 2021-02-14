@@ -43,15 +43,28 @@
             <p>{{ message.message }}</p>
             {% if message.image_src %}
                 <div class="pic">
-                    <img src=" {{ dept.image_src }} " alt="image">
+                    <img src=" {{ message.image_src }} " alt="image">
                     <p> {{ message.image_des }} </p>
                 </div>
             {% endif %}
-            {{ message.date }}
-            {% if session.user|lower == message.username|lower %}
-                <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small">Edit</a>
-                <a href="" class="btn-small">Delete</a>
+            <p class="center-align">
+            {{ message.date }}</p>
+                {% if session.user|lower == message.username|lower %}
+                <p>
+                <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small">
+                    Edit <i class="fas fa-pen-fancy"></i></a>
+
+                <button onclick="delmessage()" id="delMessage" class="btn-small shadow-light right">
+                    Delete <i class="fas fa-chevron-right right"></i>
+                </button>
+                </p>
+                <p class="confirm-delete">
+                <a href="{{ url_for('delete_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small shadow-light">
+                    Confirm Delete <i class="fas fa-times-circle right"></i>
+                </a></p>
+                
             {% endif %}
+
         </div>
     </li>
     {% endif %}

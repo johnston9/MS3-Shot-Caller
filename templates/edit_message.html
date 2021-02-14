@@ -78,9 +78,13 @@
 				</div>
             </div>
             <div class="row">
-                <div class="center-align">
-                    <button type="submit" class="col s6 offset-s3 btn-small body-back text-shadow">
-                        Edit Message <i class="fas fa-chevron-right"></i>
+                <div class="col s12 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_dep', dep=message.dept_name) }}"  class="btn-small body-back shadow-light">
+                        Cancel / Back <i class="fas fa-times-circle right"></i>
+                    </a>
+                    <button type="submit" class="btn-small body-back shadow-light">
+                        Edit Message <i class="fas fa-chevron-right right"></i>
                     </button>
                 </div>
             </div>

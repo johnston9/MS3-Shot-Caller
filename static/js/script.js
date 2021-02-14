@@ -15,7 +15,6 @@ $(document).ready(function(){
     });
 
   /* fix Materialize bug to show red line warning if department not selected in add message*/
-
     validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
@@ -43,6 +42,30 @@ $(document).ready(function(){
             }
         });
     }
+
 });
+
+/* js for delete message defensive programming 
+document.getElementById("delMessage").addEventListener("click", delmessage);*/
+
+/*function delmessage() {
+  var del = confirm("Press OK to delete message then confirm below");
+  var con = document.getElementsByClassName("confirm-delete");
+    if (del == true) {
+     con.style.display = "block";
+    } else {
+    con.style.display = "none";
+    }
+    };*/
+
+function delmessage() {
+  var del = confirm("Press OK to delete message then confirm below");
+    if (del == true) {
+     $('.confirm-delete').style.display = "block";
+    } else {
+    $('.confirm-delete').style.display = "none";
+    }
+    };
+   
 
 
