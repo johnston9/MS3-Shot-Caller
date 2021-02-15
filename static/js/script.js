@@ -16,7 +16,7 @@ $(document).ready(function(){
     });
 
   /* fix Materialize bug to show red line warning if department not selected in add message*/
-    validateMaterializeSelect();
+   validateMaterializeSelect();
     function validateMaterializeSelect() {
         let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
         let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
@@ -43,9 +43,6 @@ $(document).ready(function(){
             }
         });
     }
-
-
-
 });
 
 

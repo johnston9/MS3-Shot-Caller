@@ -117,9 +117,12 @@ def get_dep(dep):
 
 @app.route("/get_image/", methods=["GET", "POST"])
 def get_image():
-    images = list(mongo.db.images.find())
-    return render_template(
-        "images.html", images=images)
+    if request.method == "POST":
+        image = request.form.get("image")
+        images = list(mongo.db.images.find({"$text": {"$search": image}}))
+        return render_template("images.html", images=images)
+
+    return render_template("images.html")
 
 
 @app.route("/logout")

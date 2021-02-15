@@ -1,30 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
 
-        <div class="row">
+    <div class="row">
         <div class="col s12 m6 offset-m3">
             <div class="card-panel matt-black">
-         
-            <h3 class="center-align offwhite">Images</h3>
-            <form class="" method="POST" action="{{ url_for('get_image') }}">
-                <div class="input-field">
-                    
-                
-                <button type="submit" class="btn-small light-blue darken-4 text-shadow">
-                        Find image
-                </button>
-                </div>
-            </form>
-             
+                <h3 class="crimson center-align">Images</h3>
             </div>
         </div>
     </div>
 
-    <div class="pic">
-        {% for im in images %}
-            <img src=" {{ im.image_src }} " alt="image">
-            <p> {{ im.image_des }} </p>
-        {% endfor %}  
-        
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="card-panel matt-black">
+            <form class="" method="POST" action="{{ url_for('get_image') }}">
+                <div class="input-field">
+                    <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                    <input id="image" name="image" type="text" class="validate offwhite" minlength="3" required>
+                    <label for="image">Enter key words</label>
+                    <div class="center-align">
+                    <button type="submit" class="btn-small light-blue darken-4 text-shadow">
+                        <i class="fas fa-search left"></i> Search Images
+                    </button>
+                    <a href="{{ url_for('get_image') }}" class="btn-small light-blue darken-4 text-shadow">Reset</a>
+                </div>
+                </div>
+            </form>
+            <div class="center-align">
+                    <p class="offwhite">Enter image reference tag, e.g. nickApartmentOption1 to get specific image
+                    or just key word, e.g. nick or apartment to get all related images.
+                    </p>
+                </div>
+            </div>
+        </div>
     </div>
-{% endblock %}
+
+    <div class="row">
+        <div class="col s8 offset-s2">
+            <div class="pic">
+                {% for im in images %}
+                <img src=" {{ im.image_src }} " alt="image">
+                <p class="offwhite"> {{ im.image_des }} </p>
+                {% endfor %}
+            </div>
+         </div>
+    </div>
+    {% endblock %}

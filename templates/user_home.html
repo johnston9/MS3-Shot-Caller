@@ -2,8 +2,8 @@
 {% block content %}
 
     {% if session.user|lower == "admin"|lower %}
-            <div class="row">
-                <div class="col s4">
+        <div class="row">
+            <div class="col s4">
                     {% for draft in script %}
                         <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
                             <div class="top-box">
@@ -13,9 +13,9 @@
                             </div>
                         </a>
                     {% endfor %} 
-                </div>
+            </div>
 
-                <div class="col s4">
+            <div class="col s4">
                     <a href="{{ url_for('add_shot') }}"> 
                         <div class="top-box">
                             <h5 class="center-align">
@@ -23,8 +23,8 @@
                             </h5>
                         </div>
                     </a>
-                </div>
-                <div class="col s4">
+            </div>
+            <div class="col s4">
                     <a href="{{ url_for('get_image') }}"> 
                         <div class="top-box">
                             <h5 class="center-align">
@@ -32,17 +32,17 @@
                             </h5>
                         </div>
                     </a>
-                </div>
+            </div>
 
-    </div>
+        </div>
     {% endif %} 
 
     <div class="row">
-        <div class="col s4 offset-s4">
-            <div class="top-box">
-                <h3 class="center-align">{{ username }}'s Base</h3>
-            </div>
+    <div class="col s12 m6 offset-m3">
+        <div class="card-panel matt-black">
+            <h3 class="center-align offwhite">{{ username }}'s Base</h3>           
         </div>
+    </div>
     </div>
 
     <div class="row">
