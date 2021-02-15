@@ -83,11 +83,13 @@ def register():
 @app.route("/user_home/<username>", methods=["GET", "POST"])
 def user_home(username):
     script = list(mongo.db.latest_script.find())
+    shotlist = list(mongo.db.shotlist.find())
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
         return render_template(
-            "user_home.html", username=username, script=script)
+            "user_home.html", username=username,
+            script=script, shotlist=shotlist)
 
     return redirect(url_for("login"))
 
@@ -213,6 +215,20 @@ def add_script(script_id):
         return redirect(url_for("user_home", username=session["user"]))
 
     return render_template("add_script.html", script=script)
+
+
+@app.route("/add_shot", methods=["GET", "POST"])
+def add_shot():
+    if request.method == "POST":
+        newshot = {
+            "shotlist": request.form.get("shot_name")
+        }
+        mongo.db.shotlist.update(
+            {"_id": ObjectId("6029b7f80febec6e0f942fcb")}, newshot)
+        flash("Shotlist Successfully Updated")
+        return redirect(url_for("user_home", username=session["user"]))
+
+    return render_template("add_shotlist.html")
 
 
 if __name__ == "__main__":
