@@ -33,6 +33,10 @@
     height: auto;
 }
 
+.username {
+    font-size: 26px;
+}
+
 .collapsible-body .pic img {
     width: 300px;
     height: auto;
@@ -72,6 +76,14 @@
 
 .matt-black {
     background-color: #3b444b;
+}
+
+.textmatt-black {
+    color: #3b444b;
+}
+
+.white-back {
+    background-color: #F5F5F5;
 }
 
 .body-back{
@@ -114,6 +126,8 @@
 
 .dep-box {
     padding: 24px 10px 24px 10px;
+    margin-bottom: 20px;
+    border-left: 10px solid whitesmoke;
 }
 
 /*---------------messages-----------*/
@@ -137,4 +151,7 @@
     .noload {
         display: none !important;
     }
+    .username {
+        font-size: 16px;
+}
 }
