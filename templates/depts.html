@@ -1,6 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="row">
+            {% for dept in depts %}
+            <div class="col s4">
+                <div class="dep-box matt-black">
+                    <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
+                        <p class="center-align offwhite">{{ dept.dept_name }}</p>
+                        <div class="secondary-content">
+                            <i class="fas fa-angle-right offwhite"></i></div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+            </div>
+        </div>
+    </div>
+
     <div class="collection">
         {% for dept in depts %}
             {% if loop.index % 2 != 0 %}    
