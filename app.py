@@ -122,7 +122,8 @@ def get_image():
         images = list(mongo.db.images.find({"$text": {"$search": image}}))
         return render_template("images.html", images=images)
 
-    return render_template("images.html")
+    images = list(mongo.db.images.find({"image_name": "cat"}))
+    return render_template("images.html", images=images)
 
 
 @app.route("/logout")
