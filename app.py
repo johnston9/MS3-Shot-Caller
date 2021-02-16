@@ -116,6 +116,18 @@ def get_dep(dep):
         "dep.html", dep=dep, depart=depart, date=today, day="TODAY")
 
 
+@app.route("/get_poster/<dep>", methods=["GET", "POST"])
+def get_poster(dep):
+    dep = dep
+    if request.method == "POST":
+        depart = list(mongo.db[dep].find({"poster": "cat"}))
+
+        return render_template(
+            "dep-poster.html", dep=dep, depart=depart)
+    return render_template(
+        "dep-poster.html", dep=dep, depart=depart)
+
+
 @app.route("/get_image/", methods=["GET", "POST"])
 def get_image():
     if request.method == "POST":

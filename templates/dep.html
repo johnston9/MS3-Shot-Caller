@@ -10,8 +10,14 @@
 </div>
 
 <div class="row">
-    <div class="top-box">
-    <div class="col s12 m8">
+    <div class="col">
+        <h5 class="offwhite">Find messages by date</h5>
+    </div>
+</div>
+
+<div class="row">
+
+    <div class="col top-box s12 m8">
         <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
                 <div class="input-field">
                     <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
@@ -21,14 +27,11 @@
                         Find Messages
                     </button>
                 </div>
-            </form>
-    </div>
+        </form>
     </div>
 
-    <div class="col s12 m4">
-        <div class="top-box">
-            <p>Or find by Poster</p>
-        </div>
+    <div class="top-box col s12 m3 offset-m1">
+        <a href="{{ url_for('get_poster') }}"><p>Or find by Poster</p></a>
     </div>
 
 </div>

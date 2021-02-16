@@ -12,7 +12,7 @@
 <div class="row">
 
     <div class="col s12 m6">
-        <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
+        <form class="" method="POST" action="{{ url_for('get_poster', dep=dep) }}">
                 <div class="input-field">
                     <i class="fas fa-signature prefix light-blue-text text-darken-4"></i>
                     <input id="last-name" name="last-name" type="text" class="validate offwhite" required>
@@ -23,9 +23,9 @@
                 </div>
             </form>
     </div>
-    <div class="col s12 m6">
+    <div class="col s12 m3 offset-m3">
         <div class="div topbox">
-            <p>Or find by Date</p>
+            <a href="{{ url_for('get_poster') }}"><p>Or find by Date</p></a>
         </div>
     </div>
 
@@ -44,11 +44,9 @@
     
 
 
-
-<h5 class="center-align offwhite">{{ day }}</h5>
+{% for message in depart %}
+<h5 class="center-align offwhite">{{ message.poster }}</h5>
 <ul class="collapsible collapsible-border">
-    {% for message in depart %}
-    {% if message.date == date %}
     <li>
         <div class="collapsible-header matt-black offwhite">
             <i class="fas fa-caret-down"></i>
@@ -72,7 +70,7 @@
                 <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small">
                     Edit <i class="fas fa-pen-fancy"></i></a>
 
-                <!------new mat-->
+                <!------delete-->
                 <button data-target="modal{{ loop.index }}" class="btn modal-trigger">Delete</button>
                 <!-- Modal Structure -->
                 <div id="modal{{ loop.index }}" class="modal">
