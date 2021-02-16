@@ -118,3 +118,10 @@
 #explain {
     padding: 2px 20px 2px 20px;
 }
+
+/*-------------media queries---------*/
+@media only screen and (max-width: 420px) {
+    .box {
+        float: left !important;
+    }
+}

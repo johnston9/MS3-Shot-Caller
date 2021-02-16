@@ -12,28 +12,40 @@
     <div class="row">
         <div class="col s12">
             <div class="card-panel matt-black">
-            <form class="" method="POST" action="{{ url_for('get_image') }}">
-                <div class="input-field">
-                    <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="image" name="image" type="text" class="validate offwhite" minlength="3" required>
-                    <label for="image">Enter key words</label>
-                    <div class="center-align">
-                    <button type="submit" class="btn-small light-blue darken-4 text-shadow">
-                        <i class="fas fa-search left"></i> Search Images
-                    </button>
-                    <a href="{{ url_for('get_image') }}" class="btn-small light-blue darken-4 text-shadow">Reset</a>
-                </div>
-                </div>
+               <form class="col s12" method="POST" action="{{ url_for('get_image') }}">
+                    <div class="row">
+                        <div class="col s12">
+                        <div class="input-field">
+                        <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                        <input id="image" name="image" type="text" class="validate offwhite" minlength="3" required>
+                        <label for="image">Enter key words</label>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                                    <button type="submit" class="btn-small light-blue darken-4 text-shadow">
+                                    <i class="fas fa-search left"></i> Search 
+                                    </button>
+                                    <a href="{{ url_for('get_image') }}"  class="box btn-small light-blue darken-4 text-shadow right">Reset</a>
+                                </div>
+                            </div>
+
             </form>
-            <div class="center-align">
+            <div class="row">
+                <div class="col center-align">
                     <p class="offwhite">Enter image reference tag, e.g. nickApartmentOption1 to get specific image
                     or just key word, e.g. nick or apartment to get all related images.
                     </p>
                 </div>
             </div>
-        </div>
-    </div>
 
+                    
+                </div>
+            </div>
+        </div>
+
+    {% if images |length > 0 %}
     <div class="row">
         <div class="col s8 offset-s2">
             <div class="pic">
@@ -44,4 +56,7 @@
             </div>
          </div>
     </div>
+    {% else %}
+        <h3 class="crimson matt-black center-align">No Images Found</h3>
+    {% endif %}
     {% endblock %}
