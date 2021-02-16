@@ -1,10 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row">
+    <div class="row margin-top">
         <div class="col s12 m8 offset-m2">
             <div class="row">
             {% for dept in depts %}
+            {% if loop.index % 2 != 0 %}
+            <div class="col s4">
+                <div class="dep-box1 matt-black">
+                    <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
+                        <p class="center-align offwhite">{{ dept.dept_name }}</p>
+                        <div class="secondary-content">
+                            <i class="fas fa-angle-right offwhite"></i></div>
+                    </a>
+                </div>
+            </div>
+            {% else %} 
             <div class="col s4">
                 <div class="dep-box matt-black">
                     <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
@@ -14,21 +25,10 @@
                     </a>
                 </div>
             </div>
+            {% endif %} 
         {% endfor %}
             </div>
         </div>
-    </div>
-
-    <div class="collection">
-        {% for dept in depts %}
-            {% if loop.index % 2 != 0 %}    
-                <a href="{{ url_for('get_dep', dep=dept.dept_name) }}"  class="collection-item blue-grey-text text-lighten-5">{{ dept.dept_name }} <div class="secondary-content"><i class="fas fa-angle-right offwhite"></i></div></a>
-            {% else %} 
-                <a href="{{ url_for('get_dep', dep=dept.dept_name) }}"  class="collection-item blue-grey darken-4 blue-grey-text text-lighten-5">{{ dept.dept_name }}<div class="secondary-content"><i class="fas fa-angle-right offwhite"></i></div></a>
-            {% endif %} 
-
-
-        {% endfor %}
     </div>
     
 {% endblock %}

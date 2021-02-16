@@ -17,6 +17,10 @@
     background-color: #F5F5F5;
 }
 
+.margin-top {
+    margin-top: 40px;
+}
+
 .card-panel {
   margin-top: 20px;  
 }
@@ -33,6 +37,12 @@
 }
 
 .dep-box {
+    padding: 24px 10px 24px 10px;
+    margin-bottom: 20px;
+    border-left: 10px solid whitesmoke;    
+}
+
+.dep-box1 {
     padding: 24px 10px 24px 10px;
     margin-bottom: 20px;
     border-left: 10px solid whitesmoke;    

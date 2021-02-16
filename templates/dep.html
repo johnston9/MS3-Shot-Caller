@@ -4,18 +4,13 @@
 <div class="row">
     <div class="col center-align s12 m6 offset-m3">
         <div class="card-panel matt-black">
-            <h3 class="center-align offwhite">{{ dep }}</h3> 
-            <button class="center-align btn-small light-blue darken-4 text-shadow">
-                Add Message
-            </button>                
+            <h3 class="center-align offwhite">{{ dep }}</h3>                
         </div>
-    </div>
-
-    
+    </div>    
 </div>
 
 <div class="row">
-    <div class="col">
+    <div class="col s12 m6">
         <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
                 <div class="input-field">
                     <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
@@ -28,6 +23,14 @@
             </form>
     </div>
 </div>
+    <div class="row">
+    <div class="col s12 m6">
+    <button class="center-align btn-small light-blue darken-4 shadow-text right bottom">
+        Add Message
+    </button> 
+    </div>
+</div>
+
 
 <!--add-->
 
