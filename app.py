@@ -83,13 +83,14 @@ def register():
 @app.route("/user_home/<username>", methods=["GET", "POST"])
 def user_home(username):
     script = list(mongo.db.latest_script.find())
+    depts = list(mongo.db.depts.find())
     shotlist = list(mongo.db.shotlist.find())
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
         return render_template(
             "user_home.html", username=username,
-            script=script, shotlist=shotlist)
+            script=script, shotlist=shotlist, depts=depts)
 
     return redirect(url_for("login"))
 

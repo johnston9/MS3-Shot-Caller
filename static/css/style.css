@@ -17,6 +17,17 @@
     background-color: #F5F5F5;
 }
 
+.top-box {
+    background-color: #3b444b;
+    color: #F5F5F5;
+    margin-bottom: 15px;
+}
+
+.long-box {
+    background-color: #3b444b;
+    margin-top: 50px;
+}
+
 .pic img {
     width: 100%;
     height: auto;
@@ -79,12 +90,6 @@
     margin-bottom: 0;
 }
 
-.top-box {
-    background-color: #3b444b;
-    color: #F5F5F5;
-    margin-bottom: 15px;
-}
-
 .login-form {
     background-color: #3b444b;
     padding: 0px 24px 10px 24px;
@@ -107,11 +112,13 @@
     background-color: #3b444b;
 }
 
+.dep-box {
+    padding: 24px 10px 24px 10px;
+}
+
 /*---------------messages-----------*/
 
-.confirm-delete {
-    display: none;
-}
+
 
 /*---------images page--------------*/
 
@@ -123,5 +130,11 @@
 @media only screen and (max-width: 420px) {
     .box {
         float: left !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .noload {
+        display: none !important;
     }
 }

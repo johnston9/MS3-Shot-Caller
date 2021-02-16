@@ -38,15 +38,100 @@
     {% endif %} 
 
     <div class="row">
-    <div class="col s12 m6 offset-m3">
+        <!-- Download latest script-->
+        <div class="col s1 offset-s1">
+            <div class="row">
+                <div class="col s6">
+                    <div class="long-box">
+                    <p>
+                    {% for draft in script %}
+                        <a href="{{ draft.script}}">
+                            D<br>o<br>w<br>n<br>l<br>o<br>a<br>d</a>
+                    {% endfor %}  
+                    </p>
+                </div>
+                </div>
+
+                <div class="col s6">
+                    <div class="long-box">
+                    <p>
+                    {% for draft in script %}
+                        <a class="crimson" href="{{ draft.script}}">
+                            S<br>c<br>r<br>i<br>p<br>t</a>
+                    {% endfor %}  
+                    </p>
+                </div>
+                </div>
+            </div>
+            
+        </div>
+
+    <!--user name-->
+    <div class="col s6 offset-s1">
         <div class="card-panel matt-black">
             <h3 class="center-align offwhite">{{ username }}'s Base</h3>           
         </div>
     </div>
+    <!-- Download latest shotlist-->
+        <div class="col s1 offset-s1">
+            <div class="row">
+                <div class="col s6">
+                    <div class="long-box noload">
+                    <p>
+                    {% for shot in shotlist %}
+                        <a href="{{ shot.shotlist}}">
+                            D<br>o<br>w<br>n<br>l<br>o<br>a<br>d</a>
+                    {% endfor %}  
+                    </p>
+                </div>
+                </div>
+
+                <div class="col s6">
+                    <div class="long-box">
+                    <p>
+                    {% for shot in shotlist %}
+                        <a class="crimson" href="{{ shot.shotlist}}">
+                            S<br>h<br>o<br>t<br>l<br>i<br>s<br>t</a>
+                    {% endfor %}  
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="row">
-        <div class="col s6 m4 offset-m2">
+        <div class="col s12 m8 offset-m2">
+            <a href="{{ url_for('get_depts') }}"> 
+                <div class="top-box">
+                    <h5 class="center-align">
+                    Department Messages
+                    </h5>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m10 offset-m1">
+            <div class="row">
+            {% for dept in depts %}
+            <div class="col s4">
+                <div class="dep-box matt-black">
+                    <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
+                        <p class="center-align offwhite">{{ dept.dept_name }}</p>
+                        <div class="secondary-content">
+                            <i class="fas fa-angle-right offwhite"></i></div>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s6 m4">
             <a href="{{ url_for('add_message') }}"> 
                 <div class="top-box">
                     <h5 class="center-align">
@@ -87,18 +172,6 @@
                     {% endfor %}  
                 </h5>
             </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s12 m8 offset-m2">
-            <a href="{{ url_for('get_depts') }}"> 
-                <div class="top-box">
-                    <h5 class="center-align">
-                    Department Messages
-                    </h5>
-                </div>
-            </a>
         </div>
     </div>
 
