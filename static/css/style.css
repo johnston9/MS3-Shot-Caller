@@ -17,6 +17,10 @@
     background-color: #F5F5F5;
 }
 
+.card-panel {
+    
+}
+
 .top-box {
     background-color: #3b444b;
     color: #F5F5F5;
@@ -26,6 +30,12 @@
 .long-box {
     background-color: #3b444b;
     margin-top: 50px;
+}
+
+.dep-box {
+    padding: 24px 10px 24px 10px;
+    margin-bottom: 20px;
+    border-left: 10px solid whitesmoke;    
 }
 
 .pic img {
@@ -122,12 +132,6 @@
 
 .collection .collection-item .col-two {
     background-color: #3b444b;
-}
-
-.dep-box {
-    padding: 24px 10px 24px 10px;
-    margin-bottom: 20px;
-    border-left: 10px solid whitesmoke;
 }
 
 /*---------------messages-----------*/
