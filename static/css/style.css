@@ -19,7 +19,7 @@
 
 .panel-left {
     height: 500px;
-    margin-top: 150px;
+    margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -28,7 +28,7 @@
 
 .panel-right {
     height: 500px;
-    margin-top: 150px;
+    margin-top: 30px;
     background-image: url("./images/door66.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -61,7 +61,7 @@
 .login-box {
     background-color: #3b444b;
     margin-bottom: 15px;
-    margin-top: 15px;
+    margin-top: 40px;
     color: #F5F5F5;
     padding: 14px 10px 20px 10px;
 }
@@ -84,6 +84,18 @@
 .collapsible-body .pic img {
     width: 300px;
     height: auto;
+}
+
+.margintop-100 {
+    margin-top: 100px;
+}
+
+.margintop-50 {
+    margin-top: 100px;
+}
+
+.margintop-20 {
+    margin-top: 20px;
 }
 
 .no-mar {
