@@ -37,68 +37,36 @@
         </div>
     {% endif %} 
 
-    <div class="row">
-        <!-- Download latest script-->
-        <div class="col s1 offset-s1">
-            <div class="row">
-                <div class="col s6">
-                    <div class="long-box noload">
-                    <p>
-                    {% for draft in script %}
-                        <a href="{{ draft.script}}">
-                            D<br>o<br>w<br>n<br>l<br>o<br>a<br>d</a>
-                    {% endfor %}  
-                    </p>
-                </div>
-                </div>
-
-                <div class="col s6">
-                    <div class="long-box">
-                    <p>
-                    {% for draft in script %}
-                        <a class="crimson" href="{{ draft.script}}">
-                            S<br>c<br>r<br>i<br>p<br>t</a>
-                    {% endfor %}  
-                    </p>
-                </div>
-                </div>
-            </div>
-            
-        </div>
-
     <!--user name-->
-    <div class="col s6 offset-s1">        
+    <div class="col s6 offset-s3">        
         <div class="col s12 card-panel matt-black">
             <p class="username shadow-light center-align offwhite"><strong> {{ username }}'s Base</strong></p>           
         </div>
     </div>
-    <!-- Download latest shotlist-->
-        <div class="col s1 offset-s1">
-            <div class="row">
-                <div class="col s6">
-                    <div class="long-box noload">
-                    <p>
+
+        <div class="row">
+        <div class="col s6 m6">
+            <div class="top-box">
+                <h5 class="center-align">
+                    {% for draft in script %}
+                        <a href="{{ draft.script}}">
+                            Download Latest Script</a>
+                    {% endfor %}  
+                </h5>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="top-box">
+                <h5 class="center-align shadow-light crimson">
                     {% for shot in shotlist %}
                         <a href="{{ shot.shotlist}}">
-                            D<br>o<br>w<br>n<br>l<br>o<br>a<br>d</a>
+                            Download Latest Shotlist</a>
                     {% endfor %}  
-                    </p>
-                </div>
-                </div>
-
-                <div class="col s6">
-                    <div class="long-box">
-                    <p>
-                    {% for shot in shotlist %}
-                        <a class="crimson" href="{{ shot.shotlist}}">
-                            S<br>h<br>o<br>t<br>l<br>i<br>s<br>t</a>
-                    {% endfor %}  
-                    </p>
-                </div>
-                </div>
+                </h5>
             </div>
         </div>
     </div>
+
 
     <div class="row">
         <div class="col s12 m8 offset-m2">
