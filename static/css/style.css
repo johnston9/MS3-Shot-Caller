@@ -3,7 +3,7 @@
     margin-bottom: 0px;
 }
 
-.panel-left {
+/*.panel-left {
     height: 500px;
     width: 10px;
     margin-top: 150px;
@@ -15,6 +15,23 @@
     width: 10px;
     margin-top: 150px;
     background-color: #F5F5F5;
+}*/
+
+.panel-left {
+    height: 500px;
+    margin-top: 150px;
+    background-image: url("./images/door66l.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.panel-right {
+    height: 500px;
+    margin-top: 150px;
+    background-image: url("./images/door66.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .margin-top {
@@ -39,6 +56,14 @@
     padding: 24px 10px 24px 10px;
     margin-bottom: 20px;
     border-left: 10px solid whitesmoke;    
+}
+
+.login-box {
+    background-color: #3b444b;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    color: #F5F5F5;
+    padding: 14px 10px 20px 10px;
 }
 
 .dep-box1 {
@@ -130,17 +155,8 @@
     color: aquamarine;
 }
 
-
 .collapsible-border {
     border-color: crimson;
-}
-
-.collection .collection-item {
-    background-color: #11293b;
-}
-
-.collection .collection-item .col-two {
-    background-color: #3b444b;
 }
 
 /*---------------messages-----------*/
