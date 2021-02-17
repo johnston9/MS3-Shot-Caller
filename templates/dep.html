@@ -10,6 +10,14 @@
 </div>
 
 <div class="row">
+    <div class="col s12">
+    <button class="center-align btn-small light-blue darken-4 shadow-light right">
+        Add Message
+    </button> 
+    </div>
+</div>
+
+<div class="row">
     <div class="col">
         <h5 class="offwhite">Find messages by date</h5>
     </div>
@@ -31,24 +39,10 @@
     </div>
 
     <div class="top-box col s12 m3 offset-m1">
-        <a href="{{ url_for('get_poster', dep=dep) }}"><p>Or find by Poster</p></a>
-    </div>
-
-</div>
-    <div class="row">
-    <div class="col s12">
-    <button class="center-align btn-small light-blue darken-4 shadow-light">
-        Add Message
-    </button> 
+        <a href="{{ url_for('get_poster', dep=dep) }}"><h5>Or find messages by Poster</h5></a>
     </div>
 </div>
-
-
-<!--add-->
-
-    
-
-
+<!--messages-->
 
 <h5 class="center-align offwhite">{{ day }}</h5>
 <ul class="collapsible collapsible-border">

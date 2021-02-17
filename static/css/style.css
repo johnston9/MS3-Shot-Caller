@@ -27,7 +27,6 @@
 
 .top-box {
     background-color: #3b444b;
-    color: #F5F5F5;
     margin-bottom: 15px;
 }
 
@@ -54,7 +53,7 @@
 }
 
 .username {
-    font-size: 26px;
+    font-size: 36px;
 }
 
 .collapsible-body .pic img {
