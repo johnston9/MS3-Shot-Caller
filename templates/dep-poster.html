@@ -10,22 +10,27 @@
 </div>
 
 <div class="row">
+    <div class="col">
+        <h5 class="offwhite">Find messages by Poster</h5>
+    </div>
+</div>
 
-    <div class="col s12 m6">
+<div class="row">
+   <div class="col s12 m6">
         <form class="" method="POST" action="{{ url_for('get_poster', dep=dep) }}">
                 <div class="input-field">
                     <i class="fas fa-signature prefix light-blue-text text-darken-4"></i>
-                    <input id="last-name" name="last-name" type="text" class="validate offwhite" required>
-                    <label for="last-name">Enter Last Name</label>
-                    <button type="submit" class="btn-small light-blue darken-4 text-shadow">
+                    <input id="poster" name="poster" type="text" class="validate offwhite" required>
+                    <label for="poster">Enter Poster Name</label>
+                    <button type="submit" class="btn-small light-blue darken-4 shadow-light">
                         Find Messages
                     </button>
                 </div>
             </form>
     </div>
-    <div class="col s12 m3 offset-m3">
+    <div class="col s12 m3 offset-m3"> 
         <div class="div topbox">
-            <a href="{{ url_for('get_poster') }}"><p>Or find by Date</p></a>
+            <a href="{{ url_for('get_dep', dep=dep) }}"><p>Or find by Date</p></a>
         </div>
     </div>
 
@@ -38,12 +43,7 @@
     </div>
 </div>
 
-
-<!--add-->
-
-    
-
-
+<!--messages-->
 {% for message in depart %}
 <h5 class="center-align offwhite">{{ message.poster }}</h5>
 <ul class="collapsible collapsible-border">
@@ -88,7 +88,6 @@
 
         </div>
     </li>
-    {% endif %}
     {% endfor %}
 </ul>
 

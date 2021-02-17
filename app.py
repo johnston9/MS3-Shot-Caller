@@ -62,8 +62,8 @@ def register():
 
             new_user = {
                 "username": request.form.get("username").lower(),
-                "firstname": request.form.get("firstname"),
-                "lastname": request.form.get("lastname"),
+                "firstname": request.form.get("firstname").lower(),
+                "lastname": request.form.get("lastname").lower(),
                 "job_title": request.form.get("job_title"),
                 "password": generate_password_hash(
                     request.form.get("password"))
@@ -120,12 +120,14 @@ def get_dep(dep):
 def get_poster(dep):
     dep = dep
     if request.method == "POST":
-        depart = list(mongo.db[dep].find({"poster": "cat"}))
+        x = request.form.get("poster").lower()
+        depart = list(mongo.db[dep].find(
+            {"poster": x}))
 
         return render_template(
             "dep-poster.html", dep=dep, depart=depart)
     return render_template(
-        "dep-poster.html", dep=dep, depart=depart)
+        "dep-poster.html", dep=dep)
 
 
 @app.route("/get_image/", methods=["GET", "POST"])
