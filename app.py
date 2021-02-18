@@ -64,7 +64,7 @@ def register():
                 "username": request.form.get("username").lower(),
                 "firstname": request.form.get("firstname").lower(),
                 "lastname": request.form.get("lastname").lower(),
-                "job_title": request.form.get("job_title"),
+                "job_title": request.form.get("job_title").title(),
                 "password": generate_password_hash(
                     request.form.get("password"))
             }
