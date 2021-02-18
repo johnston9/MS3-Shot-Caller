@@ -30,10 +30,10 @@
     </div>
 
     <div class="row">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m6 offset-m3">
             <div class="row">
             {% for dept in depts %}
-            <div class="col s4">
+            <div class="col s6 m4">
                 <div class="dep-box matt-black">
                     <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
                         <p class="center-align offwhite">{{ dept.dept_name }}</p>
