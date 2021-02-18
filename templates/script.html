@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="row">
+        <div class="col s2 m1">
+            <div class="panel-left"></div>
+    </div>
+
+        <div class="col s8 m10">
+
         <div class="row">
         <div class="col s12 m6 offset-m3">
             <div class="card-panel matt-black">
@@ -25,5 +32,13 @@
             <a href="{{ draft.script}}">Latest Draft</a>
         {% endfor %}  
         
+    </div>
+
+    </div>
+
+        <div class="col s2 m1">
+            <div class="panel-right"></div>
+        </div>
+
     </div>
 {% endblock %}
