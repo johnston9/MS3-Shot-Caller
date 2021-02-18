@@ -1,48 +1,21 @@
 {% extends "base.html" %}
 {% block content %}
 
-    {% if session.user|lower == "admin"|lower %}
-        <div class="row">
-            <div class="col s4">
-                    {% for draft in script %}
-                        <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
-                            <div class="top-box">
-                                <h5 class="center-align">
-                                Upload New Script
-                                </h5>
-                            </div>
-                        </a>
-                    {% endfor %} 
-            </div>
-
-            <div class="col s4">
-                    <a href="{{ url_for('add_shot') }}"> 
-                        <div class="top-box">
-                            <h5 class="center-align">
-                            Upload New Shotlist
-                            </h5>
-                        </div>
-                    </a>
-            </div>
-            <div class="col s4">
-                    <a href="{{ url_for('get_image') }}"> 
-                        <div class="top-box">
-                            <h5 class="center-align">
-                            Upload New Images
-                            </h5>
-                        </div>
-                    </a>
-            </div>
-
-        </div>
-    {% endif %} 
-
     <!--user name-->
+    <div class="row">
     <div class="col s6 offset-s3">        
         <div class="col s12 card-panel matt-black">
             <p class="username shadow-light center-align offwhite"><strong> {{ username }}'s Base</strong></p>           
         </div>
     </div>
+    </div>
+
+    <div class="row">
+        <div class="col s2 m1">
+            <div class="panel-left"></div>
+    </div>
+
+        <div class="col s8 m10">
 
         <div class="row">
         <div class="col s6 m6">
@@ -116,6 +89,50 @@
                     </h5>
                 </div>
             </a>
+        </div>
+
+    </div>
+
+    {% if session.user|lower == "admin"|lower %}
+        <div class="row">
+            <div class="col s4">
+                    {% for draft in script %}
+                        <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
+                            <div class="top-box">
+                                <h5 class="center-align">
+                                Upload New Script
+                                </h5>
+                            </div>
+                        </a>
+                    {% endfor %} 
+            </div>
+
+            <div class="col s4">
+                    <a href="{{ url_for('add_shot') }}"> 
+                        <div class="top-box">
+                            <h5 class="center-align">
+                            Upload New Shotlist
+                            </h5>
+                        </div>
+                    </a>
+            </div>
+            <div class="col s4">
+                    <a href="{{ url_for('get_image') }}"> 
+                        <div class="top-box">
+                            <h5 class="center-align">
+                            Upload New Images
+                            </h5>
+                        </div>
+                    </a>
+            </div>
+
+        </div>
+    {% endif %} 
+
+    </div>
+
+        <div class="col s2 m1">
+            <div class="panel-right"></div>
         </div>
 
     </div>
