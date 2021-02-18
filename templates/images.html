@@ -10,6 +10,13 @@
 </div>
 
 <div class="row">
+        <div class="col s2 m1">
+            <div class="panel-left"></div>
+    </div>
+
+        <div class="col s8 m10">
+
+<div class="row">
     <div class="col s12 m8 offset-m2">
         <div class="card-panel matt-black">
             <form class="col s12" method="POST" action="{{ url_for('get_image') }}">
@@ -60,4 +67,12 @@
 {% else %}
 <h3 class="crimson matt-black center-align">No Images Found</h3>
 {% endif %}
+
+</div>
+
+        <div class="col s2 m1">
+            <div class="panel-right"></div>
+        </div>
+
+    </div>
 {% endblock %}
