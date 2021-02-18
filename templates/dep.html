@@ -10,87 +10,101 @@
 </div>
 
 <div class="row">
-    <div class="col s12">
-    <button class="center-align btn-small light-blue darken-4 shadow-light right">
-        Add Message
-    </button> 
-    </div>
-</div>
-
-<div class="row">
-    <div class="col">
-        <h5 class="offwhite">Find messages by date</h5>
-    </div>
-</div>
-
-<div class="row">
-
-    <div class="col top-box s12 m8">
-        <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
-                <div class="input-field">
-                    <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                    <input id="date" name="date" type="text" class="datepicker validate offwhite" required>
-                    <label for="date">Pick Date</label>
-                    <button type="submit" class="btn-small light-blue darken-4 text-shadow">
-                        Find Messages
-                    </button>
-                </div>
-        </form>
-    </div>
-
-    <div class="top-box col s12 m3 offset-m1">
-        <a href="{{ url_for('get_poster', dep=dep) }}"><h5>Or find messages by Poster</h5></a>
-    </div>
-</div>
-<!--messages-->
-
-<h5 class="center-align offwhite">{{ day }}</h5>
-<ul class="collapsible collapsible-border">
-    {% for message in depart %}
-    {% if message.date == date %}
-    <li>
-        <div class="collapsible-header matt-black offwhite">
-            <i class="fas fa-caret-down"></i>
-            <strong>from ----- {{ message.poster }}</strong> ----- {{ message.job_title }} ----- SUBJECT - {{ message.subject }}
-            ------- {% if message.is_priority == "on" %}
-            <i class="fas fa-exclamation-circle aqua tooltipped" data-position="right" data-tooltip="PRIORITY!"></i>
-            {% endif %}
+        <div class="col s2 m1">
+            <div class="panel-left"></div>
         </div>
-        <div class="collapsible-body matt-black offwhite">
-            <p>{{ message.message }}</p>
-            {% if message.image_src %}
-                <div class="pic">
-                    <img src=" {{ message.image_src }} " alt="image">
-                    <p> {{ message.image_des }} </p>
-                </div>
-            {% endif %}
-            <p class="center-align">
-            {{ message.date }}</p>
-                {% if session.user|lower == message.username|lower %}
-                <p>
-                <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small">
-                    Edit <i class="fas fa-pen-fancy"></i></a>
 
-                <!------new mat-->
-                <button data-target="modal{{ loop.index }}" class="btn modal-trigger">Delete</button>
-                <!-- Modal Structure -->
-                <div id="modal{{ loop.index }}" class="modal">
-                    <div class="modal-content">
-                        <h5 class="crimson">Are you sure you want to delete this message?</h5>
-                    </div>
-                    <div class="modal-footer">
-                        <a href="{{ url_for('delete_message', depart=message.dept_name, message_id=message._id) }}" class="modal-close waves-effect waves-green btn-flat">OK</a>
-                        <a href="#" class="modal-close waves-effect waves-green btn-flat">No</a>
-                    </div>
-                </div>
-                </p>
-                
-            {% endif %}
+        <div class="col s8 m10">
 
+            <div class="row">
+                <div class="col s12">
+                <button class="center-align btn-small light-blue darken-4 shadow-light right">
+                    Add Message
+                </button> 
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <h5 class="offwhite">Find messages by date</h5>
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col top-box s12 m8">
+                    <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
+                            <div class="input-field">
+                                <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
+                                <input id="date" name="date" type="text" class="datepicker validate offwhite" required>
+                                <label for="date">Pick Date</label>
+                                <button type="submit" class="btn-small light-blue darken-4 text-shadow">
+                                    Find Messages
+                                </button>
+                            </div>
+                    </form>
+                </div>
+
+                <div class="top-box col s12 m3 offset-m1">
+                    <a href="{{ url_for('get_poster', dep=dep) }}"><h5>Or find messages by Poster</h5></a>
+                </div>
+            </div>
+            <!--messages-->
+
+            <h5 class="center-align offwhite">{{ day }}</h5>
+            <ul class="collapsible collapsible-border">
+                {% for message in depart %}
+                {% if message.date == date %}
+                <li>
+                    <div class="collapsible-header matt-black offwhite">
+                        <i class="fas fa-caret-down"></i>
+                        <strong>from ----- {{ message.poster }}</strong> ----- {{ message.job_title }} ----- SUBJECT - {{ message.subject }}
+                        ------- {% if message.is_priority == "on" %}
+                        <i class="fas fa-exclamation-circle aqua tooltipped" data-position="right" data-tooltip="PRIORITY!"></i>
+                        {% endif %}
+                    </div>
+                    <div class="collapsible-body matt-black offwhite">
+                        <p>{{ message.message }}</p>
+                        {% if message.image_src %}
+                            <div class="pic">
+                                <img src=" {{ message.image_src }} " alt="image">
+                                <p> {{ message.image_des }} </p>
+                            </div>
+                        {% endif %}
+                        <p class="center-align">
+                        {{ message.date }}</p>
+                            {% if session.user|lower == message.username|lower %}
+                            <p>
+                            <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}" class="btn-small">
+                                Edit <i class="fas fa-pen-fancy"></i></a>
+
+                            <!------new mat-->
+                            <button data-target="modal{{ loop.index }}" class="btn modal-trigger">Delete</button>
+                            <!-- Modal Structure -->
+                            <div id="modal{{ loop.index }}" class="modal">
+                                <div class="modal-content">
+                                    <h5 class="crimson">Are you sure you want to delete this message?</h5>
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="{{ url_for('delete_message', depart=message.dept_name, message_id=message._id) }}" class="modal-close waves-effect waves-green btn-flat">OK</a>
+                                    <a href="#" class="modal-close waves-effect waves-green btn-flat">No</a>
+                                </div>
+                            </div>
+                            </p>
+                            
+                        {% endif %}
+
+                    </div>
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
         </div>
-    </li>
-    {% endif %}
-    {% endfor %}
-</ul>
+
+        <div class="col s2 m1">
+            <div class="panel-right"></div>
+        </div>
+
+</div>
 
 {% endblock %}
