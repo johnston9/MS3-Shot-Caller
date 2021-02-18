@@ -130,6 +130,15 @@ def get_poster(dep):
         "dep-poster.html", dep=dep)
 
 
+@app.route("/get_all/<dep>", methods=["GET", "POST"])
+def get_all(dep):
+    dep = dep
+    depart = list(mongo.db[dep].find())
+
+    return render_template(
+            "dep-poster.html", dep=dep, depart=depart)
+
+
 @app.route("/get_image/", methods=["GET", "POST"])
 def get_image():
     if request.method == "POST":
