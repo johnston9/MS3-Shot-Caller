@@ -17,22 +17,28 @@
         <div class="col s8 m10">
 
             <div class="row">
-                <div class="col s12">
-                <button class="center-align btn-small light-blue darken-4 shadow-light right">
+                <div class="col s6">
+                <button class="center-align btn-small light-blue darken-4 shadow-light">
                     Add Message
                 </button> 
+                </div>
+
+                <div class="col s6">
+                    <a href="{{ url_for('get_poster', dep=dep) }}">
+                    <button class="right btn-small light-blue darken-4 shadow-light">
+                        Find by Poster
+                </button></a>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col">
+                <div class="col center-align">
                     <h5 class="offwhite">Find messages by date</h5>
                 </div>
             </div>
 
             <div class="row">
-
-                <div class="col top-box s12 m8">
+                <div class="col top-box s12">
                     <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
                             <div class="input-field">
                                 <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
@@ -44,11 +50,8 @@
                             </div>
                     </form>
                 </div>
-
-                <div class="top-box col s12 m3 offset-m1">
-                    <a href="{{ url_for('get_poster', dep=dep) }}"><h5>Or find messages by Poster</h5></a>
-                </div>
             </div>
+
             <!--messages-->
 
             <h5 class="center-align offwhite">{{ day }}</h5>
