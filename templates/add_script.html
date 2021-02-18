@@ -1,33 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="offwhite center-align">Add latest script</h3>
+    <!--top-box-->
+    <div class="row">
+        <div class="col s4 offset-s4">
+            <div class="login-box">
+                <p class="username center-align">Add latest script</p>
+            </div>
+        </div>
+    </div>
 
-    <div class="row card-panel blue-grey lighten-5">
-        {% for draft in script %}
-        <form class="col s12" method="POST" action="{{ url_for('add_script', script_id=draft._id) }}">
-            <!--enter script src-->
+    <div class="row">
+        <div class="col s2 m1">
+            <div class="panel-left"></div>
+    </div>
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-book-open prefix blue-text text-darken-4"></i>
-                    <input id="script_name" name="script_name" minlength="1"
-                        type="text" class="validate" required>
-                    <label for="script_name">Enter Latest Script SRC</label>
-                </div>
+        <div class="col s8 m10">
+
+            <div class="row card-panel blue-grey lighten-5">
+                {% for draft in script %}
+                <form class="col s12" method="POST" action="{{ url_for('add_script', script_id=draft._id) }}">
+                    <!--enter script src-->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-book-open prefix blue-text text-darken-4"></i>
+                            <input id="script_name" name="script_name" minlength="1"
+                                type="text" class="validate" required>
+                            <label for="script_name">Enter Latest Script SRC</label>
+                        </div>
+                    </div>
+
+                    <div class="row center-align">
+                            <a href="{{ url_for('user_home', username=session['user']) }}" class="col s4 offset-s2 btn-small body-back text-shadow">
+                                Cancel <i class="fas fa-times-circle right"></i>
+                            </a>
+                            <button type="submit" class="col s4 btn-small body-back text-shadow">
+                                Add Script <i class="fas fa-chevron-right"></i>
+                            </button>
+                    </div>
+                    
+                </form>
+                {% endfor %}
             </div>
 
-            <div class="row center-align">
-                    <a href="{{ url_for('user_home', username=session['user']) }}" class="col s4 offset-s2 btn-small body-back text-shadow">
-                        Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
-                    <button type="submit" class="col s4 btn-small body-back text-shadow">
-                        Add Script <i class="fas fa-chevron-right"></i>
-                    </button>
-            </div>
-            
-        </form>
-        {% endfor %}
+        </div>
+
+        <div class="col s2 m1">
+            <div class="panel-right"></div>
+        </div>
+
     </div>
 
 {% endblock %}
