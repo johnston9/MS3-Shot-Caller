@@ -1,33 +1,55 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h3 class="offwhite center-align">Add Latest Shotlist</h3>
+    <!--top-box-->
+    <div class="row">
+        <div class="col s4 offset-s4">
+            <div class="login-box">
+                <p class="username center-align">Add Latest Shotlist</p>
+            </div>
+        </div>
+    </div>
 
-    <div class="row card-panel blue-grey lighten-5">
+    <div class="row">
+        <div class="col s2 m1">
+            <div class="panel-left"></div>
+    </div>
 
-        <form class="col s12" method="POST" action="{{ url_for('add_shot') }}">
-            <!--enter script src-->
+        <div class="col s8 m10">
 
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="fas fa-video prefix blue-text text-darken-4"></i>
-                    <input id="shot_name" name="shot_name" minlength="1"
-                        type="text" class="validate" required>
-                    <label for="shot_name">Enter Latest Shotlist SRC</label>
-                </div>
+            <div class="row card-panel blue-grey lighten-5">
+
+                <form class="col s12" method="POST" action="{{ url_for('add_shot') }}">
+                    <!--enter script src-->
+
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="fas fa-video prefix blue-text text-darken-4"></i>
+                            <input id="shot_name" name="shot_name" minlength="1"
+                                type="text" class="validate" required>
+                            <label for="shot_name">Enter Latest Shotlist SRC</label>
+                        </div>
+                    </div>
+
+                    <div class="row center-align">
+                            <a href="{{ url_for('user_home', username=session['user']) }}" class="col s4 offset-s2 btn-small body-back text-shadow">
+                                Cancel <i class="fas fa-times-circle right"></i>
+                            </a>
+                            <button type="submit" class="col s4 btn-small body-back text-shadow">
+                                Add Shotlist <i class="fas fa-chevron-right"></i>
+                            </button>
+                    </div>
+                    
+                </form>
+        
             </div>
 
-            <div class="row center-align">
-                    <a href="{{ url_for('user_home', username=session['user']) }}" class="col s4 offset-s2 btn-small body-back text-shadow">
-                        Cancel <i class="fas fa-times-circle right"></i>
-                    </a>
-                    <button type="submit" class="col s4 btn-small body-back text-shadow">
-                        Add Shotlist <i class="fas fa-chevron-right"></i>
-                    </button>
-            </div>
-            
-        </form>
- 
+        </div>
+
+        <div class="col s2 m1">
+            <div class="panel-right"></div>
+        </div>
+
     </div>
 
 {% endblock %}
