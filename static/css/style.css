@@ -40,7 +40,25 @@
 
 .card-panel {
   margin-top: 20px;  
+  /*background-image: url("./images/top2.png");
+    background-size: cover;
+    background-repeat: no-repeat;*/
 }
+
+.smallPanel-l {
+    background-image: url("./images/door66l.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
+.smallPanel-r {
+    background-image: url("./images/door66.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+}
+
 
 .top-box {
     background-color: #3b444b;
