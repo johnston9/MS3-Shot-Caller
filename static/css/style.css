@@ -20,7 +20,7 @@
 }
 
 .panel-left {
-    height: 500px;
+    height: 600px;
     margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: cover;
@@ -29,12 +29,20 @@
 }
 
 .panel-right {
-    height: 500px;
+    height: 600px;
     margin-top: 30px;
     background-image: url("./images/door66.png");
     background-size: cover;
     background-position: left top;
     background-repeat: no-repeat;
+}
+
+.smallPanel-l {
+    background-image: url("./images/door66l.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right top;
+    height: 120px;
 }
 
 .margin-top {
@@ -65,14 +73,6 @@
   margin-top: 20px;  
 }
 
-.smallPanel-l {
-    background-image: url("./images/door66l.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left top;
-    height: 120px;
-}
-
 .smallPanel-r {
     background-image: url("./images/door66.png");
     background-size: cover;
@@ -99,8 +99,8 @@
     background-color: #3b444b;
     margin-bottom: 15px;
     margin-top: 40px;
-    color: #F5F5F5;
-    padding: 14px 10px 20px 10px;
+    color: #F5F5F5; 
+    padding: 14px 10px 10px 10px;   
 }
 
 .pic img {
@@ -213,15 +213,20 @@
     .noload {
         display: none !important;
     }
-    .username {
-        font-size: 16px;
-}
+
+    .smallPanel-l {
+    background-image: url(./images/door66l.png);
+    height: 70px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
     .dep-img {
     width: 50px;
     height: 50px;
-}
+    }
+    .username {
+        font-size: 16px;
+    }
 }
 
