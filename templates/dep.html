@@ -81,7 +81,7 @@
                     <p>{{ message.message }}</p>
                     {% if message.image_src %}
                     <div class="pic">
-                        <img src=" {{ message.image_src }} " alt="image">
+                        <img src=" {{ message.image_src }} " alt="{{ message.image_des }}">
                         <p> {{ message.image_des }} </p>
                     </div>
                     {% endif %}
