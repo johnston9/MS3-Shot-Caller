@@ -26,11 +26,11 @@
 
         <div class="col s8 m10">
 
-    <div class="row">
+    <div class="row margintop-20">
         <div class="col s12 m8 offset-m2">
             <a href="{{ url_for('get_depts') }}"> 
                 <h5 class="center-align shadow-light">
-                Department Messages
+                Find Department Messages
                 </h5>
             </a>
         </div>
@@ -40,9 +40,9 @@
         <div class="col s12 m6 offset-m3"> 
             <div class="row">
             {% for dept in depts %}
-            <div class="col s6 m4">
+            <div class="col s4 center-align">
                 <div>
-                    <img src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}" width="100px" height="100px">
+                    <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">
                     <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
                         <p class="center-align offwhite">{{ dept.dept_name }}</p>
                     </a>

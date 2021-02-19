@@ -89,24 +89,12 @@
     margin-top: 50px;
 }
 
-.dep-box {
-    padding: 24px 10px 24px 10px;
-    margin-bottom: 20px;
-    border-left: 10px solid whitesmoke;    
-}
-
 .login-box {
     background-color: #3b444b;
     margin-bottom: 15px;
     margin-top: 40px;
     color: #F5F5F5;
     padding: 14px 10px 20px 10px;
-}
-
-.dep-box1 {
-    padding: 24px 10px 24px 10px;
-    margin-bottom: 20px;
-    border-left: 10px solid whitesmoke;    
 }
 
 .pic img {
@@ -192,6 +180,12 @@
     border-color: crimson;
 }
 
+/*---------user base page----------*/
+.dep-img {
+    width: 100px;
+    height: 100px;
+}
+
 /*---------------messages-----------*/
 
 
@@ -217,3 +211,11 @@
         font-size: 16px;
 }
 }
+
+@media only screen and (max-width: 800px) {
+    .dep-img {
+    width: 50px;
+    height: 50px;
+}
+}
+
