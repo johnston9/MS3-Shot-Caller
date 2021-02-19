@@ -57,11 +57,12 @@
     margin-bottom: 0 ;
 }
 
+.left-pad {
+    padding: 0px 0px 0px 10px !important;
+}
+
 .card-panel {
   margin-top: 20px;  
-  /*background-image: url("./images/top2.png");
-    background-size: cover;
-    background-repeat: no-repeat;*/
 }
 
 .smallPanel-l {
@@ -80,7 +81,12 @@
 }
 
 .top-box {
-    background-color: #3b444b;
+    background-color: #3b444b; 
+    margin-bottom: 15px;
+}
+
+.findDep-box {
+    background-color: #0e1111; 
     margin-bottom: 15px;
 }
 
