@@ -11,10 +11,10 @@
 
 <div class="row">
         <div class="col s1">
-            <div class="panel-leftImg right"></div>
+            <div class="panel-leftImg"></div>
     </div>
 
-        <div class="col s8 m10">
+        <div class="col s10">
 
 <div class="row">
     <div class="col s12 m8 offset-m2">
@@ -55,7 +55,7 @@
 
 {% if images |length > 0 %}
 <div class="row">
-    <div class="col s8 offset-s2">
+    <div class="col s12 m8 offset-m2">
         <div class="pic">
             {% for im in images %}
             <img src=" {{ im.image_src }} " alt="image">
@@ -71,7 +71,7 @@
 </div>
 
         <div class="col s1">
-            <div class="panel-rightImg"></div>
+            <div class="panel-rightImg right"></div>
         </div>
 
     </div>
