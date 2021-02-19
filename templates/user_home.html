@@ -57,20 +57,16 @@
     <div class="row">
         <div class="col s6">
             <a href="{{ url_for('add_message') }}"> 
-                <div class="top-box">
                     <h5 class="center-align">
                     Add Message
                     </h5>
-                </div>
             </a>
         </div>
         <div class="col s6">
             <a href="{{ url_for('get_image') }}"> 
-                <div class="top-box">
                     <h5 class="center-align">
                     Search Images
                     </h5>
-                </div>
             </a>
         </div>
 
@@ -87,7 +83,7 @@
                 </h5>
             </div>
         </div>
-        <div class="col s4">
+        <div class="col s6">
             <div class="top-box">
                 <h5 class="center-align shadow-light crimson">
                     {% for shot in shotlist %}
