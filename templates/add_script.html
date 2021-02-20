@@ -24,9 +24,9 @@
 
         <div class="col s8 m10">
 
-            <div class="row card-panel matt-black offwhite">
+            <div class="row">
                 {% for draft in script %}
-                <form class="col s10 m8" method="POST" action="{{ url_for('add_script', script_id=draft._id) }}">
+                <form class="card-panel matt-black offwhite col s8 offset-s2" method="POST" action="{{ url_for('add_script', script_id=draft._id) }}">
                     <!--enter script src-->
 
                     <div class="row">
