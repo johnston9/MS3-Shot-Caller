@@ -74,22 +74,22 @@
     <div class="row">
         <div class="col s6 m6">
             <div class="top-box">
-                <h5 class="center-align">
+                <p class="center-align">
                     {% for draft in script %}
                         <a href="{{ draft.script}}">
                             Download Latest Script</a>
                     {% endfor %}  
-                </h5>
+                        </p>
             </div>
         </div>
         <div class="col s6">
             <div class="top-box">
-                <h5 class="center-align shadow-light crimson">
+                <p class="center-align shadow-light crimson">
                     {% for shot in shotlist %}
                         <a href="{{ shot.shotlist}}">
                             Download Latest Shotlist</a>
                     {% endfor %}  
-                </h5>
+                        </p>
             </div>
         </div>
     </div>
@@ -118,7 +118,7 @@
                     </a>
             </div>
             <div class="col s4">
-                    <a href="{{ url_for('get_image') }}"> 
+                    <a href="{{ url_for('add_image') }}"> 
                         <div class="top-box">
                             <h5 class="center-align">
                             Upload New Images
