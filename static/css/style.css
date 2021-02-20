@@ -201,7 +201,19 @@
 }
 
 /*---------------messages-----------*/
+/*.input-field>label {
+    color: #F5F5F5;}
 
+.select-dropdown li.disabled>span, .select-dropdown li.optgroup {
+    color: #F5F5F5;}
+
+.select-dropdown.dropdown-content li.selected {
+    color: #F5F5F5;
+}*/
+
+imput {
+    color: #F5F5F5;
+}
 
 
 /*---------images page--------------*/
