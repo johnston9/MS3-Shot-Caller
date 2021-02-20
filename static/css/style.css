@@ -20,20 +20,20 @@
 }
 
 .panel-left {
-    height: 400px;
+    height: 700px;
     margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: cover;
-    background-position: right top;
+    /*background-position: right top;*/
     background-repeat: no-repeat;
 }
 
 .panel-right {
-    height: 400px;
+    height: 700px;
     margin-top: 30px;
     background-image: url("./images/door66.png");
     background-size: cover;
-    background-position: left top;
+    background-position: right top;
     background-repeat: no-repeat;
 }
 
@@ -67,6 +67,10 @@
 
 .left-pad {
     padding: 0px 0px 0px 10px !important;
+}
+
+.right-pad {
+    padding: 0px 10px 0px 0px !important;
 }
 
 .card-panel {
@@ -225,8 +229,19 @@
     width: 50px;
     height: 50px;
     }
+
     .username {
         font-size: 16px;
+    }
+
+    .panel-left {
+    height: 500px;
+    background-position: right top;
+    }
+
+    .panel-right {
+    height: 500px;
+    background-position: left top;
     }
 }
 

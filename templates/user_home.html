@@ -20,11 +20,11 @@
     
 
     <div class="row">
-        <div class="col s2 m1">
+        <div class="col s1">
             <div class="panel-left"></div>
     </div>
 
-        <div class="col s8 m10">
+        <div class="col s10">
 
     <div class="row margintop-20">
         <div class="col s12 m8 offset-m2">
@@ -42,8 +42,8 @@
             {% for dept in depts %}
             <div class="col s4 center-align">
                 <div>
-                    <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">
                     <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
+                    <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">                    
                         <p class="center-align offwhite">{{ dept.dept_name }}</p>
                     </a>
                 </div>
@@ -132,7 +132,7 @@
 
     </div>
 
-        <div class="col s2 m1">
+        <div class="col s1">
             <div class="panel-right"></div>
         </div>
 

@@ -17,19 +17,11 @@
     </div>
 
 <div class="row">
-    <div class="col s2 m1">
+    <div class="col s1">
         <div class="panel-left"></div>
     </div>
 
-    <div class="col s8 m10">
-
-        <div class="row margintop-20">
-            <div class="center-align">
-                <button class="btn-small light-blue darken-4 shadow-light">
-                    Add Message
-                </button>
-            </div>
-        </div>
+    <div class="col s10">
 
         <div class="row margintop-50">
             <div class="col top-box s6 offset-s3">
@@ -49,17 +41,22 @@
         </div>
 
         <div class="row">
-            <div class="center-align">
+            <div class="">
                 <a href="{{ url_for('get_all', dep=dep) }}">
-                <button class="btn-small light-blue darken-4 shadow-light">
                     Find All
-                </button></a>
+                </a>
             </div>
         </div>
 
         <a href="{{ url_for('get_poster', dep=dep) }}">
-            <h5 class="crimson center-align">Find messages by Poster <i class="fas fa-angle-right"></i></h5>
+            <p class="crimson center-align">Find by Poster <i class="fas fa-angle-right"></i></p>
         </a>
+
+        <div class="row margintop-20">
+            <div class="">
+               <p>Add Message</p> 
+            </div>
+        </div>
 
         <!--messages-->
 
@@ -117,7 +114,7 @@
         </ul>
     </div>
 
-    <div class="col s2 m1">
+    <div class="col s1">
         <div class="panel-right"></div>
     </div>
 
