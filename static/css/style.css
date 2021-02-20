@@ -57,6 +57,28 @@
     width: 50px;
     margin-top: 30px;
     background-image: url("./images/door66.png");
+    background-size: cover;
+    background-position: right top;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.panel-leftMes {
+    height: 400px;
+    width: 50px;
+    margin-top: 30px;
+    background-image: url("./images/door66l.png");
+    background-size: contain;
+    /*background-position: right top;*/
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.panel-rightMes {
+    height: 400px;
+    width: 50px;
+    margin-top: 30px;
+    background-image: url("./images/door66.png");
     background-size: contain;
     background-position: right top;
     background-repeat: no-repeat;
@@ -233,8 +255,10 @@
     color: #F5F5F5;
 }*/
 
-imput {
-    color: #F5F5F5;
+.select-wrapper+label {
+    position: absolute;
+    top: 0px;
+    font-size: .8rem;
 }
 
 
@@ -283,5 +307,18 @@ imput {
     background-position: left top;
     width: 100%;
     }
+
+    .panel-leftAdd {
+    height: 300px;   
+    background-position: right top;
+    width: 100%;
+    }
+
+    .panel-rightAdd {
+    height: 300px;   
+    background-position: left top;
+    width: 100%;
+    }
+
 }
 

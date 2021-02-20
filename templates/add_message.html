@@ -25,13 +25,13 @@
         <div class="col s10">
 
             <div class="row">
-                <form class="card-panel matt-black offwhite col s8 offset-s2" method="POST" action="{{ url_for('add_message') }}">
+                <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
                     <!--select department-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <select id="department_name" name="department_name" class="validate" required>
-                                <option value="" disabled selected><p style="color:blue;">Select Department</p></option>
+                                <option value="" disabled selected><p style="color:whitesmoke !important;"></p></option>
                                 {% for dep in depts %}
                                     <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
                                 {% endfor %}
@@ -41,43 +41,43 @@
                     </div>
                     <!--enter subject-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <input id="subject" name="subject" minlength="1" maxlength="20"
-                                type="text" class="validate" required>
+                                type="text" class="validate" style="color:whitesmoke !important;" required>
                             <label for="subject">Subject</label>
                         </div>
                     </div>
                     <!--enter message-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <textarea id="message" name="message" minlength="5"
-                                maxlength="300" class="materialize-textarea validate" required></textarea>
+                                maxlength="300" class="materialize-textarea validate" style="color:whitesmoke !important;" required></textarea>
                             <label for="message">Message</label>
                         </div>
                     </div>
                     <!--enter image src-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <input id="image_src" name="image_src" minlength="20"
-                                type="text" class="validate">
+                                type="text" class="validate" style="color:whitesmoke !important;">
                             <label for="image_src">Image SRC</label>
                         </div>
                     </div>
                     <!--enter image description-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <input id="image_des" name="image_des" minlength="1" maxlength="30"
-                                type="text" class="validate">
+                                type="text" class="validate" style="color:whitesmoke !important;">
                             <label for="image_des">Image Reference</label>
                         </div>
                     </div>
 
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <div class="switch">
                                 <i class="fas fa-exclamation-triangle prefix light-blue-text text-darken-4"></i>
                                 <label for="is_priority">
@@ -91,7 +91,7 @@
                     <div class="row margintop-20">
                         <div class="center-align">
                             <button type="submit" class="btn-small body-back text-shadow">
-                                Add Message <i class="fas fa-chevron-right"></i>
+                                Add Message 
                             </button>
                         </div>
                     </div>
