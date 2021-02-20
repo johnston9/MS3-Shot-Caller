@@ -24,11 +24,11 @@
 
         <div class="col s8 m10">
 
-    <div class="row card-panel blue-grey lighten-5">
-        <form class="col s12" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}">
+    <div class="row">
+        <form class="card-panel matt-black offwhite col s8 offset-s2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}">
             <!--select department-->
             <div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s8 offset-s2">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
 					<select id="department_name" name="department_name" class="validate" required>
                         <option value="" disabled>Select Department</option>
@@ -45,7 +45,7 @@
             </div>
             <!--enter subject-->
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s8 offset-s2">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <input id="subject" name="subject" minlength="1" maxlength="20"
                         value="{{ message.subject }}" type="text" class="validate" required>
@@ -54,7 +54,7 @@
             </div>
             <!--enter message-->
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s8 offset-s2">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <textarea id="message" name="message" minlength="5"
                         maxlength="300" class="materialize-textarea validate" required>
@@ -65,7 +65,7 @@
             </div>
             <!--enter image src-->
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s8 offset-s2">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <input id="image_src" name="image_src" minlength="20" maxlength="30"
                         value="{{ message.image_src }}" type="text" class="validate">
@@ -74,7 +74,7 @@
             </div>
             <!--enter image description-->
             <div class="row">
-                <div class="input-field col s12">
+                <div class="input-field col s8 offset-s2">
                     <i class="fas fa-star prefix blue-text text-darken-4"></i>
                     <input id="image_des" name="image_des" minlength="1" maxlength="30"
                         value="{{ message.image_des }}" type="text" class="validate">
@@ -83,7 +83,7 @@
             </div>
 
 			<div class="row">
-				<div class="input-field col s12">
+				<div class="input-field col s8 offset-s2">
 					<div class="switch">
                         <i class="fas fa-exclamation-triangle prefix light-blue-text text-darken-4"></i>
 						<label for="is_priority">
@@ -98,8 +98,8 @@
 					</div>
 				</div>
             </div>
-            <div class="row">
-                <div class="col s12 center-align">
+            <div class="row margintop-20">
+                <div class="col s8 offset-s2 center-align">
                     <!-- cancel button -->
                     <a href="{{ url_for('get_dep', dep=message.dept_name) }}"  class="btn-small body-back shadow-light">
                         Cancel / Back <i class="fas fa-times-circle right"></i>
