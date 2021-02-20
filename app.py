@@ -259,6 +259,22 @@ def add_shot():
     return render_template("add_shotlist.html")
 
 
+@app.route("/add_image", methods=["GET", "POST"])
+def add_image():
+    if request.method == "POST":
+        new_image = {
+            "image_name": request.form.get("image_name"),
+            "image_des": request.form.get("image_des"),
+            "image_src": request.form.get("image_src")
+        }
+        mongo.db.images.insert_one(new_image)
+        flash("Image Added")
+        return redirect(url_for("user_home", username=session["user"]))
+
+    return render_template("add_image.html")
+
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

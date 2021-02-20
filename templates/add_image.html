@@ -24,12 +24,12 @@
 
         <div class="col s8 m10">
 
-            <div class="row card-panel matt-black offwhite">
-                <form class="col col s8 offset-s2" method="POST" action="{{ url_for('add_image') }}">
+            <div class="row">
+                <form class="card-panel matt-black offwhite col s12 m8 offset-m2" method="POST" action="{{ url_for('add_image') }}">
                     
                     <!--enter image_name-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <input id="image_name" name="image_name" minlength="1"
                                 type="text" class="validate" required>
@@ -38,7 +38,7 @@
                     </div>
                     <!--enter image description-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <input id="image_des" name="image_des" minlength="1"
                                 type="text" class="validate" required>
@@ -47,7 +47,7 @@
                     </div>
                     <!--enter image src-->
                     <div class="row">
-                        <div class="input-field col s8 offset-s2">
+                        <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-star prefix blue-text text-darken-4"></i>
                             <input id="image_src" name="image_src" minlength="20"
                                 type="text" class="validate">
