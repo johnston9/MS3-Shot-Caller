@@ -17,21 +17,20 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row margintop-20">
         <div class="col s1">
             <div class="panel-leftAdd"></div>
         </div>
 
         <div class="col s10">
-
             <div class="row">
                 <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
                     <!--select department-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
-                            <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                            <i class="fas fa-minus prefix blue-sky"></i>
                             <select id="department_name" name="department_name" class="validate" required>
-                                <option value="" disabled selected><p style="color:whitesmoke !important;"></p></option>
+                                <option value="" disabled selected></option>
                                 {% for dep in depts %}
                                     <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
                                 {% endfor %}
@@ -42,7 +41,7 @@
                     <!--enter subject-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
-                            <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                            <i class="fas fa-minus fa-xs prefix blue-sea"></i>
                             <input id="subject" name="subject" minlength="1" maxlength="20"
                                 type="text" class="validate" style="color:whitesmoke !important;" required>
                             <label for="subject">Subject</label>
@@ -51,7 +50,7 @@
                     <!--enter message-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
-                            <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                            <i class="fas fa-minus prefix blue-sky"></i>
                             <textarea id="message" name="message" minlength="5"
                                 maxlength="300" class="materialize-textarea validate" style="color:whitesmoke !important;" required></textarea>
                             <label for="message">Message</label>
@@ -60,7 +59,7 @@
                     <!--enter image src-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
-                            <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                        <i class="fas fa-minus prefix blue-sea"></i>
                             <input id="image_src" name="image_src" minlength="20"
                                 type="text" class="validate" style="color:whitesmoke !important;">
                             <label for="image_src">Image SRC</label>
@@ -69,7 +68,7 @@
                     <!--enter image description-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
-                            <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                            <i class="fas fa-minus prefix blue-sky"></i>
                             <input id="image_des" name="image_des" minlength="1" maxlength="30"
                                 type="text" class="validate" style="color:whitesmoke !important;">
                             <label for="image_des">Image Reference</label>
@@ -79,7 +78,7 @@
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
                             <div class="switch">
-                                <i class="fas fa-exclamation-triangle prefix light-blue-text text-darken-4"></i>
+                                <i class="fas fa-minus prefix blue-sea"></i>
                                 <label for="is_priority">
                                     <input type="checkbox" id="is_priority" name="is_priority">
                                     <span class="lever"></span>
@@ -90,7 +89,7 @@
                     </div>
                     <div class="row margintop-20">
                         <div class="center-align">
-                            <button type="submit" class="btn-small body-back text-shadow">
+                            <button type="submit" class="btn-small offwhite blueBack-sea text-shadow">
                                 Add Message 
                             </button>
                         </div>

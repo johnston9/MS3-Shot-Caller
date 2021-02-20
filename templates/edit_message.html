@@ -17,21 +17,21 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row margintop-20">
         <div class="col s1">
-            <div class="panel-left"></div>
+            <div class="panel-leftAdd"></div>
         </div>
 
         <div class="col s10">
 
     <div class="row">
-        <form class="card-panel matt-black offwhite col s8 offset-s2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}">
+        <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}">
             <!--select department-->
             <div class="row">
-				<div class="input-field col s8 offset-s2">
-                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+				<div class="input-field col s12 m8 offset-m2">
+                    <i class="fas minus prefix blue-sea"></i>
 					<select id="department_name" name="department_name" class="validate" required>
-                        <option value="" disabled>Select Department</option>
+                        <option value="" disabled></option>
                         {% for dep in depts %}
                             {% if dep.dept_name == message.dept_name %}
                                 <option value="{{ dep.dept_name }}" selected>{{ dep.dept_name }}</option>
@@ -40,24 +40,24 @@
                             {% endif %}
                         {% endfor %}
                     </select>
-					<label for="department_name">Department</label>
+					<label class="offwhite" for="department_name">Select Department</label>
 				</div>
             </div>
             <!--enter subject-->
             <div class="row">
-                <div class="input-field col s8 offset-s2">
-                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                <div class="input-field col s12 m8 offset-m2">
+                        <i class="fas fa-minus prefix blue-sea"></i>
                     <input id="subject" name="subject" minlength="1" maxlength="20"
-                        value="{{ message.subject }}" type="text" class="validate" required>
+                        value="{{ message.subject }}" type="text" class="validate" style="color:whitesmoke !important;" required>
                     <label for="subject">Subject</label>
                 </div>
             </div>
             <!--enter message-->
             <div class="row">
-                <div class="input-field col s8 offset-s2">
-                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                <div class="input-field col s12 m8 offset-m2">
+                        <i class="fas fa-minus prefix blue-sea"></i>
                     <textarea id="message" name="message" minlength="5"
-                        maxlength="300" class="materialize-textarea validate" required>
+                        maxlength="300" class="materialize-textarea validate" style="color:whitesmoke !important;" required>
                         {{- message.message -}}
                     </textarea>
                     <label for="message">Message</label>
@@ -65,27 +65,27 @@
             </div>
             <!--enter image src-->
             <div class="row">
-                <div class="input-field col s8 offset-s2">
-                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                <div class="input-field col s12 m8 offset-m2">
+                        <i class="fas fa-minus prefix blue-sea"></i>
                     <input id="image_src" name="image_src" minlength="20" maxlength="30"
-                        value="{{ message.image_src }}" type="text" class="validate">
+                        value="{{ message.image_src }}" type="text" class="validate" style="color:whitesmoke !important;">
                     <label for="image_src">Image SRC</label>
                 </div>
             </div>
             <!--enter image description-->
             <div class="row">
-                <div class="input-field col s8 offset-s2">
-                    <i class="fas fa-star prefix blue-text text-darken-4"></i>
+                <div class="input-field col s12 m8 offset-m2">
+                        <i class="fas fa-minus prefix blue-sea"></i>
                     <input id="image_des" name="image_des" minlength="1" maxlength="30"
-                        value="{{ message.image_des }}" type="text" class="validate">
+                        value="{{ message.image_des }}" type="text" class="validate" style="color:whitesmoke !important;">
                     <label for="image_des">Image Reference</label>
                 </div>
             </div>
 
 			<div class="row">
-				<div class="input-field col s8 offset-s2">
+				<div class="input-field col s12 m8 offset-m2">
 					<div class="switch">
-                        <i class="fas fa-exclamation-triangle prefix light-blue-text text-darken-4"></i>
+                        <i class="fas fa-minus prefix blue-sea"></i>
 						<label for="is_priority">
                             {% if message.is_priority == "on" %}
                                 <input type="checkbox" id="is_priority" name="is_priority" checked>
@@ -101,11 +101,11 @@
             <div class="row margintop-20">
                 <div class="col s8 offset-s2 center-align">
                     <!-- cancel button -->
-                    <a href="{{ url_for('get_dep', dep=message.dept_name) }}"  class="btn-small body-back shadow-light">
-                        Cancel / Back <i class="fas fa-times-circle right"></i>
+                    <a href="{{ url_for('get_dep', dep=message.dept_name) }}"  class="btn-small offwhite blueBack-sea shadow-light">
+                        Cancel 
                     </a>
-                    <button type="submit" class="btn-small body-back shadow-light">
-                        Edit Message <i class="fas fa-chevron-right right"></i>
+                    <button type="submit" class="btn-small offwhite blueBack-sea shadow-light">
+                        Edit
                     </button>
                 </div>
             </div>
@@ -115,7 +115,7 @@
     </div>
 
         <div class="col s1">
-            <div class="panel-right"></div>
+            <div class="panel-rightAdd"></div>
         </div>
 
     </div>
