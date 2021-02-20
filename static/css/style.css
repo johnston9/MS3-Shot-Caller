@@ -41,6 +41,28 @@
     margin: 0 auto;
 }
 
+.panel-leftAdd {
+    height: 300px;
+    width: 50px;
+    margin-top: 30px;
+    background-image: url("./images/door66l.png");
+    background-size: cover;
+    /*background-position: right top;*/
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.panel-rightAdd {
+    height: 300px;
+    width: 50px;
+    margin-top: 30px;
+    background-image: url("./images/door66.png");
+    background-size: contain;
+    background-position: right top;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
 .smallPanel-l {
     background-image: url("./images/door66l.png");
     background-size: cover;
