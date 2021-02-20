@@ -21,20 +21,24 @@
 
 .panel-left {
     height: 700px;
+    width: 60px;
     margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: cover;
     /*background-position: right top;*/
     background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 .panel-right {
     height: 700px;
+    width: 60px;
     margin-top: 30px;
     background-image: url("./images/door66.png");
     background-size: cover;
     background-position: right top;
     background-repeat: no-repeat;
+    margin: 0 auto;
 }
 
 .smallPanel-l {
@@ -235,13 +239,15 @@
     }
 
     .panel-left {
-    height: 500px;
+    height: 500px;   
     background-position: right top;
+    width: 100%;
     }
 
     .panel-right {
     height: 500px;
     background-position: left top;
+    width: 100%;
     }
 }
 
