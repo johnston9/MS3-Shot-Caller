@@ -20,7 +20,7 @@
 }
 
 .panel-left {
-    height: 600px;
+    height: 400px;
     margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: cover;
@@ -29,7 +29,7 @@
 }
 
 .panel-right {
-    height: 600px;
+    height: 400px;
     margin-top: 30px;
     background-image: url("./images/door66.png");
     background-size: cover;
