@@ -51,20 +51,20 @@
         <div class="row">
             <div class="col s6 center-align">
                 <a href="{{ url_for('get_all', dep=dep) }}">
-                    <p class="center-align">Find All</p>
+                    <p class="antiquewhite center-align">Find All</p>
                 </a>
             </div>
 
             <div class="col s6 center-align">
                 <a href="{{ url_for('get_poster', dep=dep) }}">
-                    <p class="center-align">Find by Poster <i class="fas fa-angle-right"></i></p>
+                    <p class="antiquewhite center-align">Find by Poster <i class="fas fa-angle-right"></i></p>
                 </a>
         </div>
     </div>
 
         <!--messages-->
 
-        <h5 class="center-align offwhite">{{ day }}</h5>
+        <h5 class="center-align antiquewhite">{{ day }}</h5>
         <ul class="collapsible collapsible-border">
             {% for message in depart %}
             {% if message.date == date %}

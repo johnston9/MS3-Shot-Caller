@@ -23,31 +23,18 @@
 
         <div class="col s10">
 
-    <div class="row margintop-50">
-        <div class="col s12 m8 offset-m2">
+     <div class="row margintop-50">
+        <div class="col s12 m6 offset-m3"> 
             <div class="row">
             {% for dept in depts %}
-            {% if loop.index % 2 != 0 %}
-            <div class="col s4">
-                <div class="dep-box1 matt-black">
+            <div class="col s4 center-align">
+                <div>
                     <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
+                    <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">                    
                         <p class="center-align offwhite">{{ dept.dept_name }}</p>
-                        <div class="secondary-content">
-                            <i class="fas fa-angle-right offwhite"></i></div>
                     </a>
                 </div>
             </div>
-            {% else %} 
-            <div class="col s4">
-                <div class="dep-box matt-black">
-                    <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
-                        <p class="center-align offwhite">{{ dept.dept_name }}</p>
-                        <div class="secondary-content">
-                            <i class="fas fa-angle-right offwhite"></i></div>
-                    </a>
-                </div>
-            </div>
-            {% endif %} 
         {% endfor %}
             </div>
         </div>

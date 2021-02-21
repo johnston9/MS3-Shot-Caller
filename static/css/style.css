@@ -186,6 +186,10 @@
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 
+.antiquewhite {
+    color: antiquewhite;
+}
+
 .blue-sea {
     color: #0087BE;
 }
@@ -260,6 +264,15 @@
 
 .select-wrapper #department_name {
     color: #F5F5F5;
+}
+
+.select-wrapper input.select-dropdown {
+    color: white;
+    }
+
+.input-field .prefix ~ label {
+    color: antiquewhite;
+    margin-left: 3rem;
 }
 
 
