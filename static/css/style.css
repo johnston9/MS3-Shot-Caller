@@ -2,6 +2,25 @@
 .row {
     margin-bottom: 0px;
 }
+.sidepic-l {
+    height: 120px;
+    background-image: url("./images/lit-l.png");
+    background-size: cover;
+    /*background-position: right top;*/
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.sidepic-r {
+    height: 120px;
+    /*width: 50px;
+    margin-top: 30px;*/
+    background-image: url("./images/lit-r.png");
+    background-size: cover;
+    /*background-position: right top;*/
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
 
 .panel-leftImg {
     height: 300px;
@@ -113,6 +132,14 @@
     margin-bottom: 0 ;
 }
 
+.no-padRight {
+    padding-right: 0 !important;
+}
+
+.no-padLeft {
+    padding-left: 0 !important;
+}
+
 .left-pad {
     padding: 0px 0px 0px 10px !important;
 }
@@ -142,8 +169,13 @@
     margin-bottom: 15px;
 }
 
+.long-boxl {
+    color: crimson;
+    margin-top: 80px;
+}
+
 .long-box {
-    background-color: #3b444b;
+    color: crimson;
     margin-top: 50px;
 }
 
