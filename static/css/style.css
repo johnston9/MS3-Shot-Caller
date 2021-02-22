@@ -179,6 +179,14 @@
     margin-top: 50px;
 }
 
+.long-boxl p {
+    font-weight: 700;
+}
+
+.long-box p {
+    font-weight: 700;
+}
+
 .login-box {
     background-color: #3b444b;
     margin-bottom: 15px;
@@ -299,10 +307,6 @@
     color: crimson;
 }
 
-.long-box .right p {
-    font-size: smaller;
-    font-weight: 400;
-}
 
 /*----------add message/edit message-------------*/
 
@@ -344,14 +348,23 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .noload {
-        display: none !important;
-    }
 
     .smallPanel-l {
     background-image: url(./images/door66l.png);
     height: 70px;
     }
+
+    .long-boxl p {
+    font-weight: 400;
+    font-size: 10px !important;
+    }
+
+.long-box p {
+    font-weight: 400;
+    font-size: 10px !important;
+    }
+
+
 }
 
 @media only screen and (max-width: 800px) {
