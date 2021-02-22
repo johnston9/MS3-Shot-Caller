@@ -216,6 +216,10 @@
     text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6);
 }
 
+.link-color {
+    color: rgb(143, 212, 241);
+}
+
 .antiquewhite {
     color: antiquewhite;
 }
@@ -310,16 +314,12 @@
 
 /*----------add message/edit message-------------*/
 
-.select-wrapper #department_name {
-    color: #F5F5F5;
-}
-
 .select-wrapper input.select-dropdown {
-    color: white;
+    color: antiquewhite;
     }
 
 .input-field .prefix ~ label {
-    color: antiquewhite;
+    color: rgb(143, 212, 241);
     margin-left: 3rem;
 }
 
@@ -341,11 +341,11 @@
 }
 
 /*-------------media queries---------*/
-@media only screen and (max-width: 420px) {
+/*@media only screen and (max-width: 420px) {
     .box {
         float: left !important;
     }
-}
+}*/
 
 @media only screen and (max-width: 600px) {
 

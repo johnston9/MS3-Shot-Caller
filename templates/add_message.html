@@ -38,10 +38,12 @@
 
         <div class="col s10">
 
+            <h5 class="antiquewhite center-align">Enter Message</h5>
+
             <div class="row">
                 <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
                     <!--select department-->
-                    <div class="row">
+                    <div class="row margintop-20">
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-minus prefix blue-sky"></i>
                             <select id="department_name" name="department_name" class="validate" required>
@@ -110,6 +112,16 @@
                         </div>
                     </div>
                 </form>
+            </div>
+
+            <div class="row">
+                <div class="col s10 offset-s1 m8 offset-m2">
+                    <p class="find antiquewhite center-align">To upload an image simply create an image url with 
+                        <span><a class="link-color" href="https://cloudinary.com/" target="_blank">Cloudinary</a></span>
+                        or a similar url generating site and enter it in the image SRC input box below. Please 
+                        also enter an specific image reference tag, e.g. "nickApartmentOption1" for future use.
+                    </p>
+                </div>
             </div>
 
         </div>

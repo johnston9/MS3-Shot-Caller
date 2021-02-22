@@ -3,13 +3,13 @@
 
     <!--top-box with red "Shot Caller" sides decoration-->
     <div class="row">
-
+    
         <div class="col s1 offset-s1 m1 offset-m3">
             <div class="long-boxl">
                 <p>S<br>H<br>O<br>T</p>
             </div>
         </div>
-
+    
         <div class="col s6 offset-s1 m4">
             <div class="login-box">
                 <div class="row">
@@ -22,31 +22,33 @@
                 </div>
             </div>
         </div>
-
+    
         <div class="col s1 offset-s1 m1">
             <div class="long-box right">
                 <p>C<br>A<br>L<br>L<br>E<br>R</p>
             </div>
         </div>
     </div>
-
+    
     <!--panel-left-->
     <div class="row">
         <div class="col s1">
             <div class="panel-leftAdd"></div>
         </div>
-
+    
         <div class="col s10">
 
+            <!--form-->
             <div class="row">
-                <form class="card-panel matt-black offwhite col s12 m8 offset-m2" method="POST" action="{{ url_for('add_image') }}">
-                    
+                <form class="card-panel matt-black offwhite col s12 m8 offset-m2" method="POST"
+                    action="{{ url_for('add_image') }}">
+    
                     <!--enter image_name-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-minus prefix blue-text text-darken-4"></i>
-                            <input id="image_name" name="image_name" minlength="1"
-                                type="text" class="validate" style="color:whitesmoke !important;" required>
+                            <input id="image_name" name="image_name" minlength="1" type="text" class="validate"
+                                style="color:whitesmoke !important;" required>
                             <label for="image_name">Image Name Ref Tag</label>
                         </div>
                     </div>
@@ -54,8 +56,7 @@
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-minus prefix blue-text text-darken-4"></i>
-                            <input id="image_des" name="image_des" minlength="1"
-                                type="text" class="validate" required>
+                            <input id="image_des" name="image_des" minlength="1" type="text" class="validate" required>
                             <label for="image_des">Image Description</label>
                         </div>
                     </div>
@@ -63,12 +64,12 @@
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-minus prefix blue-text text-darken-4"></i>
-                            <input id="image_src" name="image_src" minlength="20"
-                                type="text" class="validate">
+                            <input id="image_src" name="image_src" minlength="20" type="text" class="validate">
                             <label for="image_src">Image SRC</label>
                         </div>
                     </div>
 
+                    <!--submit-->
                     <div class="row">
                         <div class="center-align">
                             <button type="submit" class="btn-small body-back text-shadow">
@@ -78,13 +79,14 @@
                     </div>
                 </form>
             </div>
-
+    
         </div>
-
+    
+        <!--panel right-->
         <div class="col s1">
             <div class="panel-rightAdd"></div>
         </div>
-
+    
     </div>
 
 {% endblock %}
