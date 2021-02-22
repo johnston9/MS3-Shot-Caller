@@ -26,11 +26,7 @@
                     <li><a href="{{ url_for('add_message') }}">Add Message</a></li>
                     <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>
-                    {% if session.user|lower == "admin"|lower %}
-                        <li><a href="#">Manage Site</a></li>
-                    {% endif %}    
-                {% endif %}
-                
+                {% endif %}               
             </ul>
             </div>
         </nav>
@@ -38,12 +34,13 @@
         <!--sidenav-->
         <ul class="sidenav matt-black" id="mobile-demo">
             {% if session.user %}
-                <li><h4 class="center-align aqua">Shot Caller</h4></li>
-                <li><a href="{{ url_for('get_depts') }}">Home</a></li>
-                <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
-                <li><a href="{{ url_for('logout') }}">Log Out</a></li> 
-            {% endif %} 
-            <li><a href="#">Manage Site</a></li>         
+                <li><h4 class="center-align blue-sea">Shot Caller</h4></li>
+                <li><a href="{{ url_for('get_depts') }}">Departments</a></li>
+                    <li><a href="{{ url_for('get_image') }}">Images</a></li>
+                    <li><a href="{{ url_for('add_message') }}">Add Message</a></li>
+                    <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
+                    <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+            {% endif %}         
         </ul>
     </header>
 
