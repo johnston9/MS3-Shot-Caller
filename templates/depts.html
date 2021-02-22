@@ -5,8 +5,8 @@
         
         <div class="col s1 offset-s1 m1 offset-m3">
               <div class="long-boxl">
-                 <p>
-          S<br>h<br>o<br>t</p>
+                 <p><strong>
+          S<br>H<br>O<br>T</strong></p>
                 </div>
                 </div>
 
@@ -18,7 +18,7 @@
                         <div class="smallPanel-l"></div>
                     </div>
                     <div class="col s11">
-                <p class="username shadow-light center-align"><strong>Departments</strong></p>
+                <p class="username shadow-light1 center-align"><strong>Departments</strong></p>
                     </div>
                 </div>
             </div>
@@ -27,8 +27,8 @@
 
         <div class="col s1 offset-s1 m1">
               <div class="long-box right">
-                 <p>
-          C<br>a<br>l<br>l<br>e<br>r</p>
+                 <p><strong>
+          C<br>A<br>L<br>L<br>E<br>R</strong></p>
                 </div>
                 </div>
 
@@ -48,7 +48,7 @@
             <div class="row">
             {% for dept in depts %}
             <div class="col s4 center-align">
-                <div>
+                <div class="image-box">
                     <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
                     <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">                    
                         <p class="center-align offwhite">{{ dept.dept_name }}</p>
