@@ -52,39 +52,39 @@
     </div>
 
     <div class="row">
-        <div class="col s6">
-            <a href="{{ url_for('add_message') }}"> 
-                    <h5 class="center-align">
-                    Add Message
-                    </h5>
-            </a>
-        </div>
-        <div class="col s6">
-            <a href="{{ url_for('get_image') }}"> 
-                    <h5 class="center-align">
-                    Search Images
-                    </h5>
-            </a>
-        </div>
+            <div class="col s6 center-align">
+                <p class="center-align find">
+                <a class="antiquewhite" href="{{ url_for('add_message') }}">
+                    Add Message <i class="fas fa-angle-right"></i>
+                </a>
+                </p>
+            </div>
 
+            <div class="col s6 center-align">
+                <p class="center-align find">
+                <a class="antiquewhite" href="{{ url_for('get_image') }}">
+                    Search Images <i class="fas fa-angle-right"></i>
+                </a>
+                </p>
+        </div>
     </div>
 
     <div class="row">
-        <div class="col s6 m6">
+        <div class="col s6 center-align">
             <div class="top-box">
-                <p class="center-align">
+                <p class="center-align find">
                     {% for draft in script %}
-                        <a href="{{ draft.script}}">
+                        <a class="antiquewhite" href="{{ draft.script}}">
                             Download Latest Script</a>
                     {% endfor %}  
                         </p>
             </div>
         </div>
-        <div class="col s6">
+        <div class="col s6 center-align">
             <div class="top-box">
-                <p class="center-align shadow-light crimson">
+                <p class="center-align find">
                     {% for shot in shotlist %}
-                        <a href="{{ shot.shotlist}}">
+                        <a class="antiquewhite" href="{{ shot.shotlist}}">
                             Download Latest Shotlist</a>
                     {% endfor %}  
                         </p>
@@ -95,34 +95,34 @@
     {% if session.user|lower == "admin"|lower %}
         <div class="row">
             <div class="col s4">
+                <div class="top-box">
+                <h5 class="center-align find">
                     {% for draft in script %}
                         <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
-                            <div class="top-box">
-                                <h5 class="center-align">
                                 Upload New Script
-                                </h5>
-                            </div>
                         </a>
+                </h5>
+                </div>
                     {% endfor %} 
             </div>
 
             <div class="col s4">
+                <div class="top-box">
+                <h5 class="center-align find">
                     <a href="{{ url_for('add_shot') }}"> 
-                        <div class="top-box">
-                            <h5 class="center-align">
                             Upload New Shotlist
-                            </h5>
-                        </div>
                     </a>
+                </h5>
+                </div>
             </div>
             <div class="col s4">
+                <div class="top-box">
+                <h5 class="center-align find">
                     <a href="{{ url_for('add_image') }}"> 
-                        <div class="top-box">
-                            <h5 class="center-align">
                             Upload New Images
-                            </h5>
-                        </div>
                     </a>
+                </h5>
+                </div>
             </div>
 
         </div>

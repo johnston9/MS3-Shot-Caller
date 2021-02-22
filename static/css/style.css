@@ -187,26 +187,12 @@
     padding: 14px 10px 10px 10px;   
 }
 
-.pic img {
-    width: 100%;
-    height: auto;
-}
-
 .username {
     font-size: 36px;
 }
 
-.collapsible-body .pic img {
-    width: 300px;
-    height: auto;
-}
-
 .card-250 {
     height: 110px;
-}
-
-.dep-title {
-    padding: 10px;
 }
 
 .btn-small {
@@ -287,12 +273,28 @@
 }
 
 /*---------user base page----------*/
+
+
+/*---------------dep page-----------*/
+.collapsible-body .pic img {
+    width: 300px;
+    height: auto;
+}
+
+.dep-title {
+    padding: 10px;
+}
+
 .dep-img {
     width: 100px;
     height: 100px;
 }
 
-/*---------------messages-----------*/
+.find a:hover {
+    color: crimson;
+}
+
+/*----------add message/edit message-------------*/
 
 .select-wrapper #department_name {
     color: #F5F5F5;
@@ -312,6 +314,16 @@
 
 #explain {
     padding: 2px 20px 2px 20px;
+}
+
+.pic img {
+    width: 100%;
+    height: auto;
+}
+
+.pic {
+    border-top: 2px solid crimson;
+    padding-top: 10px;
 }
 
 /*-------------media queries---------*/

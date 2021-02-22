@@ -50,15 +50,19 @@
 
         <div class="row">
             <div class="col s6 center-align">
-                <a href="{{ url_for('get_all', dep=dep) }}">
-                    <p class="antiquewhite center-align">Find All</p>
+                <p class="center-align find">
+                <a class="antiquewhite" href="{{ url_for('get_all', dep=dep) }}">
+                    Find All <i class="fas fa-angle-right"></i>
                 </a>
+                </p>
             </div>
 
-            <div class="col s6 center-align">
-                <a href="{{ url_for('get_poster', dep=dep) }}">
-                    <p class="antiquewhite center-align">Find by Poster <i class="fas fa-angle-right"></i></p>
+            <div class="col s6 center-align find">
+                <p class="center-align find">
+                <a class="antiquewhite" href="{{ url_for('get_poster', dep=dep) }}">
+                    Find by Poster <i class="fas fa-angle-right"></i>
                 </a>
+                </p>
         </div>
     </div>
 

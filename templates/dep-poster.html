@@ -49,14 +49,25 @@
                     </div>
                 </form>
             </div>
-
-
         </div>
 
-        <a href="{{ url_for('get_dep', dep=dep) }}">
-            <p class="light-blue-text text-darken-4 center-align">Find by Date <i
-                    class="fas fa-angle-right"></i></p>
-        </a>
+        <div class="row">
+            <div class="col s6 center-align">
+                <p class="center-align find">
+                <a class="antiquewhite" href="{{ url_for('get_all', dep=dep) }}">
+                    Find All <i class="fas fa-angle-right"></i>
+                </a>
+                </p>
+            </div>
+        <div class="col s6 center-align find">
+                <p class="center-align find">
+                <a class="antiquewhite" href="{{ url_for('get_dep', dep=dep) }}">
+                    Find by Date <i
+                    class="fas fa-angle-right"></i>
+                </a>
+                </p>
+        </div>
+        </div>
 
         <!--messages-->
         {% for message in depart %}
