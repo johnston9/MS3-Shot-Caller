@@ -98,11 +98,17 @@
                     {% endif %}
                 </div>
                 <div class="collapsible-body matt-black offwhite">
-                    <p>{{ message.message }}</p>
+                    
+                    <p class="center-align">{{ message.message }}</p>
                     {% if message.image_src %}
-                    <div class="pic">
-                        <img src=" {{ message.image_src }} " alt="{{ message.image_des }}">
-                        <p> {{ message.image_des }} </p>
+                    <div class="row margintop-20">
+                        <div class="col s12 m8 offset-m2">
+                            <div class="message-pic">
+                            <img class="center-align margintop-20" src=" {{ message.image_src }} " alt="{{ message.image_name }}">
+                        <p> {{ message.image_name }} </p>
+                        </div>
+                            
+                        </div>
                     </div>
                     {% endif %}
                     <p class="center-align">
@@ -110,11 +116,11 @@
                     {% if session.user|lower == message.username|lower %}
                     <p>
                         <a href="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}"
-                            class="btn-small">
+                            class="btn-small blueBack-sea">
                             Edit <i class="fas fa-pen-fancy"></i></a>
 
                         <!------new mat-->
-                        <button data-target="modal{{ loop.index }}" class="btn modal-trigger">Delete</button>
+                        <button data-target="modal{{ loop.index }}" class=" right blueBack-sea btn modal-trigger">Delete</button>
                         <!-- Modal Structure -->
                     <div id="modal{{ loop.index }}" class="modal">
                         <div class="modal-content">

@@ -180,7 +180,7 @@ def add_message():
             "subject": request.form.get("subject"),
             "message": request.form.get("message"),
             "image_src": request.form.get("image_src"),
-            "image_des": request.form.get("image_des"),
+            "image_name": request.form.get("image_name"),
             "is_priority": mes_is_priority,
         }
         mongo.db[mes_dept].insert_one(message)
@@ -199,6 +199,7 @@ def edit_message(message_id, depart):
         mes_date = day.strftime("%d %B, %Y")
         mes_dept = request.form.get("department_name")
         user = mongo.db.users.find_one({"username": session["user"]})
+        username = session["user"]
         first = user["firstname"]
         last = user["lastname"]
         mes_poster = f"{first} {last}"
@@ -207,11 +208,12 @@ def edit_message(message_id, depart):
             "dept_name": mes_dept,
             "date": mes_date,
             "poster": mes_poster,
+            "username": username,
             "job_title": mes_job,
             "subject": request.form.get("subject"),
             "message": request.form.get("message"),
             "image_src": request.form.get("image_src"),
-            "image_des": request.form.get("image_des"),
+            "image_name": request.form.get("image_name"),
             "is_priority": mes_is_priority,
         }
         mongo.db[mes_dept].update({"_id": ObjectId(message_id)}, edit)

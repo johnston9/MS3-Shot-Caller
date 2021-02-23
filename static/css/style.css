@@ -311,7 +311,16 @@
     color: crimson;
 }
 
+.message-pic {
+    border-top: 2px solid crimson;
+    padding-top: 10px;
+}
 
+.message-pic img {
+    width: 100%;
+    height: auto;
+}
+    
 /*----------add message/edit message-------------*/
 
 .select-wrapper input.select-dropdown {
