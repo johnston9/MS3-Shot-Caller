@@ -70,12 +70,12 @@
                 <div class="col s12 m6 offset-m3">
                     <h5 class="margintop-20 center-align offwhite">Log In</h5>
                     <form method="POST" action="{{ url_for('login') }}">
-                        <div class="login-form margintop-100">
+                        <div class="login-form margintop-50">
                             <!-- username -->
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="username" name="username" type="text" minlength="5" maxlength="16"
-                                        pattern="^[a-zA-Z0-9]{5,16}$" class="validate" required>
+                                        pattern="^[a-zA-Z0-9]{5,16}$" class="validate" style="color:whitesmoke !important;" required>
                                     <label for="username">Username</label>
                                 </div>
                             </div>
@@ -83,14 +83,14 @@
                             <div class="row">
                                 <div class="input-field col s12">
                                     <input id="password" name="password" type="password" minlength="5" maxlength="16"
-                                        pattern="^[a-zA-Z0-9]{5,16}$" class="validate" required>
+                                        pattern="^[a-zA-Z0-9]{5,16}$" class="validate" style="color:whitesmoke !important;" required>
                                     <label for="password">Password</label>
                                 </div>
                             </div>
                             <!-- login button-->
                             <div class="row center-align">
-                                <button type="submit" class="col s6 offset-s3 btn-small login-back text-shadow">
-                                    Log In <i class="fas fa-arrow-right"></i>
+                                <button type="submit" class="col s6 offset-s3 btn-small text-shadow">
+                                    Log In
                                 </button>
                             </div>
                         </div>
@@ -101,7 +101,7 @@
             <div class="row">
                 <div class="col s12 or-login">
                     <p class="center-align">
-                        <a href="{{ url_for('register') }}" class="offwhite">Register here</a>
+                        <a href="{{ url_for('register') }}" class="blue-sky">Register here <i class="fas fa-arrow-right"></i></a>
                     </p>
                 </div>
             </div>

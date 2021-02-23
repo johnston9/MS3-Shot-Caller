@@ -2,25 +2,21 @@
 .row {
     margin-bottom: 0px;
 }
-.sidepic-l {
+/*.sidepic-l {
     height: 120px;
     background-image: url("./images/lit-l.png");
     background-size: cover;
-    /*background-position: right top;*/
     background-repeat: no-repeat;
     margin: 0 auto;
 }
 
 .sidepic-r {
     height: 120px;
-    /*width: 50px;
-    margin-top: 30px;*/
     background-image: url("./images/lit-r.png");
     background-size: cover;
-    /*background-position: right top;*/
     background-repeat: no-repeat;
     margin: 0 auto;
-}
+}*/
 
 .panel-leftImg {
     height: 300px;
@@ -44,34 +40,11 @@
     margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: cover;
-    /*background-position: right top;*/
     background-repeat: no-repeat;
     margin: 0 auto;
 }
 
 .panel-right {
-    height: 300px;
-    width: 50px;
-    margin-top: 30px;
-    background-image: url("./images/door66.png");
-    background-size: cover;
-    background-position: right top;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-}
-
-.panel-leftAdd {
-    height: 300px;
-    width: 50px;
-    margin-top: 30px;
-    background-image: url("./images/door66l.png");
-    background-size: cover;
-    /*background-position: right top;*/
-    background-repeat: no-repeat;
-    margin: 0 auto;
-}
-
-.panel-rightAdd {
     height: 300px;
     width: 50px;
     margin-top: 30px;
@@ -88,7 +61,6 @@
     margin-top: 30px;
     background-image: url("./images/door66l.png");
     background-size: contain;
-    /*background-position: right top;*/
     background-repeat: no-repeat;
     margin: 0 auto;
 }
@@ -239,6 +211,10 @@
     background-color: aquamarine;
 }
 
+.greentext {
+    color: #26a69a;
+}
+
 .crimson {
     color: crimson;
 }
@@ -332,6 +308,9 @@
     margin-left: 3rem;
 }
 
+.input-field>label {
+    color: rgb(143, 212, 241);
+}
 
 /*---------images page--------------*/
 
