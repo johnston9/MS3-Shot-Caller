@@ -40,6 +40,7 @@
 
             <h5 class="antiquewhite center-align">Enter Message</h5>
 
+            <!--add message form-->
             <div class="row">
                 <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
                     <!--select department-->
@@ -92,6 +93,7 @@
                         </div>
                     </div>
 
+                    <!--is priority switch-->
                     <div class="row">
                         <div class="input-field col s12 m8 offset-m2">
                             <div class="switch">
@@ -104,6 +106,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!--submit-->
                     <div class="row margintop-20">
                         <div class="center-align">
                             <button type="submit" class="btn-small offwhite blueBack-sea text-shadow">
@@ -114,6 +118,7 @@
                 </form>
             </div>
 
+            <!--instructions-->
             <div class="row">
                 <div class="col s10 offset-s1 m8 offset-m2">
                     <p class="find antiquewhite center-align">To upload an image simply create an image url with 
@@ -127,6 +132,7 @@
 
         </div>
 
+        <!--panel right-->
         <div class="col s1">
             <div class="panel-rightAdd"></div>
         </div>
