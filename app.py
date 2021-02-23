@@ -104,12 +104,14 @@ def get_depts():
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])
 def get_dep(dep):
     dep = dep
-    depart = list(mongo.db[dep].find())
     day = datetime.datetime.now()
     today = day.strftime("%d %B, %Y")
+    depart = list(mongo.db[dep].find({"date": today}))
     if request.method == "POST":
         date = request.form.get("date")
-        print(date)
+        depart = list(mongo.db[dep].find(
+            {"date": date}))
+
         return render_template(
             "dep.html", dep=dep, depart=depart, date=date, day=date)
     return render_template(
@@ -120,12 +122,12 @@ def get_dep(dep):
 def get_poster(dep):
     dep = dep
     if request.method == "POST":
-        x = request.form.get("poster").lower()
+        poster = request.form.get("poster").lower()
         depart = list(mongo.db[dep].find(
-            {"poster": x}))
+            {"poster": poster}))
 
         return render_template(
-            "dep-poster.html", dep=dep, depart=depart)
+            "dep-poster.html", dep=dep, depart=depart, day=poster)
     return render_template(
         "dep-poster.html", dep=dep)
 
@@ -136,7 +138,16 @@ def get_all(dep):
     depart = list(mongo.db[dep].find())
 
     return render_template(
-            "dep-poster.html", dep=dep, depart=depart)
+        "dep.html", dep=dep, depart=depart, day="All Messages")
+
+
+@app.route("/find_all/<dep>", methods=["GET", "POST"])
+def find_all(dep):
+    dep = dep
+    depart = list(mongo.db[dep].find())
+
+    return render_template(
+        "dep-poster.html", dep=dep, depart=depart, day="All Messages")
 
 
 @app.route("/get_image/", methods=["GET", "POST"])
