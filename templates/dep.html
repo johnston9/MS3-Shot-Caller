@@ -86,9 +86,9 @@
     
             </div>
     
-            <!--messages-->
-    
             <h5 class="center-align antiquewhite">{{ day }}</h5>
+
+            <!--messages-->
             <ul class="collapsible margintop-20 collapsible-border">
                 {% for message in depart %}
                 <li>
@@ -119,8 +119,8 @@
                         {% endif %}
                         <p class="center-align">
     
-                            <!--Message date-->
-                            {{ message.date }}</p>
+                        <!--Message date-->
+                        {{ message.date }}</p>
     
                         <!--edit/delete-->
                         {% if session.user|lower == message.username|lower %}
@@ -132,7 +132,7 @@
                             <button data-target="modal{{ loop.index }}"
                                 class=" right blueBack-sea btn modal-trigger">Delete</button>
     
-                            <!-- Modal Structure -->
+                        <!-- Modal Structure -->
                         <div id="modal{{ loop.index }}" class="modal">
                             <div class="modal-content">
                                 <h5 class="crimson">Are you sure you want to delete this message?</h5>
