@@ -261,8 +261,8 @@
 }
 
 .collapsible-border {
-    /*border-color: crimson;*/
-    border-color: rgb(143, 212, 241);
+    border-color: crimson;
+    /*border-color: rgb(143, 212, 241);*/
 }
 
 /*---------user base page----------*/
