@@ -38,109 +38,109 @@
 
         <div class="col s10">
 
-    <div class="row margintop-20">
-        <div class="col s12 m8 offset-m2">
-                <h5 class="antiquewhite center-align">
-                Find Department Messages
-                </h5>
-        </div>
-    </div>
-
-    <div class="row margintop-50">
-        <div class="col s12 m6 offset-m3"> 
-            <div class="row">
-            {% for dept in depts %}
-            <div class="col s4 center-align">
-                <div>
-                    <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
-                    <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">                    
-                        <p class="center-align offwhite">{{ dept.dept_name }}</p>
-                    </a>
-                </div>
-            </div>
-        {% endfor %}
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-            <div class="col s6 center-align">
-                <p class="center-align find">
-                <a class="antiquewhite" href="{{ url_for('add_message') }}">
-                    Add Message <i class="fas fa-angle-right"></i>
-                </a>
-                </p>
-            </div>
-
-            <div class="col s6 center-align">
-                <p class="center-align find">
-                <a class="antiquewhite" href="{{ url_for('get_image') }}">
-                    Search Images <i class="fas fa-angle-right"></i>
-                </a>
-                </p>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col s6 center-align">
-            <div class="top-box">
-                <p class="center-align find">
-                    {% for draft in script %}
-                        <a class="antiquewhite" href="{{ draft.script}}">
-                            Download Latest Script</a>
-                    {% endfor %}  
-                        </p>
-            </div>
-        </div>
-        <div class="col s6 center-align">
-            <div class="top-box">
-                <p class="center-align find">
-                    {% for shot in shotlist %}
-                        <a class="antiquewhite" href="{{ shot.shotlist}}">
-                            Download Latest Shotlist</a>
-                    {% endfor %}  
-                        </p>
-            </div>
-        </div>
-    </div>
-
-    {% if session.user|lower == "admin"|lower %}
-        <div class="row">
-            <div class="col s4">
-                <div class="top-box">
-                <h5 class="center-align find">
-                    {% for draft in script %}
-                        <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
-                                Upload New Script
-                        </a>
-                </h5>
-                </div>
-                    {% endfor %} 
-            </div>
-
-            <div class="col s4">
-                <div class="top-box">
-                <h5 class="center-align find">
-                    <a href="{{ url_for('add_shot') }}"> 
-                            Upload New Shotlist
-                    </a>
-                </h5>
-                </div>
-            </div>
-            <div class="col s4">
-                <div class="top-box">
-                <h5 class="center-align find">
-                    <a href="{{ url_for('add_image') }}"> 
-                            Upload New Images
-                    </a>
-                </h5>
+            <div class="row margintop-20">
+                <div class="col s12 m8 offset-m2">
+                        <h5 class="antiquewhite center-align">
+                        Find Department Messages
+                        </h5>
                 </div>
             </div>
 
-        </div>
-    {% endif %} 
+            <div class="row margintop-50">
+                <div class="col s12 m6 offset-m3"> 
+                    <div class="row">
+                    {% for dept in depts %}
+                    <div class="col s4 center-align">
+                        <div class="loop-box">
+                            <a href="{{ url_for('get_dep', dep=dept.dept_name) }}">
+                            <img class="dep-img" src="{{ dept.dept_url }}" alt="{{ dept.dept_name }}">                    
+                                <p class="center-align offwhite">{{ dept.dept_name }}</p>
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+                    </div>
+                </div>
+            </div>
 
-    </div>
+            <hr class="red-line">
+
+            <!---add message and search image links-->
+            <div class="row margintop-50">
+                <div class="col s12 m6 center-align find">
+                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_message') }}">
+                        Add Message </a>
+                </div>
+                <div class="col s12 m6 center-align find">
+                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('get_image') }}">
+                        Search Images </a>
+                </div>
+            </div>
+
+            <!---downloads-->
+
+            <div class="row margintop-20">
+                <div class="col s6">
+                    <div class="left">
+                        <h5 class="center-align find">
+                            {% for draft in script %}
+                                <a class="link-color" href="{{ draft.script}}">
+                                    <strong>
+                                    Download Latest Script <i class="fas fa-angle-right"></i></strong></a>
+                            {% endfor %}  
+                                    </h5>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="right">
+                        <h5 class="center-align find">
+                            {% for shot in shotlist %}
+                                <a class="link-color" href="{{ shot.shotlist}}">
+                                    <strong>
+                                    Download Latest Shotlist <i class="fas fa-angle-right"></i></strong></a>
+                            {% endfor %}  
+                                    </h5>
+                    </div>
+                </div>
+            </div>
+
+            {% if session.user|lower == "admin"|lower %}
+                <div class="row">
+                    <div class="col s4">
+                        <div class="top-box">
+                        <h5 class="center-align find">
+                            {% for draft in script %}
+                                <a href="{{ url_for('add_script', script_id=draft._id) }}"> 
+                                        Upload New Script
+                                </a>
+                        </h5>
+                        </div>
+                            {% endfor %} 
+                    </div>
+
+                    <div class="col s4">
+                        <div class="top-box">
+                        <h5 class="center-align find">
+                            <a href="{{ url_for('add_shot') }}"> 
+                                    Upload New Shotlist
+                            </a>
+                        </h5>
+                        </div>
+                    </div>
+                    <div class="col s4">
+                        <div class="top-box">
+                        <h5 class="center-align find">
+                            <a href="{{ url_for('add_image') }}"> 
+                                    Upload New Images
+                            </a>
+                        </h5>
+                        </div>
+                    </div>
+
+                </div>
+            {% endif %} 
+
+            </div>
 
         <div class="col s1 panel-pad">
             <div class="panel-right"></div>

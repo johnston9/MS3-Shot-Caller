@@ -2,21 +2,107 @@
 .row {
     margin-bottom: 0px;
 }
-/*.sidepic-l {
-    height: 120px;
-    background-image: url("./images/lit-l.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 auto;
+
+hr.red-line {
+    width: 70%;
+    height: 1px;
+    border-width: 0;
+    width: 70%;
+    background-color: crimson;
+    color: crimson;
 }
 
-.sidepic-r {
-    height: 120px;
-    background-image: url("./images/lit-r.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0 auto;
-}*/
+.margin-top {
+    margin-top: 40px;
+}
+
+.margintop-100 {
+    margin-top: 100px;
+}
+
+.margintop-50 {
+    margin-top: 50px;
+}
+
+.margintop-20 {
+    margin-top: 20px;
+}
+
+.no-mar {
+    margin-bottom: 0 ;
+}
+
+.no-padRight {
+    padding-right: 0 !important;
+}
+
+.no-padLeft {
+    padding-left: 0 !important;
+}
+
+.left-pad {
+    padding: 0px 0px 0px 10px !important;
+}
+
+.right-pad {
+    padding: 0px 10px 0px 0px !important;
+}
+
+.username {
+    font-size: 36px;
+}
+
+.card-250 {
+    height: 110px;
+}
+
+.btn-small {
+    margin: 5px;
+}
+
+/*-----container boxes----------*/
+
+.card-panel {
+  margin-top: 20px;  
+}
+
+.top-box {
+    background-color: #3b444b; 
+    margin-bottom: 15px;
+}
+
+.findDep-box {
+    background-color: #0e1111; 
+    margin-bottom: 15px;
+}
+
+.long-boxl {
+    color: crimson;
+    margin-top: 80px;
+}
+
+.long-box {
+    color: crimson;
+    margin-top: 50px;
+}
+
+.long-boxl p {
+    font-weight: 700;
+}
+
+.long-box p {
+    font-weight: 700;
+}
+
+.login-box {
+    background-color: #3b444b;
+    margin-bottom: 15px;
+    margin-top: 40px;
+    color: #F5F5F5; 
+    padding: 14px 10px 10px 10px;   
+}
+
+/*---------image panels----------*/
 
 .panel-leftImg {
     height: 300px;
@@ -84,46 +170,6 @@
     height: 120px;
 }
 
-.margin-top {
-    margin-top: 40px;
-}
-
-.margintop-100 {
-    margin-top: 100px;
-}
-
-.margintop-50 {
-    margin-top: 50px;
-}
-
-.margintop-20 {
-    margin-top: 20px;
-}
-
-.no-mar {
-    margin-bottom: 0 ;
-}
-
-.no-padRight {
-    padding-right: 0 !important;
-}
-
-.no-padLeft {
-    padding-left: 0 !important;
-}
-
-.left-pad {
-    padding: 0px 0px 0px 10px !important;
-}
-
-.right-pad {
-    padding: 0px 10px 0px 0px !important;
-}
-
-.card-panel {
-  margin-top: 20px;  
-}
-
 .smallPanel-r {
     background-image: url("./images/door66.png");
     background-size: cover;
@@ -131,55 +177,8 @@
     height: 100px;
 }
 
-.top-box {
-    background-color: #3b444b; 
-    margin-bottom: 15px;
-}
-
-.findDep-box {
-    background-color: #0e1111; 
-    margin-bottom: 15px;
-}
-
-.long-boxl {
-    color: crimson;
-    margin-top: 80px;
-}
-
-.long-box {
-    color: crimson;
-    margin-top: 50px;
-}
-
-.long-boxl p {
-    font-weight: 700;
-}
-
-.long-box p {
-    font-weight: 700;
-}
-
-.login-box {
-    background-color: #3b444b;
-    margin-bottom: 15px;
-    margin-top: 40px;
-    color: #F5F5F5; 
-    padding: 14px 10px 10px 10px;   
-}
-
-.username {
-    font-size: 36px;
-}
-
-.card-250 {
-    height: 110px;
-}
-
-.btn-small {
-    margin: 5px;
-}
-
 /*---------colours----------*/
+
 .shadow-light {
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
@@ -227,8 +226,12 @@
     background-color: #3b444b;
 }
 
+.border-red {
+    border-left: 3px solid crimson;
+}
+
 .textmatt-black {
-    color: #3b444b;
+    color: #2e5b7e;
 }
 
 .white-back {
@@ -280,8 +283,7 @@
 
 .dep-img {
     width: 100px;
-    height: 100px;
-    border-radius: 25px;
+    height: 75px;
 }
 
 .find a:hover {
@@ -360,6 +362,7 @@
     .dep-img {
     width: 50px;
     height: 50px;
+    border-radius: 25px;
     }
 
     .username {
