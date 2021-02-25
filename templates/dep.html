@@ -45,7 +45,7 @@
                     <form class="" method="POST" action="{{ url_for('get_dep', dep=dep) }}">
                         <div class="input-field">
                             <i class="fas fa-fas fa-calendar-alt prefix light-blue-text text-darken-4"></i>
-                            <input id="date" name="date" type="text" class="datepicker validate" required>
+                            <input id="date" name="date" type="text" class="datepicker validate" style="color:whitesmoke !important;" required>
                             <label for="date">Pick Date</label>
                             <div class="center-align">
                                 <button type="submit" class="btn-small light-blue darken-4 text-shadow">
@@ -60,27 +60,27 @@
             <!--find all messages-->
             <div class="row margintop-20">
                 <div class="col s4 center-align">
-                    <p class="center-align find">
-                        <a class="link-color" href="{{ url_for('get_all', dep=dep) }}">
-                            Find All Messages <i class="fas fa-angle-right"></i>
+                    <p class="blueBack-sea pad-20 center-align find">
+                        <a class="offwhite" href="{{ url_for('get_all', dep=dep) }}">
+                            Find All Messages 
                         </a>
                     </p>
                 </div>
     
                 <!--Add Message-->
                 <div class="col s4">
-                    <p class="center-align find">
-                        <a class="link-color" href="{{ url_for('add_message') }}">
-                            Add Message <i class="fas fa-angle-right"></i>
+                    <p class="blueBack-sea pad-20 center-align find">
+                        <a class="offwhite" href="{{ url_for('add_message') }}">
+                            Add Message
                         </a>
                     </p>
                 </div>
     
                 <!--Find by Poster-->
                 <div class="col s4 center-align">
-                    <p class="center-align find">
-                        <a class="link-color" href="{{ url_for('get_poster', dep=dep) }}">
-                            Find by Poster <i class="fas fa-angle-right"></i>
+                    <p class="blueBack-sea pad-20 center-align find">
+                        <a class="offwhite" href="{{ url_for('get_poster', dep=dep) }}">
+                            Find by Poster
                         </a>
                     </p>
                 </div>
@@ -111,18 +111,24 @@
                             <div class="col s2">
                                 <i class="fas fa-caret-down"></i>
                                 {% if message.is_priority == "on" %}
-                                    <i class="fas fa-exclamation-circle tooltipped" data-position="right"
+                                    <i class=" blue-sea fas fa-exclamation-circle tooltipped" data-position="right"
                                         data-tooltip="PRIORITY!"></i>
                                 {% endif %}
                             </div>
                             <div class="col s6">
-                                <strong>{{ message.poster }}</strong> {{ message.job_title }}
-                            </div>
+                            <strong><span class="caps">{{ message.poster }}</span></strong>&nbsp; &nbsp; - &nbsp; &nbsp; {{ message.job_title }}
+                        </div>
                             <div class="col s4">
                                 {{ message.subject }}
                             </div>
                         </div>
                     <div class="collapsible-body matt-black offwhite">
+                        <p><span class="span-mes">From: &nbsp;</span> <strong><span class="caps">{{ message.poster }}</span></strong> &nbsp;
+                            &nbsp; &nbsp; &nbsp;
+                        <span class="span-mes">Position: &nbsp; &nbsp;</span> {{ message.job_title }}&nbsp; &nbsp;
+                        <span class="span-mes">Sent: &nbsp; &nbsp;</span> {{ message.date }}
+                        </p>
+                        <p><span class="span-mes"><strong>MESSAGE:</strong></span></p>
                         <p class="">{{ message.message }}</p>
     
                         <!-- Message image-->
@@ -138,10 +144,6 @@
                             </div>
                         </div>
                         {% endif %}
-                        <p class="center-align">
-    
-                        <!--Message date-->
-                        {{ message.date }}</p>
     
                         <!--edit/delete-->
                         {% if session.user|lower == message.username|lower %}

@@ -3,13 +3,13 @@
 
     <!--top-box with red "Shot Caller" sides decoration-->
     <div class="row">
-
+    
         <div class="col s1 offset-s1 m1 offset-m3">
             <div class="long-boxl">
                 <p>S<br>H<br>O<br>T</p>
             </div>
         </div>
-
+    
         <div class="col s6 offset-s1 m4">
             <div class="login-box">
                 <div class="row">
@@ -22,31 +22,32 @@
                 </div>
             </div>
         </div>
-
+    
         <div class="col s1 offset-s1 m1">
             <div class="long-box right">
                 <p>C<br>A<br>L<br>L<br>E<br>R</p>
             </div>
         </div>
     </div>
-
+    
     <!--panel-left-->
     <div class="row">
         <div class="col s1">
             <div class="panel-left"></div>
         </div>
-
+    
         <div class="col s10">
-
+    
             <p class="margintop-20 center-align antiquewhite">Enter first name space last name</p>
-
+    
             <!--find poster button-->
             <div class="row margintop-20">
                 <div class="col top-box s10 offset-s1 m6 offset-m3">
                     <form class="" method="POST" action="{{ url_for('get_poster', dep=dep) }}">
                         <div class="input-field">
                             <i class="fas fa-signature prefix light-blue-text text-darken-4"></i>
-                            <input id="poster" name="poster" type="text" class="validate" required>
+                            <input id="poster" name="poster" type="text" class="validate"
+                                style="color:whitesmoke !important;" required>
                             <label for="poster">Enter Poster Name</label>
                             <div class="center-align">
                                 <button type="submit" class="btn-small light-blue darken-4 shadow-light">
@@ -57,7 +58,7 @@
                     </form>
                 </div>
             </div>
-
+    
             <!--find all messages-->
             <div class="row margintop-20">
                 <div class="col s4 center-align">
@@ -67,7 +68,7 @@
                         </a>
                     </p>
                 </div>
-
+    
                 <!--Add Message-->
                 <div class="col s4 center-align">
                     <p class="center-align find">
@@ -76,7 +77,7 @@
                         </a>
                     </p>
                 </div>
-
+    
                 <!--Find by Poster-->
                 <div class="col s4 center-align">
                     <p class="center-align find">
@@ -85,36 +86,43 @@
                         </a>
                     </p>
                 </div>
-
+    
             </div>
-
+    
             <hr class="red-line">
-
+    
             <h5 class="center-align antiquewhite">{{ day }}</h5>
-
+    
             <!--messages-->
             {% for message in depart %}
             <ul class="collapsible collapsible-border">
                 <li>
                     <div class="collapsible-header matt-black offwhite">
-
-                            <div class="col s2">
-                                <i class="fas fa-caret-down"></i>
-                                {% if message.is_priority == "on" %}
-                                    <i class="fas fa-exclamation-circle tooltipped" data-position="right"
-                                        data-tooltip="PRIORITY!"></i>
-                                {% endif %}
-                            </div>
-                            <div class="col s6">
-                                <strong>{{ message.poster }}</strong> {{ message.job_title }}
-                            </div>
-                            <div class="col s4">
-                                {{ message.subject }}
-                            </div>
+    
+                        <div class="col s2">
+                            <i class="fas fa-caret-down"></i>
+                            {% if message.is_priority == "on" %}
+                            <i class=" blue-sea fas fa-exclamation-circle tooltipped" data-position="right"
+                                data-tooltip="PRIORITY!"></i>
+                            {% endif %}
                         </div>
+                        <div class="col s6">
+                            <strong><span class="caps">{{ message.poster }}</span></strong>&nbsp; &nbsp; - &nbsp; &nbsp; {{ message.job_title }}
+                        </div>
+                        <div class="col s4">
+                            {{ message.subject }}
+                        </div>
+                    </div>
                     <div class="collapsible-body matt-black offwhite">
-                        <p class="center-align">{{ message.message }}</p>
-
+                        <p><span class="span-mes">From: &nbsp;</span> <strong><span class="caps">{{ message.poster }}</span></strong> &nbsp;
+                            &nbsp; &nbsp; &nbsp;
+                            <span class="span-mes">Position: &nbsp; </span> {{ message.job_title }}&nbsp; &nbsp;
+                            &nbsp; &nbsp;
+                            <span class="span-mes">Sent: &nbsp;</span> {{ message.date }}
+                        </p>
+                        <p><span class="span-mes"><strong>MESSAGE:</strong></span></p>
+                        <p class="">{{ message.message }}</p>
+    
                         <!-- Message image-->
                         {% if message.image_src %}
                         <div class="row margintop-20">
@@ -128,10 +136,7 @@
                             </div>
                         </div>
                         {% endif %}
-
-                        <!--Message date-->
-                        <p class="">{{ message.date }}</p>
-
+    
                         <!--edit/delete-->
                         {% if session.user|lower == message.username|lower %}
                         <p>
@@ -141,7 +146,7 @@
     
                             <button data-target="modal{{ loop.index }}"
                                 class=" right blueBack-sea btn modal-trigger">Delete</button>
-
+    
                             <!-- Modal Structure -->
                         <div id="modal{{ loop.index }}" class="modal">
                             <div class="modal-content">
@@ -154,21 +159,21 @@
                             </div>
                         </div>
                         </p>
-
+    
                         {% endif %}
-
+    
                     </div>
                 </li>
                 {% endfor %}
             </ul>
-
+    
         </div>
-
+    
         <!--panel right-->
         <div class="col s1">
             <div class="panel-right"></div>
         </div>
-
+    
     </div>
 
 {% endblock %}
