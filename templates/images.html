@@ -76,8 +76,9 @@
             </div>
 
             <!--images-->
+            {% if images |length > 0 %}
             <div class="row">
-                {% if images |length > 0 %}
+                
                 <div class="col s12 m8 offset-m2">
                     <div class="pic">
                         {% for im in images %}
@@ -87,10 +88,11 @@
                     </div>
                 </div>
             </div>
+        
             {% else %}
             <h3 class="crimson matt-black center-align">No Images Found</h3>
             {% endif %}
-
+        
         </div>
  
         <!--panel-right-->
