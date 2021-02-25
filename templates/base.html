@@ -22,7 +22,7 @@
             <ul class="right hide-on-med-and-down">
                 {% if session.user %}
                     <li><a href="{{ url_for('get_depts') }}">Departments</a></li>
-                    <li><a href="{{ url_for('get_image') }}">Images</a></li>
+                    <li><a href="{{ url_for('get_image') }}">Search Images</a></li>
                     <li><a href="{{ url_for('add_message') }}">Add Message</a></li>
                     <li><a href="{{ url_for('user_home', username=session['user']) }}">My Base</a></li>
                     <li><a href="{{ url_for('logout') }}">Log Out</a></li>

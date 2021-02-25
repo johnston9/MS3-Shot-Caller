@@ -3,10 +3,6 @@
     margin-bottom: 0px;
 }
 
-.collapsible {
-    margin: 0;
-}
-
 hr.red-line {
     width: 70%;
     height: 1px;
@@ -267,15 +263,24 @@ hr.red-line {
     color: aquamarine;
 }
 
-.collapsible-border {
-    border-color: #0087BE;
-    /*border-color: rgb(143, 212, 241);*/
-}
-
 /*---------user base page----------*/
+
+.dep-img {
+    width: 250px;
+    height: 150px;
+}
 
 
 /*---------------dep page-----------*/
+
+.collapsible-border {
+    border-color: #0087BE;
+}
+
+.collapsible {
+    margin: 0;
+}
+
 .collapsible-body .pic img {
     width: 300px;
     height: auto;
@@ -283,11 +288,6 @@ hr.red-line {
 
 .dep-title {
     padding: 10px;
-}
-
-.dep-img {
-    width: 100px;
-    height: 75px;
 }
 
 .find a:hover {
@@ -337,8 +337,7 @@ hr.red-line {
 
 /*-------------media queries---------*/
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 600px) {  
     .smallPanel-l {
     background-image: url(./images/door66l.png);
     height: 70px;
@@ -353,17 +352,9 @@ hr.red-line {
     font-weight: 400;
     font-size: 10px !important;
     }
-
-
 }
 
 @media only screen and (max-width: 800px) {
-    .dep-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    }
-
     .username {
         font-size: 16px;
     }
@@ -393,4 +384,41 @@ hr.red-line {
     }
 
 }
+
+/*-------------department images-----------*/
+
+@media only screen and (max-width: 1500px) {
+    .dep-img {
+    width: 200px;
+    height: 150px;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .dep-img {
+    width: 150px;
+    height: 100px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .dep-img {
+    width: 100px;
+    height: 75px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .dep-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    }
+}
+
+
+
+
+
+
 
