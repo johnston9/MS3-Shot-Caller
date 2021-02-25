@@ -88,28 +88,37 @@
 
             </div>
 
+            <hr class="red-line">
+
             <h5 class="center-align antiquewhite">{{ day }}</h5>
 
             <!--messages-->
             {% for message in depart %}
-            <ul class="collapsible margintop-20 collapsible-border">
+            <ul class="collapsible collapsible-border">
                 <li>
                     <div class="collapsible-header matt-black offwhite">
-                        <i class="fas fa-caret-down"></i>
-                        <strong>from ----- {{ message.poster }}</strong> ----- {{ message.job_title }} ----- SUBJECT -
-                        {{ message.subject }}
-                        ------- {% if message.is_priority == "on" %}
-                        <i class="fas fa-exclamation-circle aqua tooltipped" data-position="right"
-                            data-tooltip="PRIORITY!"></i>
-                        {% endif %}
-                    </div>
+
+                            <div class="col s2">
+                                <i class="fas fa-caret-down"></i>
+                                {% if message.is_priority == "on" %}
+                                    <i class="fas fa-exclamation-circle tooltipped" data-position="right"
+                                        data-tooltip="PRIORITY!"></i>
+                                {% endif %}
+                            </div>
+                            <div class="col s6">
+                                <strong>{{ message.poster }}</strong> {{ message.job_title }}
+                            </div>
+                            <div class="col s4">
+                                {{ message.subject }}
+                            </div>
+                        </div>
                     <div class="collapsible-body matt-black offwhite">
                         <p class="center-align">{{ message.message }}</p>
 
                         <!-- Message image-->
                         {% if message.image_src %}
                         <div class="row margintop-20">
-                            <div class="col s12 m8 offset-m2">
+                            <div class="col s10 m6 offset-m3">
                                 <div class="message-pic">
                                     <img class="center-align margintop-20" src=" {{ message.image_src }} "
                                         alt="{{ message.image_name }}">
@@ -119,10 +128,9 @@
                             </div>
                         </div>
                         {% endif %}
-                        <p class="center-align">
-    
+
                         <!--Message date-->
-                        {{ message.date }}</p>
+                        <p class="">{{ message.date }}</p>
 
                         <!--edit/delete-->
                         {% if session.user|lower == message.username|lower %}

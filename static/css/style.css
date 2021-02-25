@@ -3,6 +3,10 @@
     margin-bottom: 0px;
 }
 
+.collapsible {
+    margin: 0;
+}
+
 hr.red-line {
     width: 70%;
     height: 1px;
@@ -264,7 +268,7 @@ hr.red-line {
 }
 
 .collapsible-border {
-    border-color: crimson;
+    border-color: #0087BE;
     /*border-color: rgb(143, 212, 241);*/
 }
 
@@ -332,11 +336,6 @@ hr.red-line {
 }
 
 /*-------------media queries---------*/
-/*@media only screen and (max-width: 420px) {
-    .box {
-        float: left !important;
-    }
-}*/
 
 @media only screen and (max-width: 600px) {
 
