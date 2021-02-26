@@ -213,7 +213,9 @@ def add_message():
 
 @app.route("/edit_message/<message_id>/<depart>", methods=["GET", "POST"])
 def edit_message(message_id, depart):
-    if session["user"]:
+    message = mongo.db[depart].find({"_id": ObjectId(message_id)})
+    user = message.user
+    if session["user"] == user:
         if request.method == "POST":
             mes_is_priority = "on" if request.form.get(
                 "is_priority") else "off"
@@ -250,7 +252,9 @@ def edit_message(message_id, depart):
 
 @app.route("/delete_message/<message_id>/<depart>")
 def delete_message(message_id, depart):
-    if session["user"]:
+    message = mongo.db[depart].find({"_id": ObjectId(message_id)})
+    user = message.user
+    if session["user"] == user:
         mongo.db[depart].remove({"_id": ObjectId(message_id)})
         flash("Message Deleted")
         return redirect(url_for("get_dep", dep=depart))
