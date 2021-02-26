@@ -211,10 +211,9 @@ def add_message():
         return render_template("add_message.html", depts=depts)
 
 
-@app.route("/edit_message/<message_id>/<depart>", methods=["GET", "POST"])
-def edit_message(message_id, depart):
-    message = mongo.db[depart].find({"_id": ObjectId(message_id)})
-    user = message.user
+@app.route(
+    "/edit_message/<message_id>/<depart>/<user>", methods=["GET", "POST"])
+def edit_message(message_id, depart, user):
     if session["user"] == user:
         if request.method == "POST":
             mes_is_priority = "on" if request.form.get(
@@ -250,10 +249,8 @@ def edit_message(message_id, depart):
             "edit_message.html", message=message, depts=depts)
 
 
-@app.route("/delete_message/<message_id>/<depart>")
-def delete_message(message_id, depart):
-    message = mongo.db[depart].find({"_id": ObjectId(message_id)})
-    user = message.user
+@app.route("/delete_message/<message_id>/<depart>/<user>")
+def delete_message(message_id, depart, user):
     if session["user"] == user:
         mongo.db[depart].remove({"_id": ObjectId(message_id)})
         flash("Message Deleted")
@@ -305,6 +302,25 @@ def add_image():
             return redirect(url_for("user_home", username=session["user"]))
 
         return render_template("add_image.html")
+
+
+@app.route("/remove_user", methods=["GET", "POST"])
+def remove_user():
+    if session["user"] == "admin":
+        if request.method == "POST":
+            remove = mongo.db.users.find_one({"firstname": request.form.get("first_name"), "lastname": request.form.get("last_name") })
+            print(remove)
+            flash("User Successfully Removed")
+            return redirect(url_for("user_home", username=session["user"]))
+
+        return render_template("remove_user.html")
+
+
+@app.route("/delete_image", methods=["GET", "POST"])
+def delete_image():
+    if session["user"] == "admin":
+
+        return render_template("delete_image.html")
 
 
 if __name__ == "__main__":

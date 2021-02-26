@@ -41,7 +41,7 @@
             <h5 class="antiquewhite center-align">Enter Message</h5>
 
             <div class="row">
-                <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, message_id=message._id) }}">
+                <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, user=message.username, message_id=message._id) }}">
                     <!--select department-->
                     <div class="row margintop-20">
                         <div class="input-field col s12 m8 offset-m2">
