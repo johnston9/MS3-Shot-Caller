@@ -84,6 +84,14 @@
                         {% for im in images %}
                         <img src=" {{ im.image_src }} " alt="image">
                         <h5 class="center-align offwhite"> {{ im.image_des }} </h5>
+
+                        <!---admin section (only display if sesson user is admin)-->
+                        {% if session.user|lower == "admin"|lower %}
+                        <p>
+
+                        <a href="{{ url_for('edit_image', image_id=im._id) }}"
+                                class="btn-small blueBack-sea pad-20">
+                                Edit</a>
                         <button data-target="modal{{ loop.index }}"
                                 class=" right blueBack-sea btn modal-trigger">Delete</button>
 
@@ -93,11 +101,14 @@
                                 <h3 class="center-align crimson">Confirm Delete Image</h3></strong>
                             </div>
                             <div class="modal-footer">
-                                <button href="{{ url_for('delete_image', image_id=im._id) }}"
-                                    class="pad-50 modal-close left btn-small blueBack-sea">OK</button>
-                                <button href="#" class="pad-50 modal-close btn-small blueBack-sea">No</button>
+                                <a href="{{ url_for('delete_image', image_id=im._id) }}"
+                                    class="pad-50 modal-close left btn-small blueBack-sea">OK</a>
+                                <a href="#" class="pad-50 modal-close btn-small blueBack-sea">No</a>
                             </div>
                         </div>
+                        </p>
+
+                        {% endif %}
   
                         {% endfor %}
                     </div>

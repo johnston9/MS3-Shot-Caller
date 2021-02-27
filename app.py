@@ -181,7 +181,8 @@ def logout():
 def add_message():
     if session["user"]:
         if request.method == "POST":
-            mes_is_priority = "on" if request.form.get("is_priority") else "off"
+            mes_is_priority = "on" if request.form.get(
+                "is_priority") else "off"
             day = datetime.datetime.now()
             mes_date = day.strftime("%d %B, %Y")
             mes_dept = request.form.get("department_name")
@@ -247,6 +248,23 @@ def edit_message(message_id, depart, user):
         depts = mongo.db.depts.find().sort("dept_name", 1)
         return render_template(
             "edit_message.html", message=message, depts=depts)
+
+
+@app.route("/edit_image/<image_id>", methods=["GET", "POST"])
+def edit_image(image_id):
+    if session["user"] == "admin":
+        if request.method == "POST":
+            edit = {
+                "image_name": request.form.get("image_name"),
+                "image_des": request.form.get("image_des"),
+                "image_src": request.form.get("image_src")
+            }
+            mongo.db.images.update({"_id": ObjectId(image_id)}, edit)
+            flash("Image Updated")
+            return redirect(url_for("get_image"))
+
+        image = mongo.db.images.find_one({"_id": ObjectId(image_id)})
+        return render_template("edit_image.html", image=image)
 
 
 @app.route("/delete_message/<message_id>/<depart>/<user>")
@@ -319,9 +337,9 @@ def remove_user():
 @app.route("/delete_image/<image_id>")
 def delete_image(image_id):
     if session["user"] == "admin":
-        mongo.db.images.remove({"_id": ObjectId(image_id)})
-
-        return render_template("images.html")
+        mongo.db.images.delete_one({"_id": ObjectId(image_id)})
+        flash("Image Removed")
+        return redirect(url_for("get_image"))
 
 
 if __name__ == "__main__":
