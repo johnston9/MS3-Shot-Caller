@@ -41,9 +41,29 @@ hr.red-line {
     padding-right: 20px;
 } 
 
+.pad-22 {
+    padding-left: 22px;
+    padding-right: 22px;
+} 
+.pad-25 {
+    padding-left: 25px;
+    padding-right: 25px;
+} 
+
 .pad-30 {
     padding-left: 30px;
     padding-right: 30px;
+} 
+
+.pad-32 {
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+
+.pad-35 {
+    padding-left: 35px;
+    padding-right: 35px;
 } 
 .pad-50 {
     padding-left: 50px;
@@ -378,11 +398,6 @@ span.caps {
     font-weight: 400;
     font-size: 10px !important;
     }
-
-    /*.pad-20 {
-    padding-left: 0px;
-    padding-right: 0px;
-}*/
 }
 
 @media only screen and (max-width: 800px) {

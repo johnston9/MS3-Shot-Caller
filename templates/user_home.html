@@ -56,7 +56,7 @@
                     <!---upload latest script-->
                     <div class="col s12 m6 margintop-10 center-align find">
                     {% for draft in script %}
-                        <a class="btn-small pad-20 offwhite blueBack-sea text-shadow" href="{{ url_for('add_script', script_id=draft._id) }}">
+                        <a class="btn-small pad-25 offwhite blueBack-sea text-shadow" href="{{ url_for('add_script', script_id=draft._id) }}">
                         Upload Script </a>
                     </div>
                     {% endfor %}
@@ -66,13 +66,13 @@
                     <div class="row">
                     <!---upload latest shotlist-->
                     <div class="col s12 m6 center-align margintop-10 find">
-                    <a class="btn-small pad-20 offwhite blueBack-sea text-shadow" href="{{ url_for('add_shot') }}">
+                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_shot') }}">
                         Upload Shotlist </a>
                     </div>
 
                     <!---upload new images-->
                     <div class="col s12 m6 center-align margintop-10 find">
-                    <a class="btn-small pad-20 offwhite blueBack-sea text-shadow" href="{{ url_for('add_image') }}">
+                    <a class="btn-small pad-22 offwhite blueBack-sea text-shadow" href="{{ url_for('add_image') }}">
                         Upload Images </a>
                     </div>
 
@@ -113,11 +113,11 @@
 
             <div class="row margintop-50">
                 <div class="col s12 m4 offset-m2 center-align find">
-                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_message') }}">
+                    <a class="btn-small pad-32 offwhite blueBack-sea text-shadow" href="{{ url_for('add_message') }}">
                         Add Message </a>
                 </div>
                 <div class="col s12 m4 center-align find">
-                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('get_image') }}">
+                    <a class="btn-small pad-25 offwhite blueBack-sea text-shadow" href="{{ url_for('get_image') }}">
                         Search Images </a>
                 </div>
             </div>
