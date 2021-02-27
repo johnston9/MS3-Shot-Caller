@@ -88,11 +88,12 @@ def user_home(username):
         shotlist = list(mongo.db.shotlist.find())
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
-        if session["user"]:
-            return render_template(
-                "user_home.html", username=username,
-                script=script, shotlist=shotlist, depts=depts)
+        return render_template(
+            "user_home.html", username=username,
+            script=script, shotlist=shotlist, depts=depts)
 
+    else:
+        flash("Entry Incorrect")
         return redirect(url_for("login"))
 
  
@@ -101,6 +102,10 @@ def get_depts():
     if session["user"]:
         depts = mongo.db.depts.find()
         return render_template("depts.html", depts=depts)
+
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])
@@ -120,6 +125,10 @@ def get_dep(dep):
         return render_template(
             "dep.html", dep=dep, depart=depart, date=today, day="TODAY")
 
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
+
 
 @app.route("/get_poster/<dep>", methods=["GET", "POST"])
 def get_poster(dep):
@@ -134,6 +143,9 @@ def get_poster(dep):
                 "dep-poster.html", dep=dep, depart=depart, day=poster)
         return render_template(
             "dep-poster.html", dep=dep)
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/get_all/<dep>", methods=["GET", "POST"])
@@ -144,6 +156,9 @@ def get_all(dep):
 
         return render_template(
             "dep.html", dep=dep, depart=depart, day="All Messages")
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/find_all/<dep>", methods=["GET", "POST"])
@@ -154,6 +169,10 @@ def find_all(dep):
 
         return render_template(
             "dep-poster.html", dep=dep, depart=depart, day="All Messages")
+
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/get_image/", methods=["GET", "POST"])
@@ -166,6 +185,10 @@ def get_image():
 
         images = list(mongo.db.images.find({"image_name": "cat"}))
         return render_template("images.html", images=images)
+
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/logout")
@@ -211,6 +234,10 @@ def add_message():
         depts = mongo.db.depts.find().sort("dept_name", 1)
         return render_template("add_message.html", depts=depts)
 
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
+
 
 @app.route(
     "/edit_message/<message_id>/<depart>/<user>", methods=["GET", "POST"])
@@ -248,6 +275,10 @@ def edit_message(message_id, depart, user):
         depts = mongo.db.depts.find().sort("dept_name", 1)
         return render_template(
             "edit_message.html", message=message, depts=depts)
+    
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/edit_image/<image_id>", methods=["GET", "POST"])
@@ -266,6 +297,10 @@ def edit_image(image_id):
         image = mongo.db.images.find_one({"_id": ObjectId(image_id)})
         return render_template("edit_image.html", image=image)
 
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
+
 
 @app.route("/delete_message/<message_id>/<depart>/<user>")
 def delete_message(message_id, depart, user):
@@ -273,6 +308,10 @@ def delete_message(message_id, depart, user):
         mongo.db[depart].remove({"_id": ObjectId(message_id)})
         flash("Message Deleted")
         return redirect(url_for("get_dep", dep=depart))
+    
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/add_script/<script_id>", methods=["GET", "POST"])
@@ -289,6 +328,10 @@ def add_script(script_id):
             return redirect(url_for("user_home", username=session["user"]))
 
         return render_template("add_script.html", script=script)
+    
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/add_shot", methods=["GET", "POST"])
@@ -304,6 +347,10 @@ def add_shot():
             return redirect(url_for("user_home", username=session["user"]))
 
         return render_template("add_shotlist.html")
+
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 @app.route("/add_image", methods=["GET", "POST"])
@@ -321,6 +368,10 @@ def add_image():
 
         return render_template("add_image.html")
 
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
+
 
 @app.route("/remove_user", methods=["GET", "POST"])
 def remove_user():
@@ -333,6 +384,10 @@ def remove_user():
 
         return render_template("remove_user.html")
 
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
+
 
 @app.route("/delete_image/<image_id>")
 def delete_image(image_id):
@@ -340,6 +395,10 @@ def delete_image(image_id):
         mongo.db.images.delete_one({"_id": ObjectId(image_id)})
         flash("Image Removed")
         return redirect(url_for("get_image"))
+
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
 
 
 if __name__ == "__main__":

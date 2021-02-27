@@ -49,34 +49,31 @@
 
                     <!---remove user-->
                     <div class="col s12 m6 margintop-10 center-align find">
-                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('remove_user') }}">
+                    <a class="btn-small pad-30 offwhite blueBack-sea text-shadow" href="{{ url_for('remove_user') }}">
                         Remove User </a>
                     </div>
-
-                <div class="row">
 
                     <!---upload latest script-->
                     <div class="col s12 m6 margintop-10 center-align find">
                     {% for draft in script %}
-                        <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_script', script_id=draft._id) }}">
-                        Upload New Script </a>
+                        <a class="btn-small pad-20 offwhite blueBack-sea text-shadow" href="{{ url_for('add_script', script_id=draft._id) }}">
+                        Upload Script </a>
                     </div>
                     {% endfor %}
 
-                    <!---upload latest shotlist-->
-                    <div class="col s12 m6 center-align margintop-10 find">
-                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_shot') }}">
-                        Upload New Shotlist </a>
-                    </div>
-
                 </div>
 
-                <div class="row center-align">
+                    <div class="row">
+                    <!---upload latest shotlist-->
+                    <div class="col s12 m6 center-align margintop-10 find">
+                    <a class="btn-small pad-20 offwhite blueBack-sea text-shadow" href="{{ url_for('add_shot') }}">
+                        Upload Shotlist </a>
+                    </div>
 
                     <!---upload new images-->
-                    <div class="col s12 center-align margintop-10 find">
-                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_image') }}">
-                        Upload New Images </a>
+                    <div class="col s12 m6 center-align margintop-10 find">
+                    <a class="btn-small pad-20 offwhite blueBack-sea text-shadow" href="{{ url_for('add_image') }}">
+                        Upload Images </a>
                     </div>
 
                 </div>
