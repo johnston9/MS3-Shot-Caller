@@ -308,19 +308,20 @@ def add_image():
 def remove_user():
     if session["user"] == "admin":
         if request.method == "POST":
-            remove = mongo.db.users.find_one({"firstname": request.form.get("first_name"), "lastname": request.form.get("last_name") })
-            print(remove)
+            mongo.db.users.remove({"firstname": request.form.get(
+                "first_name"), "lastname": request.form.get("last_name")})
             flash("User Successfully Removed")
             return redirect(url_for("user_home", username=session["user"]))
 
         return render_template("remove_user.html")
 
 
-@app.route("/delete_image", methods=["GET", "POST"])
-def delete_image():
+@app.route("/delete_image/<image_id>")
+def delete_image(image_id):
     if session["user"] == "admin":
+        mongo.db.images.remove({"_id": ObjectId(image_id)})
 
-        return render_template("delete_image.html")
+        return render_template("images.html")
 
 
 if __name__ == "__main__":

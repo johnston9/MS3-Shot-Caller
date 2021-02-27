@@ -48,23 +48,15 @@
                 <div class="row">
 
                     <!---remove user-->
-                    <div class="col s12 m6 margintop-20 center-align find">
+                    <div class="col s12 m6 margintop-10 center-align find">
                     <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('remove_user') }}">
                         Remove User </a>
                     </div>
 
-                    <!---delete image-->
-                    <div class="col s12 m6 center-align margintop-20 find">
-                    <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('delete_image') }}">
-                        Delete Image </a>
-                    </div>
-
-                </div>
-
                 <div class="row">
 
                     <!---upload latest script-->
-                    <div class="col s12 m6 margintop-20 center-align find">
+                    <div class="col s12 m6 margintop-10 center-align find">
                     {% for draft in script %}
                         <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_script', script_id=draft._id) }}">
                         Upload New Script </a>
@@ -72,7 +64,7 @@
                     {% endfor %}
 
                     <!---upload latest shotlist-->
-                    <div class="col s12 m6 center-align margintop-20 find">
+                    <div class="col s12 m6 center-align margintop-10 find">
                     <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_shot') }}">
                         Upload New Shotlist </a>
                     </div>
@@ -82,86 +74,11 @@
                 <div class="row center-align">
 
                     <!---upload new images-->
-                    <div class="col s12 center-align margintop-20 find">
+                    <div class="col s12 center-align margintop-10 find">
                     <a class="btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('add_image') }}">
                         Upload New Images </a>
                     </div>
 
-                </div>
-
-                <hr class="red-line margintop-50">
-               
-            {% endif %} 
-
-            <!---admin section (only display if sesson user is admin)-->
-            {% if session.user|lower == "admin"|lower %}
-
-                <hr class="red-line">
-
-                <h5 class="center-align antiquewhite">Admin</h5>
-                <div class="row">
-
-                    <!---upload latest script-->
-
-                    <div class="col s4">
-                        <div class="top-box">
-                            <h5 class="center-align find">
-                                {% for draft in script %}
-                                <a href="{{ url_for('add_script', script_id=draft._id) }}">
-                                    Upload New Script
-                                </a>
-                            </h5>
-                        </div>
-                        {% endfor %}
-                    </div>
-
-                    <!---upload latest shotlist-->
-                    <div class="col s4">
-                        <div class="top-box">
-                            <h5 class="center-align find">
-                                <a href="{{ url_for('add_shot') }}">
-                                    Upload New Shotlist
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-
-                    <!---upload new images-->
-                    <div class="col s4">
-                        <div class="top-box">
-                        <h5 class="center-align find">
-                            <a href="{{ url_for('add_image') }}"> 
-                                    Upload New Images
-                            </a>
-                        </h5>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <!---remove user-->
-                    <div class="col s6">
-                        <div class="top-box">
-                            <h5 class="center-align find">
-                                <a href="{{ url_for('remove_user') }}">
-                                    Remove User
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
-
-                    <!---delete image-->
-                    <div class="col s6">
-                        <div class="top-box">
-                            <h5 class="center-align find">
-                                <a href="{{ url_for('delete_image') }}">
-                                    Delete Image
-                                </a>
-                            </h5>
-                        </div>
-                    </div>
                 </div>
 
                 <hr class="red-line margintop-50">
@@ -234,6 +151,8 @@
                     </div>
                 </div>
             </div>
+
+            <hr class="red-line margintop-10">
 
             </div>
 

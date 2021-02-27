@@ -28,6 +28,10 @@ hr.red-line {
     margin-top: 20px;
 }
 
+.margintop-10 {
+  margin-top: 10px;  
+}
+
 .no-mar {
     margin-bottom: 0 ;
 }
@@ -35,6 +39,11 @@ hr.red-line {
 .pad-20 {
     padding-left: 20px;
     padding-right: 20px;
+} 
+
+.pad-50 {
+    padding-left: 50px;
+    padding-right: 50px;
 } 
 
 .no-padRight {
