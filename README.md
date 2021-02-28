@@ -58,8 +58,6 @@ ideas and all work related developements as they happen.
 
 <h2 align="center">Design</h2>
 
----
-
 <h2 align="center">
 <img src="documentation/readme-images/log1.png" width="90%">
 </h2>
@@ -97,33 +95,32 @@ ideas and all work related developements as they happen.
 
 ### Existing Features
 
-- #### Responsive Design
+#### Responsive Design
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
 ---
 
+<p align="center"> Large Screen 1600px</p>
+
 <h2 align="center">
 <img src="documentation/readme-images/post-16.png" width="50%">
 </h2>
 
-<p align="center"> Large Screen 1600px</p>
----
-
+<p align="center">  Medium Screen 1000px</p>
 <h2 align="center">
 <img src="documentation/readme-images/post-md.png" width="50%">
 </h2>
 
-<p align="center">  Medium Screen 1000px</p>
----
 
+
+<p align="center"> Small Screen 370px</p>
 <h2 align="center">
 <img src="documentation/readme-images/post-sm.png" width="25%">
 </h2>
 
-<p align="center"> Small Screen 370px</p>
-
-- #### Login/Register Pages and Security Measures
+---
+#### Login/Register Pages and Security Measures
 
   The user is brought first to the login page. From there they will find a 
   link to register if a new user. One of the core features of the site is it's
@@ -144,14 +141,14 @@ ideas and all work related developements as they happen.
   All other functions in the back-end are protected by ensuring that there is a sesson
   user for them to run, and only registered users would be logged in and set as sesson users.
 
----
+<p align="center">Register Page</p>
 <h2 align="center">
 <img src="documentation/readme-images/reg1.png" width="50%">
 </h2>
 
-<p align="center">Register Page</p>
+---
 
-- #### User Base Page
+#### User Base Page
 
   Once loged in the user is taken to their own User Base page which is the center base
   of the site and along with all other pages had a navbar to take them to any page.
@@ -162,14 +159,14 @@ ideas and all work related developements as they happen.
   This page also allows the user to download the latest script and shotlist, to add messages 
   and provides a link to take them to the images page.
 
----
+<p align="center">User Base Department Choices</p>
 <h2 align="center">
 <img src="documentation/readme-images/depts1.png" width="50%">
 </h2>
 
-<p align="center">User Base Department Choices</p>
+---
 
-  - #### Departments Page
+#### Departments Page
 
   Once the user clicks on a department they are taken to that department 
   Find by Date Page. That day's communications will automatically be displaying and the 
@@ -178,14 +175,14 @@ ideas and all work related developements as they happen.
   They can also click on a link to take them to the Find by Poster Page where they
   can find communications by entering the poster's name.
 
----
+<p align="center">Department Page</p>
 <h2 align="center">
 <img src="documentation/readme-images/dep1.png" width="50%">
 </h2>
 
-<p align="center">Department Page</p>
+---
 
-  - #### Images Page
+#### Images Page
     
     The user here can find images by entering a specific image tag name if they have 
     it or entering a search word relating to the images they wish to see. These image
@@ -196,33 +193,32 @@ ideas and all work related developements as they happen.
     In posting options it also allows, along with the posting of images in the Departments 
     Page for discussion and collaboration.
 
----
+<p align="center">Images Page</p>
 <h2 align="center">
 <img src="documentation/readme-images/hos1.png" width="50%">
 </h2>
 
-<p align="center">Images Page</p>
+---
 
-  - #### Admin Page
+
+#### Admin Page
 
     If the user is admin they will be given the option to delete a user, upload the 
     latest script, upload the latest shotlist or upload new images.
 
----
+<p align="center">Admin Page 1600px</p>
 <h2 align="center">
 <img src="documentation/readme-images/admin1.png" width="50%">
 </h2>
 
-<p align="center">Admin Page 1600px</p>
-
----
-  - This is also fully responsive.
+<p align="center">Admin Page 375px</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/admin2.png" width="50%">
 </h2>
 
-<p align="center">Admin Page 375px</p>
+---
+
 
 
 
