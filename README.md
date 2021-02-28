@@ -72,7 +72,7 @@ ideas and all work related developements as they happen.
   - #### Typography
     - Materialize was used for the site and I kept their inherent font-family style 
       choice with was: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-      Oxygen-Sans, Ubuntu,Cantarell, "Helvetica Neue", sans-serif. This worked perfectly
+      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif. This worked perfectly
       for the style of the site.
 
 
@@ -99,7 +99,6 @@ ideas and all work related developements as they happen.
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
----
 
 <p align="center"> Large Screen 1600px</p>
 
@@ -184,14 +183,14 @@ ideas and all work related developements as they happen.
 
 #### Images Page
     
-    The user here can find images by entering a specific image tag name if they have 
-    it or entering a search word relating to the images they wish to see. These image
-    are only upload by admin so they are intended to be actual style and shooting choices,
-    options of these or looks the creative team are going for. Here the admin can set images for users to know what choices
-    have been made and what looks and themes are being uses In turn this is the means in which the user finds out what choices have been made, i.e. actual location
-    images or colour themes, and therefore devise their own choices accordingly. 
-    In posting options it also allows, along with the posting of images in the Departments 
-    Page for discussion and collaboration.
+  The user here can find images by entering a specific image tag name if they have 
+  it or entering a search word relating to the images they wish to see. These image
+  are only upload by admin so they are intended to be actual style and shooting choices,
+  options of these or looks the creative team are going for. Here the admin can set images for users to know what choices
+  have been made and what looks and themes are being uses In turn this is the means in which the user finds out what choices have been made, i.e. actual location
+  images or colour themes, and therefore devise their own choices accordingly. 
+  In posting options it also allows, along with the posting of images in the Departments 
+  Page for discussion and collaboration.
 
 <p align="center">Images Page</p>
 <h2 align="center">
@@ -203,8 +202,8 @@ ideas and all work related developements as they happen.
 
 #### Admin Page
 
-    If the user is admin they will be given the option to delete a user, upload the 
-    latest script, upload the latest shotlist or upload new images.
+  If the user is admin they will be given the option to delete a user, upload the 
+  latest script, upload the latest shotlist or upload new images.
 
 <p align="center">Admin Page 1600px</p>
 <h2 align="center">
@@ -214,7 +213,7 @@ ideas and all work related developements as they happen.
 <p align="center">Admin Page 375px</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/admin2.png" width="50%">
+<img src="documentation/readme-images/admin2.png" width="25%">
 </h2>
 
 ---
