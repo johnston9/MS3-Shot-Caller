@@ -47,7 +47,7 @@
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="fas minus prefix blue-sea"></i>
                             <select id="department_name" name="department_name" class="validate" required>
-                                <option value="" disabled></option>
+                                <option value="" disabled>Click to select</option>
                                 {% for dep in depts %}
                                     {% if dep.dept_name == message.dept_name %}
                                         <option value="{{ dep.dept_name }}" selected>{{ dep.dept_name }}</option>

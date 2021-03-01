@@ -245,17 +245,32 @@ ideas and all work related developements as they happen.
    - GitHub is used to store the projects code after being pushed from Git.
 1. [Balsamiq:](https://balsamiq.com/)
    - Balsamiq was used to create the [wireframes](https://github.com/johnston9/MS3-Shot-Caller) during the design process.
-1. [Favicon-generator](https://www.favicon-generator.org/)
-   - Favicon-generator was used to create the favicon link.
 1. [Freeformatter](https://www.freeformatter.com/html-formatter.html)
    - Freeformatter was used to tidy up the final code.
 1. [Gauger](https://gauger.io/fonticon/)
    - Gauger was used to create the favicon icon.
 1. [Am-I-Responsive](http://ami.responsivedesign.is/):
-   - Am I Responsive was used to get the responsive sizing landing page image.
+   - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
 
+## Testing
 
+W3C Markup Validator, W3C CSS Validator and JSHint were used to validate every page of the project to ensure there were no errors in the app.
 
+- [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
+  - W3C "Direct Input" option was used on each html page. As Jinja was used throughout the site
+    errors displayed where it was used on each page but no other error displayed.
+    When I validated by URL no errors were shown as seen in the screenshot "W3C entire site by URL"
+
+- [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
+  - W3C 
+
+- [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/ms2-apis)
+  - JSHint was used with "New JavaScript features (ES6)" and "jQuery" checked in the configuration menu.
+    All files were clear of errors and warnings.
+    
+- [PEP8 online check](http://pep8online.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
+  - PEP8 approved the app.py page and all python apart from saying "no newline at end of file"
+    but I researched this and found it was a common result and could be ignored.
 
 
 

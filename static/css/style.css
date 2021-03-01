@@ -3,6 +3,10 @@
     margin-bottom: 0px;
 }
 
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup {
+    color: blue;
+    background-color: transparent;}
+
 hr.red-line {
     width: 70%;
     height: 1px;

@@ -139,7 +139,6 @@
     
                         <!--edit/delete-->
                         {% if session.user|lower == message.username|lower %}
-                        <p>
                             <a href="{{ url_for('edit_message', depart=message.dept_name, user=message.username, message_id=message._id) }}"
                                 class="btn-small blueBack-sea">
                                 Edit <i class="fas fa-pen-fancy"></i></a>
@@ -149,8 +148,8 @@
     
                             <!-- Modal Structure -->
                         <div id="modal{{ loop.index }}" class="modal">
-                            <div class="modal-content"><strong>
-                                <h3 class="center-align crimson">Are you sure you want to delete this message?</h3></strong>
+                            <div class="modal-content">
+                                <h3 class="center-align crimson"><strong>Are you sure you want to delete this message?</strong></h3>
                             </div>
                             <div class="modal-footer">
                                 <a href="{{ url_for('delete_message', depart=message.dept_name, user=message.username, message_id=message._id) }}"
@@ -158,7 +157,6 @@
                                 <a href="#" class="pad-50 modal-close btn-small blueBack-sea">No</a>
                             </div>
                         </div>
-                        </p>
     
                         {% endif %}
     

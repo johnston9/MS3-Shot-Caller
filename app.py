@@ -29,11 +29,11 @@ def login():
 
         if old_user:
             # use Wertzeug to check stored password matches user input
-            if check_password_hash(
-                old_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    return redirect(url_for(
-                        "user_home", username=session["user"]))
+            if check_password_hash(old_user["password"], request.form.get(
+                    "password")):
+                session["user"] = request.form.get("username").lower()
+                return redirect(url_for(
+                    "user_home", username=session["user"]))
             else:
                 # invalid password match
                 flash("Entry Incorrect")
@@ -96,7 +96,7 @@ def user_home(username):
         flash("Entry Incorrect")
         return redirect(url_for("login"))
 
- 
+
 @app.route("/get_depts")
 def get_depts():
     if session["user"]:
@@ -275,7 +275,7 @@ def edit_message(message_id, depart, user):
         depts = mongo.db.depts.find().sort("dept_name", 1)
         return render_template(
             "edit_message.html", message=message, depts=depts)
-    
+
     else:
         flash("Entry Incorrect")
         return redirect(url_for("login"))
@@ -308,7 +308,7 @@ def delete_message(message_id, depart, user):
         mongo.db[depart].remove({"_id": ObjectId(message_id)})
         flash("Message Deleted")
         return redirect(url_for("get_dep", dep=depart))
-    
+
     else:
         flash("Entry Incorrect")
         return redirect(url_for("login"))
@@ -328,7 +328,7 @@ def add_script(script_id):
             return redirect(url_for("user_home", username=session["user"]))
 
         return render_template("add_script.html", script=script)
-    
+
     else:
         flash("Entry Incorrect")
         return redirect(url_for("login"))
