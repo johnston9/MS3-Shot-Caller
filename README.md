@@ -218,6 +218,45 @@ ideas and all work related developements as they happen.
 
 ---
 
+## Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+- [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+
+### Frameworks, Libraries & Programs Used
+
+1. [Materialize:](https://materializecss.com/getting-started.html)
+   - Materialize was used to create the overall framework and it's grid based 
+     format for the site and it's primary responsiveness. Also specific 
+     Materialize features were used throughout which include the, collapsable, 
+     the navbar and sidenav, the modals, the tooltipped feature, the datepickers
+     and the overall styling of the website.
+1. [Font Awesome:](https://fontawesome.com/)
+   - Font Awesome was used throughout the website for the arrow navigation and
+     a number of other icons.
+1. [jQuery:](https://jquery.com/)
+   - jQuery was used along with javascript to initialize the Materialize features.
+1. [Git](https://git-scm.com/)
+   - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+1. [GitHub:](https://github.com/)
+   - GitHub is used to store the projects code after being pushed from Git.
+1. [Balsamiq:](https://balsamiq.com/)
+   - Balsamiq was used to create the [wireframes](https://github.com/johnston9/MS3-Shot-Caller) during the design process.
+1. [Favicon-generator](https://www.favicon-generator.org/)
+   - Favicon-generator was used to create the favicon link.
+1. [Freeformatter](https://www.freeformatter.com/html-formatter.html)
+   - Freeformatter was used to tidy up the final code.
+1. [Gauger](https://gauger.io/fonticon/)
+   - Gauger was used to create the favicon icon.
+1. [Am-I-Responsive](http://ami.responsivedesign.is/):
+   - Am I Responsive was used to get the responsive sizing landing page image.
+
+
+
+
 
 
 
