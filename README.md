@@ -17,6 +17,31 @@ as a product on an individual basis for each new production and owner.
 
 <h2 align="center"><img src="documentation/readme-images/user16.png"></h2>
 
+- [User Experience (UX)](#user-experience--ux-)
+  * [User stories](#user-stories)
+    + [First Time User Goals](#first-time-user-goals)
+    + [Returning User Goals](#returning-user-goals)
+    + [Frequent User Goals](#frequent-user-goals)
+- [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Typography](#typography)
+  * [Imagery](#imagery)
+  * [Wireframes](#wireframes)
+- [Existing Features](#existing-features)
+  * [Responsive Design](#responsive-design)
+  * [Login/Register Pages and Security Measures](#login-register-pages-and-security-measures)
+  * [User Base Page](#user-base-page)
+  * [Departments Page](#departments-page)
+  * [Images Page](#images-page)
+  * [Admin Page](#admin-page)
+- [Languages Used](#languages-used)
+- [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+- [Testing](#testing)
+  * [Credits](#credits)
+  * [Code](#code)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # User Experience (UX)
 
@@ -91,11 +116,10 @@ ideas and all work related developements as they happen.
 
    [View on Github](https://github.com/johnston9/MS3-Shot-Caller)
 
-# Features
 
-## Existing Features
+# Existing Features
 
-### Responsive Design
+## Responsive Design
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
@@ -118,7 +142,7 @@ ideas and all work related developements as they happen.
 </h2>
 
 
-### Login/Register Pages and Security Measures
+## Login/Register Pages and Security Measures
 
   The user is brought first to the login page. From there they will find a 
   link to register if a new user. One of the core features of the site is it's
@@ -145,7 +169,7 @@ ideas and all work related developements as they happen.
 </h2>
 
 
-### User Base Page
+## User Base Page
 
   Once loged in the user is taken to their own User Base page which is the center base
   of the site and along with all other pages had a navbar to take them to any page.
@@ -162,7 +186,7 @@ ideas and all work related developements as they happen.
 </h2>
 
 
-### Departments Page
+## Departments Page
 
   Once the user clicks on a department they are taken to that department 
   Find by Date Page. That day's communications will automatically be displaying and the 
@@ -177,7 +201,7 @@ ideas and all work related developements as they happen.
 </h2>
 
 
-### Images Page
+## Images Page
     
   The user here can find images by entering a specific image tag name if they have 
   it or entering a search word relating to the images they wish to see. These image
@@ -194,7 +218,7 @@ ideas and all work related developements as they happen.
 </h2>
 
 
-### Admin Page
+## Admin Page
 
   As discussed above in "decurity Measures" defensive programming will only allow
   access to the admin features if admin is the sesson user and this is inplemented
@@ -213,9 +237,8 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/admin2.png" width="25%">
 </h2>
 
----
 
-## Languages Used
+# Languages Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
@@ -223,7 +246,7 @@ ideas and all work related developements as they happen.
 - [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine))
 
-### Frameworks, Libraries & Programs Used
+# Frameworks, Libraries & Programs Used
 
 1. [Materialize:](https://materializecss.com/getting-started.html)
    - Materialize was used to create the overall framework and it's grid based 
@@ -249,9 +272,9 @@ ideas and all work related developements as they happen.
 1. [Am-I-Responsive](http://ami.responsivedesign.is/):
    - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
 
-## Testing
+# Testing
 
-W3C Markup Validator, W3C CSS Validator and JSHint were used to validate every page of the project to ensure there were no errors in the app.
+W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate every page of the project.
 
 - [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - W3C "Direct Input" option was used on each html page. As Jinja was used throughout the site
@@ -259,7 +282,8 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate every p
     When I validated by URL no errors were shown as seen in the screenshot "W3C entire site by URL"
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
-  - W3C 
+  - W3C showed no errors and only one warning for the hr rule's background colour
+    being the same as it's colour, which was intentional.
 
 - [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/ms2-apis)
   - JSHint was used with "New JavaScript features (ES6)" and "jQuery" checked in the configuration menu.
@@ -273,7 +297,7 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate every p
 
 ## Credits
 
-### Code
+## Code
 
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 
