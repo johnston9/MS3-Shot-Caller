@@ -40,7 +40,7 @@
     
             <p class="margintop-20 center-align antiquewhite">Enter first name space last name</p>
     
-            <!--find poster button-->
+            <!--find poster form-->
             <div class="row margintop-20">
                 <div class="col top-box s10 offset-s1 m6 offset-m3">
                     <form class="" method="POST" action="{{ url_for('get_poster', dep=dep) }}">
@@ -58,31 +58,31 @@
                     </form>
                 </div>
             </div>
-    
+
             <!--find all messages-->
             <div class="row margintop-20">
-                <div class="col s4 center-align">
-                    <p class="center-align find">
-                        <a class="link-color" href="{{ url_for('find_all', dep=dep) }}">
-                            Find All Messages <i class="fas fa-angle-right"></i>
+                <div class="col s4">
+                    <p class="blueBack-sea pad-findl center-align find">
+                        <a class="offwhite" href="{{ url_for('get_all', dep=dep) }}">
+                            All Messages 
                         </a>
                     </p>
                 </div>
     
                 <!--Add Message-->
-                <div class="col s4 center-align">
-                    <p class="center-align find">
-                        <a class="link-color" href="{{ url_for('add_message') }}">
-                            Add Message <i class="fas fa-angle-right"></i>
+                <div class="col s4">
+                    <p class="blueBack-sea pad-findm center-align find">
+                        <a class="offwhite" href="{{ url_for('add_message') }}">
+                            Add Message
                         </a>
                     </p>
                 </div>
     
                 <!--Find by Poster-->
-                <div class="col s4 center-align">
-                    <p class="center-align find">
-                        <a class="link-color" href="{{ url_for('get_dep', dep=dep) }}">
-                            Find by Date <i class="fas fa-angle-right"></i>
+                <div class="col s4">
+                    <p class="blueBack-sea pad-findrd center-align find">
+                        <a class="offwhite" href="{{ url_for('get_poster', dep=dep) }}">
+                            Find by Date
                         </a>
                     </p>
                 </div>

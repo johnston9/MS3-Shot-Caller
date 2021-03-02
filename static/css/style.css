@@ -27,6 +27,22 @@
     margin-bottom: 0px;
 }
 
+.pad-findl {
+    padding: 5px 10px 5px 5px;
+}
+
+.pad-findm {
+    padding: 5px 5px 5px 5px;
+}
+
+.pad-findr {
+    padding: 5px 5px 5px 0px;
+}
+
+.pad-findrd {
+    padding: 5px 5px 5px 10px;
+}
+
 hr.red-line {
     width: 70%;
     height: 1px;

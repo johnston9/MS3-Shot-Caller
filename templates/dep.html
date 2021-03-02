@@ -59,17 +59,17 @@
     
             <!--find all messages-->
             <div class="row margintop-20">
-                <div class="col s4 center-align">
-                    <p class="blueBack-sea pad-20 center-align find">
+                <div class="col s4">
+                    <p class="blueBack-sea pad-findl center-align find">
                         <a class="offwhite" href="{{ url_for('get_all', dep=dep) }}">
-                            Find All Messages 
+                            All Messages 
                         </a>
                     </p>
                 </div>
     
                 <!--Add Message-->
                 <div class="col s4">
-                    <p class="blueBack-sea pad-20 center-align find">
+                    <p class="blueBack-sea pad-findm center-align find">
                         <a class="offwhite" href="{{ url_for('add_message') }}">
                             Add Message
                         </a>
@@ -77,8 +77,8 @@
                 </div>
     
                 <!--Find by Poster-->
-                <div class="col s4 center-align">
-                    <p class="blueBack-sea pad-20 center-align find">
+                <div class="col s4">
+                    <p class="blueBack-sea pad-findr center-align find">
                         <a class="offwhite" href="{{ url_for('get_poster', dep=dep) }}">
                             Find by Poster
                         </a>
