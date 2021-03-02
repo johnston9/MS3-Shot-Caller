@@ -83,7 +83,7 @@ ideas and all work related developements as they happen.
 9. As a Frequent User, I want to collaborate with other user on specific areas of 
    production.
 
-<h3 align="center" style="color: red;">[Back to Table of Content](#table-of-content)</h3>
+[Back to Table of Content](#table-of-content)
 
 # Design
 
@@ -120,6 +120,7 @@ ideas and all work related developements as they happen.
 
    [View on Github](https://github.com/johnston9/MS3-Shot-Caller)
 
+[Back to Table of Content](#table-of-content)
 
 # Existing Features
 
@@ -241,6 +242,7 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/admin2.png" width="25%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
 
 # Languages Used
 
@@ -276,6 +278,8 @@ ideas and all work related developements as they happen.
 1. [Am-I-Responsive](http://ami.responsivedesign.is/):
    - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
 
+[Back to Table of Content](#table-of-content)
+
 # Testing
 
 W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate every page of the project.
@@ -297,16 +301,17 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
   - PEP8 approved the app.py page and all python apart from saying "no newline at end of file"
     but I researched this and found it was a common result and could be ignored.
 
+[Back to Table of Content](#table-of-content)
 
+# Credits
 
-## Credits
-
+[Back to Table of Content](#table-of-content)
 ## Code
 
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 
 
-
+[Back to Table of Content](#table-of-content)
 
 
 
