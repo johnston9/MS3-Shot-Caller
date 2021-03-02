@@ -18,7 +18,7 @@ as a product on an individual basis for each new production and owner.
 <h2 align="center"><img src="documentation/readme-images/user16.png"></h2>
 
 
-<h2 align="center">User Experience (UX)</h2>
+# User Experience (UX)
 
 The business goals are to establish the app as a reputable and reliable tool
 that facilitates film production. It provides a communication platform for all 
@@ -33,21 +33,21 @@ It will allow the user the means to instantaniously both share and recieve
 ideas and all work related developements as they happen.
 
 
-### User stories
+## User stories
 
- - #### First Time User Goals
+ - ### First Time User Goals
 
 1. As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
 2. As a First Time User, I want to find and add communications in my department.
 3. As a First Time User, I want to upload and view images.
 
-  - #### Returning User Goals
+  - ### Returning User Goals
 
 4. As a Returning User, I want to download the latest shotlist and script
 5. As a Returning User, I want to find messages in specific areas.
 6. As a Returning User, I want to edit or delete my communications.
 
-  - #### Frequent User Goals
+  - ### Frequent User Goals
 
 7. As a Frequent User, I want to view communications and see images relating to style, 
    shooting and script choices so I can develop my owm choices accordingly.
@@ -56,46 +56,46 @@ ideas and all work related developements as they happen.
 9. As a Frequent User, I want to collaborate with other user on specific areas of 
    production.
 
-<h2 align="center">Design</h2>
+# Design
 
 <h2 align="center">
 <img src="documentation/readme-images/log1.png" width="90%">
 </h2>
 
-  - #### Colour Scheme
-    - The site aims to be minimal streamlined and slick using an offblack background 
-      colour with blue side image panels and an offwhite text. Crimson and blue tones
-      are used minimally against this for a touch of sophisticated flare especially
-      the site title in crimson letters running downwards on either side of the header box.
+## Colour Scheme
+ - The site aims to be minimal streamlined and slick using an offblack background 
+   colour with blue side image panels and an offwhite text. Crimson and blue tones
+   are used minimally against this for a touch of sophisticated flare especially
+   the site title in crimson letters running downwards on either side of the header box.
 
   
-  - #### Typography
-    - Materialize was used for the site and I kept their inherent font-family style 
-      choice with was: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
-      Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif. This worked perfectly
-      for the style of the site.
+## Typography
+ - Materialize was used for the site and I kept their inherent font-family style 
+   choice with was: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
+   Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif. This worked perfectly
+   for the style of the site.
 
 
-  - #### Imagery
-    - The site was designed to have a minimal straight to business slick slightly cinematic look. This was achieved
-      by the use of right and reversed left narrow side panels on an offblack background.
-      The panels contain an images of a narrow window and it's blue lighting
-      effect which act as a foreground to the complementing seemingly distant dark header box
-      container which also has one of the images to which focus is drawn. The hope is that
-      this achieves a feeling of cinematic lighting and depth.
+## Imagery
+ - The site was designed to have a minimal straight to business slick slightly cinematic look. This was achieved
+   by the use of right and reversed left narrow side panels on an offblack background.
+   The panels contain an images of a narrow window and it's blue lighting
+   effect which act as a foreground to the complementing seemingly distant dark header box
+   container which also has one of the images to which focus is drawn. The hope is that
+   this achieves a feeling of cinematic lighting and depth.
 
-  - #### Wireframes
+## Wireframes
 
-    - PDF – Balsamic was used to design the layout for login, register, user base, 
-      dep messages, images, and the add and admin upload pages.
+ - PDF – Balsamic was used to design the layout for login, register, user base, 
+   department messages, images, and the add and admin pages.
 
-- [View on Github](https://github.com/johnston9/MS3-Shot-Caller)
+   [View on Github](https://github.com/johnston9/MS3-Shot-Caller)
 
-<h2 align="center">Features</h2>
+# Features
 
-### Existing Features
+## Existing Features
 
-#### Responsive Design
+### Responsive Design
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
@@ -112,14 +112,13 @@ ideas and all work related developements as they happen.
 </h2>
 
 
-
 <p align="center"> Small Screen 370px</p>
 <h2 align="center">
 <img src="documentation/readme-images/post-sm.png" width="25%">
 </h2>
 
----
-#### Login/Register Pages and Security Measures
+
+### Login/Register Pages and Security Measures
 
   The user is brought first to the login page. From there they will find a 
   link to register if a new user. One of the core features of the site is it's
@@ -145,9 +144,8 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/reg1.png" width="50%">
 </h2>
 
----
 
-#### User Base Page
+### User Base Page
 
   Once loged in the user is taken to their own User Base page which is the center base
   of the site and along with all other pages had a navbar to take them to any page.
@@ -163,9 +161,8 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/depts1.png" width="50%">
 </h2>
 
----
 
-#### Departments Page
+### Departments Page
 
   Once the user clicks on a department they are taken to that department 
   Find by Date Page. That day's communications will automatically be displaying and the 
@@ -179,9 +176,8 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/dep1.png" width="50%">
 </h2>
 
----
 
-#### Images Page
+### Images Page
     
   The user here can find images by entering a specific image tag name if they have 
   it or entering a search word relating to the images they wish to see. These image
@@ -197,13 +193,14 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/hos1.png" width="50%">
 </h2>
 
----
 
+### Admin Page
 
-#### Admin Page
-
-  If the user is admin they will be given the option to delete a user, upload the 
-  latest script, upload the latest shotlist or upload new images.
+  As discussed above in "decurity Measures" defensive programming will only allow
+  access to the admin features if admin is the sesson user and this is inplemented
+  both in the front-end and back-end. If the user is admin they will be given the 
+  option to delete a user, upload the latest script, upload the latest shotlist 
+  or upload new images.
 
 <p align="center">Admin Page 1600px</p>
 <h2 align="center">
