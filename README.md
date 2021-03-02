@@ -274,8 +274,11 @@ W3C Markup Validator, W3C CSS Validator and JSHint were used to validate every p
 
 
 
+## Credits
 
+### Code
 
+- [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 
 
 

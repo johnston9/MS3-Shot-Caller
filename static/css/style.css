@@ -1,11 +1,31 @@
+/*return to top button*/
+
+#topbut {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 50px;
+	z-index: 99;
+	height: 24px;
+	width: 80px;
+	background-color: rgb(143, 212, 241);
+	border: none;
+	font-weight: bold;
+	border-radius: 5px;
+	outline: none;
+	color: #fafafa;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+#topbut:hover {
+	background-color: crimson;
+}
+
 /*---------general ----------*/
 .row {
     margin-bottom: 0px;
 }
-
-.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup {
-    color: blue;
-    background-color: transparent;}
 
 hr.red-line {
     width: 70%;
@@ -359,6 +379,11 @@ span.caps {
 .select-wrapper input.select-dropdown {
     color: antiquewhite;
     }
+
+.select-dropdown li.disabled, .select-dropdown li.disabled>span, .select-dropdown li.optgroup {
+    color: blue;
+    background-color: transparent;
+}
 
 .input-field .prefix ~ label {
     color: rgb(143, 212, 241);

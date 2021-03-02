@@ -17,7 +17,9 @@ $(document).ready(function () {
 		}
 	});
 
-	/* fix Materialize bug to show red line warning if department not selected in add message*/
+    /* fix Materialize bug to show red line warning if department not 
+       selected in add message*/
+
 	validateMaterializeSelect();
 
 	function validateMaterializeSelect() {
@@ -59,3 +61,26 @@ $(document).ready(function () {
 		});
 	}
 });
+
+/*-----function to create the return to top button-----*/
+
+const topbutton = document.getElementById("topbut");
+
+topbutton.addEventListener("click", poptop);
+
+window.onscroll = function () {
+	buttonDisplay();
+};
+
+function buttonDisplay() {
+	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+		topbutton.style.display = "block";
+	} else {
+		topbutton.style.display = "none";
+	}
+}
+
+function poptop() {
+	document.body.scrollTop = 0;
+	document.documentElement.scrollTop = 0;
+}
