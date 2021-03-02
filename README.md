@@ -17,6 +17,8 @@ as a product on an individual basis for each new production and owner.
 
 <h2 align="center"><img src="documentation/readme-images/user16.png"></h2>
 
+# Table of Content
+
 - [User Experience (UX)](#user-experience--ux-)
   * [User stories](#user-stories)
     + [First Time User Goals](#first-time-user-goals)
@@ -33,7 +35,7 @@ as a product on an individual basis for each new production and owner.
   * [User Base Page](#user-base-page)
   * [Departments Page](#departments-page)
   * [Images Page](#images-page)
-  * [Admin Page](#admin-page)
+  * [Admin Page](#admin-page) 
 - [Languages Used](#languages-used)
 - [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
 - [Testing](#testing)
@@ -80,6 +82,8 @@ ideas and all work related developements as they happen.
    shooting and script choices.
 9. As a Frequent User, I want to collaborate with other user on specific areas of 
    production.
+
+[Menu](#table-of-content)
 
 # Design
 
