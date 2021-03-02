@@ -83,7 +83,7 @@ ideas and all work related developements as they happen.
 9. As a Frequent User, I want to collaborate with other user on specific areas of 
    production.
 
-[Menu](#table-of-content)
+<h3 align="center" style="color: red;">[Back to Table of Content](#table-of-content)</h3>
 
 # Design
 
