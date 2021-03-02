@@ -459,7 +459,7 @@ span.caps {
 
 @media only screen and (max-width: 800px) {
 	.username {
-		font-size: 16px;
+		font-size: 30px;
 	}
 	.panel-left {
 		height: 300px;
