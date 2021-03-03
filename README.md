@@ -295,37 +295,37 @@ it to be used in the find() method on Mongo and get the messages for the collect
 
 The MongoDB Shot Caller database contains the following collections.
 
-<p align="center">users- for user details</p>
+<p align="center"> **users**- for user details</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-users.png" width="25%">
 </h2>
 
-<p align="center">depts- for each department's details</p>
+<p align="center">**depts**- for each department's details</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-departments.png" width="25%">
 </h2>
 
-<p align="center">9 department collections - each containing that department's messages</p>
+<p align="center">**9 department collections, e.g. camera** - each containing that department's messages</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-dep1.png" width="25%">
 </h2>
 
-<p align="center">images - for image details</p>
+<p align="center">**images** - for image details</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-images.png" width="25%">
 </h2>
 
-<p align="center">shotlist - for the shotlist's url</p>
+<p align="center">**shotlist** - for the shotlist's url</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-shotlist.png" width="25%">
 </h2>
 
-<p align="center">script - for the script's url</p>
+<p align="center">**script** - for the script's url</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-script.png" width="25%">
