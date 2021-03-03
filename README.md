@@ -298,37 +298,37 @@ The MongoDB Shot Caller database contains the following collections.
 <p align="center"> <strong>users</strong>- for user details</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-users.png" width="25%">
+<img src="documentation/readme-images/m-users.png" width="50%">
 </h2>
 
 <p align="center"><strong>depts</strong>- for each department's details</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-departments.png" width="25%">
+<img src="documentation/readme-images/m-departments.png" width="50%">
 </h2>
 
 <p align="center"><strong>9 department collections, e.g. camera</strong> - each containing that department's messages</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-dep1.png" width="25%">
+<img src="documentation/readme-images/m-dep1.png" width="50%">
 </h2>
 
-<p align="center"><strong>images - for image details</strong></p>
+<p align="center"><strong>images</strong> - for image details</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-images.png" width="25%">
+<img src="documentation/readme-images/m-images.png" width="50%">
 </h2>
 
 <p align="center"><strong>shotlist</strong> - for the shotlist's url</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-shotlist.png" width="25%">
+<img src="documentation/readme-images/m-shotlist.png" width="50%">
 </h2>
 
 <p align="center"><strong>script</strong> - for the script's url</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-script.png" width="25%">
+<img src="documentation/readme-images/m-script.png" width="50%">
 </h2>
 
 
