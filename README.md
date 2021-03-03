@@ -396,13 +396,13 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 </h2>
 
 
-5. As a Returning User, I want to find messages in specific areas.
+5. As a Returning User, I want to add a communication in a specific area.
 
     1. Upon entering 
     2. Upon entering 
     3. Upon entering 
 
-6. As a Returning User, I want to edit or delete my communications.
+6. As a Returning User, I want to edit and delete my communications.
 
     1. Upon entering 
     2. Upon entering 
