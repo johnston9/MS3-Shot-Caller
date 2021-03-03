@@ -9,7 +9,9 @@ departments channels of film production. It allows both a general and specific
 means on searching and uploading communications and images to different departments.
 
 It has a secure admin facility for site regulation and the upkeep of the image
-bank that includes a simple means of uploading the latest script, shotlist.
+bank that includes a simple means of uploading the latest script, shotlist. The site 
+is built with Flask using the Jinja template engine and the Werkzeug WSGI toolkit
+and uses Mongodb as the back-end database.
 
 Currently the app is limited to one production but future developements would
 lead to it being turned into a piece of software that can be downloaded and used
@@ -59,19 +61,44 @@ communication. It is streamlined for the exchange of messages by specific areas.
 It will allow the user the means to instantaniously both share and recieve
 ideas and all work related developements as they happen.
 
+## Strategy Plane
+
+The aim of the site is to create an app that facilitates film production and is on a par with the latest trends in digital communication media. It aims to be enjoyable and simple to use and become a “go to” tool in film production.
+The site is designed to give the user, here being specifically the film production team, the necessary tools to communicate their ideas during production collaboration.  
+Clearly separating the production process by department is key to the site’s simplicity and reliability of use where the user can fulfill their needs to find and post communications and images.
+The owners of the site, here being the production team, have overall control over the site and the necessary tools, unique only to those given admin access, to update the script and the shot list and add and delete image in the image bank.
+Security is a big factor in the site and only those give a key can register, the password functionality is secured through Werkzeug and the admin access id check both in the front and backend.
+
+## Scope Plane
+
+The features included in the app at present reflect choices made around what is absolutely necessary for the app to deliver it’s basic marketed functionality, which proposed features are buildable and what features are necessary to make
+the app sellable. The buildable aspect was vital for the scope of the app and several more advance features, like a communal workspace and storyboarding facilities were repositioned as future features.
+
+## Structure Plane
+
+The site is structured so the user can navigate in an intuitive way through the different features, all pages keeping a uniformed consistency. The user is taken on a journey into the site, all elements being discoverable as they proceed into the site. They will see clear states of change when they interact with the features and be given clear feedback to assure them of their interactive success.
+The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
+
+## Skeleton Plane
+
+The interface is aesthetically functionally all the time creating a positive reaction in the user with every click, making the user feel both at home here and part of an exciting journey. Details of
+this are found in the Design section.
+
+[Back to Table of Content](#table-of-content)
+
 
 ## User stories
 
  - ### First Time User Goals
 
 1. As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
-2. As a First Time User, I want to find and add communications in my department.
-3. As a First Time User, I want to upload and view images.
+2. As a First Time User, I want to find communications in my or other departments.
+3. As a First Time User, I want to view images.
 
   - ### Returning User Goals
 
 4. As a Returning User, I want to download the latest shotlist and script
-5. As a Returning User, I want to find messages in specific areas.
+5. As a Returning User, I want to add a communication in a specific area.
 6. As a Returning User, I want to edit or delete my communications.
 
   - ### Frequent User Goals
@@ -162,6 +189,9 @@ ideas and all work related developements as they happen.
   As a minor security feature the login and register pages are not connected to the base
   page and the other pages.
 
+  Werkzeug's security utilities "generate_password_hash" and "check_password_hash"
+  are used run the register and login functions and ensure login security.
+ 
   Other security measures include front-end measures to allow admin access only to admin.
   This is backed up in the back-end ensuring only these admin functions will run if
   admin is the sesson user.
@@ -249,6 +279,60 @@ ideas and all work related developements as they happen.
 
 [Back to Table of Content](#table-of-content)
 
+# Database structure
+
+MongoDB was used as the site's database. 
+
+The Entity Relationship's between users 
+and the 9 departments for username and job_title and user's firstname and lastname
+which is joined to connect to the department's message poster allow automatic input of these 
+when a user sends a message.
+
+The Entity Relationship's between depts and the 9 departments for dep_name allow for the
+depts dep_name to be passed to app.py when a department is clicked on in the user's
+base page. This sends dep_name as a variable to the get_dep function in app.py allowing
+it to be used in the find() method on Mongo and get the messages for the collection of that name.
+
+The MongoDB Shot Caller database contains the following collections.
+
+<p align="center">users- for user details</p>
+
+<h2 align="center">
+<img src="documentation/readme-images/m-users.png" width="25%">
+</h2>
+
+<p align="center">depts- for each department's details</p>
+
+<h2 align="center">
+<img src="documentation/readme-images/m-departments.png" width="25%">
+</h2>
+
+<p align="center">9 department collections - each containing that department's messages</p>
+
+<h2 align="center">
+<img src="documentation/readme-images/m-dep1.png" width="25%">
+</h2>
+
+<p align="center">images - for image details</p>
+
+<h2 align="center">
+<img src="documentation/readme-images/m-images.png" width="25%">
+</h2>
+
+<p align="center">shotlist - for the shotlist's url</p>
+
+<h2 align="center">
+<img src="documentation/readme-images/m-shotlist.png" width="25%">
+</h2>
+
+<p align="center">script - for the script's url</p>
+
+<h2 align="center">
+<img src="documentation/readme-images/m-script.png" width="25%">
+</h2>
+
+
+
 # Languages Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
@@ -257,7 +341,7 @@ ideas and all work related developements as they happen.
 - [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine))
 
-# Frameworks, Libraries & Programs Used
+# Frameworks, Databases, Libraries & Programs Used
 
 1. [Materialize:](https://materializecss.com/getting-started.html)
    - Materialize was used to create the overall framework and it's grid based 
@@ -265,6 +349,18 @@ ideas and all work related developements as they happen.
      Materialize features were used throughout which include the, collapsable, 
      the navbar and sidenav, the modals, the tooltipped feature, the datepickers
      and the overall styling of the website.
+1. [Flask:](https://en.wikipedia.org/wiki/Flask_(web_framework))
+   - Flask was used along with python to build then site's backend framework and
+     run the app.
+1. [Werkzeug:](https://werkzeug.palletsprojects.com/en/1.0.x/)
+   - Flask used Werkzeug to the application to speak with the webserver and 
+     for security purposes mainly with regard to the users's password.
+1. [Jinja:](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+   - Flask used the Jinja template engine to build the front-end of the app.
+1. [MongoDB:](https://en.wikipedia.org/wiki/MongoDB)
+   - MongoDB was used as the app's backend database.
+1. [Pymongo:](https://pypi.org/project/pymongo/)
+   - Pymongo was used for interacting with MongoDB database from the app.
 1. [Font Awesome:](https://fontawesome.com/)
    - Font Awesome was used throughout the website for the arrow navigation and
      a number of other icons.
@@ -282,7 +378,8 @@ ideas and all work related developements as they happen.
    - Gauger was used to create the favicon icon.
 1. [Am-I-Responsive](http://ami.responsivedesign.is/):
    - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
-
+1. [GitHub Wiki TOC generator:](http://ecotrust-canada.github.io/markdown-toc/)
+   - GitHub Wiki TOC generator was used to create the Table of Contents.
 [Back to Table of Content](#table-of-content)
 
 # Testing
@@ -383,16 +480,16 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
     1. On clicking download script the script is downloaded to the user's device.
 
-<p align="center">Result for downloaded script</p>
-<h2 align="center">
-<img src="documentation/readme-images/script1.png" width="50%">
-</h2>
-
     1. On clicking download shotlist the shotlist is downloaded to the user's device.
 
 <p align="center">Result for downloaded script</p>
 <h2 align="center">
 <img src="documentation/readme-images/shot1.png" width="50%">
+</h2>
+
+<p align="center">Result for downloaded script</p>
+<h2 align="center">
+<img src="documentation/readme-images/script1.png" width="50%">
 </h2>
 
 

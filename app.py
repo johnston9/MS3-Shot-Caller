@@ -108,6 +108,18 @@ def get_depts():
         return redirect(url_for("login"))
 
 
+@app.route("/get_pro")
+def get_pro():
+    if session["user"]:
+        day = datetime.datetime.now()
+        today = day.strftime("%d %B, %Y")
+        depart = list(mongo.db.production.find({"date": today}))
+
+        return render_template(
+            "pro.html", dep="Production Latest", depart=depart,
+            date=today, day="TODAY")
+
+
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])
 def get_dep(dep):
     if session["user"]:

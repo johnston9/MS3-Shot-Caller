@@ -141,6 +141,10 @@ hr.red-line {
 	background-color: crimson;
 }
 
+/*-----sidenav ----------*/
+.sidenav li>a {
+    color: #fafafa;
+}
 
 /*-----container boxes----------*/
 
@@ -442,6 +446,7 @@ span.caps {
 
 /*-------------media queries---------*/
 
+
 @media only screen and (max-width: 600px) {
 	.smallPanel-l {
 		background-image: url(./images/door66l.png);
@@ -481,6 +486,12 @@ span.caps {
 		background-position: left top;
 		width: 100%;
 	}
+}
+
+@media only screen and (max-width: 400px) {
+    .username {
+    font-size: 22px;
+    }
 }
 
 /*-------------department images-----------*/
