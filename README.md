@@ -146,6 +146,7 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/post-sm.png" width="25%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
 
 ## Login/Register Pages and Security Measures
 
@@ -173,6 +174,7 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/reg1.png" width="50%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
 
 ## User Base Page
 
@@ -190,6 +192,7 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/depts1.png" width="50%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
 
 ## Departments Page
 
@@ -205,6 +208,7 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/dep1.png" width="50%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
 
 ## Images Page
     
@@ -222,6 +226,7 @@ ideas and all work related developements as they happen.
 <img src="documentation/readme-images/hos1.png" width="50%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
 
 ## Admin Page
 
@@ -303,10 +308,134 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 [Back to Table of Content](#table-of-content)
 
+# Testing User Stories from User Experience (UX) Section
+
+## First Time User Goals
+
+1. As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
+
+    1. The site is designed for first time learning. It is streamlined for specicic
+       user goals that after first use are so simple that with a few clicks after entering
+       the site the user will be able to get to any specific area or tool. At the top of the 
+       User Base Page and throughout the site the navbar displays all options for the user
+       so they can select their desired destination quickly.
+    2. Upon entering the user is taken to their home base and greeted with image
+       links for each production department and the message to "Choose Department".
+       Upon clicking on a department they are taken to that departments "Find by Date Page"
+       where that day's communications are automatically showing.
+       They are given further choices to find all messages or go to the "Find by Poster Page".
+       The user will become automatically aware of what is on offer and how to find a particular
+       field in a few click. The user will see the choices on offer and learn how best 
+       to use them for their needs.
+    3. Below the departments on the User Base Page the user will see further options
+       to add messages, search images, download the script or download the shotlist.
+    
+<h2 align="center">
+<img src="documentation/readme-images/user10.png" width="50%">
+</h2>
+
+
+2. As a First Time User, I want to find communications in my or other departments.
+
+    1. Upon opening a department page the user will see the latest messages displayed.
+       They will see the option to open all messages and a more specicic option
+       to find messages by a particular date.
+    2. The user will see a further option to go to "Find messages by Poster" and on clicking
+       they will be taken to the "Find messages by Poster Page" where they can get all messages
+       from a particular team member by typing in their full name as instructed.
+    3. The user will see all chosen messages each displaying,in the header the name and position
+       of the poster, the subject and whether it is a priority or not. On clicking on a message box
+       it will open to show the message and an image if one has been posted.
+
+<h2 align="center">
+<img src="documentation/readme-images/dep-post.png" width="50%">
+</h2>
+
+3. As a First Time User, I want to view images.
+
+    1. In the navbar and on their home base the user will see a link to search images
+       which on clicking will take them to the images page.
+    2. The user will see instruction on how to search for images. They can use a specicic
+       image reference tag, if thet have one or they can input search words relevent
+       to what they are looking for.
+    3. The image bank is uploaded by the production team only so only contains sanctioned
+       images of style choices, locations and other images all in keeping with the choices
+       set by the team or different options that are being worked on or considered.
+
+<p align="center">Specific reference tag input</p>
+<h2 align="center">
+<img src="documentation/readme-images/im-spec.png" width="50%">
+</h2>
+
+<p align="center">Specific reference tag result</p>
+<h2 align="center">
+<img src="documentation/readme-images/im-res1.png" width="50%">
+</h2>
+
+<p align="center">Result for query word "nick"</p>
+<h2 align="center">
+<img src="documentation/readme-images/im-word.png" width="25%">
+</h2>
+
+## Returning User Goals
+
+4. As a Returning User, I want to download the latest shotlist and script.
+
+    1. On clicking download script the script is downloaded to the user's device.
+
+<p align="center">Result for downloaded script</p>
+<h2 align="center">
+<img src="documentation/readme-images/script1.png" width="50%">
+</h2>
+
+    1. On clicking download shotlist the shotlist is downloaded to the user's device.
+
+<p align="center">Result for downloaded script</p>
+<h2 align="center">
+<img src="documentation/readme-images/shot1.png" width="50%">
+</h2>
+
+
+5. As a Returning User, I want to find messages in specific areas.
+
+    1. Upon entering 
+    2. Upon entering 
+    3. Upon entering 
+
+6. As a Returning User, I want to edit or delete my communications.
+
+    1. Upon entering 
+    2. Upon entering 
+    3. Upon entering 
+
+## Frequent User Goals
+
+7. As a Frequent User, I want to view communications and see images relating to style, 
+   shooting and script choices so I can develop my owm choices accordingly.
+
+    1. Upon entering 
+    2. Upon entering 
+    3. Upon entering 
+
+8. As a Frequent User, I want to post communications and images relating to my style, 
+   shooting and script choices.
+
+    1. Upon entering 
+    2. Upon entering 
+    3. Upon entering 
+
+9. As a Frequent User, I want to collaborate with other user on specific areas of 
+   production.
+
+    1. Upon entering 
+    2. Upon entering 
+    3. Upon entering 
+
 # Credits
 
 [Back to Table of Content](#table-of-content)
-## Code
+
+# Code
 
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 
