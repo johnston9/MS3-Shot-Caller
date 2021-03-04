@@ -98,7 +98,7 @@ They will see clear states of change when they interact with the features and be
 The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
 
 <h2 align="center">
-<img src="documentation/readme-images/struc.png" width="50%">
+<img src="documentation/readme-images/struc.png" width="90%">
 </h2>
 
 ## Skeleton Plane
@@ -177,16 +177,15 @@ this are found in the Design section.
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
-
 <p align="center"> Large Screen 1600px</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/post-16.png" width="50%">
+<img src="documentation/readme-images/post-16.png" width="90%">
 </h2>
 
 <p align="center">  Medium Screen 1000px</p>
 <h2 align="center">
-<img src="documentation/readme-images/post-md.png" width="50%">
+<img src="documentation/readme-images/post-md.png" width="90%">
 </h2>
 
 
@@ -223,7 +222,7 @@ this are found in the Design section.
 
 <p align="center">Register Page</p>
 <h2 align="center">
-<img src="documentation/readme-images/reg1.png" width="50%">
+<img src="documentation/readme-images/reg1.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -241,7 +240,7 @@ this are found in the Design section.
 
 <p align="center">User Base Department Choices</p>
 <h2 align="center">
-<img src="documentation/readme-images/depts1.png" width="50%">
+<img src="documentation/readme-images/depts1.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -257,7 +256,7 @@ this are found in the Design section.
 
 <p align="center">Department Page</p>
 <h2 align="center">
-<img src="documentation/readme-images/dep1.png" width="50%">
+<img src="documentation/readme-images/dep1.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -275,7 +274,7 @@ this are found in the Design section.
 
 <p align="center">Images Page</p>
 <h2 align="center">
-<img src="documentation/readme-images/hos1.png" width="50%">
+<img src="documentation/readme-images/hos1.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -290,7 +289,7 @@ this are found in the Design section.
 
 <p align="center">Admin Page 1600px</p>
 <h2 align="center">
-<img src="documentation/readme-images/admin1.png" width="50%">
+<img src="documentation/readme-images/admin1.png" width="90%">
 </h2>
 
 <p align="center">Admin Page 375px</p>
@@ -318,7 +317,7 @@ it to be used in the find() method on Mongo and get the messages for the collect
  
 
 <h2 align="center">
-<img src="documentation/readme-images/scop3.png" width="50%">
+<img src="documentation/readme-images/scop3.png" width="90%">
 </h2>
 
 The MongoDB Shot Caller database contains the following collections.
@@ -326,37 +325,37 @@ The MongoDB Shot Caller database contains the following collections.
 <p align="center"> <strong>users</strong>- for user details</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-users.png" width="50%">
+<img src="documentation/readme-images/m-users.png" width="90%">
 </h2>
 
 <p align="center"><strong>depts</strong>- for each department's details</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-departments.png" width="50%">
+<img src="documentation/readme-images/m-departments.png" width="90%">
 </h2>
 
 <p align="center"><strong>9 department collections, e.g. camera</strong> - each containing that department's messages</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-dep1.png" width="50%">
+<img src="documentation/readme-images/m-dep1.png" width="90%">
 </h2>
 
 <p align="center"><strong>images</strong> - for image details</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-images.png" width="50%">
+<img src="documentation/readme-images/m-images.png" width="90%">
 </h2>
 
 <p align="center"><strong>shotlist</strong> - for the shotlist's url</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-shotlist.png" width="50%">
+<img src="documentation/readme-images/m-shotlist.png" width="90%">
 </h2>
 
 <p align="center"><strong>script</strong> - for the script's url</p>
 
 <h2 align="center">
-<img src="documentation/readme-images/m-script.png" width="50%">
+<img src="documentation/readme-images/m-script.png" width="90%">
 </h2>
 
 
@@ -463,7 +462,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
        to add messages, search images, download the script or download the shotlist.
     
 <h2 align="center">
-<img src="documentation/readme-images/user10.png" width="50%">
+<img src="documentation/readme-images/user10.png" width="90%">
 </h2>
 
 
@@ -480,7 +479,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
        it will open to show the message and an image if one has been posted.
 
 <h2 align="center">
-<img src="documentation/readme-images/dep-post.png" width="50%">
+<img src="documentation/readme-images/dep-post.png" width="90%">
 </h2>
 
 3. As a First Time User, I want to view images.
@@ -496,12 +495,12 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 <p align="center">Specific reference tag input</p>
 <h2 align="center">
-<img src="documentation/readme-images/im-spec.png" width="50%">
+<img src="documentation/readme-images/im-spec.png" width="90%">
 </h2>
 
 <p align="center">Specific reference tag result</p>
 <h2 align="center">
-<img src="documentation/readme-images/im-res1.png" width="50%">
+<img src="documentation/readme-images/im-res1.png" width="90%">
 </h2>
 
 <p align="center">Result for query word "nick"</p>
@@ -521,12 +520,12 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 <p align="center">Result for downloaded script</p>
 <h2 align="center">
-<img src="documentation/readme-images/shot1.png" width="50%">
+<img src="documentation/readme-images/shot1.png" width="90%">
 </h2>
 
 <p align="center">Result for downloaded script</p>
 <h2 align="center">
-<img src="documentation/readme-images/script1.png" width="50%">
+<img src="documentation/readme-images/script1.png" width="90%">
 </h2>
 
 
