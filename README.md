@@ -567,6 +567,20 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
     2. Upon entering 
     3. Upon entering 
 
+
+
+- The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
+
+- The app was viewed on a variety of devices such as Desktop, Laptop, iPhone and various other smartphones.
+
+- Friends and family members were asked to review the site and to point out any bugs and/or user experience issues. These were taken on board and changes were made if necessary or to give a better user experience.
+
+
+### Known Bugs
+
+- All bugs to date have been dealt with.
+[Back to Table of Content](#table-of-content)
+
 # Repository
    [Github](https://github.com/)
    - Github was used as the repository for the project.
@@ -666,17 +680,41 @@ Click "View" to launch the app.
 [Back to Table of Content](#table-of-content)
 
 
-
-
-
 # Credits
-
-[Back to Table of Content](#table-of-content)
 
 ## Code
 
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
+- The general structure of the app was inspired by Tim Nelson's Task Manager app
+  which is part of the Code Institute's course.
 
+### Content
+
+All content was written by the developer.
+
+### Media
+
+The nine images used for the departments in this site were all created by myself 
+using a small portion of different screenshots I took from the TV series "Arrow" 
+created by "The CW Network", USA and the TV series "Gotham" created by "The Fox Broadcasting Company", USA.
+
+These are only being used for the MS3 project and will be replaced if the app is
+to be made in any way public.
+
+The images used in the sites image bank and sent by ficticious users are also from the above.
+
+I researched the topic of copyright when it comes to the use of screenshots of tv shows
+used for non-profit student purposes and although it is somewhat of a grey area the
+general consensus is that it come under the "Fair Use Doctrine". Also in terms
+of the 4-factor balancing test that it is accessed under the usage in this project is fair.
+
+See documentation for more info in copyright.docx.
+
+
+### Acknowledgements
+
+- I'd like to thank the Code Institute tutor team for their support and my mentor 
+Aaron Sinnott for his insights and clarity.
 
 [Back to Table of Content](#table-of-content)
 
