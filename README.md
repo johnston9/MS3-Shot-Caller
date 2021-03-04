@@ -573,21 +573,21 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+By forking we make a copy of the GitHub Repository.
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/johnston9/MS3-Shot-Caller)
+2. At the top of the Repository just above the "Settings" button on the menu, click the "Fork" Button.
+3. This will create a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/johnston9/MS3-Shot-Caller)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
-4. Open Git Bash
-5. Change the current working directory to the location where you want the cloned directory to be made.
-6. Type `git clone`, and then paste the URL you copied in Step 3.
-7. Press Enter. Your local clone will be created.
+4. Open Git Bash.
+5. Set the current working directory to the location where you want the cloned directory to be made.
+6. Type git clone, and then paste the URL copied above.
+7. Press enter and a local clone will be created.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
@@ -596,6 +596,76 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 [Heroku](https://www.heroku.com/platform)
    - Heroku was used to deploy the project.
 
+### Create the Flask app
+
+In the terminal use the following commands:
+
+#### pip3 install Flask
+
+#### touch app.py
+app.py is where the python logic to run the app is written.
+
+#### touch env.py
+In env.py set the app's environment variables and keys needed during development.
+These will later be set in Heroku.
+
+import os
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "***************")
+os.environ.setdefault("MONGO_URI", "***********")
+os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
+
+#### touch pycach.py 
+
+#### touch gitignore
+gitignore is used to store sensitive variables and keys that do not get sent to github.
+Type pycach.py and env.py in the gitignore file.
+
+#### pip3 freeze --local > requirements.txt 
+A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
+
+#### echo web: python app.py > Procfile
+This tells Heroku what language the app is using.
+
+#### pip3 install flask-pymongo
+So Flask can communicate with Mongo install 'flask-pymongo'.
+
+#### pip3 install dnspython
+We also need to install 'dnsython' in order to use the Mongo SRV connection string.
+
+#### pip3 freeze --local > requirements.txt
+Heroku needs to know these are needed for the app.
+
+#### Push everything to Github
+
+### Set up Heroku
+
+Register a Heroku account.
+Click 'Create a New App'.
+Where asked select "Europe" as the region then click create app.
+
+Click Settings then click Reveal Config Vars.
+Now set the variables and keys to those in env.py.
+
+IP, with the value of 0.0.0.0. 
+PORT, which is 5000.
+SECRET_KEY, copy then paste it from env.py. 
+MONGO_URI, get this when 'Connect your Application’ is clicked on in Mongo connect area. 
+MONGO_DBNAME, shot_caller.
+
+THEN CLICK HIDE CONFIG VARS
+
+Back in Deploy choose Github then click Search to get the correct Github repo for the app
+then click connect.
+
+Click Enable Automatic Deployment then click Deploy Branch.
+
+Click "View" to launch the app.
+
+[Back to Table of Content](#table-of-content)
+
+
 
 
 
@@ -603,7 +673,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 [Back to Table of Content](#table-of-content)
 
-# Code
+## Code
 
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 
