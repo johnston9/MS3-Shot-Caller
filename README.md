@@ -88,8 +88,18 @@ the app sellable. The buildable aspect was vital for the scope of the app and se
 
 ## Structure Plane
 
-The site is structured so the user can navigate in an intuitive way through the different features, all pages keeping a uniformed consistency. The user is taken on a journey into the site, all elements being discoverable as they proceed into the site. They will see clear states of change when they interact with the features and be given clear feedback to assure them of their interactive success.
+The site is structured so the user can navigate in an intuitive way through the different features, all pages keeping a uniformed consistency. 
+The user is taken on a journey into the site, all elements being discoverable as they proceed along.
+The User Base is central to the scructure. Here the user has a number of immediate
+option tools they can click on. Or, as they are being visably encouraged to do so and
+is the primary aspect to the app they can select a department. Once taken there
+they are given different "find messages" choices they can follow.
+They will see clear states of change when they interact with the features and be given clear feedback to assure them of their interactive success.
 The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
+
+<h2 align="center">
+<img src="documentation/readme-images/struc.png" width="50%">
+</h2>
 
 ## Skeleton Plane
 
@@ -295,15 +305,21 @@ this are found in the Design section.
 
 MongoDB was used as the site's database. 
 
-The Entity Relationship's between users 
-and the 9 departments for username and job_title and user's firstname and lastname
-which is joined to connect to the department's message poster allow automatic input of these 
-when a user sends a message.
+The Entity Relationship's between the users collection and the 9 seperate 
+collections for each departments is on "username" and "job_title". A third relationship
+is between the concatenated result of the users collection "firstname" and "lastname"
+values and the department collection's "poster". These allow the automatic input 
+of these user valies when a user sends a message.
 
 The Entity Relationship's between depts and the 9 departments for dep_name allow for the
 depts dep_name to be passed to app.py when a department is clicked on in the user's
 base page. This sends dep_name as a variable to the get_dep function in app.py allowing
 it to be used in the find() method on Mongo and get the messages for the collection of that name.
+ 
+
+<h2 align="center">
+<img src="documentation/readme-images/scop3.png" width="50%">
+</h2>
 
 The MongoDB Shot Caller database contains the following collections.
 
