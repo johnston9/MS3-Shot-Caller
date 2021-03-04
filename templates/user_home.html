@@ -61,28 +61,28 @@
             Upload Images </a>
          </div>
       </div>
-      <hr class="red-line margintop-50">
+
       {% endif %} 
 
       <!---check for urgent production messages button-->
-      <div class="row margintop-20">
-         <div class="col s12 m6 offset-m3 center-align find">
-            <a class="offwhite blueBack-sea text-shadow" href="{{ url_for('get_pro') }}">
-            Latest Production updates </a>
+      <div class="row">
+         <div class="col s12 margintop-10 m6 offset-m3 center-align find">
+            <a class="pad-20 btn-small offwhite blueBack-sea text-shadow" href="{{ url_for('get_pro') }}">
+            <strong> Latest Updates</strong> </a>
          </div>
       </div>
 
-      <hr class="red-line margintop-50">
+      <hr class="red-line margintop-20">
 
       <!--Departments-->
-      <div class="row margintop-20">
+      <div class="row">
          <div class="col s12 m8 offset-m2">
             <h5 class="antiquewhite center-align">
                Choose Department
             </h5>
          </div>
       </div>
-      <div class="row margintop-50">
+      <div class="row margintop-20">
          <div class="col s12 m8 offset-m2">
             <div class="row">
                {% for dept in depts %}

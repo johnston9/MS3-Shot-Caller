@@ -116,7 +116,7 @@ def get_pro():
         depart = list(mongo.db.production.find({"date": today}))
 
         return render_template(
-            "pro.html", dep="Production Latest", depart=depart,
+            "pro.html", dep="Today's Production Updates", depart=depart,
             date=today, day="TODAY")
 
 

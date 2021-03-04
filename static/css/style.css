@@ -53,6 +53,14 @@ hr.red-line {
 	margin-bottom: 0;
 }
 
+.pad-10 {
+    padding: 10px;
+}
+
+.latest {
+    font-size: 26px;
+}
+
 .pad-20 {
 	padding-left: 20px;
 	padding-right: 20px;

@@ -21,7 +21,12 @@ as a product on an individual basis for each new production and owner.
 
 # Table of Content
 
+- [Table of Content](#table-of-content)
 - [User Experience (UX)](#user-experience--ux-)
+  * [Strategy Plane](#strategy-plane)
+  * [Scope Plane](#scope-plane)
+  * [Structure Plane](#structure-plane)
+  * [Skeleton Plane](#skeleton-plane)
   * [User stories](#user-stories)
     + [First Time User Goals](#first-time-user-goals)
     + [Returning User Goals](#returning-user-goals)
@@ -37,14 +42,21 @@ as a product on an individual basis for each new production and owner.
   * [User Base Page](#user-base-page)
   * [Departments Page](#departments-page)
   * [Images Page](#images-page)
-  * [Admin Page](#admin-page) 
+  * [Admin Page](#admin-page)
+- [Database structure](#database-structure)
 - [Languages Used](#languages-used)
-- [Frameworks, Libraries & Programs Used](#frameworks--libraries---programs-used)
+- [Frameworks, Databases, Libraries & Programs Used](#frameworks--databases--libraries---programs-used)
+- [Development platform](#development-platform)
 - [Testing](#testing)
-  * [Credits](#credits)
-  * [Code](#code)
+- [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience--ux--section)
+  * [First Time User Goals](#first-time-user-goals-1)
+  * [Returning User Goals](#returning-user-goals-1)
+  * [Frequent User Goals](#frequent-user-goals-1)
+- [Credits](#credits)
+- [Code](#code)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 # User Experience (UX)
@@ -380,6 +392,13 @@ The MongoDB Shot Caller database contains the following collections.
    - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
 1. [GitHub Wiki TOC generator:](http://ecotrust-canada.github.io/markdown-toc/)
    - GitHub Wiki TOC generator was used to create the Table of Contents.
+
+
+# Development platform
+
+1. [Gitpod:](https://www.gitpod.io/docs/)
+   - Gitpod was used as the development platform.
+
 [Back to Table of Content](#table-of-content)
 
 # Testing
@@ -474,6 +493,8 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/im-word.png" width="25%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
+
 ## Returning User Goals
 
 4. As a Returning User, I want to download the latest shotlist and script.
@@ -505,6 +526,8 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
     2. Upon entering 
     3. Upon entering 
 
+[Back to Table of Content](#table-of-content)
+
 ## Frequent User Goals
 
 7. As a Frequent User, I want to view communications and see images relating to style, 
@@ -527,6 +550,38 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
     1. Upon entering 
     2. Upon entering 
     3. Upon entering 
+
+# Repository
+   [Github](https://github.com/)
+   - Github was used as the repository for the project.
+
+### Forking the GitHub Repository
+
+By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
+3. You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
+7. Press Enter. Your local clone will be created.
+
+Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+# Deployment
+
+[Heroku](https://www.heroku.com/platform)
+   - Heroku was used to deploy the project.
+
+
+
 
 # Credits
 
