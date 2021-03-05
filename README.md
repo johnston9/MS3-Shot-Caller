@@ -700,8 +700,6 @@ created by "The CW Network", USA and the TV series "Gotham" created by "The Fox 
 These are only being used for the MS3 project and will be replaced if the app is
 to be made in any way public.
 
-The images used in the sites image bank and sent by ficticious users are also from the above.
-
 I researched the topic of copyright when it comes to the use of screenshots of tv shows
 used for non-profit student purposes and although it is somewhat of a grey area the
 general consensus is that it come under the "Fair Use Doctrine". Also in terms
@@ -711,7 +709,7 @@ See documentation for more info in copyright.docx.
 
 
 ### Acknowledgements
-
+   
 - I'd like to thank the Code Institute tutor team for their support and my mentor 
 Aaron Sinnott for his insights and clarity.
 

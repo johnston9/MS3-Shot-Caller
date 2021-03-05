@@ -187,6 +187,17 @@ def find_all(dep):
         return redirect(url_for("login"))
 
 
+@app.route("/all_images/", methods=["GET", "POST"])
+def all_images():
+    if session["user"]:
+        images = list(mongo.db.images.find())
+        return render_template("images.html", images=images)
+
+    else:
+        flash("Entry Incorrect")
+        return redirect(url_for("login"))
+
+
 @app.route("/get_image/", methods=["GET", "POST"])
 def get_image():
     if session["user"]:
