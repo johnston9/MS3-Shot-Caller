@@ -1,6 +1,6 @@
 <h1 align="center">Shot Caller - Movie Production Website</h1>
 
-[View the project live here.](https://ms3-shot-caller.herokuapp.com/)
+[View the project live here.](https://ms3-shot-caller.herokuapp.com/){:target="_blank"}
 
 A web application for film production that provides a reliable all encompassing
 means of production collaboration from pre-production to post. The app is designed 
@@ -55,7 +55,7 @@ as a product on an individual basis for each new production and owner.
 - [Credits](#credits)
 - [Code](#code)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+<small><i><a target="_blank" href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
 
@@ -167,7 +167,7 @@ this are found in the Design section.
  - PDF – Balsamic was used to design the layout for login, register, user base, 
    department messages, images, and the add and admin pages.
 
-   [View on Github](https://github.com/johnston9/MS3-Shot-Caller)
+   [View on Github](https://github.com/johnston9/MS3-Shot-Caller){:target="_blank"}
 
 [Back to Table of Content](#table-of-content)
 
@@ -367,15 +367,15 @@ The MongoDB Shot Caller database contains the following collections.
 
 # Languages Used
 
-- [HTML5](https://en.wikipedia.org/wiki/HTML5)
-- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
-- [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
-- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
-- [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine))
+- [HTML5](https://en.wikipedia.org/wiki/HTML5){:target="_blank"}
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets){:target="_blank"}
+- [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript){:target="_blank"}
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language)){:target="_blank"}
+- [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine)){:target="_blank"}
 
 # Frameworks, Databases, Libraries & Programs Used
 
-1. [Materialize:](https://materializecss.com/getting-started.html)
+1. [Materialize:](https://materializecss.com/getting-started.html){:target="_blank"}
    - Materialize was used to create the overall framework and it's grid based 
      format for the site and it's primary responsiveness. Also specific 
      Materialize features were used throughout which include the, collapsable, 
@@ -584,7 +584,10 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 ### Known Bugs
 
-- All bugs to date have been dealt with.
+- All bugs to date have been dealt with. The only issue is that on my laptop the select department
+  input box red line warning on the add message page remain red after a department is selected.
+  On all other devices including a number of turors, who I check the issue with it works
+  , i.e. it turns green.
 [Back to Table of Content](#table-of-content)
 
 # Repository
@@ -696,6 +699,8 @@ Click "View" to launch the app.
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 - The general structure of the app was inspired by Tim Nelson's Task Manager app
   which is part of the Code Institute's course.
+- The code to fix Materialize bug to show red line warning if department not 
+  selected in add message is taken from Tim Nelson's Task Manager app.
 
 ## Content
 

@@ -1,4 +1,5 @@
-/*jQuery for Materialize initialization*/
+/*jQuery for Materialize initialization of the sidenav, collapsible, tooltipped,
+  modal, select and datepicker features*/
 
 $(document).ready(function () {
 	$('.sidenav').sidenav({
@@ -17,7 +18,7 @@ $(document).ready(function () {
 		}
 	});
 
-    /* fix Materialize bug to show red line warning if department not 
+    /* Function to fix Materialize bug to show red line warning if department not 
        selected in add message*/
 
 	validateMaterializeSelect();
