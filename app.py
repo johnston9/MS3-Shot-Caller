@@ -206,7 +206,7 @@ def get_image():
             images = list(mongo.db.images.find({"$text": {"$search": image}}))
             return render_template("images.html", images=images)
 
-        images = list(mongo.db.images.find({"image_name": "cat"}))
+        images = list(mongo.db.images.find({"image_name": "windowlight"}))
         return render_template("images.html", images=images)
 
     else:

@@ -328,11 +328,13 @@ The MongoDB Shot Caller database contains the following collections.
 <img src="documentation/readme-images/m-users.png" width="90%">
 </h2>
 
+
 <p align="center"><strong>depts</strong>- for each department's details</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-departments.png" width="90%">
 </h2>
+
 
 <p align="center"><strong>9 department collections, e.g. camera</strong> - each containing that department's messages</p>
 
@@ -340,17 +342,20 @@ The MongoDB Shot Caller database contains the following collections.
 <img src="documentation/readme-images/m-dep1.png" width="90%">
 </h2>
 
+
 <p align="center"><strong>images</strong> - for image details</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-images.png" width="90%">
 </h2>
 
+
 <p align="center"><strong>shotlist</strong> - for the shotlist's url</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-shotlist.png" width="90%">
 </h2>
+
 
 <p align="center"><strong>script</strong> - for the script's url</p>
 
@@ -422,13 +427,13 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 - [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - W3C "Direct Input" option was used on each html page. As Jinja was used throughout the site
-    errors displayed where it was used on each page but no other error displayed.
-    When I validated by URL no errors were shown as seen in the screenshot "W3C entire site by URL"
+    errors displayed where it was used on each page but no other error displayed, documentation -folder "w3c-direct-input".
+    When I validated by URL no errors were shown as seen in documentation "w3c-by-url".
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - W3C showed no errors and only one warning for the hr rule's background colour
     being the same as it's colour, which was intentional.
-
+  
 - [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/ms2-apis)
   - JSHint was used with "New JavaScript features (ES6)" and "jQuery" checked in the configuration menu.
     All files were clear of errors and warnings.
@@ -439,7 +444,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 [Back to Table of Content](#table-of-content)
 
-# Testing User Stories from User Experience (UX) Section
+# Testing User Stories from User Experience (UX) 
 
 ## First Time User Goals
 
@@ -566,6 +571,8 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
     2. Upon entering 
     3. Upon entering 
 
+### Further Testing
+
 
 
 - The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
@@ -604,41 +611,43 @@ By forking we make a copy of the GitHub Repository.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-# Deployment
-
-[Heroku](https://www.heroku.com/platform)
-   - Heroku was used to deploy the project.
-
-### Create the Flask app
+### Create the Flask app 
+  - (some steps will have been completed in making a clone, marked *
+     but are shown here for clarification)
 
 In the terminal use the following commands:
 
 #### pip3 install Flask
 
-#### touch app.py
+#### touch app.py*
 app.py is where the python logic to run the app is written.
-
-#### touch env.py
-In env.py set the app's environment variables and keys needed during development.
-These will later be set in Heroku.
-
-import os
-os.environ.setdefault("IP", "0.0.0.0")
-os.environ.setdefault("PORT", "5000")
-os.environ.setdefault("SECRET_KEY", "***************")
-os.environ.setdefault("MONGO_URI", "***********")
-os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
-
-#### touch pycach.py 
 
 #### touch gitignore
 gitignore is used to store sensitive variables and keys that do not get sent to github.
 Type pycach.py and env.py in the gitignore file.
 
-#### pip3 freeze --local > requirements.txt 
+#### touch env.py
+As this file is not sent to Github it needs to be created.
+In env.py set the app's environment variables and keys needed during development.
+These will later be set in Heroku.
+
+
+         **env.py**
+
+    import os
+    os.environ.setdefault("IP", "0.0.0.0")
+    os.environ.setdefault("PORT", "5000")
+    os.environ.setdefault("SECRET_KEY", "***************")
+    os.environ.setdefault("MONGO_URI", "***********")
+    os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
+
+#### touch pycach.py 
+As this file is not sent to Github it needs to be created.
+
+#### pip3 freeze --local > requirements.txt* 
 A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
 
-#### echo web: python app.py > Procfile
+#### echo web: python app.py > Procfile*
 This tells Heroku what language the app is using.
 
 #### pip3 install flask-pymongo
@@ -650,9 +659,10 @@ We also need to install 'dnsython' in order to use the Mongo SRV connection stri
 #### pip3 freeze --local > requirements.txt
 Heroku needs to know these are needed for the app.
 
-#### Push everything to Github
+# Deployment
 
-### Set up Heroku
+[Heroku](https://www.heroku.com/platform)
+   - Heroku was used to deploy the project.
 
 Register a Heroku account.
 Click 'Create a New App'.
@@ -687,11 +697,18 @@ Click "View" to launch the app.
 - The general structure of the app was inspired by Tim Nelson's Task Manager app
   which is part of the Code Institute's course.
 
-### Content
+## Content
 
 All content was written by the developer.
 
-### Media
+## Media
+
+The photos used in the image bank and used for messages Sthis site were obtained from;
+
+  1.  [FreeImages.com](https://www.freeimages.com/)
+
+  2.  [pexels.com](https://www.pexels.com)
+
 
 The nine images used for the departments in this site were all created by myself 
 using a small portion of different screenshots I took from the TV series "Arrow" 
@@ -701,11 +718,10 @@ These are only being used for the MS3 project and will be replaced if the app is
 to be made in any way public.
 
 I researched the topic of copyright when it comes to the use of screenshots of tv shows
-used for non-profit student purposes and although it is somewhat of a grey area the
-general consensus is that it come under the "Fair Use Doctrine". Also in terms
+used for non-profit purposes and concluded that the use of fragments of these images 
+in this manner in the app come under the "Fair Use Doctrine". Also in terms
 of the 4-factor balancing test that it is accessed under the usage in this project is fair.
-
-See documentation for more info in copyright.docx.
+I also cleared it with the college staff.
 
 
 ### Acknowledgements
