@@ -578,7 +578,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
  - If user's "Username" entry does not match the requested format they get a warning message.
 
 <h2 align="center">
-<img src="documentation/readme-images/log1.png" width="50%">
+<img src="documentation/readme-images/logu.png" width="50%">
 </h2>
 
  - If user's "Password" entry does not match the requested format they get a warning message.
