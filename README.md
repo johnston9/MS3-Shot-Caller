@@ -691,9 +691,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 In the terminal use the following commands:
 
-##### pip3 install Flask
+##### 1. pip3 install Flask
 
-##### touch app.py*
+##### 2. touch app.py*
 - app.py is where the python logic to run the app is written.
 
 ##### touch gitignore
