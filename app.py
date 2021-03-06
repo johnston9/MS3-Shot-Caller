@@ -26,6 +26,13 @@ def page_not_found(e):
         return render_template('404.html'), 404
 
 
+@app.errorhandler(500)
+def server_down(e):
+    if session["user"]:
+        # note that we set the 500 status explicitly
+        return render_template('404.html'), 404
+
+
 @app.route("/")
 @app.route("/login", methods=["GET", "POST"])
 def login():
