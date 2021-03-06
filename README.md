@@ -696,14 +696,14 @@ In the terminal use the following commands:
 ##### 2. touch app.py*
 - app.py is where the python logic to run the app is written.
 
-##### touch gitignore
-    - gitignore is used to store sensitive variables and keys that do not get sent to github.
-Type pycach.py and env.py in the gitignore file.
+##### 3. touch gitignore
+- gitignore is used to store sensitive variables and keys that do not get sent to github.
+  Type pycach.py and env.py in the gitignore file.
 
-##### touch env.py
-    - As this file is not sent to Github it needs to be created.
-In env.py set the app's environment variables and keys needed during development.
-These will later be set in Heroku.
+##### 4. touch env.py
+- As this file is not sent to Github it needs to be created.
+  In env.py set the app's environment variables and keys needed during development.
+  These will later be set in Heroku.
 
 
          **env.py**
@@ -715,23 +715,23 @@ These will later be set in Heroku.
     os.environ.setdefault("MONGO_URI", "***********")
     os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
 
-##### touch pycach.py 
-    - As this file is not sent to Github it needs to be created.
+##### 5. touch pycach.py 
+- As this file is not sent to Github it needs to be created.
 
-##### pip3 freeze --local > requirements.txt* 
-    - A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
+##### 6. pip3 freeze --local > requirements.txt* 
+- A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
 
-##### echo web: python app.py > Procfile*
-    - This tells Heroku what language the app is using.
+##### 7. echo web: python app.py > Procfile*
+- This tells Heroku what language the app is using.
 
-##### pip3 install flask-pymongo
-    - So Flask can communicate with Mongo install 'flask-pymongo'.
+##### 8. pip3 install flask-pymongo
+- So Flask can communicate with Mongo install 'flask-pymongo'.
 
-##### pip3 install dnspython
-    - We also need to install 'dnsython' in order to use the Mongo SRV connection string.
+##### 9. pip3 install dnspython
+- We also need to install 'dnsython' in order to use the Mongo SRV connection string.
 
-##### pip3 freeze --local > requirements.txt
-    - Heroku needs to know these are needed for the app.
+##### 10. pip3 freeze --local > requirements.txt
+- Heroku needs to know these are needed for the app.
 
 # Deployment
 
@@ -759,7 +759,7 @@ These will later be set in Heroku.
 
      - MONGO_DBNAME, shot_caller.
 
-THEN CLICK HIDE CONFIG VARS
+     - THEN CLICK HIDE CONFIG VARS
 
  - Back in Deploy choose Github then click Search to get the correct Github repo for the app
    then click connect.
@@ -810,8 +810,8 @@ I also cleared it with the college staff.
 
 ### Acknowledgements
    
-- I'd like to thank the Code Institute tutor team for their support and my mentor 
-Aaron Sinnott for his insights and clarity.
+- I'd like to thank the Code Institute tutor team for their support and  
+Aaron Sinnott for his insights.
 
 [Back to Table of Content](#table-of-content)
 
