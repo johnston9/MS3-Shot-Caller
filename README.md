@@ -706,14 +706,19 @@ In the terminal use the following commands:
   These will later be set in Heroku.
 
 
-         **env.py**
+    **env.py**
 
-    import os
-    os.environ.setdefault("IP", "0.0.0.0")
-    os.environ.setdefault("PORT", "5000")
-    os.environ.setdefault("SECRET_KEY", "***************")
-    os.environ.setdefault("MONGO_URI", "***********")
-    os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
+      import os
+
+      os.environ.setdefault("IP", "0.0.0.0")
+
+      os.environ.setdefault("PORT", "5000")
+
+      os.environ.setdefault("SECRET_KEY", "***************")
+
+      os.environ.setdefault("MONGO_URI", "***********")
+      
+      os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
 
 ##### 5. touch pycach.py 
 - As this file is not sent to Github it needs to be created.
@@ -759,7 +764,7 @@ In the terminal use the following commands:
 
      - MONGO_DBNAME, shot_caller.
 
-     - THEN CLICK HIDE CONFIG VARS
+- THEN CLICK HIDE CONFIG VARS
 
  - Back in Deploy choose Github then click Search to get the correct Github repo for the app
    then click connect.
