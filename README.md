@@ -120,16 +120,15 @@ this are found in the Design section.
 
 4. As a Returning User, I want to download the latest shotlist and script
 5. As a Returning User, I want to add a communication in a specific area.
-6. As a Returning User, I want to edit or delete my communications.
 
   - ### Frequent User Goals
 
-7. As a Frequent User, I want to view communications and see images relating to style, 
+6. As a Frequent User, I want to view the latest production updates.
+7. As a Frequent User, I want to edit and delete my communications.
+
+8. As a Frequent User, I want to view and post communications and see images relating to style, 
    shooting and script choices so I can develop my owm choices accordingly.
-8. As a Frequent User, I want to post communications and images relating to my style, 
-   shooting and script choices.
-9. As a Frequent User, I want to collaborate with other user on specific areas of 
-   production.
+
 
 [Back to Table of Content](#table-of-content)
 
@@ -242,7 +241,7 @@ this are found in the Design section.
 <img src="documentation/readme-images/la.png" width="90%">
 </h2>
 
-- [Testing Latest Updates](#latest-updates)
+- [Testing Latest Updates](#frequent-user-goals)
 
   The bulk of the page is used to show the different departments on which the user can
   click to view each department's communications. 
@@ -263,6 +262,8 @@ this are found in the Design section.
 
   Once the user clicks on a department they are taken to that department 
   Find by Date Page. That day's communications will automatically be displaying.
+  All messages open on click to reveal the contained message and images contained in
+  it if there were any posted.
   
 <p align="center">Today's communications</p>
 <h2 align="center">
@@ -272,27 +273,27 @@ this are found in the Design section.
   The user has the further options of finding all communications in that
   department.
   
-<p align="center">Department Page</p>
+<p align="center">All communications</p>
 <h2 align="center">
 <img src="documentation/readme-images/dep-2.png" width="90%">
 </h2>
 
-  Also the user can find them by specific date by using the datepicker.
+  Also the user can find them by specific date by using the Datepicker.
 
 <p align="center">Pick Date (on small screen</p>
 <h2 align="center">
-<img src="documentation/readme-images/cam22.png" width="90%">
+<img src="documentation/readme-images/cam23.png" width="25%">
 </h2>
 
 <p align="center">Result of Pick Date (on large screen</p>
 <h2 align="center">
-<img src="documentation/readme-images/cam23.png" width="90%">
+<img src="documentation/readme-images/cam23.png" width="50%">
 </h2>
 
   The user can also click on a link to take them to the Find by Poster Page where they
-  can find communications by entering the poster's name.
+  can find communications by entering the poster's name. 
 
-<p align="center">Department Page</p>
+<p align="center">Find by Poster Page with message open and containing an image</p>
 <h2 align="center">
 <img src="documentation/readme-images/dep1.png" width="90%">
 </h2>
@@ -304,11 +305,10 @@ this are found in the Design section.
   The user here can find images by entering a specific image tag name if they have 
   it or entering a search word relating to the images they wish to see. These image
   are only upload by admin so they are intended to be actual style and shooting choices,
-  options of these or looks the creative team are going for. Here the admin can set images for users to know what choices
-  have been made and what looks and themes are being uses In turn this is the means in which the user finds out what choices have been made, i.e. actual location
-  images or colour themes, and therefore devise their own choices accordingly. 
-  In posting options it also allows, along with the posting of images in the Departments 
-  Page for discussion and collaboration.
+  options of these. Here the admin can set images for users to know what choices
+  have been made and what looks and themes are being uses.  
+  In the Departments posting message option it also allows for the posting of images
+  for discussion and collaboration.
 
 <p align="center">Images Page</p>
 <h2 align="center">
@@ -335,6 +335,8 @@ this are found in the Design section.
 <h2 align="center">
 <img src="documentation/readme-images/admin2.png" width="25%">
 </h2>
+
+[Admin Testing](#admin-testing)
 
 [Back to Table of Content](#table-of-content)
 
@@ -482,6 +484,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 [Back to Table of Content](#table-of-content)
 
+
 # Testing User Stories from User Experience (UX) 
 
 ## First Time User Goals
@@ -548,7 +551,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 <p align="center">Result for query word "nick"</p>
 <h2 align="center">
-<img src="documentation/readme-images/nick-all.png" width="25%">
+<img src="documentation/readme-images/nick-all1.png" width="25%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -574,40 +577,91 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 5. As a Returning User, I want to add a communication in a specific area.
 
-    1. Upon entering 
-    2. Upon entering 
-    3. Upon entering 
+    1. In the navbar, on the User's Base page and in all the department
+       pages the user will see a button to "Add Message". 
+    2. On clicking the button the user is brought to the "Add Messsage" page
+       where they can post a new communication. A flash message will displayed
+       if their message has been added successfully.
+    3. They are also given the option to add an image and instructions on how to do 
+       so are supplied. 
 
-6. As a Returning User, I want to edit and delete my communications.
+<p align="center">Result for downloaded script</p>
+<h2 align="center">
+<img src="documentation/readme-images/add16.png" width="90%">
+</h2>
 
-    1. Upon entering 
-    2. Upon entering 
-    3. Upon entering 
+[Testing Images](#add-message-testing-images)
 
 [Back to Table of Content](#table-of-content)
 
+
 ## Frequent User Goals
 
-7. As a Frequent User, I want to view communications and see images relating to style, 
-   shooting and script choices so I can develop my owm choices accordingly.
+6. As a Frequent User, I want to view the latest production updates.
 
-    1. Upon entering 
-    2. Upon entering 
-    3. Upon entering 
+   1. When the user clicks on the Latest Updates buttton on their home base page they are taken to the Today's
+      Latest Production Updates Page. All the production communications from that day are
+      shown there.
+      There is also a link to take them straight to all other departments to see their latest
+      updates which are always displaying for that day.
 
-8. As a Frequent User, I want to post communications and images relating to my style, 
+  
+<p align="center">Latest Updates Page</p>
+<h2 align="center">
+<img src="documentation/readme-images/la2.png" width="90%">
+</h2>
+
+7. As a Frequent User, I want to edit and delete my communications.
+
+    1. The user and strictly only the user, not even the admin, will have
+       edit and delete buttons display under the messages that they themselves have
+       posted. 
+    2. With a click they will be taken to the "Edit Message" page where they can edit their message.
+       They will get a flash message to tell them if the edit was a success.
+
+<p align="center">Message before edit</p>
+<h2 align="center">
+<img src="documentation/readme-images/ed-b.png" width="90%">
+</h2>
+
+<p align="center">Edit page</p>
+<h2 align="center">
+<img src="documentation/readme-images/edit.png" width="90%">
+</h2>
+
+<p align="center">Message after edit</p>
+<h2 align="center">
+<img src="documentation/readme-images/ed-a.png" width="90%">
+</h2>
+
+<p align="center">Flash message</p>
+<h2 align="center">
+<img src="documentation/readme-images/edit-fl.png" width="90%">
+</h2>
+
+    3. On clicking delete will be given a modal warning asking if they are sure
+       they want to delete the message and a flash message telling them if the 
+       delete was a success should they click OK.
+
+<p align="center">Delete Modal</p>
+<h2 align="center">
+<img src="documentation/readme-images/del-m.png" width="90%">
+</h2>
+
+<p align="center">Flash Message</p>
+<h2 align="center">
+<img src="documentation/readme-images/del-f.png" width="90%">
+</h2>
+8. As a Frequent User, I want to view and post communications and images relating to my style, 
    shooting and script choices.
 
-    1. Upon entering 
-    2. Upon entering 
-    3. Upon entering 
+    1. Having used the app once the user will be easily able to navigate
+       through it to locate desired fields of messages by date, department and poster. 
+    2. Having used the app once the user will be easily find how to post all communications
+       and images.
+    3. Having used the app once the user will be easily able to download the script
+       and shotlist. 
 
-9. As a Frequent User, I want to collaborate with other user on specific areas of 
-   production.
-
-    1. Upon entering 
-    2. Upon entering 
-    3. Upon entering 
 
 ## Further Testing
 
@@ -733,20 +787,25 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/regk2.png" width="50%">
 </h2>
 
-## Latest Updates
-
-  When the user clicks on the Latest Updates buttton on their home base page they are taken to the Today's
-  Latest Production Updates Page. All the production communications from that day are
-  shown there.
-  There is also a link to take them straight to all other departments to see their latest
-  updates which are always displaying for that day.
-
-<p align="center">Department Page</p>
-<h2 align="center">
-<img src="documentation/readme-images/la2.png" width="90%">
-</h2>
 
 [Back to Table of Content](#table-of-content)
+
+## Add Message Testing Images
+
+ <p align="center">test message "test2" submitted</p>
+<h2 align="center">
+<img src="documentation/readme-images/add-11.png" width="90%">
+</h2>
+
+<p align="center">Latest Updates Page</p>
+<h2 align="center">
+<img src="documentation/readme-images/add-12.png" width="90%">
+</h2>
+
+<p align="center">Success Flash message</p>
+<h2 align="center">
+<img src="documentation/readme-images/add-1s.png" width="90%">
+</h2>
 
 
 - The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
@@ -761,7 +820,13 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 - All bugs to date have been dealt with. The only issue is that on my laptop the select department
   input box red line warning on the add message page remain red after a department is selected.
   On all other devices including a number of turors, who I check the issue with it works
-  , i.e. it turns green.
+  , i.e. it turns green. Example below from a smart phone of it working correctly.
+
+<h2 align="center">
+<img src="documentation/readme-images/select.png" width="90%">
+</h2>
+
+
 
 [Back to Table of Content](#table-of-content)
 
