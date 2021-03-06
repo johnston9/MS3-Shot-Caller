@@ -241,7 +241,6 @@ this are found in the Design section.
 <img src="documentation/readme-images/la.png" width="90%">
 </h2>
 
-- [Testing Latest Updates](#frequent-user-goals)
 
   The bulk of the page is used to show the different departments on which the user can
   click to view each department's communications. 
@@ -287,7 +286,7 @@ this are found in the Design section.
 
 <p align="center">Result of Pick Date (on large screen</p>
 <h2 align="center">
-<img src="documentation/readme-images/cam23.png" width="50%">
+<img src="documentation/readme-images/cam22.png" width="50%">
 </h2>
 
   The user can also click on a link to take them to the Find by Poster Page where they
@@ -586,14 +585,9 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
        so are supplied. 
 
 
-<p align="center">test message "test2" submitted</p>
+<p align="center">Add message page</p>
 <h2 align="center">
 <img src="documentation/readme-images/add-11.png" width="25%">
-</h2>
-
-<p align="center">Latest Updates Page</p>
-<h2 align="center">
-<img src="documentation/readme-images/add-12.png" width="90%">
 </h2>
 
 <p align="center">Success Flash message</p>
@@ -601,6 +595,10 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/add-13.png" width="90%">
 </h2>
 
+<p align="center">Result</p>
+<h2 align="center">
+<img src="documentation/readme-images/add-12.png" width="90%">
+</h2>
 
 
 [Back to Table of Content](#table-of-content)
