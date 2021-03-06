@@ -5,6 +5,7 @@ from flask import (
     redirect, request, session, url_for)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
+import werkzeug
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
@@ -27,10 +28,9 @@ def page_not_found(e):
 
 
 @app.errorhandler(500)
-def server_down(e):
+def server(e):
     if session["user"]:
-        # note that we set the 500 status explicitly
-        return render_template('404.html'), 404
+        return render_template('404.html'), 500
 
 
 @app.route("/")

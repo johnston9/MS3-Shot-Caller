@@ -53,7 +53,6 @@ as a product on an individual basis for each new production and owner.
   * [Returning User Goals](#returning-user-goals-1)
   * [Frequent User Goals](#frequent-user-goals-1)
 - [Credits](#credits)
-- [Code](#code)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -220,18 +219,32 @@ this are found in the Design section.
   All other functions in the back-end are protected by ensuring that there is a sesson
   user for them to run, and only registered users would be logged in and set as sesson users.
 
+
 <p align="center">Register Page</p>
 <h2 align="center">
 <img src="documentation/readme-images/reg1.png" width="90%">
 </h2>
 
+ - [Testing](#testing)
 [Back to Table of Content](#table-of-content)
 
 ## User Base Page
 
   Once loged in the user is taken to their own User Base page which is the center base
   of the site and along with all other pages had a navbar to take them to any page.
-  There they have access to the different departments to view each department's communications. 
+  They will immediatly see a "Latest Updates" button which they can click on to take
+  then directly to a page showing that dayy's production messages. This in intended a a primary
+  feature in the app that allows all crew members to stay on top of all of current developments.
+
+<p align="center">User Base Department Choices</p>
+<h2 align="center">
+<img src="documentation/readme-images/la.png" width="90%">
+</h2>
+
+- [Testing](#latest-updates)
+
+  The bulk of the page is used to show the different departments on which the user can
+  click to view each department's communications. 
   The core feature of the site is clarity and specificy. The first measure of this is the 
   seperating of the production communications into different departments.
 
@@ -248,9 +261,28 @@ this are found in the Design section.
 ## Departments Page
 
   Once the user clicks on a department they are taken to that department 
-  Find by Date Page. That day's communications will automatically be displaying and the 
-  user has the further options of finding all communications in that
-  department or finding then by date.
+  Find by Date Page. That day's communications will automatically be displaying.
+  
+<p align="center">Today's communications</p>
+<h2 align="center">
+<img src="documentation/readme-images/dep-1.png" width="90%">
+</h2>
+ 
+  The user has the further options of finding all communications in that
+  department.
+  
+<p align="center">Department Page</p>
+<h2 align="center">
+<img src="documentation/readme-images/dep-2.png" width="90%">
+</h2>
+
+  Also the user can find them by specific date by using the datepicker.
+
+<p align="center">Department Page</p>
+<h2 align="center">
+<img src="documentation/readme-images/dep-2.png" width="90%">
+</h2>
+
   They can also click on a link to take them to the Find by Poster Page where they
   can find communications by entering the poster's name.
 
@@ -609,8 +641,19 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/brut-fa.png" width="50%">
 </h2>
 
+### 404 and 500 Error Handling
 
+- If a user is logged in as a sesson user and they get a 404 error they will be directed to a custom page.
 
+<h2 align="center">
+<img src="documentation/readme-images/page-n.png" width="50%">
+</h2>
+
+- When they click on the link on the page thet are brought back to their home base.
+
+<h2 align="center">
+<img src="documentation/readme-images/back.png" width="50%">
+</h2>
 
 
 ### Login Page
@@ -683,6 +726,21 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <h2 align="center">
 <img src="documentation/readme-images/regk2.png" width="50%">
 </h2>
+
+## Latest Updates
+
+  When the user clicks on the Latest Updates buttton on their home base page they are taken to the Today's
+  Latest Production Updates Page. All the production communications from that day are
+  shown there.
+  There is also a link to take them straight to all other departments to see their latest
+  updates which are always displaying for that day.
+
+<p align="center">Department Page</p>
+<h2 align="center">
+<img src="documentation/readme-images/la2.png" width="90%">
+</h2>
+
+[Back to Table of Content](#table-of-content)
 
 
 - The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
