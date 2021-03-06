@@ -584,14 +584,14 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
  - If user's "Password" entry does not match the requested format they get a warning message.
 
 <h2 align="center">
-<img src="documentation/readme-images/logp.png" width="50%">
+<img src="documentation/readme-images/log-p.png" width="50%">
 </h2>
 
 - If user's "Username" or "Password" do not match to ones stored on the database 
    they get a flash "Incorrect Entry" message.
 
 <h2 align="center">
-<img src="documentation/readme-images/logx.png" width="50%">
+<img src="documentation/readme-images/log-x.png" width="50%">
 </h2>
 
 ## Register Page
