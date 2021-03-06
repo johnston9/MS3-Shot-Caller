@@ -225,8 +225,9 @@ this are found in the Design section.
 <img src="documentation/readme-images/reg1.png" width="90%">
 </h2>
 
- - [Testing](#testing)
-[Back to Table of Content](#table-of-content)
+ - [Testing Register and Login pages](#testing)
+
+ - [Back to Table of Content](#table-of-content)
 
 ## User Base Page
 
@@ -236,12 +237,12 @@ this are found in the Design section.
   then directly to a page showing that dayy's production messages. This in intended a a primary
   feature in the app that allows all crew members to stay on top of all of current developments.
 
-<p align="center">User Base Department Choices</p>
+<p align="center">Latest Updates</p>
 <h2 align="center">
 <img src="documentation/readme-images/la.png" width="90%">
 </h2>
 
-- [Testing](#latest-updates)
+- [Testing Latest Updates](#latest-updates)
 
   The bulk of the page is used to show the different departments on which the user can
   click to view each department's communications. 
@@ -278,12 +279,17 @@ this are found in the Design section.
 
   Also the user can find them by specific date by using the datepicker.
 
-<p align="center">Department Page</p>
+<p align="center">Pick Date (on small screen</p>
 <h2 align="center">
-<img src="documentation/readme-images/dep-2.png" width="90%">
+<img src="documentation/readme-images/cam22.png" width="90%">
 </h2>
 
-  They can also click on a link to take them to the Find by Poster Page where they
+<p align="center">Result of Pick Date (on large screen</p>
+<h2 align="center">
+<img src="documentation/readme-images/cam23.png" width="90%">
+</h2>
+
+  The user can also click on a link to take them to the Find by Poster Page where they
   can find communications by entering the poster's name.
 
 <p align="center">Department Page</p>
