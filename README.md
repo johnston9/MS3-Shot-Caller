@@ -573,6 +573,46 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 ## Further Testing
 
+### Brute-Forcing Attacks
+
+- If a user tries a brute-force entry using a known user's username with the Base Page URL
+  they will get a KeyError message.
+
+<h2 align="center">
+<img src="documentation/readme-images/brut-c.png" width="50%">
+</h2>
+
+- If a user tries a brute-force entry using a known view, e.g. get_depts,
+  they will get a KeyError message.
+
+<h2 align="center">
+<img src="documentation/readme-images/brut-get.png" width="50%">
+</h2>
+
+- Both of these KeyErrors highlight the "if sesson user" logic.
+
+<h2 align="center">
+<img src="documentation/readme-images/brut-u.png" width="50%">
+</h2>
+
+- If a user attempts to use a view that takes an argument without the argument
+  they get a standard 404 error message as that does not exist.
+
+<h2 align="center">
+<img src="documentation/readme-images/brut-f.png" width="50%">
+</h2> 
+
+- If a user attempts to use a view that takes an argument with a correct argument
+  they will get a KeyError message.
+
+<h2 align="center">
+<img src="documentation/readme-images/brut-fa.png" width="50%">
+</h2>
+
+
+
+
+
 ### Login Page
  
  - If user's "Username" entry does not match the requested format they get a warning message.
@@ -685,13 +725,14 @@ By forking we make a copy of the GitHub Repository.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-### Create the Flask app 
+### Further step required in the terminal 
 (some steps will have been completed in "Making a Local Clone", marked *,
      but are shown here for clarification)
 
 In the terminal use the following commands:
 
 ##### 1. pip3 install Flask
+- Create the Flask app
 
 ##### 2. touch app.py*
 - app.py is where the python logic to run the app is written.
@@ -735,7 +776,7 @@ In the terminal use the following commands:
 ##### 9. pip3 install dnspython
 - We also need to install 'dnsython' in order to use the Mongo SRV connection string.
 
-##### 10. pip3 freeze --local > requirements.txt
+##### 10. pip3 freeze --local > requirements.txt*
 - Heroku needs to know these are needed for the app.
 
 # Deployment

@@ -19,6 +19,13 @@ app.register_key = os.environ.get("REGISTER_KEY")
 mongo = PyMongo(app)
 
 
+@app.errorhandler(404)
+def page_not_found(e):
+    if session["user"]:
+        # note that we set the 404 status explicitly
+        return render_template('404.html'), 404
+
+
 @app.route("/")
 @app.route("/login", methods=["GET", "POST"])
 def login():
