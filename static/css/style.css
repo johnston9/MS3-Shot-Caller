@@ -196,7 +196,6 @@ hr.red-line {
 	padding: 14px 10px 10px 10px;
 }
 
-
 /*---------image panels----------*/
 
 .panel-leftImg {
@@ -467,7 +466,10 @@ span.caps {
 	.long-box p {
 		font-weight: 400;
 		font-size: 10px !important;
-	}
+    }
+    #pass-type {
+        font-size: 10px;
+    }
 }
 
 @media only screen and (max-width: 800px) {

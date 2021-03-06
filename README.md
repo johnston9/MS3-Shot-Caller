@@ -571,8 +571,78 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
     2. Upon entering 
     3. Upon entering 
 
-### Further Testing
+## Further Testing
 
+### Login Page
+ 
+ - If user's "Username" entry does not match the requested format they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/log1.png" width="50%">
+</h2>
+
+ - If user's "Password" entry does not match the requested format they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/logp.png" width="50%">
+</h2>
+
+- If user's "Username" or "Password" do not match to ones stored on the database 
+   they get a flash "Incorrect Entry" message.
+
+<h2 align="center">
+<img src="documentation/readme-images/logx.png" width="50%">
+</h2>
+
+## Register Page
+ 
+ - If user's "Username" entry does not match the requested min length format they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/reg1.png" width="50%">
+</h2>
+
+ - If user's "Username" entry does not match the requested character format they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/reg1a.png" width="50%">
+</h2>
+
+ - If user does not fill in the required "First Name" field they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/regf.png" width="50%">
+</h2>
+
+ - If user does not fill in the required "Last Name" field they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/regl.png" width="50%">
+</h2>
+
+ - If user does not fill in the required "Job Title" field they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/regj.png" width="50%">
+</h2>
+
+ - If user's "Password" entry does not match the requested character or length format they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/regp.png" width="50%">
+</h2>
+
+ - If user does not enter a key they get a warning message.
+
+<h2 align="center">
+<img src="documentation/readme-images/regk.png" width="50%">
+</h2>
+
+ - If user enters an incorrect key they get a flash "Invalid Key" message.
+
+<h2 align="center">
+<img src="documentation/readme-images/regk2.png" width="50%">
+</h2>
 
 
 - The app was tested on Google Chrome, Internet Explorer, and Safari browsers.

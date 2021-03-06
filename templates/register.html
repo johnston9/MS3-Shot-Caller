@@ -57,12 +57,23 @@
             <div class="panel-left"></div>
          </div>
          <div class="col s10">
-            <!--register-->
+
+            <!--register instructions-->
+            <div class="row">
+                <div class="col s12 m8 offset-m2">
+                    <h5 class="margintop-20 center-align offwhite">Register</h5>
+                    <p id="pass-type" class="center-align offwhite">Username and Password both must be min 5 characters, max 16 characters long and
+                        consist only of the letters a-z either lowercase or uppercase and numeric characters
+                        0-9 with no spaces or special characters, e.g. %$&*.</p>
+                </div>
+            </div>
+
+            <!--register form-->
             <div class="row">
                <div class="col s12 m6 offset-m3">
-                  <h5 class="margintop-20 center-align offwhite">register</h5>
                   <form method="POST" action="{{ url_for('register') }}">
                      <div class="login-form margintop-20">
+
                         <!-- username -->
                         <div class="row">
                            <div class="input-field col s12">
@@ -75,8 +86,8 @@
                         <!-- name -->
                         <div class="row">
                            <div class="input-field col s12">
-                              <input id="firstname" name="firstname" type="text" minlength="1" maxlength="16"
-                                 pattern="^[a-zA-Z0-9]{1,16}$" class="validate"
+                              <input id="firstname" name="firstname" type="text"
+                                 class="validate"
                                  style="color:whitesmoke !important;" required>
                               <label for="firstname">First Name</label>
                            </div>
@@ -84,8 +95,8 @@
                         <!-- last name -->
                         <div class="row">
                            <div class="input-field col s12">
-                              <input id="lastname" name="lastname" type="text" minlength="2" maxlength="16"
-                                 pattern="^[a-zA-Z0-9]{2,16}$" class="validate"
+                              <input id="lastname" name="lastname" type="text"
+                                 class="validate"
                                  style="color:whitesmoke !important;" required>
                               <label for="lastname">Last Name</label>
                            </div>
@@ -93,7 +104,7 @@
                         <!-- job title -->
                         <div class="row">
                            <div class="input-field col s12">
-                              <input id="job_title" name="job_title" type="text" minlength="2" maxlength="30"
+                              <input id="job_title" name="job_title" type="text"
                                  class="validate" style="color:whitesmoke !important;" required>
                               <label for="job_title">Job Title</label>
                            </div>

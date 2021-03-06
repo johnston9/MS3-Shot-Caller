@@ -76,7 +76,7 @@ def register():
                             request.form.get("username")))
             return redirect(url_for("user_home", username=session["user"]))
         else:
-            flash("invalid key")
+            flash("Invalid Key")
     return render_template("register.html")
 
 
