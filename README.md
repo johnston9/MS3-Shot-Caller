@@ -689,12 +689,12 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 (some steps will have been completed in "Making a Local Clone", marked *,
      but are shown here for clarification)
 
-#### In the terminal use the following commands:
+In the terminal use the following commands:
 
 ##### pip3 install Flask
 
 ##### touch app.py*
-    - app.py is where the python logic to run the app is written.
+- app.py is where the python logic to run the app is written.
 
 ##### touch gitignore
     - gitignore is used to store sensitive variables and keys that do not get sent to github.
