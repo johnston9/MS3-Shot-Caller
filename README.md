@@ -510,7 +510,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 <p align="center">Result for query word "nick"</p>
 <h2 align="center">
-<img src="documentation/readme-images/im-word.png" width="25%">
+<img src="documentation/readme-images/nick-all.png" width="25%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -658,6 +658,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
   input box red line warning on the add message page remain red after a department is selected.
   On all other devices including a number of turors, who I check the issue with it works
   , i.e. it turns green.
+
 [Back to Table of Content](#table-of-content)
 
 # Repository
@@ -685,22 +686,22 @@ By forking we make a copy of the GitHub Repository.
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 ### Create the Flask app 
-  - (some steps will have been completed in making a clone, marked *
+(some steps will have been completed in "Making a Local Clone", marked *,
      but are shown here for clarification)
 
-In the terminal use the following commands:
+#### In the terminal use the following commands:
 
-#### pip3 install Flask
+##### pip3 install Flask
 
-#### touch app.py*
-app.py is where the python logic to run the app is written.
+##### touch app.py*
+    - app.py is where the python logic to run the app is written.
 
-#### touch gitignore
-gitignore is used to store sensitive variables and keys that do not get sent to github.
+##### touch gitignore
+    - gitignore is used to store sensitive variables and keys that do not get sent to github.
 Type pycach.py and env.py in the gitignore file.
 
-#### touch env.py
-As this file is not sent to Github it needs to be created.
+##### touch env.py
+    - As this file is not sent to Github it needs to be created.
 In env.py set the app's environment variables and keys needed during development.
 These will later be set in Heroku.
 
@@ -714,50 +715,58 @@ These will later be set in Heroku.
     os.environ.setdefault("MONGO_URI", "***********")
     os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
 
-#### touch pycach.py 
-As this file is not sent to Github it needs to be created.
+##### touch pycach.py 
+    - As this file is not sent to Github it needs to be created.
 
-#### pip3 freeze --local > requirements.txt* 
-A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
+##### pip3 freeze --local > requirements.txt* 
+    - A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
 
-#### echo web: python app.py > Procfile*
-This tells Heroku what language the app is using.
+##### echo web: python app.py > Procfile*
+    - This tells Heroku what language the app is using.
 
-#### pip3 install flask-pymongo
-So Flask can communicate with Mongo install 'flask-pymongo'.
+##### pip3 install flask-pymongo
+    - So Flask can communicate with Mongo install 'flask-pymongo'.
 
-#### pip3 install dnspython
-We also need to install 'dnsython' in order to use the Mongo SRV connection string.
+##### pip3 install dnspython
+    - We also need to install 'dnsython' in order to use the Mongo SRV connection string.
 
-#### pip3 freeze --local > requirements.txt
-Heroku needs to know these are needed for the app.
+##### pip3 freeze --local > requirements.txt
+    - Heroku needs to know these are needed for the app.
 
 # Deployment
 
 [Heroku](https://www.heroku.com/platform)
-   - Heroku was used to deploy the project.
 
-Register a Heroku account.
-Click 'Create a New App'.
-Where asked select "Europe" as the region then click create app.
+#### Heroku was used to deploy the project.
 
-Click Settings then click Reveal Config Vars.
-Now set the variables and keys to those in env.py.
+ - Register a Heroku account.
 
-IP, with the value of 0.0.0.0. 
-PORT, which is 5000.
-SECRET_KEY, copy then paste it from env.py. 
-MONGO_URI, get this when 'Connect your Application’ is clicked on in Mongo connect area. 
-MONGO_DBNAME, shot_caller.
+ - Click 'Create a New App'.
+
+ - Where asked select "Europe" as the region then click create app.
+
+ - Click Settings then click Reveal Config Vars.
+
+ - Now set the variables and keys to those in env.py.
+
+     - IP, with the value of 0.0.0.0.
+
+     - PORT, which is 5000.
+
+     - SECRET_KEY, copy then paste it from env.py. 
+
+     - MONGO_URI, get this when 'Connect your Application’ is clicked on in Mongo connect area.
+
+     - MONGO_DBNAME, shot_caller.
 
 THEN CLICK HIDE CONFIG VARS
 
-Back in Deploy choose Github then click Search to get the correct Github repo for the app
-then click connect.
+ - Back in Deploy choose Github then click Search to get the correct Github repo for the app
+   then click connect.
 
-Click Enable Automatic Deployment then click Deploy Branch.
+ - Click Enable Automatic Deployment then click Deploy Branch.
 
-Click "View" to launch the app.
+ - Click "View" to launch the app.
 
 [Back to Table of Content](#table-of-content)
 
