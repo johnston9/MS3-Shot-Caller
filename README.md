@@ -564,7 +564,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
     1. On clicking download shotlist the shotlist is downloaded to the user's device.
 
-<p align="center">Result for downloaded script</p>
+<p align="center">Result for downloaded shotlist</p>
 <h2 align="center">
 <img src="documentation/readme-images/shot1.png" width="90%">
 </h2>
@@ -585,12 +585,23 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
     3. They are also given the option to add an image and instructions on how to do 
        so are supplied. 
 
-<p align="center">Result for downloaded script</p>
+
+<p align="center">test message "test2" submitted</p>
 <h2 align="center">
-<img src="documentation/readme-images/add16.png" width="90%">
+<img src="documentation/readme-images/add-11.png" width="25%">
 </h2>
 
-[Testing Images](#add-message-testing-images)
+<p align="center">Latest Updates Page</p>
+<h2 align="center">
+<img src="documentation/readme-images/add-12.png" width="90%">
+</h2>
+
+<p align="center">Success Flash message</p>
+<h2 align="center">
+<img src="documentation/readme-images/add-13.png" width="90%">
+</h2>
+
+
 
 [Back to Table of Content](#table-of-content)
 
@@ -639,7 +650,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/edit-fl.png" width="90%">
 </h2>
 
-    3. On clicking delete will be given a modal warning asking if they are sure
+3. On clicking delete will be given a modal warning asking if they are sure
        they want to delete the message and a flash message telling them if the 
        delete was a success should they click OK.
 
@@ -652,14 +663,15 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <h2 align="center">
 <img src="documentation/readme-images/del-f.png" width="90%">
 </h2>
+
 8. As a Frequent User, I want to view and post communications and images relating to my style, 
    shooting and script choices.
 
-    1. Having used the app once the user will be easily able to navigate
+   1. Having used the app once the user will be easily able to navigate
        through it to locate desired fields of messages by date, department and poster. 
-    2. Having used the app once the user will be easily find how to post all communications
+   2. Having used the app once the user will be easily find how to post all communications
        and images.
-    3. Having used the app once the user will be easily able to download the script
+   3. Having used the app once the user will be easily able to download the script
        and shotlist. 
 
 
@@ -701,7 +713,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/brut-fa.png" width="50%">
 </h2>
 
-### 404 and 500 Error Handling
+### 404 Error Handling
 
 - If a user is logged in as a sesson user and they get a 404 error they will be directed to a custom page.
 
@@ -790,23 +802,6 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 [Back to Table of Content](#table-of-content)
 
-## Add Message Testing Images
-
- <p align="center">test message "test2" submitted</p>
-<h2 align="center">
-<img src="documentation/readme-images/add-11.png" width="90%">
-</h2>
-
-<p align="center">Latest Updates Page</p>
-<h2 align="center">
-<img src="documentation/readme-images/add-12.png" width="90%">
-</h2>
-
-<p align="center">Success Flash message</p>
-<h2 align="center">
-<img src="documentation/readme-images/add-1s.png" width="90%">
-</h2>
-
 
 - The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
 
@@ -823,7 +818,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
   , i.e. it turns green. Example below from a smart phone of it working correctly.
 
 <h2 align="center">
-<img src="documentation/readme-images/select.png" width="90%">
+<img src="documentation/readme-images/select.png" width="25%">
 </h2>
 
 
