@@ -21,16 +21,16 @@ as a product on an individual basis for each new production and owner.
 
 # Table of Content
 
-  * [User Experience (UX)](#user-experience--ux-)
-    + [Strategy Plane](#strategy-plane)
-    + [Scope Plane](#scope-plane)
-    + [Structure Plane](#structure-plane)
-    + [Skeleton Plane](#skeleton-plane)
-    + [User stories](#user-stories)
-      - [First Time User Goals](#first-time-user-goals)
-      - [Returning User Goals](#returning-user-goals)
-      - [Frequent User Goals](#frequent-user-goals)
-      - [Admin User Goals](#admin-user-goals)
+- [User Experience (UX)](#user-experience--ux-)
+  * [Strategy Plane](#strategy-plane)
+  * [Scope Plane](#scope-plane)
+  * [Structure Plane](#structure-plane)
+  * [Skeleton Plane](#skeleton-plane)
+  * [User stories](#user-stories)
+    + [First Time User Goals](#first-time-user-goals)
+    + [Returning User Goals](#returning-user-goals)
+    + [Frequent User Goals](#frequent-user-goals)
+    + [Admin User Goals](#admin-user-goals)
 - [Design](#design)
   * [Colour Scheme](#colour-scheme)
   * [Typography](#typography)
@@ -52,17 +52,23 @@ as a product on an individual basis for each new production and owner.
   * [Returning User Goals](#returning-user-goals-1)
   * [Frequent User Goals](#frequent-user-goals-1)
   * [Admin User Goals](#admin-user-goals-1)
-  * [Further Testing](#further-testing)
-    + [Brute-Forcing Attacks](#brute-forcing-attacks)
-    + [404 Error Handling](#404-error-handling)
-    + [Login Page](#login-page)
-    + [Register Page](#register-page)
+- [Further Testing](#further-testing)
+  * [Brute-Forcing Attacks](#brute-forcing-attacks)
+  * [404 Error Handling](#404-error-handling)
+  * [Login Page](#login-page)
+  * [Register Page](#register-page)
+  * [Known Bugs](#known-bugs)
+- [Development platform](#development-platform)
 - [Repository](#repository)
-    + [Forking the GitHub Repository](#forking-the-github-repository)
-    + [Making a Local Clone](#making-a-local-clone)
-    + [Further step required in the terminal](#further-step-required-in-the-terminal)
+  * [Forking the GitHub Repository](#forking-the-github-repository)
+  * [Making a Local Clone](#making-a-local-clone)
+  * [Further steps required](#further-steps-required)
 - [Deployment](#deployment)
 - [Credits](#credits)
+  * [Code](#code)
+  * [Content](#content)
+  * [Media](#media)
+  * [Acknowledgements](#acknowledgements)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -154,27 +160,27 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-# Design
+## Design
 
 <h2 align="center">
 <img src="documentation/readme-images/log1.png" width="90%">
 </h2>
 
-## Colour Scheme
+### Colour Scheme
  - The site aims to be minimal streamlined and slick using an offblack background 
    colour with blue side image panels and an offwhite text. Crimson and blue tones
    are used minimally against this for a touch of sophisticated flare especially
    the site title in crimson letters running downwards on either side of the header box.
 
   
-## Typography
+### Typography
  - Materialize was used for the site and I kept their inherent font-family style 
    choice with was: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, 
    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif. This worked perfectly
    for the style of the site.
 
 
-## Imagery
+### Imagery
  - The site was designed to have a minimal straight to business slick slightly cinematic look. This was achieved
    by the use of right and reversed left narrow side panels on an offblack background.
    The panels contain an images of a narrow window and it's blue lighting
@@ -182,7 +188,7 @@ this are found in the Design section.
    container which also has one of the images to which focus is drawn. The hope is that
    this achieves a feeling of cinematic lighting and depth.
 
-## Wireframes
+### Wireframes
 
  - PDF – Balsamic was used to design the layout for login, register, user base, 
    department messages, images, and the add and admin pages.
@@ -191,9 +197,9 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-# Existing Features
+## Existing Features
 
-## Responsive Design
+### Responsive Design
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
@@ -216,7 +222,7 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-## Login/Register Pages and Security Measures
+### Login/Register Pages and Security Measures
 
   The user is brought first to the login page. From there they will find a 
   link to register if a new user. One of the core features of the site is it's
@@ -250,7 +256,7 @@ this are found in the Design section.
 
  - [Back to Table of Content](#table-of-content)
 
-## User Base Page
+### User Base Page
 
   Once loged in the user is taken to their own User Base page which is the center base
   of the site and along with all other pages had a navbar to take them to any page.
@@ -279,7 +285,7 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-## Departments Page
+### Departments Page
 
   Once the user clicks on a department they are taken to that department 
   Find by Date Page. That day's communications will automatically be displaying.
@@ -321,7 +327,7 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-## Images Page
+### Images Page
     
   The user here can find images by entering a specific image tag name if they have 
   it or entering a search word relating to the images they wish to see. These image
@@ -338,7 +344,7 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-## Admin Page
+### Admin Page
 
   As discussed above in "Security Measures" defensive programming will only allow
   access to the admin features if admin is the sesson user and this is inplemented
@@ -361,7 +367,7 @@ Please see admin testing for further details.
 
 [Back to Table of Content](#table-of-content)
 
-# Database structure
+## Database structure
 
 MongoDB was used as the site's database. 
 
@@ -425,8 +431,7 @@ The MongoDB Shot Caller database contains the following collections.
 </h2>
 
 
-
-# Languages Used
+## Languages Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
@@ -434,7 +439,7 @@ The MongoDB Shot Caller database contains the following collections.
 - [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 - [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine))
 
-# Frameworks, Databases, Libraries & Programs Used
+## Frameworks, Databases, Libraries & Programs Used
 
 1. [Materialize:](https://materializecss.com/getting-started.html)
    - Materialize was used to create the overall framework and it's grid based 
@@ -476,7 +481,7 @@ The MongoDB Shot Caller database contains the following collections.
 
 [Back to Table of Content](#table-of-content)
 
-# Testing
+## Testing
 
 W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate every page of the project.
 
@@ -500,9 +505,9 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 [Back to Table of Content](#table-of-content)
 
 
-# Testing User Stories from User Experience (UX) 
+## Testing User Stories from User Experience (UX) 
 
-## First Time User Goals
+### First Time User Goals
 
 1. As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
 
@@ -571,7 +576,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 [Back to Table of Content](#table-of-content)
 
-## Returning User Goals
+### Returning User Goals
 
 4. As a Returning User, I want to download the latest shotlist and script.
 
@@ -620,7 +625,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 [Back to Table of Content](#table-of-content)
 
 
-## Frequent User Goals
+### Frequent User Goals
 
 6. As a Frequent User, I want to view the latest production updates.
 
@@ -688,7 +693,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
    3. Having used the app once the user will be easily able to download the script
        and shotlist. 
 
-## Admin User Goals
+### Admin User Goals
 
 
 1. As the admin user I want to upload the latest draft of the script.
@@ -810,7 +815,9 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/ad-4.png" width="90%">
 </h2>
 
+
 ## Further Testing
+
 
 ### Brute-Forcing Attacks
 
@@ -972,12 +979,12 @@ method wold be most appropriate.
 
 [Back to Table of Content](#table-of-content)
 
-# Development platform
+## Development platform
 
 1. [Gitpod:](https://www.gitpod.io/docs/)
    - Gitpod was used as the development platform.
 
-# Repository
+## Repository
    [Github](https://github.com/)
    - Github was used as the repository for the project.
 
@@ -1003,12 +1010,12 @@ By forking we make a copy of the GitHub Repository.
   will contain Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
   will need these to run the app.
 
-  - The Procfile tells Heroku what language the app is using.
+  - The Procfile will tell Heroku what language the app is using.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
-### Further step required  
+### Further steps required  
 
 Some file containing sensitive variables will not have been pushed to Github so it 
 will be necessary to create them.
@@ -1037,7 +1044,7 @@ will be necessary to create them.
       os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
 
 
-# Deployment
+## Deployment
 
 [Heroku](https://www.heroku.com/platform)
 
@@ -1075,9 +1082,9 @@ will be necessary to create them.
 [Back to Table of Content](#table-of-content)
 
 
-# Credits
+## Credits
 
-## Code
+### Code
 
 - [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
 - The general structure of the app was inspired by Tim Nelson's Task Manager app
@@ -1085,11 +1092,11 @@ will be necessary to create them.
 - The code to fix Materialize bug to show red line warning if department not 
   selected in add message is taken from Tim Nelson's Task Manager app.
 
-## Content
+### Content
 
 All content was written by the developer.
 
-## Media
+### Media
 
 The photos used in the image bank and used for messages Sthis site were obtained from;
 
@@ -1112,7 +1119,7 @@ of the 4-factor balancing test that it is accessed under the usage in this proje
 I also cleared it with the college staff.
 
 
-## Acknowledgements
+### Acknowledgements
    
 - I'd like to thank the Code Institute tutor team for their support and  
 Aaron Sinnott for his insights.
