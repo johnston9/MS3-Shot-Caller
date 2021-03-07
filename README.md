@@ -46,7 +46,6 @@ as a product on an individual basis for each new production and owner.
 - [Database structure](#database-structure)
 - [Languages Used](#languages-used)
 - [Frameworks, Databases, Libraries & Programs Used](#frameworks--databases--libraries---programs-used)
-- [Development platform](#development-platform)
 - [Testing](#testing)
 - [Testing User Stories from User Experience (UX)](#testing-user-stories-from-user-experience--ux-)
   * [First Time User Goals](#first-time-user-goals-1)
@@ -94,6 +93,8 @@ Security is a big factor in the site and only those give a key can register, the
 
 The features included in the app at present reflect choices made around what is absolutely necessary for the app to deliver it’s basic marketed functionality, which proposed features are buildable and what features are necessary to make
 the app sellable. The buildable aspect was vital for the scope of the app and several more advance features, like a communal workspace and storyboarding facilities were repositioned as future features.
+
+[Back to Table of Content](#table-of-content)
 
 ### Structure Plane
 
@@ -245,7 +246,7 @@ this are found in the Design section.
 <img src="documentation/readme-images/reg1.png" width="90%">
 </h2>
 
- - [Testing Register and Login pages](#testing)
+ See Further Testing login and register pages.
 
  - [Back to Table of Content](#table-of-content)
 
@@ -472,12 +473,6 @@ The MongoDB Shot Caller database contains the following collections.
    - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
 1. [GitHub Wiki TOC generator:](http://ecotrust-canada.github.io/markdown-toc/)
    - GitHub Wiki TOC generator was used to create the Table of Contents.
-
-
-# Development platform
-
-1. [Gitpod:](https://www.gitpod.io/docs/)
-   - Gitpod was used as the development platform.
 
 [Back to Table of Content](#table-of-content)
 
@@ -707,7 +702,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/sc-1.png" width="90%">
 </h2>
 
-     They will get a success flash message to tell then if it is sucessful. 
+- They will get a flash message to tell them if it was sucessful. 
 
 <h2 align="center">
 <img src="documentation/readme-images/sc-2.png" width="90%">
@@ -724,7 +719,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/st-1.png" width="90%">
 </h2>
 
-     They will get a success flash message to tell then if it is sucessful. 
+- They will get a flash message to tell them if it was sucessful. 
 
 <h2 align="center">
 <img src="documentation/readme-images/st-2.png" width="90%">
@@ -743,7 +738,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/st-1.png" width="90%">
 </h2>
 
-     They will get a success flash message to tell then if it is sucessful. 
+- They will get a flash message to tell them if it was sucessful.
 
 <h2 align="center">
 <img src="documentation/readme-images/st-2.png" width="90%">
@@ -765,7 +760,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/ee-2.png" width="90%">
 </h2>
 
-     They will get a success flash message to tell then if it is sucessful. 
+- They will get a flash message to tell them if it was sucessful.
 
 <h2 align="center">
 <img src="documentation/readme-images/ee-4.png" width="90%">
@@ -781,7 +776,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/delet.png" width="90%">
 </h2>
 
-     They will get a success flash message to tell then if it is sucessful. 
+- They will get a flash message to tell them if it was sucessful.
 
 <h2 align="center">
 <img src="documentation/readme-images/sc-2.png" width="90%">
@@ -798,7 +793,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/rm.png" width="90%">
 </h2>
 
-     They will get a success flash message to tell then if it is sucessful. 
+- They will get a flash message to tell them if it was sucessful.
 
 <h2 align="center">
 <img src="documentation/readme-images/st-2.png" width="90%">
@@ -977,6 +972,11 @@ method wold be most appropriate.
 
 [Back to Table of Content](#table-of-content)
 
+# Development platform
+
+1. [Gitpod:](https://www.gitpod.io/docs/)
+   - Gitpod was used as the development platform.
+
 # Repository
    [Github](https://github.com/)
    - Github was used as the repository for the project.
@@ -999,27 +999,26 @@ By forking we make a copy of the GitHub Repository.
 6. Type git clone, and then paste the URL copied above.
 7. Press enter and a local clone will be created.
 
+  - The requirements.txt contains all tools to be installed to run the app. These are  
+  will contain Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
+  will need these to run the app.
+
+  - The Procfile tells Heroku what language the app is using.
+
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
-### Further step required in the terminal 
-(some steps will have been completed in "Making a Local Clone", marked *,
-     but are shown here for clarification)
 
-In the terminal use the following commands:
+### Further step required  
 
-##### 1. pip3 install Flask
-- Create the Flask app
+Some file containing sensitive variables will not have been pushed to Github so it 
+will be necessary to create them.
 
-##### 2. touch app.py*
-- app.py is where the python logic to run the app is written.
-
-##### 3. touch gitignore
+##### gitignore
 - gitignore is used to store sensitive variables and keys that do not get sent to github.
   Type pycach.py and env.py in the gitignore file.
 
-##### 4. touch env.py
-- As this file is not sent to Github it needs to be created.
-  In env.py set the app's environment variables and keys needed during development.
+##### env.py
+- In env.py set the app's environment variables and keys needed during development.
   These will later be set in Heroku.
 
 
@@ -1037,23 +1036,6 @@ In the terminal use the following commands:
       
       os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
 
-##### 5. touch pycach.py 
-- As this file is not sent to Github it needs to be created.
-
-##### 6. pip3 freeze --local > requirements.txt* 
-- A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
-
-##### 7. echo web: python app.py > Procfile*
-- This tells Heroku what language the app is using.
-
-##### 8. pip3 install flask-pymongo
-- So Flask can communicate with Mongo install 'flask-pymongo'.
-
-##### 9. pip3 install dnspython
-- We also need to install 'dnsython' in order to use the Mongo SRV connection string.
-
-##### 10. pip3 freeze --local > requirements.txt*
-- Heroku needs to know these are needed for the app.
 
 # Deployment
 
