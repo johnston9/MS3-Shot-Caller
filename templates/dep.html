@@ -125,7 +125,7 @@
                </div>
                {% endif %}
                <!--edit/delete-->
-               {% if session.user|lower == message.username|lower %}
+               {% if session.user|lower == message.username|lower or session.user|lower == "admin"|lower %}
                <a href="{{ url_for('edit_message', depart=message.dept_name, user=message.username, message_id=message._id) }}"
                   class="btn-small blueBack-sea">
                Edit <i class="fas fa-pen-fancy"></i></a>

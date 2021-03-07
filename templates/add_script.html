@@ -31,8 +31,19 @@
       <div class="panel-left"></div>
    </div>
    <div class="col s10">
+
+        <!--instructions-->
+        <div class="row">
+            <div class="col s10 offset-s1 m8 offset-m2">
+                <p class="find antiquewhite center-align">To upload a script simply first upload and create an url for it with 
+                <span><a class="link-color" href="https://cloudinary.com/" target="_blank">Cloudinary</a></span>
+                or a similar url generating site and enter the URL in the input box below. 
+                </p>
+            </div>
+        </div>
+
       <!--add new script url form-->
-      <div class="row margintop-50">
+      <div class="row">
          {% for draft in script %}
          <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST"
             action="{{ url_for('add_script', script_id=draft._id) }}">
@@ -60,6 +71,7 @@
          {% endfor %}
       </div>
    </div>
+
    <!--panel right-->
    <div class="col s1">
       <div class="panel-right"></div>

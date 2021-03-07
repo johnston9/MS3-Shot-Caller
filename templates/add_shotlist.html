@@ -30,12 +30,24 @@
    <div class="col s1">
       <div class="panel-left"></div>
    </div>
+
    <div class="col s10">
-      <div class="row margintop-50">
-         <!--update shotlist form-->
+
+    <!--instructions-->
+        <div class="row">
+            <div class="col s10 offset-s1 m8 offset-m2">
+                <p class="find antiquewhite center-align">To upload the latest shotlist simply first upload and create an url for it with 
+                <span><a class="link-color" href="https://cloudinary.com/" target="_blank">Cloudinary</a></span>
+                or a similar url generating site and enter the URL in the input box below. 
+                </p>
+            </div>
+        </div>
+
+      <!--upload shotlist form-->
+      <div class="row">
          <form class="card-panel matt-black col s10 offset-s1 col m8 offset-m2" method="POST"
             action="{{ url_for('add_shot') }}">
-            <!--enter script src-->
+            <!--enter shotlist src-->
             <div class="row">
                <div class="input-field col s12">
                   <i class="fas fa-book-open prefix blue-text text-darken-4"></i>
@@ -58,6 +70,7 @@
          </form>
       </div>
    </div>
+
    <!--panel right-->
    <div class="col s1">
       <div class="panel-right"></div>

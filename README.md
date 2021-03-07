@@ -21,16 +21,16 @@ as a product on an individual basis for each new production and owner.
 
 # Table of Content
 
-- [Table of Content](#table-of-content)
-- [User Experience (UX)](#user-experience--ux-)
-  * [Strategy Plane](#strategy-plane)
-  * [Scope Plane](#scope-plane)
-  * [Structure Plane](#structure-plane)
-  * [Skeleton Plane](#skeleton-plane)
-  * [User stories](#user-stories)
-    + [First Time User Goals](#first-time-user-goals)
-    + [Returning User Goals](#returning-user-goals)
-    + [Frequent User Goals](#frequent-user-goals)
+  * [User Experience (UX)](#user-experience--ux-)
+    + [Strategy Plane](#strategy-plane)
+    + [Scope Plane](#scope-plane)
+    + [Structure Plane](#structure-plane)
+    + [Skeleton Plane](#skeleton-plane)
+    + [User stories](#user-stories)
+      - [First Time User Goals](#first-time-user-goals)
+      - [Returning User Goals](#returning-user-goals)
+      - [Frequent User Goals](#frequent-user-goals)
+      - [Admin User Goals](#admin-user-goals)
 - [Design](#design)
   * [Colour Scheme](#colour-scheme)
   * [Typography](#typography)
@@ -48,17 +48,27 @@ as a product on an individual basis for each new production and owner.
 - [Frameworks, Databases, Libraries & Programs Used](#frameworks--databases--libraries---programs-used)
 - [Development platform](#development-platform)
 - [Testing](#testing)
-- [Testing User Stories from User Experience (UX) Section](#testing-user-stories-from-user-experience--ux--section)
+- [Testing User Stories from User Experience (UX)](#testing-user-stories-from-user-experience--ux-)
   * [First Time User Goals](#first-time-user-goals-1)
   * [Returning User Goals](#returning-user-goals-1)
   * [Frequent User Goals](#frequent-user-goals-1)
+  * [Admin User Goals](#admin-user-goals-1)
+  * [Further Testing](#further-testing)
+    + [Brute-Forcing Attacks](#brute-forcing-attacks)
+    + [404 Error Handling](#404-error-handling)
+    + [Login Page](#login-page)
+    + [Register Page](#register-page)
+- [Repository](#repository)
+    + [Forking the GitHub Repository](#forking-the-github-repository)
+    + [Making a Local Clone](#making-a-local-clone)
+    + [Further step required in the terminal](#further-step-required-in-the-terminal)
+- [Deployment](#deployment)
 - [Credits](#credits)
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 
-
-# User Experience (UX)
+## User Experience (UX)
 
 The business goals are to establish the app as a reputable and reliable tool
 that facilitates film production. It provides a communication platform for all 
@@ -72,7 +82,7 @@ communication. It is streamlined for the exchange of messages by specific areas.
 It will allow the user the means to instantaniously both share and recieve
 ideas and all work related developements as they happen.
 
-## Strategy Plane
+### Strategy Plane
 
 The aim of the site is to create an app that facilitates film production and is on a par with the latest trends in digital communication media. It aims to be enjoyable and simple to use and become a “go to” tool in film production.
 The site is designed to give the user, here being specifically the film production team, the necessary tools to communicate their ideas during production collaboration.  
@@ -80,12 +90,12 @@ Clearly separating the production process by department is key to the site’s s
 The owners of the site, here being the production team, have overall control over the site and the necessary tools, unique only to those given admin access, to update the script and the shot list and add and delete image in the image bank.
 Security is a big factor in the site and only those give a key can register, the password functionality is secured through Werkzeug and the admin access id check both in the front and backend.
 
-## Scope Plane
+### Scope Plane
 
 The features included in the app at present reflect choices made around what is absolutely necessary for the app to deliver it’s basic marketed functionality, which proposed features are buildable and what features are necessary to make
 the app sellable. The buildable aspect was vital for the scope of the app and several more advance features, like a communal workspace and storyboarding facilities were repositioned as future features.
 
-## Structure Plane
+### Structure Plane
 
 The site is structured so the user can navigate in an intuitive way through the different features, all pages keeping a uniformed consistency. 
 The user is taken on a journey into the site, all elements being discoverable as they proceed along.
@@ -100,28 +110,29 @@ The information architecture is a tree structure allowing users to move through 
 <img src="documentation/readme-images/struc.png" width="90%">
 </h2>
 
-## Skeleton Plane
+### Skeleton Plane
 
-The interface is aesthetically functionally all the time creating a positive reaction in the user with every click, making the user feel both at home here and part of an exciting journey. Details of
+The interface is aesthetically functionally all the time creating a positive reaction in the user with every click, 
+making the user feel both at home here and part of an exciting journey. Details of
 this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
 
-## User stories
+### User stories
 
- - ### First Time User Goals
+ - #### First Time User Goals
 
 1. As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
 2. As a First Time User, I want to find communications in my or other departments.
 3. As a First Time User, I want to view images.
 
-  - ### Returning User Goals
+  - #### Returning User Goals
 
 4. As a Returning User, I want to download the latest shotlist and script
 5. As a Returning User, I want to add a communication in a specific area.
 
-  - ### Frequent User Goals
+  - #### Frequent User Goals
 
 6. As a Frequent User, I want to view the latest production updates.
 7. As a Frequent User, I want to edit and delete my communications.
@@ -129,6 +140,16 @@ this are found in the Design section.
 8. As a Frequent User, I want to view and post communications and see images relating to style, 
    shooting and script choices so I can develop my owm choices accordingly.
 
+  - #### Admin User Goals
+
+1. As the admin user I want to upload the latest draft of the script.
+2. As the admin user I want to upload the latest shotlist.
+3. As the admin user I want to upload new images.
+4. As the admin user I want to edit images.
+5. As the admin user I want to delete images.
+6. As the admin user I want to delete a user.
+7. As the admin user I want control over material posted on the site for legal
+   and other purposes.
 
 [Back to Table of Content](#table-of-content)
 
@@ -318,7 +339,7 @@ this are found in the Design section.
 
 ## Admin Page
 
-  As discussed above in "decurity Measures" defensive programming will only allow
+  As discussed above in "Security Measures" defensive programming will only allow
   access to the admin features if admin is the sesson user and this is inplemented
   both in the front-end and back-end. If the user is admin they will be given the 
   option to delete a user, upload the latest script, upload the latest shotlist 
@@ -335,7 +356,7 @@ this are found in the Design section.
 <img src="documentation/readme-images/admin2.png" width="25%">
 </h2>
 
-[Admin Testing](#admin-testing)
+Please see admin testing for further details.
 
 [Back to Table of Content](#table-of-content)
 
@@ -672,6 +693,127 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
    3. Having used the app once the user will be easily able to download the script
        and shotlist. 
 
+## Admin User Goals
+
+
+1. As the admin user I want to upload the latest draft of the script.
+
+   - If the admin user clicks the upload script button available only to them they
+     will be taken to the "Add Latest Script" page. They can follow the instructions
+     telling them how to upload and get an SRC for the new file from Cloudinary, 
+     or a similar app, and enter an SRC here.
+     
+<h2 align="center">
+<img src="documentation/readme-images/sc-1.png" width="90%">
+</h2>
+
+     They will get a success flash message to tell then if it is sucessful. 
+
+<h2 align="center">
+<img src="documentation/readme-images/sc-2.png" width="90%">
+</h2>
+
+2. As the admin user I want to upload the latest shotlist.
+
+   - If the admin user clicks the upload shotlist button available only to them they
+     will be taken to the "Add Latest shotlist" page. They can follow the instructions
+     telling them how to upload and get an SRC for the new file from Cloudinary, 
+     or a similar app, and enter an SRC here.
+     
+<h2 align="center">
+<img src="documentation/readme-images/st-1.png" width="90%">
+</h2>
+
+     They will get a success flash message to tell then if it is sucessful. 
+
+<h2 align="center">
+<img src="documentation/readme-images/st-2.png" width="90%">
+</h2>
+
+3. As the admin user I want to upload new images.
+
+   - If the admin user clicks the upload images button available only to them they
+     will be taken to the "Add New Images" page. They can follow the instructions
+     telling them how to upload and get an SRC for the new file from Cloudinary, 
+     or a similar app, and enter an SRC here. They will also be told that if they
+     want to use an image already uploades by a user in the department messages they
+     can just right click on the image and enter it here.
+     
+<h2 align="center">
+<img src="documentation/readme-images/st-1.png" width="90%">
+</h2>
+
+     They will get a success flash message to tell then if it is sucessful. 
+
+<h2 align="center">
+<img src="documentation/readme-images/st-2.png" width="90%">
+</h2>
+
+4. As the admin user I want to edit images.
+
+   - On the images page under every image an edit button will display for
+     the admin and the admin only. 
+
+<h2 align="center">
+<img src="documentation/readme-images/ee-1.png" width="90%">
+</h2>
+          
+   - On clicking it they will be taken to the
+     "Edit Image" page where they can update any of the three image values.
+     
+<h2 align="center">
+<img src="documentation/readme-images/ee-2.png" width="90%">
+</h2>
+
+     They will get a success flash message to tell then if it is sucessful. 
+
+<h2 align="center">
+<img src="documentation/readme-images/ee-4.png" width="90%">
+</h2>
+
+5. As the admin user I want to delete images.
+
+   - On the images page under every image a delete button will display for
+     the admin and the admin only. On clicking they will be given a modal
+     asking them to confirm. On doing so they will get a flash message.
+     
+<h2 align="center">
+<img src="documentation/readme-images/delet.png" width="90%">
+</h2>
+
+     They will get a success flash message to tell then if it is sucessful. 
+
+<h2 align="center">
+<img src="documentation/readme-images/sc-2.png" width="90%">
+</h2>
+
+6. As the admin user I want to delete a user.
+
+   - If the admin user clicks the "Remove User" button available only to them they
+     will be taken to the "Remove User" page. They must enter the user's firstname they
+     seperatly the user's lastname then press submit. They will get a flash message on
+     completion. No modal use deemed necessary as this is an already involved process.
+     
+<h2 align="center">
+<img src="documentation/readme-images/rm.png" width="90%">
+</h2>
+
+     They will get a success flash message to tell then if it is sucessful. 
+
+<h2 align="center">
+<img src="documentation/readme-images/st-2.png" width="90%">
+</h2>
+
+7. As the admin user I want control over material posted on the site for legal
+   and other purposes.
+
+   - Admin will have access to the edit and delete functions for every message
+     along with the user who posted the message. This along with the remove user function
+     will allow admin full control of the site;
+
+<h2 align="center">
+<img src="documentation/readme-images/ad-4.png" width="90%">
+</h2>
 
 ## Further Testing
 
@@ -740,14 +882,15 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/log-p.png" width="50%">
 </h2>
 
+
 - If user's "Username" or "Password" do not match to ones stored on the database 
    they get a flash "Incorrect Entry" message.
 
 <h2 align="center">
-<img src="documentation/readme-images/log-x.png" width="50%">
+<img src="documentation/readme-images/log-x.png" width="50%">s
 </h2>
 
-## Register Page
+### Register Page
  
  - If user's "Username" entry does not match the requested min length format they get a warning message.
 
@@ -819,6 +962,17 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 <img src="documentation/readme-images/select.png" width="25%">
 </h2>
 
+### A Code Note
+
+For the add_script function I got the object_id for the original document to be updated
+by having Flask get the Mongo latest_script collection, passing that to the Jinja template
+so it could get the id and pass that back to the Flask as an argument.
+
+For the add_shotlist function I just set the object_id for the document directly in
+the function.
+
+The reason for this is just to have options for further development of the app as to which
+method wold be most appropriate.
 
 
 [Back to Table of Content](#table-of-content)
@@ -976,7 +1130,7 @@ of the 4-factor balancing test that it is accessed under the usage in this proje
 I also cleared it with the college staff.
 
 
-### Acknowledgements
+## Acknowledgements
    
 - I'd like to thank the Code Institute tutor team for their support and  
 Aaron Sinnott for his insights.
