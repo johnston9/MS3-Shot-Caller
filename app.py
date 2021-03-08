@@ -160,6 +160,7 @@ def get_dep(dep):
 def get_poster(dep):
     if session["user"]:
         dep = dep
+        depart = list(mongo.db[dep].find().sort({_id:1}).limit(1))
         if request.method == "POST":
             poster = request.form.get("poster").lower()
             depart = list(mongo.db[dep].find(
@@ -168,7 +169,7 @@ def get_poster(dep):
             return render_template(
                 "dep-poster.html", dep=dep, depart=depart, day=poster)
         return render_template(
-            "dep-poster.html", dep=dep)
+            "dep-poster.html", dep=dep, depart=depart, day="John Defoe")
     else:
         flash("Entry Incorrect")
         return redirect(url_for("login"))

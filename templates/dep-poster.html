@@ -70,14 +70,26 @@
          <!--Find by Poster-->
          <div class="col s6 m4">
             <p class="blueBack-sea pad-findrd center-align find">
-               <a class="offwhite" href="{{ url_for('get_poster', dep=dep) }}">
+               <a class="offwhite" href="{{ url_for('get_dep', dep=dep) }}">
                Find by Date
                </a>
             </p>
          </div>
       </div>
-      <hr class="red-line">
-      <h5 class="center-align antiquewhite">{{ day }}</h5>
+
+          <hr class="red-line100 margintop-20">
+<h5 class="margintop-20 center-align antiquewhite">{{ day }}</h5>
+        
+   </div>
+   <!--panel right-->
+   <div class="col s1">
+      <div class="panel-right"></div>
+   </div>
+</div>
+
+{% if depart |length > 0 %}
+<div class="row">
+   <div class="col mar-10 s12 m10 offset-m1">
       <!--messages-->
       {% for message in depart %}
       <ul class="collapsible collapsible-border">
@@ -141,10 +153,8 @@
          </li>
          {% endfor %}
       </ul>
-   </div>
-   <!--panel right-->
-   <div class="col s1">
-      <div class="panel-right"></div>
-   </div>
-</div>
+
+{% else %}
+    <h5 class="crimson matt-black center-align">No Messages Found</h5>
+{% endif %}
 {% endblock %}

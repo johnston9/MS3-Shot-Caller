@@ -1015,6 +1015,15 @@ By forking we make a copy of the GitHub Repository.
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
+### Terminal
+
+  - Using the following command will install the packages need for the app from 
+    requirements.txt. 
+
+##### pip3 install -r requirements.txt 
+  - The -r switch tells pip to install packages from the requirements.txt file 
+    needed for the app.
+
 ### Further steps required  
 
 Some file containing sensitive variables will not have been pushed to Github so it 
@@ -1050,6 +1059,13 @@ will be necessary to create them.
 
 #### Heroku was used to deploy the project.
 
+ - As mentioned in the "Clone" section above a requirements.txt and Procfile are needed
+by Heroku to run the app. If not already created make sure to do so. In the terminal
+type they following commands.
+
+   - pip3 freeze --local > requirements.txt
+   - echo web: python3 app.py > Procfile
+
  - Register a Heroku account.
 
  - Click 'Create a New App'.
@@ -1078,6 +1094,25 @@ will be necessary to create them.
  - Click Enable Automatic Deployment then click Deploy Branch.
 
  - Click "View" to launch the app.
+
+### Clarification
+
+Clarification on steps taken in the terminal to create the app using pip3 
+to install packages without requirements.txt and how to create the Procfile. 
+
+##### pip3 install Flask
+
+##### pip3 install flask-pymongo
+- So Flask can communicate with Mongo install 'flask-pymongo'.
+
+##### pip3 install dnspython
+- Install 'dnsython' in order to use the Mongo SRV connection string.
+
+##### echo web: python app.py > Procfile
+- This tells Heroku what language the app is using.
+
+##### 6. pip3 freeze --local > requirements.txt
+- A requirements.txt containing all Flask dependencies is needed for Heroku to run the app.
 
 [Back to Table of Content](#table-of-content)
 
