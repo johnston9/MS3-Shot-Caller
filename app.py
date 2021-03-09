@@ -140,6 +140,7 @@ def get_dep(dep):
 @app.route("/get_poster/<dep>", methods=["GET", "POST"])
 def get_poster(dep):
     if session["user"]:
+        depart = list(mongo.db[dep].find().sort('date', -1).limit(5))
         dep = dep
         if request.method == "POST":
             poster = request.form.get("poster").lower()
@@ -149,7 +150,7 @@ def get_poster(dep):
             return render_template(
                 "dep-poster.html", dep=dep, depart=depart, day=poster)
         return render_template(
-            "dep-poster.html", dep=dep)
+            "dep-poster.html", dep=dep, depart=depart, day="Latest")
 
 
 @app.route("/get_all/<dep>", methods=["GET", "POST"])
