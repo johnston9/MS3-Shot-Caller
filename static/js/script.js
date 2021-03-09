@@ -1,11 +1,10 @@
 /*jQuery for Materialize initialization of the sidenav, collapsible, tooltipped,
   modal, select and datepicker features*/
 
-setTimeout(function() {
-    $('.flashes').fadeOut('fast');
-}, 30000);
-
 $(document).ready(function () {
+    setTimeout(function() {
+    $('.flashes').fadeOut('fast');
+    }, 5000);
 	$('.sidenav').sidenav({
 		edge: "right"
 	});
