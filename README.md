@@ -822,37 +822,25 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 ### Brute-Forcing Attacks
 
 - If a user tries a brute-force entry using a known user's username with the Base Page URL
-  they will get a KeyError message.
+  they will get an Internal Server Error message.
 
 <h2 align="center">
-<img src="documentation/readme-images/brut-c.png" width="50%">
+<img src="documentation/readme-images/brut-user.png" width="50%">
 </h2>
 
-- If a user tries a brute-force entry using a known view, e.g. get_depts,
-  they will get a KeyError message.
-
+- If a user tries a brute-force entry using a known view, e.g. get_depts, 
+  or a view that takes an argument without the argument, e.g. get_dep,
+  or a view that takes an argument with a correct argument, e.g. get_dep/camera
+  they will get an Internal Server Error message.
+  
 <h2 align="center">
 <img src="documentation/readme-images/brut-get.png" width="50%">
 </h2>
 
-- Both of these KeyErrors highlight the "if sesson user" logic.
-
+- If a user tries a brute-force entry using any other characters after the address
+  they will get an Internal Server Error message.
 <h2 align="center">
-<img src="documentation/readme-images/brut-u.png" width="50%">
-</h2>
-
-- If a user attempts to use a view that takes an argument without the argument
-  they get a standard 404 error message as that does not exist.
-
-<h2 align="center">
-<img src="documentation/readme-images/brut-f.png" width="50%">
-</h2> 
-
-- If a user attempts to use a view that takes an argument with a correct argument
-  they will get a KeyError message.
-
-<h2 align="center">
-<img src="documentation/readme-images/brut-fa.png" width="50%">
+<img src="documentation/readme-images/brut-xxx.png" width="50%">
 </h2>
 
 ### 404 Error Handling
