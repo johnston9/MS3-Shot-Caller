@@ -508,6 +508,9 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 Lighthouse was used to test every page in desktop and moblie screens.
 
+### Sumary
+
+
 Performance was over 90 mostly but sometimes dipped. 
 
 ### Login page
@@ -588,7 +591,7 @@ here that will cover this for all pages.
 
  - The extra features on the admin user page did not effect the results.
 
- - ### Best Practices
+ - ### Image page
 
    The image page faired well although a bit weaker at moblie performance.
 
@@ -598,6 +601,15 @@ here that will cover this for all pages.
 
 <h2 align="center">
 <img src="documentation/readme-images/lit-ims.png" width="90%">
+</h2>
+
+ - ### Departments page
+
+   The Departments page as it's just a portion of the user base page had the same
+   resultd for the images.
+
+<h2 align="center">
+<img src="documentation/readme-images/lit-d.png" width="90%">
 </h2>
 
 
