@@ -537,7 +537,7 @@ button and register link so I changed the colours.
  - #### Accessibility
 
 It gave me an accessibility note for the header "Shot Caller" decorative
-writing. As this is purely decorative and is only barely visual limited I left it
+writing in red either side of the header box.. As this is purely decorative and is only barely visual limited I left it
 red as this was in keeping with my style intentions. I did however change it from Crimson
 to a bright red. 
 
@@ -548,17 +548,17 @@ These two note were for every page on the site and accounted solely for the "89"
 was given for "Accessibility" on this ana all other pages. I will include images 
 here that will cover this for all pages.
 
-<p align="center"><strong>images</strong>Overall note</p>
+<p align="center"><strong>Overall note</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-a.png" width="90%">
 </h2>
 
-<p align="center"><strong>images</strong>Header note</p>
+<p align="center"><strong>Header note</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-p.png" width="90%">
 </h2>
 
-<p align="center"><strong>images</strong>Sidenav icon note</p>
+<p align="center"><strong>Sidenav icon note</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-l.png" width="90%">
 </h2>
@@ -588,7 +588,17 @@ here that will cover this for all pages.
 
  - The extra features on the admin user page did not effect the results.
 
- 
+ - ### Best Practices
+
+   The image page faired well although a bit weaker at moblie performance.
+
+<h2 align="center">
+<img src="documentation/readme-images/lit-im1.png" width="90%">
+</h2>
+
+<h2 align="center">
+<img src="documentation/readme-images/lit-ims.png" width="90%">
+</h2>
 
 
 ## Testing User Stories from User Experience (UX) 
