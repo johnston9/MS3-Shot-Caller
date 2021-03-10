@@ -504,6 +504,92 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 [Back to Table of Content](#table-of-content)
 
+## Lighthouse
+
+Lighthouse was used to test every page in desktop and moblie screens.
+
+Performance was over 90 mostly but sometimes dipped. 
+
+### Login page
+
+Same result for desktop and mobile. It gave me an accessibility note for the submit
+button and register link so I changed the colours.
+
+<h2 align="center">
+<img src="documentation/readme-images/light-log.png" width="90%">
+</h2>
+
+<h2 align="center">
+<img src="documentation/readme-images/light-mo-log.png" width="90%">
+</h2>
+
+### Register page
+
+As above same result for desktop and mobile. It gave me an accessibility note for the submit
+button and register link so I changed the colours.
+
+<h2 align="center">
+<img src="documentation/readme-images/reg-l1.png" width="90%">
+</h2>
+
+### User Base page
+
+ - #### Accessibility
+
+It gave me an accessibility note for the header "Shot Caller" decorative
+writing. As this is purely decorative and is only barely visual limited I left it
+red as this was in keeping with my style intentions. I did however change it from Crimson
+to a bright red. 
+
+It also gave me a note about the sidenav icon not having a name or label but this is
+also an intentional style choice and one that is common practice.
+
+These two note were for every page on the site and accounted solely for the "89" score that
+was given for "Accessibility" on this ana all other pages. I will include images 
+here that will cover this for all pages.
+
+<p align="center"><strong>images</strong>Overall note</p>
+<h2 align="center">
+<img src="documentation/readme-images/lig-u-a.png" width="90%">
+</h2>
+
+<p align="center"><strong>images</strong>Header note</p>
+<h2 align="center">
+<img src="documentation/readme-images/lig-u-p.png" width="90%">
+</h2>
+
+<p align="center"><strong>images</strong>Sidenav icon note</p>
+<h2 align="center">
+<img src="documentation/readme-images/lig-u-l.png" width="90%">
+</h2>
+
+
+ - #### Best Practices
+
+   It gave me a sole note for images not being sized with the correct aspect ratio.
+   This was not an issue for the images's purpose as they were very much meant to be 
+   abstract and not representations of anything or works in their own right. They only
+   altered slightly in the first place apart from the ones for mobile but that is as
+   it is intended to be for that size.
+
+<h2 align="center">
+<img src="documentation/readme-images/lig-u-b.png" width="90%">
+</h2>
+
+ - mobile
+
+ That said should the app the taken to a further stage they will be resized to the correct
+ ratio and two different sized set made as they were the sole reason for a poorer performance at mobile size as they
+ need to be altered much more.
+
+ <h2 align="center">
+<img src="documentation/readme-images/user-aad.png" width="90%">
+</h2>
+
+ - The extra features on the admin user page did not effect the results.
+
+ 
+
 
 ## Testing User Stories from User Experience (UX) 
 
