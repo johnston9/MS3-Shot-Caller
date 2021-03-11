@@ -537,17 +537,17 @@ button and register link so I changed the colours.
 
 ### User Base page
 
-<p align="center"><strong> Originally overall note</strong></p>
+<p align="center"><strong> Originally overall result</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-a.png" width="90%">
 </h2>
 
  - #### Best Practices
 
-It gave me a note for images not being sized with the correct aspect ratio. I resized
+It had given me a note for images not being sized with the correct aspect ratio. I resized
 the images to the desire 2:3 ratio.
 
-<p align="center"><strong> New overall note</strong></p>
+<p align="center"><strong> New overall result</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/new-user" width="90%">
 </h2>
@@ -557,7 +557,8 @@ the images to the desire 2:3 ratio.
 I also resized the images to the desired 50px by 50px for mobile devices but the only way I could
 use them with the Jinja Template was to create two img elements in the for loop code block
 and set one to display "none" at larger than 600px in CSS. I decided against doing this weighing 
-the slight improvment in Best Practices and the improvment in performance against cleaner, shorter code.
+the slight improvment in Best Practices and the improvment in Performance against cleaner, shorter code
+minimizing any risk no matter how small.
 That said should the app the taken to a further stage I will investsigate it more.
 
 <h2 align="center">
@@ -582,42 +583,44 @@ These two notes were for every page on the site and accounted solely for the "89
 was given for "Accessibility" on this and all other pages. I will include images 
 here that will cover this for all pages.
 
-<p align="center"><strong>Overall note</strong></p>
+<p align="center"><strong>Header red text note</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/new-userp.png" width="90%">
 </h2>
 
-<p align="center"><strong>Header note</strong></p>
+<p align="center"><strong>Sidenav icon note</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/new-userl.png" width="90%">
 </h2>
 
-<p align="center"><strong>Sidenav icon note</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/lig-u-l.png" width="90%">
-</h2>
-
- - The extra features on the admin user page did not effect the results.
+ - The extra buttons on the admin user page did not effect the results.
 
  - ### Image page
 
    The image page faired well although a bit weaker at moblie performance.
 
+<p align="center"><strong>Medium and up</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lit-im1.png" width="90%">
 </h2>
 
+<p align="center"><strong>Mobile</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lit-ims.png" width="90%">
 </h2>
 
  - ### Departments page
 
-   The Departments page as it's just a portion of the user base page had the same
-   resultd for the images.
+   The Departments page had the same results as the User Base page.
 
+<p align="center"><strong>Medium and up</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/lit-d.png" width="90%">
+<img src="documentation/readme-images/depts-l" width="90%">
+</h2>
+
+<p align="center"><strong>Mobile</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/depts-mo.png" width="90%">
 </h2>
 
 
