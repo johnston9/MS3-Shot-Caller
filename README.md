@@ -1111,20 +1111,21 @@ By forking we make a copy of the GitHub Repository.
 5. Set the current working directory to the location where you want the cloned directory to be made.
 6. Type git clone, and then paste the URL copied above.
 7. Press enter and a local clone will be created.
-8. The clone will include two file needed for sr up and Heroku.
+8. You may want to unpack the everything from the containing "MS3-Shot-Caller" folder.
+9. The clone will include two file needed for set up and Heroku.
 
   1. The requirements.txt which contains all packages to be installed to run the app. These are  
   Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
   will need these to run the app.
 
-  2. The Procfile w tells Heroku what language the app is using.
+  2. The Procfile which tells Heroku what language the app is using.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
 #### Terminal
 
-  - Using the following command will install the packages need for the app from 
+  - Use the following command to install the packages needed for the app from 
     requirements.txt. 
 
 ##### pip3 install -r requirements.txt 
@@ -1133,14 +1134,14 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 #### Further steps required  
 
-Some file containing sensitive variables will not have been pushed to Github so it 
+Some files containing sensitive variables will not have been pushed to Github so it 
 will be necessary to create them.
 
-##### gitignore
-- gitignore is used to store sensitive variables and keys that do not get sent to github.
-  Type pycach.py and env.py in the gitignore file.
+##### Create a .gitignore file
+- .gitignore is used to store sensitive variables and keys that do not get sent to github.
+  Type pycach.py and env.py in the .gitignore file.
 
-##### env.py
+##### Create a env.py file 
 - In env.py set the app's environment variables and keys needed during development.
   These will later be set in Heroku.
 
@@ -1155,9 +1156,12 @@ will be necessary to create them.
 
       os.environ.setdefault("SECRET_KEY", "***************")
 
-      os.environ.setdefault("MONGO_URI", "***********")
+      os.environ.setdefault("REGISTER_KEY", "************")
+
+      os.environ.setdefault("MONGO_URI", "Get this in Mongo when you click 
+      'Connect your Application’ after clicking the Connect button")
       
-      os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
+      os.environ.setdefault("MONGO_DBNAME", "The name of your Mongo database") 
 
 
 ### Deploy to Heroku
