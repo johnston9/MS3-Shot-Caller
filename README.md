@@ -537,7 +537,7 @@ button and register link so I changed the colours.
 
 ### User Base page
 
-<p align="center"><strong> Originally overall result</strong></p>
+<p align="center"><strong> Original result</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-a.png" width="90%">
 </h2>
@@ -547,26 +547,23 @@ button and register link so I changed the colours.
 It had given me a note for images not being sized with the correct aspect ratio. I resized
 the images to the desire 2:3 ratio.
 
-<p align="center"><strong> New overall result</strong></p>
+<p align="center"><strong> New result</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/new-user" width="90%">
+<img src="documentation/readme-images/new-user.png" width="90%">
 </h2>
 
  - Mobile
 
 I also resized the images to the desired 50px by 50px for mobile devices but the only way I could
 use them with the Jinja Template was to create two img elements in the for loop code block
-and set one to display "none" at larger than 600px in CSS. I decided against doing this weighing 
+and set one to display "none" at larger than 600px in CSSand the opposite for the other. I decided against doing this weighing 
 the slight improvment in Best Practices and the improvment in Performance against cleaner, shorter code
 minimizing any risk no matter how small.
 That said should the app the taken to a further stage I will investsigate it more.
 
+<p align="center"><strong> Mobile result</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/user-newmo.png" width="90%">
-</h2>
-
-<h2 align="center">
-<img src="documentation/readme-images/lig-u-b.png" width="90%">
 </h2>
 
  - #### Accessibility
@@ -599,7 +596,7 @@ here that will cover this for all pages.
 
    The image page faired well although a bit weaker at moblie performance.
 
-<p align="center"><strong>Medium and up</strong></p>
+<p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lit-im1.png" width="90%">
 </h2>
@@ -1086,16 +1083,18 @@ method wold be most appropriate.
 
 [Back to Table of Content](#table-of-content)
 
-## Development platform
+## Deployment
+
+### Development platform
 
 1. [Gitpod:](https://www.gitpod.io/docs/)
    - Gitpod was used as the development platform.
 
-## Repository
+### Repository
    [Github](https://github.com/)
    - Github was used as the repository for the project.
 
-### Forking the GitHub Repository
+#### Forking the GitHub Repository
 
 By forking we make a copy of the GitHub Repository.
 
@@ -1103,26 +1102,27 @@ By forking we make a copy of the GitHub Repository.
 2. At the top of the Repository just above the "Settings" button on the menu, click the "Fork" Button.
 3. This will create a copy of the original repository in your GitHub account.
 
-### Making a Local Clone
+#### Making a Local Clone
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/johnston9/MS3-Shot-Caller)
-2. Under the repository name, click "Clone or download".
+2. Under the repository name, click "Code" beside the Gitpod bitton.
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash.
 5. Set the current working directory to the location where you want the cloned directory to be made.
 6. Type git clone, and then paste the URL copied above.
 7. Press enter and a local clone will be created.
+8. The clone will include two file needed for sr up and Heroku.
 
-  - The requirements.txt contains all tools to be installed to run the app. These are  
-  will contain Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
+  1. The requirements.txt which contains all packages to be installed to run the app. These are  
+  Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
   will need these to run the app.
 
-  - The Procfile will tell Heroku what language the app is using.
+  2. The Procfile w tells Heroku what language the app is using.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
 
-### Terminal
+#### Terminal
 
   - Using the following command will install the packages need for the app from 
     requirements.txt. 
@@ -1131,7 +1131,7 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
   - The -r switch tells pip to install packages from the requirements.txt file 
     needed for the app.
 
-### Further steps required  
+#### Further steps required  
 
 Some file containing sensitive variables will not have been pushed to Github so it 
 will be necessary to create them.
@@ -1160,7 +1160,7 @@ will be necessary to create them.
       os.environ.setdefault("MONGO_DBNAME", "shot_caller") 
 
 
-## Deployment
+### Deploy to Heroku
 
 [Heroku](https://www.heroku.com/platform)
 
@@ -1202,7 +1202,7 @@ type they following commands.
 
  - Click "View" to launch the app.
 
-### Clarification
+#### Clarification
 
 Clarification on steps taken in the terminal to create the app using pip3 
 to install packages without requirements.txt and how to create the Procfile. 
