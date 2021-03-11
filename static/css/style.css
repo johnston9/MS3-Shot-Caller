@@ -496,7 +496,7 @@ span.caps {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
 	.username {
 		font-size: 30px;
 	}

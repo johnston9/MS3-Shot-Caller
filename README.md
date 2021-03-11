@@ -537,56 +537,64 @@ button and register link so I changed the colours.
 
 ### User Base page
 
+<p align="center"><strong> Originally overall note</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/lig-u-a.png" width="90%">
+</h2>
+
+ - #### Best Practices
+
+It gave me a note for images not being sized with the correct aspect ratio. I resized
+the images to the desire 2:3 ratio.
+
+<p align="center"><strong> New overall note</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/new-user" width="90%">
+</h2>
+
+ - Mobile
+
+I also resized the images to the desired 50px by 50px for mobile devices but the only way I could
+use them with the Jinja Template was to create two img elements in the for loop code block
+and set one to display "none" at larger than 600px in CSS. I decided against doing this weighing 
+the slight improvment in Best Practices and the improvment in performance against cleaner, shorter code.
+That said should the app the taken to a further stage I will investsigate it more.
+
+<h2 align="center">
+<img src="documentation/readme-images/user-newmo.png" width="90%">
+</h2>
+
+<h2 align="center">
+<img src="documentation/readme-images/lig-u-b.png" width="90%">
+</h2>
+
  - #### Accessibility
 
 It gave me an accessibility note for the header "Shot Caller" decorative
-writing in red either side of the header box.. As this is purely decorative and is only barely visual limited I left it
+writing in red either side of the header box. As this is purely decorative and is only barely visual limited I left it
 red as this was in keeping with my style intentions. I did however change it from Crimson
 to a bright red. 
 
 It also gave me a note about the sidenav icon not having a name or label but this is
 also an intentional style choice and one that is common practice.
 
-These two note were for every page on the site and accounted solely for the "89" score that
-was given for "Accessibility" on this ana all other pages. I will include images 
+These two notes were for every page on the site and accounted solely for the "89" score that
+was given for "Accessibility" on this and all other pages. I will include images 
 here that will cover this for all pages.
 
 <p align="center"><strong>Overall note</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/lig-u-a.png" width="90%">
+<img src="documentation/readme-images/new-userp.png" width="90%">
 </h2>
 
 <p align="center"><strong>Header note</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/lig-u-p.png" width="90%">
+<img src="documentation/readme-images/new-userl.png" width="90%">
 </h2>
 
 <p align="center"><strong>Sidenav icon note</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-l.png" width="90%">
-</h2>
-
-
- - #### Best Practices
-
-   It gave me a sole note for images not being sized with the correct aspect ratio.
-   This was not an issue for the images's purpose as they were very much meant to be 
-   abstract and not representations of anything or works in their own right. They only
-   altered slightly in the first place apart from the ones for mobile but that is as
-   it is intended to be for that size.
-
-<h2 align="center">
-<img src="documentation/readme-images/lig-u-b.png" width="90%">
-</h2>
-
- - mobile
-
- That said should the app the taken to a further stage they will be resized to the correct
- ratio and two different sized set made as they were the sole reason for a poorer performance at mobile size as they
- need to be altered much more.
-
- <h2 align="center">
-<img src="documentation/readme-images/user-aad.png" width="90%">
 </h2>
 
  - The extra features on the admin user page did not effect the results.
