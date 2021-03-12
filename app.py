@@ -173,6 +173,16 @@ def get_depts():
 
 @app.route("/get_pro")
 def get_pro():
+    """Renders the Production latest messages template page.
+
+    Renders the Production latest messages template page with the latest
+    messages showing for the Production department
+    getting the department's messages from Mongo.
+
+    :return: pro.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         day = datetime.datetime.now()
         today = day.strftime("%d %B, %Y")
@@ -187,9 +197,9 @@ def get_pro():
 
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])
 def get_dep(dep):
-    """Renders the Department messages page.
+    """Renders the Department messages by Date page.
 
-    On Get renders the Department messages page with the latest
+    On Get renders the Department messages by Date page with that day's
     messages showing for each department
     depending on which department name is passed as a parameter
     getting that department's messages from Mongo.
@@ -200,8 +210,8 @@ def get_dep(dep):
     for whichever date value is supplied.
 
     :param dep: the department selected by the user
-    :type username: str
-    :return: user_home.html
+    :type dep: str
+    :return: dep.html
     :rtype: n/a
     """
 
@@ -227,8 +237,27 @@ def get_dep(dep):
 
 @app.route("/get_poster/<dep>", methods=["GET", "POST"])
 def get_poster(dep):
+    """Renders the Department messages by Poster page.
+
+    On Get renders the Department messages by Poster page with the latest
+    messages showing for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo.
+
+    On Post renders the Department messages page for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo
+    for whichever poster value is supplied.
+
+    :param dep: the department selected by the user
+    :type dep: str
+    :return: dep_poster.html
+    :rtype: n/a
+    """
+
     if session["user"]:
-        depart = list(mongo.db[dep].find().sort('date', -1).limit(5))
+        # get data from Mongo
+        depart = list(mongo.db[dep].find().sort('date', -1).limit(10))
         dep = dep
         if request.method == "POST":
             poster = request.form.get("poster").lower()
@@ -236,8 +265,10 @@ def get_poster(dep):
             depart = list(mongo.db[dep].find(
                 {"poster": poster}))
 
+            # render the Department template
             return render_template(
                 "dep-poster.html", dep=dep, depart=depart, day=poster)
+        # render the Department template
         return render_template(
             "dep-poster.html", dep=dep, depart=depart, day="Latest")
 
