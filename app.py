@@ -211,7 +211,7 @@ def get_dep(dep):
 
     :param dep: the department selected by the user
     :type dep: str
-    :return: dep.html
+    :return: dep.html   
     :rtype: n/a
     """
 
@@ -273,23 +273,17 @@ def get_poster(dep):
             "dep-poster.html", dep=dep, depart=depart, day="Latest")
 
 
-@app.route("/get_all/<dep>", methods=["GET", "POST"])
+@app.route("/get_all/<dep>")
 def get_all(dep):
-    """Renders the Department messages by Poster page.
+    """Render the Department by Date page with all messages 
+    for choosen department.
 
-    On Get renders the Department messages by Poster page with the latest
-    messages showing for each department
-    depending on which department name is passed as a parameter
+    Renders the Department page with all messages for the choosen department 
     getting that department's messages from Mongo.
-
-    On Post renders the Department messages page for each department
-    depending on which department name is passed as a parameter
-    getting that department's messages from Mongo
-    for whichever poster value is supplied.
 
     :param dep: the department selected by the user
     :type dep: str
-    :return: dep_poster.html
+    :return: dep.html
     :rtype: n/a
     """
 
@@ -302,19 +296,13 @@ def get_all(dep):
             "dep.html", dep=dep, depart=depart, day="All Messages")
 
 
-@app.route("/find_all/<dep>", methods=["GET", "POST"])
+@app.route("/find_all/<dep>")
 def find_all(dep):
-    """Renders the Department messages by Poster page.
+    """Render the Department by Poster page with all messages for 
+    choosen department.
 
-    On Get renders the Department messages by Poster page with the latest
-    messages showing for each department
-    depending on which department name is passed as a parameter
+    Renders the Department page with all messages for the choosen department 
     getting that department's messages from Mongo.
-
-    On Post renders the Department messages page for each department
-    depending on which department name is passed as a parameter
-    getting that department's messages from Mongo
-    for whichever poster value is supplied.
 
     :param dep: the department selected by the user
     :type dep: str
@@ -333,6 +321,15 @@ def find_all(dep):
 
 @app.route("/all_images/", methods=["GET", "POST"])
 def all_images():
+    """Render the Images page.
+
+    Renders the Images page with all images showing 
+    getting the images from Mongo.
+
+    :return: images.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         # get data from Mongo
         images = list(mongo.db.images.find())
@@ -341,6 +338,17 @@ def all_images():
 
 @app.route("/get_image/", methods=["GET", "POST"])
 def get_image():
+    """Render the Images page.
+
+    On Get renders the Images page. 
+    On Post renders the Images page with image or images selected
+    from a user's query,
+    getting the images from Mongo.
+
+    :return: images.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         if request.method == "POST":
             image = request.form.get("image")
@@ -355,6 +363,15 @@ def get_image():
 
 @app.route("/logout")
 def logout():
+    """Logs the user out.
+
+    Removes the user from sesson user
+    and renders the login page.
+
+    :return: login.html
+    :rtype: n/a
+    """
+    
     if session["user"]:
         # delete user session cookie
         flash("Logout successful")
