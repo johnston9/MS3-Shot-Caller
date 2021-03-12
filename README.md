@@ -615,7 +615,7 @@ here that will cover this for all pages.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/d-lar" width="90%">
+<img src="documentation/readme-images/d-lar.png" width="90%">
 </h2>
 
 <p align="center"><strong>Mobile</strong></p>
@@ -1101,7 +1101,7 @@ method wold be most appropriate.
 
 #### Forking the GitHub Repository
 
-By forking we make a copy of the GitHub Repository.
+By forking we make a copy of the GitHub Repository in our Github account.
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/johnston9/MS3-Shot-Caller)
 2. At the top of the Repository just above the "Settings" button on the menu, click the "Fork" Button.
@@ -1198,9 +1198,11 @@ type they following commands.
 
      - SECRET_KEY, copy then paste it from env.py. 
 
+     - REGISTER_KEY, ************
+
      - MONGO_URI, get this when 'Connect your Application’ is clicked on in Mongo connect area.
 
-     - MONGO_DBNAME, shot_caller.
+     - MONGO_DBNAME, The name of your Mongo database.
 
 - THEN CLICK HIDE CONFIG VARS
 
@@ -1237,11 +1239,14 @@ to install packages without requirements.txt and how to create the Procfile.
 
 ### Code
 
-- [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): Here I learnt how to create the return to top function.
+- [W3schools.com](https://www.w3schools.com/howto/howto_js_scroll_to_top.asp): 
+  Here I learnt how to create the return to top function.
 - The general structure of the app was inspired by Tim Nelson's Task Manager app
   which is part of the Code Institute's course.
 - The code to fix Materialize bug to show red line warning if department not 
   selected in add message is taken from Tim Nelson's Task Manager app.
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/): 
+  Here I got the code for the 404 custome error message.
 
 ### Content
 

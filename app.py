@@ -21,6 +21,16 @@ mongo = PyMongo(app)
 
 @app.errorhandler(404)
 def page_not_found(e):
+    """Render 404 template.
+
+    When an error messages occur render the 404.html template.
+
+    :param 404: the error code
+    :type temp: integer
+    :return: 404.html
+    :rtype: template
+    """
+
     if session["user"]:
         # note that we set the 404 status explicitly
         return render_template('404.html'), 404
