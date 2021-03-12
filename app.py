@@ -275,8 +275,27 @@ def get_poster(dep):
 
 @app.route("/get_all/<dep>", methods=["GET", "POST"])
 def get_all(dep):
+    """Renders the Department messages by Poster page.
+
+    On Get renders the Department messages by Poster page with the latest
+    messages showing for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo.
+
+    On Post renders the Department messages page for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo
+    for whichever poster value is supplied.
+
+    :param dep: the department selected by the user
+    :type dep: str
+    :return: dep_poster.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         dep = dep
+        # get data from Mongo
         depart = list(mongo.db[dep].find())
 
         return render_template(
@@ -285,8 +304,27 @@ def get_all(dep):
 
 @app.route("/find_all/<dep>", methods=["GET", "POST"])
 def find_all(dep):
+    """Renders the Department messages by Poster page.
+
+    On Get renders the Department messages by Poster page with the latest
+    messages showing for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo.
+
+    On Post renders the Department messages page for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo
+    for whichever poster value is supplied.
+
+    :param dep: the department selected by the user
+    :type dep: str
+    :return: dep_poster.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         dep = dep
+        # get data from Mongo
         depart = list(mongo.db[dep].find())
 
         return render_template(
@@ -296,6 +334,7 @@ def find_all(dep):
 @app.route("/all_images/", methods=["GET", "POST"])
 def all_images():
     if session["user"]:
+        # get data from Mongo
         images = list(mongo.db.images.find())
         return render_template("images.html", images=images)
 
@@ -305,9 +344,11 @@ def get_image():
     if session["user"]:
         if request.method == "POST":
             image = request.form.get("image")
+            # get data from Mongo
             images = list(mongo.db.images.find({"$text": {"$search": image}}))
             return render_template("images.html", images=images)
 
+        # get data from Mongo
         images = list(mongo.db.images.find({"image_name": "windowlight"}))
         return render_template("images.html", images=images)
 
@@ -330,6 +371,7 @@ def add_message():
             day = datetime.datetime.now()
             mes_date = day.strftime("%d %B, %Y")
             mes_dept = request.form.get("department_name")
+            # get data from Mongo
             user = mongo.db.users.find_one({"username": session["user"]})
             first = user["firstname"]
             last = user["lastname"]
@@ -348,6 +390,7 @@ def add_message():
                 "image_name": request.form.get("image_name"),
                 "is_priority": mes_is_priority,
             }
+            # insert data to Mongo
             mongo.db[mes_dept].insert_one(message)
             flash("Message Added")
             return redirect(url_for("user_home", username=session["user"]))
@@ -366,6 +409,7 @@ def edit_message(message_id, depart, user):
             day = datetime.datetime.now()
             mes_date = day.strftime("%d %B, %Y")
             mes_dept = request.form.get("department_name")
+            # get data from Mongo
             user = mongo.db.users.find_one({"username": session["user"]})
             username = session["user"]
             first = user["firstname"]
@@ -384,11 +428,14 @@ def edit_message(message_id, depart, user):
                 "image_name": request.form.get("image_name"),
                 "is_priority": mes_is_priority,
             }
+            # update data from Mongo
             mongo.db[mes_dept].update({"_id": ObjectId(message_id)}, edit)
             flash("Message Updated")
             return redirect(url_for("get_dep", dep=mes_dept))
 
+        # get data from Mongo
         message = mongo.db[depart].find_one({"_id": ObjectId(message_id)})
+        # get data from Mongo
         depts = mongo.db.depts.find().sort("dept_name", 1)
         return render_template(
             "edit_message.html", message=message, depts=depts)
@@ -403,10 +450,12 @@ def edit_image(image_id):
                 "image_des": request.form.get("image_des"),
                 "image_src": request.form.get("image_src")
             }
+            # update data to Mongo
             mongo.db.images.update({"_id": ObjectId(image_id)}, edit)
             flash("Image Updated")
             return redirect(url_for("get_image"))
 
+        # get data from Mongo
         image = mongo.db.images.find_one({"_id": ObjectId(image_id)})
         return render_template("edit_image.html", image=image)
 
@@ -414,6 +463,7 @@ def edit_image(image_id):
 @app.route("/delete_message/<message_id>/<depart>/<user>")
 def delete_message(message_id, depart, user):
     if session["user"] == user:
+        # remove data from Mongo
         mongo.db[depart].remove({"_id": ObjectId(message_id)})
         flash("Message Deleted")
         return redirect(url_for("get_dep", dep=depart))
@@ -422,11 +472,13 @@ def delete_message(message_id, depart, user):
 @app.route("/add_script/<script_id>", methods=["GET", "POST"])
 def add_script(script_id):
     if session["user"] == "admin":
+        # get data from Mongo
         script = list(mongo.db.latest_script.find())
         if request.method == "POST":
             latest = {
                 "script": request.form.get("script_name")
             }
+            # update data from Mongo
             mongo.db.latest_script.update(
                 {"_id": ObjectId(script_id)}, latest)
             flash("Script Successfully Updated")
@@ -442,6 +494,7 @@ def add_shot():
             newshot = {
                 "shotlist": request.form.get("shot_name")
             }
+            # gupdateet data to Mongo
             mongo.db.shotlist.update(
                 {"_id": ObjectId("6029b7f80febec6e0f942fcb")}, newshot)
             flash("Shotlist Successfully Updated")
@@ -459,6 +512,7 @@ def add_image():
                 "image_des": request.form.get("image_des"),
                 "image_src": request.form.get("image_src")
             }
+            # update data to Mongo
             mongo.db.images.insert_one(new_image)
             flash("Image Added")
             return redirect(url_for("user_home", username=session["user"]))
@@ -470,6 +524,7 @@ def add_image():
 def remove_user():
     if session["user"] == "admin":
         if request.method == "POST":
+            # remove data from Mongo
             mongo.db.users.remove({"firstname": request.form.get(
                 "first_name"), "lastname": request.form.get("last_name")})
             flash("User Successfully Removed")
@@ -481,6 +536,7 @@ def remove_user():
 @app.route("/delete_image/<image_id>")
 def delete_image(image_id):
     if session["user"] == "admin":
+        # remove data from Mongo
         mongo.db.images.delete_one({"_id": ObjectId(image_id)})
         flash("Image Removed")
         return redirect(url_for("get_image"))
