@@ -211,7 +211,7 @@ def get_dep(dep):
 
     :param dep: the department selected by the user
     :type dep: str
-    :return: dep.html   
+    :return: dep.html
     :rtype: n/a
     """
 
@@ -275,10 +275,10 @@ def get_poster(dep):
 
 @app.route("/get_all/<dep>")
 def get_all(dep):
-    """Render the Department by Date page with all messages 
+    """Render the Department by Date page with all messages
     for choosen department.
 
-    Renders the Department page with all messages for the choosen department 
+    Renders the Department page with all messages for the choosen department
     getting that department's messages from Mongo.
 
     :param dep: the department selected by the user
@@ -298,10 +298,10 @@ def get_all(dep):
 
 @app.route("/find_all/<dep>")
 def find_all(dep):
-    """Render the Department by Poster page with all messages for 
+    """Render the Department by Poster page with all messages for
     choosen department.
 
-    Renders the Department page with all messages for the choosen department 
+    Renders the Department page with all messages for the choosen department
     getting that department's messages from Mongo.
 
     :param dep: the department selected by the user
@@ -319,11 +319,11 @@ def find_all(dep):
             "dep-poster.html", dep=dep, depart=depart, day="All Messages")
 
 
-@app.route("/all_images/", methods=["GET", "POST"])
+@app.route("/all_images/")
 def all_images():
     """Render the Images page.
 
-    Renders the Images page with all images showing 
+    Renders the Images page with all images showing
     getting the images from Mongo.
 
     :return: images.html
@@ -340,7 +340,7 @@ def all_images():
 def get_image():
     """Render the Images page.
 
-    On Get renders the Images page. 
+    On Get renders the Images page.
     On Post renders the Images page with image or images selected
     from a user's query,
     getting the images from Mongo.
@@ -371,7 +371,7 @@ def logout():
     :return: login.html
     :rtype: n/a
     """
-    
+
     if session["user"]:
         # delete user session cookie
         flash("Logout successful")
@@ -381,13 +381,25 @@ def logout():
 
 @app.route("/add_message", methods=["GET", "POST"])
 def add_message():
+    """Render the Add Message page.
+
+    On Get renders the Add Message page.
+    On Post creates a dictionary using values from the form, from datetime
+    and from Mongo to create a new document in Mongo.
+
+    :return: add_message.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         if request.method == "POST":
+            # get data from form
             mes_is_priority = "on" if request.form.get(
                 "is_priority") else "off"
+            mes_dept = request.form.get("department_name")
+            # get date from datetime
             day = datetime.datetime.now()
             mes_date = day.strftime("%d %B, %Y")
-            mes_dept = request.form.get("department_name")
             # get data from Mongo
             user = mongo.db.users.find_one({"username": session["user"]})
             first = user["firstname"]
@@ -395,17 +407,19 @@ def add_message():
             username = session["user"]
             mes_poster = f"{first} {last}"
             mes_job = user["job_title"]
+            # create dictionary
             message = {
+                "is_priority": mes_is_priority,
                 "dept_name": mes_dept,
                 "date": mes_date,
                 "poster": mes_poster,
                 "username": username,
                 "job_title": mes_job,
+                # get data from form
                 "subject": request.form.get("subject"),
                 "message": request.form.get("message"),
                 "image_src": request.form.get("image_src"),
                 "image_name": request.form.get("image_name"),
-                "is_priority": mes_is_priority,
             }
             # insert data to Mongo
             mongo.db[mes_dept].insert_one(message)
@@ -419,10 +433,30 @@ def add_message():
 @app.route(
     "/edit_message/<message_id>/<depart>/<user>", methods=["GET", "POST"])
 def edit_message(message_id, depart, user):
-    if session["user"] == user:
+    """Render the Edit Message page.
+
+    On Get checks if the message poster's username is equal to the sesson user
+    or if admin is user and if either is true renders the Edit Message page
+    with the selected message's detail as values in the input boxes..
+    On Post creates a dictionary using values from the form, from datetime
+    and from Mongo to update the selected message in Mongo.
+
+    :param message_id: the selected document to be edited
+    :type dep: str
+    :param depart: the collection which the document is in
+    :type dep: str
+    :param user: the user's username
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
+    if session["user"] == user or session["user"] == "admin":
         if request.method == "POST":
+            # get data from form
             mes_is_priority = "on" if request.form.get(
                 "is_priority") else "off"
+            # get date from datetime
             day = datetime.datetime.now()
             mes_date = day.strftime("%d %B, %Y")
             mes_dept = request.form.get("department_name")
@@ -433,19 +467,21 @@ def edit_message(message_id, depart, user):
             last = user["lastname"]
             mes_poster = f"{first} {last}"
             mes_job = user["job_title"]
+            # create dictionary
             edit = {
+                "is_priority": mes_is_priority,
                 "dept_name": mes_dept,
                 "date": mes_date,
                 "poster": mes_poster,
                 "username": username,
                 "job_title": mes_job,
+                # get date from form
                 "subject": request.form.get("subject"),
                 "message": request.form.get("message"),
                 "image_src": request.form.get("image_src"),
                 "image_name": request.form.get("image_name"),
-                "is_priority": mes_is_priority,
             }
-            # update data from Mongo
+            # update data in Mongo
             mongo.db[mes_dept].update({"_id": ObjectId(message_id)}, edit)
             flash("Message Updated")
             return redirect(url_for("get_dep", dep=mes_dept))
@@ -460,6 +496,19 @@ def edit_message(message_id, depart, user):
 
 @app.route("/edit_image/<image_id>", methods=["GET", "POST"])
 def edit_image(image_id):
+    """Render the Edit Image page and allow admin to edit an image.
+
+    On Get checks if admin is sesson user then renders the Edit Image page
+    with the selected image's detail as values in the input boxes.
+    On Post creates a dictionary using values from the form
+    to update the selected document in Mongo.
+
+    :param image_id: the selected document to be edited
+    :type dep: str
+    :return: edit_image.html
+    :rtype: n/a
+    """
+
     if session["user"] == "admin":
         if request.method == "POST":
             edit = {
@@ -479,7 +528,24 @@ def edit_image(image_id):
 
 @app.route("/delete_message/<message_id>/<depart>/<user>")
 def delete_message(message_id, depart, user):
-    if session["user"] == user:
+    """Delete a Message.
+
+    Checks if the message poster's username is equal to the sesson user
+    or if admin is user and if either is true displays a model asking
+    the user to confirm delete.
+    If the user confirms the document is deleted in Mongo.
+
+    :param message_id: the selected document to be edited
+    :type dep: str
+    :param depart: the collection which the document is in
+    :type dep: str
+    :param user: the user's username
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
+    if session["user"] == user or session["user"] == "admin":
         # remove data from Mongo
         mongo.db[depart].remove({"_id": ObjectId(message_id)})
         flash("Message Deleted")
@@ -488,6 +554,18 @@ def delete_message(message_id, depart, user):
 
 @app.route("/add_script/<script_id>", methods=["GET", "POST"])
 def add_script(script_id):
+    """Update the script URL.
+
+    On Get checks if admin is user and if true renders the Add Script page
+    with the current script URL as a value in the input box.
+    On Post the document is updated in Mongo.
+
+    :param script_id: the selected document to be updated
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
     if session["user"] == "admin":
         # get data from Mongo
         script = list(mongo.db.latest_script.find())
@@ -506,6 +584,18 @@ def add_script(script_id):
 
 @app.route("/add_shot", methods=["GET", "POST"])
 def add_shot():
+    """Update the script URL.
+
+    On Get checks if admin is user and if true renders the Add Script page
+    with the current script URL as a value in the input box.
+    On Post the document is updated in Mongo.
+
+    :param script_id: the selected document to be updated
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
     if session["user"] == "admin":
         if request.method == "POST":
             newshot = {
@@ -522,6 +612,18 @@ def add_shot():
 
 @app.route("/add_image", methods=["GET", "POST"])
 def add_image():
+    """Update the script URL.
+
+    On Get checks if admin is user and if true renders the Add Script page
+    with the current script URL as a value in the input box.
+    On Post the document is updated in Mongo.
+
+    :param script_id: the selected document to be updated
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
     if session["user"] == "admin":
         if request.method == "POST":
             new_image = {
@@ -539,6 +641,18 @@ def add_image():
 
 @app.route("/remove_user", methods=["GET", "POST"])
 def remove_user():
+    """Update the script URL.
+
+    On Get checks if admin is user and if true renders the Add Script page
+    with the current script URL as a value in the input box.
+    On Post the document is updated in Mongo.
+
+    :param script_id: the selected document to be updated
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
     if session["user"] == "admin":
         if request.method == "POST":
             # remove data from Mongo
@@ -552,6 +666,18 @@ def remove_user():
 
 @app.route("/delete_image/<image_id>")
 def delete_image(image_id):
+    """Update the script URL.
+
+    On Get checks if admin is user and if true renders the Add Script page
+    with the current script URL as a value in the input box.
+    On Post the document is updated in Mongo.
+
+    :param script_id: the selected document to be updated
+    :type dep: str
+    :return: edit_message.html
+    :rtype: n/a
+    """
+
     if session["user"] == "admin":
         # remove data from Mongo
         mongo.db.images.delete_one({"_id": ObjectId(image_id)})
