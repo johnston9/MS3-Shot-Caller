@@ -615,7 +615,7 @@ here that will cover this for all pages.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/depts-l" width="90%">
+<img src="documentation/readme-images/d-lar" width="90%">
 </h2>
 
 <p align="center"><strong>Mobile</strong></p>
@@ -628,7 +628,7 @@ here that will cover this for all pages.
 
 ### First Time User Goals
 
-#### As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
+1. #### As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
 
     1. The site is designed for first time learning. It is streamlined for specicic
        user goals that after first use are so simple that with a few clicks after entering
@@ -652,7 +652,7 @@ here that will cover this for all pages.
 </h2>
 
 
-#### As a First Time User, I want to find communications in my or other departments.
+2. #### As a First Time User, I want to find communications in my or other departments.
 
     1. Upon opening a department page the user will see the latest messages displayed.
        They will see the option to open all messages and a more specicic option
@@ -669,7 +669,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/dep-post.png" width="90%">
 </h2>
 
-#### As a First Time User, I want to view images.
+3. #### As a First Time User, I want to view images.
 
     1. In the navbar and on their home base the user will see a link to search images
        which on clicking will take them to the images page.
@@ -699,7 +699,7 @@ here that will cover this for all pages.
 
 ### Returning User Goals
 
-#### As a Returning User, I want to download the latest shotlist and script.
+4. #### As a Returning User, I want to download the latest shotlist and script.
 
     1. On clicking download script the script is downloaded to the user's device.
 
@@ -716,7 +716,7 @@ here that will cover this for all pages.
 </h2>
 
 
-#### As a Returning User, I want to add a communication in a specific area.
+5. #### As a Returning User, I want to add a communication in a specific area.
 
     1. In the navbar, on the User's Base page and in all the department
        pages the user will see a button to "Add Message". 
@@ -748,7 +748,7 @@ here that will cover this for all pages.
 
 ### Frequent User Goals
 
-#### As a Frequent User, I want to view the latest production updates.
+6. #### As a Frequent User, I want to view the latest production updates.
 
    1. When the user clicks on the Latest Updates buttton on their home base page they are taken to the Today's
       Latest Production Updates Page. All the production communications from that day are
@@ -762,7 +762,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/la2.png" width="90%">
 </h2>
 
-#### As a Frequent User, I want to edit and delete my communications.
+7. #### As a Frequent User, I want to edit and delete my communications.
 
     1. The user and strictly only the user, not even the admin, will have
        edit and delete buttons display under the messages that they themselves have
@@ -804,7 +804,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/del-f.png" width="90%">
 </h2>
 
-#### As a Frequent User, I want to view and post communications and images relating to my style, 
+8. #### As a Frequent User, I want to view and post communications and images relating to my style, 
    shooting and script choices.
 
    1. Having used the app once the user will be easily able to navigate
@@ -817,7 +817,7 @@ here that will cover this for all pages.
 ### Admin User Goals
 
 
-#### As the admin user I want to upload the latest draft of the script.
+1. #### As the admin user I want to upload the latest draft of the script.
 
    - If the admin user clicks the upload script button available only to them they
      will be taken to the "Add Latest Script" page. They can follow the instructions
@@ -834,7 +834,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/sc-2.png" width="90%">
 </h2>
 
-#### As the admin user I want to upload the latest shotlist.
+2. #### As the admin user I want to upload the latest shotlist.
 
    - If the admin user clicks the upload shotlist button available only to them they
      will be taken to the "Add Latest shotlist" page. They can follow the instructions
@@ -851,7 +851,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-#### As the admin user I want to upload new images.
+3. #### As the admin user I want to upload new images.
 
    - If the admin user clicks the upload images button available only to them they
      will be taken to the "Add New Images" page. They can follow the instructions
@@ -870,7 +870,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-#### As the admin user I want to edit images.
+4. #### As the admin user I want to edit images.
 
    - On the images page under every image an edit button will display for
      the admin and the admin only. 
@@ -892,7 +892,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/ee-4.png" width="90%">
 </h2>
 
-#### As the admin user I want to delete images.
+5. #### As the admin user I want to delete images.
 
    - On the images page under every image a delete button will display for
      the admin and the admin only. On clicking they will be given a modal
@@ -908,7 +908,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/sc-2.png" width="90%">
 </h2>
 
-#### As the admin user I want to delete a user.
+6. #### As the admin user I want to delete a user.
 
    - If the admin user clicks the "Remove User" button available only to them they
      will be taken to the "Remove User" page. They must enter the user's firstname they
@@ -925,7 +925,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-#### As the admin user I want control over material posted on the site for legal
+7. #### As the admin user I want control over material posted on the site for legal
    and other purposes.
 
    - Admin will have access to the edit and delete functions for every message
