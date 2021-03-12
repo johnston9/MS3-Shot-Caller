@@ -23,12 +23,13 @@ mongo = PyMongo(app)
 def page_not_found(e):
     """Render 404 template.
 
-    When an error messages occur render the 404.html template.
+    When an error message occur render the 404.html template.
 
     :param 404: the error code
+    :param e: the error code
     :type temp: integer
     :return: 404.html
-    :rtype: template
+    :rtype: n/a
     """
 
     if session["user"]:
@@ -39,6 +40,17 @@ def page_not_found(e):
 @app.route("/")
 @app.route("/login", methods=["GET", "POST"])
 def login():
+    """Log the user in.
+
+    On Get renders the login page.
+    On Post verifies the user's password and if valid 
+    sets the user as the sesson user 
+    and renders the User Base page.
+
+    :return: user_home.html
+    :rtype: n/a
+    """
+
     if request.method == "POST":
         # check db for matching username
         old_user = mongo.db.users.find_one(
@@ -66,6 +78,18 @@ def login():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """Register the user.
+
+    On Get renders the Register page.
+    On Post verifies the imput key and if valid
+    sets the user as the sesson user,
+    creates a MongoDB document with their details
+    and renders the User Base page.
+
+    :return: user_home.html
+    :rtype: n/a
+    """
+
     if request.method == "POST":
         if request.form.get("key").lower() == app.register_key:
 
@@ -77,6 +101,7 @@ def register():
                 flash("Username taken try again")
                 return redirect(url_for("register"))
 
+            # create new user dictionary
             new_user = {
                 "username": request.form.get("username").lower(),
                 "firstname": request.form.get("firstname").lower(),
@@ -85,26 +110,45 @@ def register():
                 "password": generate_password_hash(
                     request.form.get("password"))
             }
+            # insert new user dict into Mongo
             mongo.db.users.insert_one(new_user)
 
             # set session cookie to this username
             session["user"] = request.form.get("username").lower()
             flash("Welcome aboard, {}".format(
                             request.form.get("username")))
+            # render user base page
             return redirect(url_for("user_home", username=session["user"]))
         else:
             flash("Invalid Key")
+    # render register page
     return render_template("register.html")
 
 
-@app.route("/user_home/<username>", methods=["GET", "POST"])
+@app.route("/user_home/<username>")
 def user_home(username):
+    """Render the User Base page.
+
+    Renders the User Base page setting the value
+    in the header box to the passed username parameter,
+    getting the department's name values from Mongo
+    along with the script and shot list data.
+
+
+    :param username: the user's username
+    :type username: str
+    :return: user_home.html
+    :rtype: n/a
+    """
+
     if session["user"]:
+        # get data from Mongo
         script = list(mongo.db.latest_script.find())
         depts = list(mongo.db.depts.find())
         shotlist = list(mongo.db.shotlist.find())
         username = mongo.db.users.find_one(
             {"username": session["user"]})["username"]
+        # render the user_home template
         return render_template(
             "user_home.html", username=username,
             script=script, shotlist=shotlist, depts=depts)
@@ -112,8 +156,18 @@ def user_home(username):
 
 @app.route("/get_depts")
 def get_depts():
+    """Renders the Departments page.
+
+    Renders the Departments page getting the name
+    values from Mongo.
+
+    :return: Departments.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         depts = mongo.db.depts.find()
+        # render the depts template
         return render_template("depts.html", depts=depts)
 
 
@@ -122,8 +176,10 @@ def get_pro():
     if session["user"]:
         day = datetime.datetime.now()
         today = day.strftime("%d %B, %Y")
+        # get data from Mongo
         depart = list(mongo.db.production.find({"date": today}))
 
+        # render the Production latest messages template
         return render_template(
             "pro.html", dep="Today's Production Updates", depart=depart,
             date=today, day="TODAY")
@@ -131,18 +187,40 @@ def get_pro():
 
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])
 def get_dep(dep):
+    """Renders the Department messages page.
+
+    On Get renders the Department messages page with the latest
+    messages showing for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo.
+
+    On Post renders the Department messages page for each department
+    depending on which department name is passed as a parameter
+    getting that department's messages from Mongo
+    for whichever date value is supplied.
+
+    :param dep: the department selected by the user
+    :type username: str
+    :return: user_home.html
+    :rtype: n/a
+    """
+
     if session["user"]:
         dep = dep
         day = datetime.datetime.now()
         today = day.strftime("%d %B, %Y")
+        # get data from Mongo
         depart = list(mongo.db[dep].find({"date": today}))
         if request.method == "POST":
             date = request.form.get("date")
+            # get data from Mongo
             depart = list(mongo.db[dep].find(
                 {"date": date}))
 
+            # render the Department template
             return render_template(
                 "dep.html", dep=dep, depart=depart, date=date, day=date)
+        # render the Department template
         return render_template(
             "dep.html", dep=dep, depart=depart, date=today, day="TODAY")
 
@@ -154,6 +232,7 @@ def get_poster(dep):
         dep = dep
         if request.method == "POST":
             poster = request.form.get("poster").lower()
+            # get data from Mongo
             depart = list(mongo.db[dep].find(
                 {"poster": poster}))
 
