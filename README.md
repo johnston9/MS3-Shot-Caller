@@ -518,10 +518,12 @@ Performance was over 90 mostly but sometimes dipped.
 Same result for desktop and mobile. It gave me an accessibility note for the submit
 button and register link so I changed the colours.
 
+<p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/light-log.png" width="90%">
 </h2>
 
+<p align="center"><strong>Mobile</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/light-mo-log.png" width="90%">
 </h2>
@@ -531,6 +533,7 @@ button and register link so I changed the colours.
 As above same result for desktop and mobile. It gave me an accessibility note for the submit
 button and register link so I changed the colours.
 
+<p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/reg-l1.png" width="90%">
 </h2>
@@ -610,7 +613,7 @@ here that will cover this for all pages.
 
    The Departments page had the same results as the User Base page.
 
-<p align="center"><strong>Medium and up</strong></p>
+<p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/depts-l" width="90%">
 </h2>
@@ -625,7 +628,7 @@ here that will cover this for all pages.
 
 ### First Time User Goals
 
-1. As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
+#### As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
 
     1. The site is designed for first time learning. It is streamlined for specicic
        user goals that after first use are so simple that with a few clicks after entering
@@ -642,13 +645,14 @@ here that will cover this for all pages.
        to use them for their needs.
     3. Below the departments on the User Base Page the user will see further options
        to add messages, search images, download the script or download the shotlist.
-    
+
+<p align="center"><strong>User Base</strong></p>   
 <h2 align="center">
 <img src="documentation/readme-images/user10.png" width="90%">
 </h2>
 
 
-2. As a First Time User, I want to find communications in my or other departments.
+#### As a First Time User, I want to find communications in my or other departments.
 
     1. Upon opening a department page the user will see the latest messages displayed.
        They will see the option to open all messages and a more specicic option
@@ -660,11 +664,12 @@ here that will cover this for all pages.
        of the poster, the subject and whether it is a priority or not. On clicking on a message box
        it will open to show the message and an image if one has been posted.
 
+<p align="center"><strong>Departments</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/dep-post.png" width="90%">
 </h2>
 
-3. As a First Time User, I want to view images.
+#### As a First Time User, I want to view images.
 
     1. In the navbar and on their home base the user will see a link to search images
        which on clicking will take them to the images page.
@@ -675,17 +680,17 @@ here that will cover this for all pages.
        images of style choices, locations and other images all in keeping with the choices
        set by the team or different options that are being worked on or considered.
 
-<p align="center">Specific reference tag input</p>
+<p align="center"><strong>Specific reference tag input</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/im-spec.png" width="90%">
 </h2>
 
-<p align="center">Specific reference tag result</p>
+<p align="center"><strong>Specific reference tag result</strong></strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/im-res1.png" width="90%">
 </h2>
 
-<p align="center">Result for query word "nick"</p>
+<p align="center"><strong>Result for query word "nick"</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/nick-all1.png" width="25%">
 </h2>
@@ -694,24 +699,24 @@ here that will cover this for all pages.
 
 ### Returning User Goals
 
-4. As a Returning User, I want to download the latest shotlist and script.
+#### As a Returning User, I want to download the latest shotlist and script.
 
     1. On clicking download script the script is downloaded to the user's device.
 
     1. On clicking download shotlist the shotlist is downloaded to the user's device.
 
-<p align="center">Result for downloaded shotlist</p>
+<p align="center"><strong>Result for downloaded shotlist</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/shot1.png" width="90%">
 </h2>
 
-<p align="center">Result for downloaded script</p>
+<p align="center"><strong>Result for downloaded script</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/script1.png" width="90%">
 </h2>
 
 
-5. As a Returning User, I want to add a communication in a specific area.
+#### As a Returning User, I want to add a communication in a specific area.
 
     1. In the navbar, on the User's Base page and in all the department
        pages the user will see a button to "Add Message". 
@@ -722,17 +727,17 @@ here that will cover this for all pages.
        so are supplied. 
 
 
-<p align="center">Add message page</p>
+<p align="center"><strong>Add message page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/add-11.png" width="25%">
 </h2>
 
-<p align="center">Success Flash message</p>
+<p align="center"><strong>Success Flash message</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/add-13.png" width="90%">
 </h2>
 
-<p align="center">Result</p>
+<p align="center"><strong>Result</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/add-12.png" width="90%">
 </h2>
@@ -743,7 +748,7 @@ here that will cover this for all pages.
 
 ### Frequent User Goals
 
-6. As a Frequent User, I want to view the latest production updates.
+#### As a Frequent User, I want to view the latest production updates.
 
    1. When the user clicks on the Latest Updates buttton on their home base page they are taken to the Today's
       Latest Production Updates Page. All the production communications from that day are
@@ -752,12 +757,12 @@ here that will cover this for all pages.
       updates which are always displaying for that day.
 
   
-<p align="center">Latest Updates Page</p>
+<p align="center"><strong>Latest Updates Page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/la2.png" width="90%">
 </h2>
 
-7. As a Frequent User, I want to edit and delete my communications.
+#### As a Frequent User, I want to edit and delete my communications.
 
     1. The user and strictly only the user, not even the admin, will have
        edit and delete buttons display under the messages that they themselves have
@@ -765,22 +770,22 @@ here that will cover this for all pages.
     2. With a click they will be taken to the "Edit Message" page where they can edit their message.
        They will get a flash message to tell them if the edit was a success.
 
-<p align="center">Message before edit</p>
+<p align="center"><strong>Message before edit</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ed-b.png" width="90%">
 </h2>
 
-<p align="center">Edit page</p>
+<p align="center"><strong>Edit page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/edit.png" width="90%">
 </h2>
 
-<p align="center">Message after edit</p>
+<p align="center"><strong>Message after edit</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ed-a.png" width="90%">
 </h2>
 
-<p align="center">Flash message</p>
+<p align="center"><strong>Flash message</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/edit-fl.png" width="90%">
 </h2>
@@ -789,17 +794,17 @@ here that will cover this for all pages.
        they want to delete the message and a flash message telling them if the 
        delete was a success should they click OK.
 
-<p align="center">Delete Modal</p>
+<p align="center"><strong>Delete Modal</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/del-m.png" width="90%">
 </h2>
 
-<p align="center">Flash Message</p>
+<p align="center"><strong>Flash Message</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/del-f.png" width="90%">
 </h2>
 
-8. As a Frequent User, I want to view and post communications and images relating to my style, 
+#### As a Frequent User, I want to view and post communications and images relating to my style, 
    shooting and script choices.
 
    1. Having used the app once the user will be easily able to navigate
@@ -812,7 +817,7 @@ here that will cover this for all pages.
 ### Admin User Goals
 
 
-1. As the admin user I want to upload the latest draft of the script.
+#### As the admin user I want to upload the latest draft of the script.
 
    - If the admin user clicks the upload script button available only to them they
      will be taken to the "Add Latest Script" page. They can follow the instructions
@@ -829,7 +834,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/sc-2.png" width="90%">
 </h2>
 
-2. As the admin user I want to upload the latest shotlist.
+#### As the admin user I want to upload the latest shotlist.
 
    - If the admin user clicks the upload shotlist button available only to them they
      will be taken to the "Add Latest shotlist" page. They can follow the instructions
@@ -846,7 +851,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-3. As the admin user I want to upload new images.
+#### As the admin user I want to upload new images.
 
    - If the admin user clicks the upload images button available only to them they
      will be taken to the "Add New Images" page. They can follow the instructions
@@ -865,7 +870,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-4. As the admin user I want to edit images.
+#### As the admin user I want to edit images.
 
    - On the images page under every image an edit button will display for
      the admin and the admin only. 
@@ -887,7 +892,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/ee-4.png" width="90%">
 </h2>
 
-5. As the admin user I want to delete images.
+#### As the admin user I want to delete images.
 
    - On the images page under every image a delete button will display for
      the admin and the admin only. On clicking they will be given a modal
@@ -903,7 +908,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/sc-2.png" width="90%">
 </h2>
 
-6. As the admin user I want to delete a user.
+#### As the admin user I want to delete a user.
 
    - If the admin user clicks the "Remove User" button available only to them they
      will be taken to the "Remove User" page. They must enter the user's firstname they
@@ -920,7 +925,7 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-7. As the admin user I want control over material posted on the site for legal
+#### As the admin user I want control over material posted on the site for legal
    and other purposes.
 
    - Admin will have access to the edit and delete functions for every message
