@@ -191,15 +191,12 @@ def get_pro():
     """
 
     if session["user"]:
-        day = datetime.datetime.now()
-        today = day.strftime("%d %B, %Y")
-        # get production collection's data from Mongo
-        depart = list(mongo.db.production.find({"date": today}))
+        # get production collection's latest documents from Mongo
+        depart = list(mongo.db.production.find().sort('date', -1).limit(10))
 
         # render the Production Latest messages page
         return render_template(
-            "pro.html", dep="Today's Production Updates", depart=depart,
-            date=today, day="TODAY")
+            "pro.html", dep="Latest Production Updates", depart=depart)
 
 
 @app.route("/get_dep/<dep>", methods=["GET", "POST"])

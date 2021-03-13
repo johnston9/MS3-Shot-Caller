@@ -342,6 +342,12 @@ this are found in the Design section.
 <img src="documentation/readme-images/hos1.png" width="90%">
 </h2>
 
+ If no image is found for a query a message is displayed.
+
+ <h2 align="center">
+<img src="documentation/readme-images/hos1.png" width="90%">
+</h2>
+
 [Back to Table of Content](#table-of-content)
 
 ### Admin Page
@@ -384,19 +390,20 @@ MongoDB was used as the site's database and held 14 collections.
 6-14 - <strong>9 collections</strong> for each of the departments messages.
 
 There is an Entity Relationship between the users collection and the 9 seperate departments
-collections  is on "username" and "job_title". A third relationship
+collections on "username" and "job_title". A third relationship
 is between the concatenated result of the users collection "firstname" and "lastname"
 values and the department collection's "poster". These allow the automatic input 
 of these user valies when a user sends a message.
 
-There is an Entity Relationship between depts and the 9 departments for depts dep_name and
+There is an Entity Relationship between depts and the 9 departments on depts dep_name and
 the actual name of the department collection. This allow for the
 depts dep_name to be passed to app.py when a department is clicked on in the user's
 base page. This sends dep_name as a variable to the get_dep function in app.py allowing
 it to be used in the find() method on Mongo and get the messages for the collection of that name.
 
 <strong>Note 1:</strong> In the ER Diagram the last relationship above points to the the dep_name in the example camera
-      collection as it was not technically posssible to have it point to the collection name.
+      collection as it was not technically posssible to have it point to the collection name, which
+      is in fact the correct relationship.
 
 <strong>Note 2:</strong>: Only one, "camera", of the 9 department collections is used in the diagram but the same
       relationships exist for all of the 9 department collections.
@@ -1077,15 +1084,22 @@ here that will cover this for all pages.
 </h2>
 
 
-[Back to Table of Content](#table-of-content)
-
-
 - The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
 
 - The app was viewed on a variety of devices such as Desktop, Laptop, iPhone and various other smartphones.
 
 - Friends and family members were asked to review the site and to point out any bugs and/or user experience issues. These were taken on board and changes were made if necessary or to give a better user experience.
 
+[Back to Table of Content](#table-of-content)
+
+## Logout
+
+The logout button remove the user from sesson user and displays a Flash message if this is
+sucessful.
+
+<h2 align="center">
+<img src="documentation/readme-images/logout.png" width="50%">
+</h2>
 
 ### Known Bugs
 
