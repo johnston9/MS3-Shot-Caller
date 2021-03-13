@@ -27,15 +27,13 @@ as a product on an individual basis for each new production and owner.
   * [Structure Plane](#structure-plane)
   * [Skeleton Plane](#skeleton-plane)
   * [User stories](#user-stories)
-    + [First Time User Goals](#first-time-user-goals)
-    + [Returning User Goals](#returning-user-goals)
-    + [Frequent User Goals](#frequent-user-goals)
-    + [Admin User Goals](#admin-user-goals)
+
 - [Design](#design)
   * [Colour Scheme](#colour-scheme)
   * [Typography](#typography)
   * [Imagery](#imagery)
   * [Wireframes](#wireframes)
+
 - [Existing Features](#existing-features)
   * [Responsive Design](#responsive-design)
   * [Login/Register Pages and Security Measures](#login-register-pages-and-security-measures)
@@ -43,32 +41,46 @@ as a product on an individual basis for each new production and owner.
   * [Departments Page](#departments-page)
   * [Images Page](#images-page)
   * [Admin Page](#admin-page)
+
 - [Database structure](#database-structure)
+
 - [Languages Used](#languages-used)
+
 - [Frameworks, Databases, Libraries & Programs Used](#frameworks--databases--libraries---programs-used)
+
 - [Testing](#testing)
+
+- [Lighthouse](#lighthouse)
+  * [Login page](#login-page)
+  * [Register page](#register-page)
+  * [User Base page](#user-base-page)
+  * [Image page](#image-page)
+  * [Departments page](#departments-page)
+
 - [Testing User Stories from User Experience (UX)](#testing-user-stories-from-user-experience--ux-)
   * [First Time User Goals](#first-time-user-goals-1)
   * [Returning User Goals](#returning-user-goals-1)
   * [Frequent User Goals](#frequent-user-goals-1)
   * [Admin User Goals](#admin-user-goals-1)
+
 - [Further Testing](#further-testing)
   * [Brute-Forcing Attacks](#brute-forcing-attacks)
   * [404 Error Handling](#404-error-handling)
   * [Login Page](#login-page)
   * [Register Page](#register-page)
-  * [Known Bugs](#known-bugs)
-- [Development platform](#development-platform)
-- [Repository](#repository)
-  * [Forking the GitHub Repository](#forking-the-github-repository)
-  * [Making a Local Clone](#making-a-local-clone)
-  * [Further steps required](#further-steps-required)
+  * [Logout](#logout)
+
 - [Deployment](#deployment)
+  * [Repository](#repository)
+    + [Forking the GitHub Repository](#forking-the-github-repository)
+    + [Making a Local Clone](#making-a-local-clone)
+    + [Terminal](#terminal)
+    + [Further steps required](#further-steps-required)
+
+  * [Deploy to Heroku](#deploy-to-heroku)
+
 - [Credits](#credits)
-  * [Code](#code)
-  * [Content](#content)
-  * [Media](#media)
-  * [Acknowledgements](#acknowledgements)
+
 
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
@@ -344,8 +356,8 @@ this are found in the Design section.
 
  If no image is found for a query a message is displayed.
 
- <h2 align="center">
-<img src="documentation/readme-images/hos1.png" width="90%">
+<h2 align="center">
+<img src="documentation/readme-images/no-im.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -695,10 +707,17 @@ here that will cover this for all pages.
     3. The user will see all chosen messages each displaying,in the header the name and position
        of the poster, the subject and whether it is a priority or not. On clicking on a message box
        it will open to show the message and an image if one has been posted.
+    4. If there are no messages for a particular request a message will display
+       advising the user of this.
 
 <p align="center"><strong>Departments</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/dep-post.png" width="90%">
+</h2>
+
+<p align="center"><strong>No Dessages Display</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/no-mes.png" width="90%">
 </h2>
 
 3. #### As a First Time User, I want to view images.
