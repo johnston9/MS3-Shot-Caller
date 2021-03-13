@@ -371,17 +371,17 @@ Please see admin testing for further details.
 
 MongoDB was used as the site's database and held 14 collections. 
 
-1 - latest_script - to hold the script url.
+1 - <strong>latest_script</strong> - to hold the script url.
 
-2 - shotlist - to hold the shotlist url.
+2 - <strong>shotlist</strong> - to hold the shotlist url.
 
-3 - users - to hold the user's details.
+3 - <strong>users</strong> - to hold the user's details.
 
-4 - images - to hold the image bank images ref names, descriptions and urls.
+4 - <strong>images</strong> - to hold the image bank images ref names, descriptions and urls.
 
-5 - depts - to hold the departments names, titles and the department images urls for User Base/Department's pages.
+5 - <strong>depts</strong> - to hold the departments names, titles and the department images urls for User Base/Department's pages.
 
-6-14 - 9 collections for each of the departments messages.
+6-14 - <strong>9 collections</strong> for each of the departments messages.
 
 There is an Entity Relationship between the users collection and the 9 seperate departments
 collections  is on "username" and "job_title". A third relationship
