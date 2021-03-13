@@ -147,7 +147,7 @@ def user_home(username):
     """
 
     if session["user"]:
-        # get depts, latest_script, shotlist and users 
+        # get depts, latest_script, shotlist and users
         # collections data from Mongo
         script = list(mongo.db.latest_script.find())
         depts = list(mongo.db.depts.find())
@@ -174,7 +174,7 @@ def get_depts():
     if session["user"]:
         # get depts collection's data from Mongo
         depts = mongo.db.depts.find()
-        # render the Departmentts page
+        # render the Departments page
         return render_template("depts.html", depts=depts)
 
 
@@ -226,12 +226,12 @@ def get_dep(dep):
         dep = dep
         day = datetime.datetime.now()
         today = day.strftime("%d %B, %Y")
-        # get selected department collection's documents posted 
+        # get selected department collection's documents posted
         # today from Mongo
         depart = list(mongo.db[dep].find({"date": today}))
         if request.method == "POST":
             date = request.form.get("date")
-            # get selected department collection's documents 
+            # get selected department collection's documents
             # with this date from Mongo
             depart = list(mongo.db[dep].find(
                 {"date": date}))
@@ -270,7 +270,7 @@ def get_poster(dep):
         dep = dep
         if request.method == "POST":
             poster = request.form.get("poster").lower()
-            # get selected department collection's documents by this 
+            # get selected department collection's documents by this
             # poster from Mongo
             depart = list(mongo.db[dep].find(
                 {"poster": poster}))
@@ -365,7 +365,8 @@ def get_image():
     if session["user"]:
         if request.method == "POST":
             image = request.form.get("image")
-            # get images collection's documents matching search queries from Mongo
+            # get images collection's documents matching search queries
+            # from Mongo
             images = list(mongo.db.images.find({"$text": {"$search": image}}))
             # Render the Images page
             return render_template("images.html", images=images)
@@ -596,7 +597,8 @@ def add_script(script_id):
             latest = {
                 "script": request.form.get("script_name")
             }
-            # update the singular document in the latest_script collection in Mongo
+            # update the singular document in the latest_script collection
+            # in Mongo
             mongo.db.latest_script.update(
                 {"_id": ObjectId(script_id)}, latest)
             flash("Script Successfully Updated")

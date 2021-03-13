@@ -369,22 +369,38 @@ Please see admin testing for further details.
 
 ## Database structure
 
-MongoDB was used as the site's database. 
+MongoDB was used as the site's database and held 14 collections. 
 
-The Entity Relationship's between the users collection and the 9 seperate 
-collections for each departments is on "username" and "job_title". A third relationship
+1. - latest_script - to hold the script url.
+2. - shotlist - to hold the shotlist url.
+3. - users - to hold the user's details.
+4. - images - to hold the image bank images ref names, descriptions and urls.
+5. - depts - to hold the departments names, titles and the department images urls for User Base/Department's pages.
+6 - 14. - 9 collections for each of the departments messages.
+
+The Entity Relationship's between the users collection and the 9 seperate departments
+collections  is on "username" and "job_title". A third relationship
 is between the concatenated result of the users collection "firstname" and "lastname"
 values and the department collection's "poster". These allow the automatic input 
 of these user valies when a user sends a message.
 
-The Entity Relationship's between depts and the 9 departments for dep_name allow for the
+The Entity Relationship's between depts and the 9 departments for depts dep_name and
+the actual name of the department collection. This allow for the
 depts dep_name to be passed to app.py when a department is clicked on in the user's
 base page. This sends dep_name as a variable to the get_dep function in app.py allowing
 it to be used in the find() method on Mongo and get the messages for the collection of that name.
- 
+
+note 1: In the ER Diagram this relationship points to the the dep_name in the example camera
+      collection as it was not technically posssible to have it point to the collection name.
+note 2: Only one, "camera", of the 9 department collections is used in the diagram but the same
+      relationships exist for all of the 9 department collections.
+note 3: Two values in the images collection, image_name and image_src, share the same names as ones
+      in the department collection but this is not actually used by any python function. If admin 
+      wants to use one of the message images they would do so manually on the spot by right clicking on it.
+      Also they may wish to alter the image_name for various reasons.
 
 <h2 align="center">
-<img src="documentation/readme-images/scop3.png" width="90%">
+<img src="documentation/readme-images/er.png" width="90%">
 </h2>
 
 The MongoDB Shot Caller database contains the following collections.
@@ -478,6 +494,8 @@ The MongoDB Shot Caller database contains the following collections.
    - Am I Responsive was used to test the site's responsive sizings and to generate responsive sizing images.
 1. [GitHub Wiki TOC generator:](http://ecotrust-canada.github.io/markdown-toc/)
    - GitHub Wiki TOC generator was used to create the Table of Contents.
+1. [dbdiagram.io](https://dbdiagram.io/home)
+   - dbdiagram.io was used to create the Entity-Relationship Diagram.
 
 [Back to Table of Content](#table-of-content)
 
