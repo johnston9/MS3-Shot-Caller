@@ -555,7 +555,8 @@ Lighthouse was used to test every page in desktop and moblie screens.
 ### Sumary
 
 
-1. Performance was over 90 mostly but sometimes dipped. 
+1. On all pages apart from the Login and RegisterIt gave me a "Does not use HTTPS - (x for different pages) insecure requests found" error. But this 
+   is because I was using basic Heroku and can fix this if I purchace an SSL certificate.
 
 2. I got an insecure link warning from Lighthouse for the link to Cloudinary so I put rel="noopener"
    in all links.
@@ -570,6 +571,15 @@ Lighthouse was used to test every page in desktop and moblie screens.
 
 5. It gave me an accessibility note for the select dropdown trigger on the Add Message page
    not having a label but this is a Materialize issue.
+
+6. It gave me an error for the robot.txt not being valid. I had not know about this so I 
+   looked it up and made one. I tried it later without it and did not get an error but I ended 
+   up putting it back in just to be sure and will try to find out more about the issue.
+ 
+<p align="center"><strong>Robot.txt warning</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/robo.png" width="90%">
+</h2>
 
 
 ### Login page
