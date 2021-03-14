@@ -19,7 +19,7 @@ app.register_key = os.environ.get("REGISTER_KEY")
 mongo = PyMongo(app)
 
 
-@app.new_page()
+@app.route("/new_page")
 def new_page():
     """Render 404 page.
 
