@@ -625,7 +625,7 @@ the images to the desire 2:3 ratio.
 
 <p align="center"><strong> New result</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/new-user.png" width="90%">
+<img src="documentation/readme-images/u-1.png" width="90%">
 </h2>
 
  - Mobile
@@ -639,7 +639,7 @@ That said should the app the taken to a further stage I will investsigate it mor
 
 <p align="center"><strong> Mobile result</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/user-newmo.png" width="90%">
+<img src="documentation/readme-images/u-2.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -673,19 +673,27 @@ strong></p>
 
  [Back to Table of Content](#table-of-content)
 
- - ### Image page
-
-   The image page faired well although a bit weaker at moblie performance.
+ - ### Add Message page
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/lit-im1.png" width="90%">
 </h2>
 
-<p align="center"><strong>Mobile</strong></p>
+ - ### Edit Message page
+
+<p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/lit-ims.png" width="90%">
+<img src="documentation/readme-images/.png" width="90%">
 </h2>
+
+ - ### Add Message page
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/messy.png" width="90%">
+</h2>
+
 
 [Back to Table of Content](#table-of-content)
 
@@ -709,12 +717,12 @@ strong></p>
 
 <p align="center"><strong>Remove User page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/ad-bp.png" width="90%">
+<img src="documentation/readme-images/admin-remo.png" width="90%">
 </h2>
 
-<p align="center"><strong>Mobile</strong></p>
+<p align="center"><strong>Add Latest Script page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/depts-mo.png" width="90%">
+<img src="documentation/readme-images/ad-a.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
