@@ -1,127 +1,129 @@
 {% extends "base.html" %}
 {% block content %}
-<!--top-box with red "Shot Caller" sides decoration-->
-<div class="row">
-   <div class="col s1 offset-s1 m1 offset-m3">
-      <div class="long-boxl">
-         <p>S<br>H<br>O<br>T</p>
-      </div>
-   </div>
-   <div class="col s6 offset-s1 m4">
-      <div class="login-box">
-         <div class="row">
-            <div class="col s1 left-pad">
-               <div class="smallPanel-l"></div>
-            </div>
-            <div class="col s11">
-               <p class="username shadow-light1 center-align"><strong>Edit Message</strong></p>
-            </div>
-         </div>
-      </div>
-   </div>
-   <div class="col s1 offset-s1 m1">
-      <div class="long-box right">
-         <p>C<br>A<br>L<br>L<br>E<br>R</p>
-      </div>
-   </div>
-</div>
-<!--panel-left-->
-<div class="row">
-   <div class="col s1">
-      <div class="panel-left"></div>
-   </div>
-   <div class="col s10">
-      <h5 class="antiquewhite center-align">Enter Message</h5>
-      <div class="row">
-         <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, user=message.username, message_id=message._id) }}">
-            <!--select department-->
-            <div class="row margintop-20">
-               <div class="input-field col s12 m8 offset-m2">
-                  <i class="fas minus prefix blue-sea"></i>
-                  <select id="department_name" name="department_name" class="validate" required>
-                     <option value="" disabled>Click to select</option>
-                     {% for dep in depts %}
-                     {% if dep.dept_name == message.dept_name %}
-                     <option value="{{ dep.dept_name }}" selected>{{ dep.dept_name }}</option>
-                     {% else %}
-                     <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
-                     {% endif %}
-                     {% endfor %}
-                  </select>
-                  <label for="department_name">Select Department</label>
-               </div>
-            </div>
-            <!--enter subject-->
+
+    <!--top-box with red "Shot Caller" sides decoration-->
+    <div class="row">
+    <div class="col s1 offset-s1 m1 offset-m3">
+        <div class="long-boxl">
+            <p>S<br>H<br>O<br>T</p>
+        </div>
+    </div>
+    <div class="col s6 offset-s1 m4">
+        <div class="login-box">
             <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
-                  <i class="fas fa-minus prefix blue-sea"></i>
-                  <input id="subject" name="subject" minlength="1" maxlength="50"
-                     value="{{ message.subject }}" type="text" class="validate" style="color:whitesmoke !important;" required>
-                  <label for="subject">Subject</label>
-               </div>
+                <div class="col s1 left-pad">
+                <div class="smallPanel-l"></div>
+                </div>
+                <div class="col s11">
+                <p class="username shadow-light1 center-align"><strong>Edit Message</strong></p>
+                </div>
             </div>
-            <!--enter message-->
-            <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
-                  <i class="fas fa-minus prefix blue-sea"></i>
-                  <textarea id="message" name="message" minlength="5"
-                     maxlength="300" class="materialize-textarea validate" style="color:whitesmoke !important;" required>
-                  {{- message.message -}}
-                  </textarea>
-                  <label for="message">Message</label>
-               </div>
-            </div>
-            <!--enter image src-->
-            <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
-                  <i class="fas fa-minus prefix blue-sea"></i>
-                  <input id="image_src" name="image_src" minlength="1"
-                     value="{{ message.image_src }}" type="text" class="validate" style="color:whitesmoke !important;">
-                  <label for="image_src">Image SRC</label>
-               </div>
-            </div>
-            <!--enter image ref tag-->
-            <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
-                  <i class="fas fa-minus prefix blue-sea"></i>
-                  <input id="image_name" name="image_name" minlength="1"
-                     value="{{ message.image_des }}" type="text" class="validate" style="color:whitesmoke !important;">
-                  <label for="image_name">Image Reference</label>
-               </div>
-            </div>
-            <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
-                  <div class="switch">
-                     <i class="fas fa-minus prefix blue-sea"></i>
-                     <label for="is_priority">
-                     {% if message.is_priority == "on" %}
-                     <input type="checkbox" id="is_priority" name="is_priority" checked>
-                     {% else %}
-                     <input type="checkbox" id="is_priority" name="is_priority">
-                     {% endif %}
-                     <span class="lever"></span>
-                     Is Priority
-                     </label>
-                  </div>
-               </div>
-            </div>
-            <div class="row margintop-20">
-               <div class="col s8 offset-s2 center-align">
-                  <!-- cancel button -->
-                  <a href="{{ url_for('get_dep', dep=message.dept_name) }}"  class="btn-small offwhite blueBack-sea shadow-light">
-                  Cancel 
-                  </a>
-                  <!-- submit button -->
-                  <button type="submit" class="btn-small offwhite blueBack-sea shadow-light">
-                  Submit
-                  </button>
-               </div>
-            </div>
-         </form>
-      </div>
-   </div>
-   <div class="col s1">
-      <div class="panel-right"></div>
-   </div>
-</div>
+        </div>
+    </div>
+    <div class="col s1 offset-s1 m1">
+        <div class="long-box right">
+            <p>C<br>A<br>L<br>L<br>E<br>R</p>
+        </div>
+    </div>
+    </div>
+    <!--panel-left-->
+    <div class="row">
+    <div class="col s1">
+        <div class="panel-left"></div>
+    </div>
+    <div class="col s10">
+        <h5 class="antiquewhite center-align">Enter Message</h5>
+        <div class="row">
+            <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, user=message.username, message_id=message._id) }}">
+                <!--select department-->
+                <div class="row margintop-20">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas minus prefix blue-sea"></i>
+                    <select id="department_name" name="department_name" class="validate" required>
+                        <option value="" disabled>Click to select</option>
+                        {% for dep in depts %}
+                        {% if dep.dept_name == message.dept_name %}
+                        <option value="{{ dep.dept_name }}" selected>{{ dep.dept_name }}</option>
+                        {% else %}
+                        <option value="{{ dep.dept_name }}">{{ dep.dept_name }}</option>
+                        {% endif %}
+                        {% endfor %}
+                    </select>
+                    <label for="department_name">Select Department</label>
+                </div>
+                </div>
+                <!--enter subject-->
+                <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-minus prefix blue-sea"></i>
+                    <input id="subject" name="subject" minlength="1" maxlength="50"
+                        value="{{ message.subject }}" type="text" class="validate" style="color:whitesmoke !important;" required>
+                    <label for="subject">Subject</label>
+                </div>
+                </div>
+                <!--enter message-->
+                <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-minus prefix blue-sea"></i>
+                    <textarea id="message" name="message" minlength="5"
+                        maxlength="300" class="materialize-textarea validate" style="color:whitesmoke !important;" required>
+                    {{- message.message -}}
+                    </textarea>
+                    <label for="message">Message</label>
+                </div>
+                </div>
+                <!--enter image src-->
+                <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-minus prefix blue-sea"></i>
+                    <input id="image_src" name="image_src" minlength="1"
+                        value="{{ message.image_src }}" type="text" class="validate" style="color:whitesmoke !important;">
+                    <label for="image_src">Image SRC</label>
+                </div>
+                </div>
+                <!--enter image ref tag-->
+                <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <i class="fas fa-minus prefix blue-sea"></i>
+                    <input id="image_name" name="image_name" minlength="1"
+                        value="{{ message.image_des }}" type="text" class="validate" style="color:whitesmoke !important;">
+                    <label for="image_name">Image Reference</label>
+                </div>
+                </div>
+                <div class="row">
+                <div class="input-field col s12 m8 offset-m2">
+                    <div class="switch">
+                        <i class="fas fa-minus prefix blue-sea"></i>
+                        <label for="is_priority">
+                        {% if message.is_priority == "on" %}
+                        <input type="checkbox" id="is_priority" name="is_priority" checked>
+                        {% else %}
+                        <input type="checkbox" id="is_priority" name="is_priority">
+                        {% endif %}
+                        <span class="lever"></span>
+                        Is Priority
+                        </label>
+                    </div>
+                </div>
+                </div>
+                <div class="row margintop-20">
+                <div class="col s8 offset-s2 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_dep', dep=message.dept_name) }}"  class="btn-small offwhite blueBack-sea shadow-light">
+                    Cancel 
+                    </a>
+                    <!-- submit button -->
+                    <button type="submit" class="btn-small offwhite blueBack-sea shadow-light">
+                    Submit
+                    </button>
+                </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="col s1">
+        <div class="panel-right"></div>
+    </div>
+    </div>
+
 {% endblock %}

@@ -29,10 +29,6 @@ as a product on an individual basis for each new production and owner.
   * [User stories](#user-stories)
 
 - [Design](#design)
-  * [Colour Scheme](#colour-scheme)
-  * [Typography](#typography)
-  * [Imagery](#imagery)
-  * [Wireframes](#wireframes)
 
 - [Existing Features](#existing-features)
   * [Responsive Design](#responsive-design)
@@ -429,6 +425,8 @@ it to be used in the find() method on Mongo and get the messages for the collect
 <img src="documentation/readme-images/er.png" width="90%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
+
 The MongoDB Shot Caller database contains the following collections.
 
 <p align="center"> <strong>users</strong>- for user details</p>
@@ -471,6 +469,8 @@ The MongoDB Shot Caller database contains the following collections.
 <h2 align="center">
 <img src="documentation/readme-images/m-script.png" width="90%">
 </h2>
+
+[Back to Table of Content](#table-of-content)
 
 
 ## Languages Used
@@ -572,6 +572,8 @@ button and register link so I changed the colours.
 <img src="documentation/readme-images/light-mo-log.png" width="90%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
+
 ### Register page
 
 As above same result for desktop and mobile. It gave me an accessibility note for the submit
@@ -588,6 +590,8 @@ button and register link so I changed the colours.
 <h2 align="center">
 <img src="documentation/readme-images/lig-u-a.png" width="90%">
 </h2>
+
+[Back to Table of Content](#table-of-content)
 
  - #### Best Practices
 
@@ -612,6 +616,8 @@ That said should the app the taken to a further stage I will investsigate it mor
 <h2 align="center">
 <img src="documentation/readme-images/user-newmo.png" width="90%">
 </h2>
+
+[Back to Table of Content](#table-of-content)
 
  - #### Accessibility
 
@@ -639,6 +645,8 @@ here that will cover this for all pages.
 
  - The extra buttons on the admin user page did not effect the results.
 
+ [Back to Table of Content](#table-of-content)
+
  - ### Image page
 
    The image page faired well although a bit weaker at moblie performance.
@@ -653,6 +661,8 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/lit-ims.png" width="90%">
 </h2>
 
+[Back to Table of Content](#table-of-content)
+
  - ### Departments page
 
    The Departments page had the same results as the User Base page.
@@ -666,6 +676,8 @@ here that will cover this for all pages.
 <h2 align="center">
 <img src="documentation/readme-images/depts-mo.png" width="90%">
 </h2>
+
+[Back to Table of Content](#table-of-content)
 
 
 ## Testing User Stories from User Experience (UX) 
@@ -1111,7 +1123,7 @@ here that will cover this for all pages.
 
 [Back to Table of Content](#table-of-content)
 
-## Logout
+### Logout
 
 The logout button remove the user from sesson user and displays a Flash message if this is
 sucessful.
