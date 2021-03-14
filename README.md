@@ -555,8 +555,14 @@ Lighthouse was used to test every page in desktop and moblie screens.
 ### Sumary
 
 
-1. On all pages apart from the Login and RegisterIt gave me a "Does not use HTTPS - (x for different pages) insecure requests found" error. But this 
+1. On all pages apart from the Login and Register it had not secure in the address
+   and a "Does not use HTTPS -  insecure requests found" error. But this 
    is because I was using basic Heroku and can fix this if I purchace an SSL certificate.
+
+<p align="center"><strong>Not Secure - http used message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/robo.png" width="90%">
+</h2>
 
 2. I got an insecure link warning from Lighthouse for the link to Cloudinary so I put rel="noopener"
    in all links.
