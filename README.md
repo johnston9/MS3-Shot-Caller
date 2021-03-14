@@ -557,8 +557,21 @@ Lighthouse was used to test every page in desktop and moblie screens.
 
 1. Performance was over 90 mostly but sometimes dipped. 
 
-2. I got a 
+2. I got an insecure link warning from Lighthouse for the link to Cloudinary so I put rel="noopener"
+   in all links.
 
+3. It gave me an accessibility note for the header "Shot Caller" decorative
+   writing in red either side of the header box. As this is purely decorative and is only barely visual limited I left it
+   red as this was in keeping with my style intentions. I did however change it from Crimson
+   to a bright red. 
+
+4. It gave me an accessibility note  about the sidenav icon not having a name or label but this is
+   also an intentional style choice and one that is common practice.
+
+5. It gave me an accessibility note for the select dropdown trigger on the Add Message page
+   not having a label but this is a Materialize issue.
+
+   
 ### Login page
 
 Same result for desktop and mobile. It gave me an accessibility note for the submit
