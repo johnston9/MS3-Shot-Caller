@@ -19,8 +19,8 @@ app.register_key = os.environ.get("REGISTER_KEY")
 mongo = PyMongo(app)
 
 
-@app.test()
-def test():
+@app.new_page()
+def new_page():
     """Render 404 page.
 
     When an error message occur render the 404.html page.
