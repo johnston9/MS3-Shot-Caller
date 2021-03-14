@@ -561,7 +561,7 @@ Lighthouse was used to test every page in desktop and moblie screens.
 
 <p align="center"><strong>Not Secure - http used message</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/robo.png" width="90%">
+<img src="documentation/readme-images/not-sec.png" width="90%">
 </h2>
 
 2. I got an insecure link warning from Lighthouse for the link to Cloudinary so I put rel="noopener"
@@ -570,17 +570,23 @@ Lighthouse was used to test every page in desktop and moblie screens.
 3. It gave me an accessibility note for the header "Shot Caller" decorative
    writing in red either side of the header box. As this is purely decorative and is only barely visual limited I left it
    red as this was in keeping with my style intentions. I did however change it from Crimson
-   to a bright red. 
+   to a bright red. See User Base page - Accessibility below for more on that issue.
 
 4. It gave me an accessibility note  about the sidenav icon not having a name or label but this is
    also an intentional style choice and one that is common practice.
+   See User Base page - Accessibility below for more on that issue.
+
+5. On the User Base and Departments pages it gave me a Best Practices messages 
+   regarding the image sizes. See User Base page below for more on that issue.
 
 5. It gave me an accessibility note for the select dropdown trigger on the Add Message page
-   not having a label but this is a Materialize issue.
+   not having a label but it does have one for the outer select so this is a Materialize issue.
+   See Add Message page below for more on that issue.
 
 6. It gave me an error for the robot.txt not being valid. I had not know about this so I 
-   looked it up and made one. I tried it later without it and did not get an error but I ended 
-   up putting it back in just to be sure and will try to find out more about the issue.
+   looked it up and made the required file. The error was gone. I removed the file to check
+   this issue more it later and did not get an error.
+   I will try to find out more about the issue. It must have been just a server error instance.
  
 <p align="center"><strong>Robot.txt warning</strong></p>
 <h2 align="center">
@@ -590,7 +596,7 @@ Lighthouse was used to test every page in desktop and moblie screens.
 
 ### Login page
 
-Same result for desktop and mobile. It gave me an accessibility note for the submit
+Got the same result for desktop and mobile. It gave me an accessibility note for the submit
 button and register link so I changed the colours.
 
 <p align="center"><strong>Desktop</strong></p>
@@ -598,12 +604,10 @@ button and register link so I changed the colours.
 <img src="documentation/readme-images/log2.png" width="90%">
 </h2>
 
-[Back to Table of Content](#table-of-content)
 
 ### Register page
 
-As above same result for desktop and mobile. It gave me an accessibility note for the submit
-button and register link so I changed the colours.
+As above same result for desktop and mobile. 
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
@@ -612,7 +616,7 @@ button and register link so I changed the colours.
 
 [Back to Table of Content](#table-of-content)
 
-### User Base page
+### User Base page 
 
  - #### Best Practices
 
@@ -650,8 +654,8 @@ to a bright red.
 It also gave me a note about the sidenav icon not having a name or label but this is
 also an intentional style choice and one that is common practice.
 
-These two notes were for every page on the site and accounted solely for the "89" score that
-was given for "Accessibility" on this and all other pages. I will include images 
+These two notes were for every page on the site and accounted solely for the "93" and sometimes "88" scores that
+was given for "Accessibility" on this and all other pages apart from Add Message. I will include images 
 here that will cover this for all pages.
 
 <p align="center"><strong>Header red text note</strong></p>
@@ -659,7 +663,8 @@ here that will cover this for all pages.
 <img src="documentation/readme-images/new-userp.png" width="90%">
 </h2>
 
-<p align="center"><strong>Sidenav icon note</strong></p>
+<p align="center"><strong>Sidenav icon note</
+strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/new-userl.png" width="90%">
 </h2>
@@ -691,6 +696,20 @@ here that will cover this for all pages.
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/d-lar.png" width="90%">
+</h2>
+
+<p align="center"><strong>Mobile</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/depts-mo.png" width="90%">
+</h2>
+
+ - ### Admin pages - 
+
+   All 4 pages had the same results.
+
+<p align="center"><strong>Remove User page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/ad-bp.png" width="90%">
 </h2>
 
 <p align="center"><strong>Mobile</strong></p>
