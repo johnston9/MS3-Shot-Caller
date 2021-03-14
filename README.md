@@ -555,7 +555,9 @@ Lighthouse was used to test every page in desktop and moblie screens.
 ### Sumary
 
 
-Performance was over 90 mostly but sometimes dipped. 
+1. Performance was over 90 mostly but sometimes dipped. 
+
+2. I got a 
 
 ### Login page
 
@@ -564,12 +566,7 @@ button and register link so I changed the colours.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/light-log.png" width="90%">
-</h2>
-
-<p align="center"><strong>Mobile</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/light-mo-log.png" width="90%">
+<img src="documentation/readme-images/log2.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
