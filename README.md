@@ -571,7 +571,7 @@ Lighthouse was used to test every page in desktop and moblie screens.
 5. It gave me an accessibility note for the select dropdown trigger on the Add Message page
    not having a label but this is a Materialize issue.
 
-   
+
 ### Login page
 
 Same result for desktop and mobile. It gave me an accessibility note for the submit
@@ -591,17 +591,12 @@ button and register link so I changed the colours.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/reg-l1.png" width="90%">
-</h2>
-
-### User Base page
-
-<p align="center"><strong> Original result</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/lig-u-a.png" width="90%">
+<img src="documentation/readme-images/reg2.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
+
+### User Base page
 
  - #### Best Practices
 
