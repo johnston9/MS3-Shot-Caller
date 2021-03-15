@@ -357,6 +357,20 @@ this are found in the Design section.
 <img src="documentation/readme-images/no-im.png" width="90%">
 </h2>
 
+### Add/Edit Message Pages
+ 
+ - Users can post messages. They and they alone apart from admin will have the
+   Edit and Delete buttons display below their own messaages.They can add an 
+   image to their message or in Edit change it or it's name.
+   They are given instructions on how to obtain an image SRC. They are instructed 
+   just below the Emter Image title that they must fill in the image name box if they
+   enter an image SRC. This is to ensure that alt can use this if the SRC is incorrect or an
+   error will be logged to the console. 
+
+<h2 align="center">
+<img src="documentation/readme-images/mes-im.png" width="50%">
+</h2>
+
 [Back to Table of Content](#table-of-content)
 
 ### Admin Page
@@ -672,13 +686,19 @@ but as expected it had no result as the dropdown is not reachable on the page.
 
  - ### Edit Message page
 
-The Edit Message page had thre same result and issue as the Add Message page.
+The Edit Message page had the same result and issue as the Add Message page.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/.png" width="90%">
+<img src="documentation/readme-images/ed1a.png" width="90%">
 </h2>
 
+Both pages had same result for moblie
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/ed2b.png" width="90%">
+</h2>
 
 [Back to Table of Content](#table-of-content)
 
@@ -705,16 +725,18 @@ The Edit Message page had thre same result and issue as the Add Message page.
 
  - ### Admin pages - 
 
-   All 4 pages had the same results.
+   All 4 admin pages had the same results for desktop.
 
 <p align="center"><strong>Remove User page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/admin-remo.png" width="90%">
+<img src="documentation/readme-images/ad2b.png" width="90%">
 </h2>
+
+    All 4 admin pages had the same results for mobile.
 
 <p align="center"><strong>Add Latest Script page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/ad-a.png" width="90%">
+<img src="documentation/readme-images/ad1a.png" width="90%">
 </h2>
 
 ### Lighthouse internal strange occurance

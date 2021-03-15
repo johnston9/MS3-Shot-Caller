@@ -32,7 +32,8 @@
         <div class="panel-left"></div>
     </div>
     <div class="col s10">
-        <h5 class="antiquewhite center-align">Enter Message</h5>
+        <h5 class="white-text center-align">Enter Message</h5>
+        <p class="antiquewhite center-align">If adding an image SRC the name box below it is required</p>
         <!--add message form-->
         <div class="row">
             <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
@@ -73,17 +74,16 @@
                     <i class="fas fa-minus prefix blue-sea"></i>
                     <input id="image_src" name="image_src"
                         type="text" class="validate" style="color:whitesmoke !important;">
-                    <label for="image_src">Image SRC</label>
+                    <label for="image_src">Image SRC </label>
                 </div>
                 </div>
-                <!--enter image Reference-->
+                <!--enter image Name-->
                 <div class="row">
                 <div class="input-field col s12 m8 offset-m2">
                     <i class="fas fa-minus prefix blue-sky"></i>
                     <input id="image_name" name="image_name" minlength="1"
-                        type="text" class="validate" style="color:whitesmoke !important;" 
-                        placeholder="If SRC entered above this is required" >
-                    <label for="image_name">Image Reference</label>
+                        type="text" class="validate" style="color:whitesmoke !important;">        
+                    <label for="image_name">Image Name  </label>
                 </div>
                 </div>
                 <!--is priority switch-->
@@ -114,9 +114,8 @@
             <div class="col s10 offset-s1 m8 offset-m2">
                 <p class="find antiquewhite center-align">To upload an image simply first upload and create an url for it with
                 <span><a rel="noopener" class="link-color" href="https://cloudinary.com/" target="_blank">Cloudinary</a></span>
-                or a similar url generating site and enter it in the image SRC input box below. Please 
-                also enter an specific image reference tag, e.g. "nickApartmentOption1" or "nick-apartment-Option1" for future use. (Important, please 
-                use no spaces)
+                or a similar url generating site and enter it in the image SRC input box above. Please 
+                also enter an image name. This is a required field if an SRC has been entered.
                 </p>
             </div>
         </div>

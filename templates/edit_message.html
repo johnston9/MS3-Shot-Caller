@@ -33,6 +33,7 @@
     </div>
     <div class="col s10">
         <h5 class="antiquewhite center-align">Enter Message</h5>
+        <p class="antiquewhite center-align">If adding an image SRC the name box below it is required</p>
         <div class="row">
             <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('edit_message', depart=message.dept_name, user=message.username, message_id=message._id) }}">
                 <!--select department-->
@@ -120,7 +121,18 @@
                 </div>
             </form>
         </div>
+        <!--instructions-->
+        <div class="row">
+            <div class="col s10 offset-s1 m8 offset-m2">
+                <p class="find antiquewhite center-align">To upload an image simply first upload and create an url for it with
+                <span><a rel="noopener" class="link-color" href="https://cloudinary.com/" target="_blank">Cloudinary</a></span>
+                or a similar url generating site and enter it in the image SRC input box above. Please 
+                also enter an image name. This is a required field if an SRC has been entered.
+                </p>
+            </div>
+        </div>
     </div>
+    <!--panel right-->
     <div class="col s1">
         <div class="panel-right"></div>
     </div>
