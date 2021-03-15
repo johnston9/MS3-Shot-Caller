@@ -552,52 +552,29 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 Lighthouse was used to test every page in desktop and moblie screens.
 
-### Sumary
+### Sumary of issues found
 
-
-1. On all pages apart from the Login and Register it had not secure in the address
-   and a "Does not use HTTPS -  insecure requests found" error. But this 
-   is because I was using basic Heroku and can fix this if I purchace an SSL certificate.
-
-<p align="center"><strong>Not Secure - http used message</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/not-sec.png" width="90%">
-</h2>
-
-2. I got an insecure link warning from Lighthouse for the link to Cloudinary so I put rel="noopener"
-   in all links.
-
-3. It gave me an accessibility note for the header "Shot Caller" decorative
+1. Lighthouse gave me an accessibility note for the header "Shot Caller" decorative
    writing in red either side of the header box. As this is purely decorative and is only barely visual limited I left it
    red as this was in keeping with my style intentions. I did however change it from Crimson
    to a bright red. See User Base page - Accessibility below for more on that issue.
 
-4. It gave me an accessibility note  about the sidenav icon not having a name or label but this is
+2. Lighthouse gave me an accessibility note  about the sidenav icon not having a name or label but this is
    also an intentional style choice and one that is common practice.
    See User Base page - Accessibility below for more on that issue.
 
-5. On the User Base and Departments pages it gave me a Best Practices messages 
+3. On the User Base and Departments pages Lighthouse gave me a Best Practices messages 
    regarding the image sizes. See User Base page below for more on that issue.
 
-5. It gave me an accessibility note for the select dropdown trigger on the Add Message page
+4. Lighthouse gave me an accessibility note for the select dropdown trigger on the Add Message page
    not having a label but it does have one for the outer select so this is a Materialize issue.
    See Add Message page below for more on that issue.
-
-6. It gave me an error for the robot.txt not being valid. I had not know about this so I 
-   looked it up and made the required file. The error was gone. I removed the file to check
-   this issue more it later and did not get an error.
-   I will try to find out more about the issue. It must have been just a server error instance.
- 
-<p align="center"><strong>Robot.txt warning</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/robo.png" width="90%">
-</h2>
 
 
 ### Login page
 
 Got the same result for desktop and mobile. It gave me an accessibility note for the submit
-button and register link so I changed the colours.
+button and register link but I changed the colours and all was OK.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
@@ -620,10 +597,10 @@ As above same result for desktop and mobile.
 
  - #### Best Practices
 
-It had given me a note for images not being sized with the correct aspect ratio. I resized
+It had originally given me a note for images not being sized with the correct aspect ratio. I resized
 the images to the desire 2:3 ratio.
 
-<p align="center"><strong> New result</strong></p>
+<p align="center"><strong> User Base</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/u-1.png" width="90%">
 </h2>
@@ -673,12 +650,6 @@ strong></p>
 
  [Back to Table of Content](#table-of-content)
 
- - ### Add Message page
-
-<p align="center"><strong>Desktop</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/lit-im1.png" width="90%">
-</h2>
 
  - ### Edit Message page
 
@@ -711,6 +682,13 @@ strong></p>
 <img src="documentation/readme-images/depts-mo.png" width="90%">
 </h2>
 
+ - ### Latest Production Updates page
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/late.png" width="90%">
+</h2>
+
  - ### Admin pages - 
 
    All 4 pages had the same results.
@@ -724,6 +702,33 @@ strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ad-a.png" width="90%">
 </h2>
+
+### Lighthouse Jokes
+
+1. Lighthouse gave me an error for the robot.txt not being valid. I had not know about this so I 
+   after much research into robot files and creating sitemaps after much trial and error I made the required file.
+   The error was gone and I felt like I'd nailed that issue. But then I just thought I'd make sure.
+   I removed the file, loaded the site and the error was still no longer there. 
+   
+ 
+<p align="center"><strong>Robot.txt warning</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/robo.png" width="90%">
+</h2>
+
+2. About five minutes later on all pages apart from the Login and Register 
+   Lighthouse displayed a message saying 
+   "Does not use HTTPS -  insecure requests found". After much research and 
+   trial and error I did a hard reload and deleted the sesson cookie and all was back to https.
+
+<p align="center"><strong>Not Secure http not https message</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/not-sec.png" width="90%">
+</h2>
+
+3. To conclude I could say I learnt a bit about using testing-software or to 
+   put it another way you kinda had to be there.
+
 
 [Back to Table of Content](#table-of-content)
 

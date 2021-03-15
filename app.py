@@ -19,24 +19,6 @@ app.register_key = os.environ.get("REGISTER_KEY")
 mongo = PyMongo(app)
 
 
-@app.route("/new_page")
-def new_page():
-    """Render 404 page.
-
-    When an error message occur render the 404.html page.
-
-    :param 404: the error code
-    :param e: the error code
-    :type temp: integer
-    :return: 404.html
-    :rtype: n/a
-    """
-
-    if session["user"]:
-        # render 404 page
-        return render_template('test.html')
-
-
 @app.errorhandler(404)
 def page_not_found(e):
     """Render 404 page.
@@ -53,6 +35,24 @@ def page_not_found(e):
     if session["user"]:
         # render 404 page
         return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def server_er(e):
+    """Render 500 page.
+
+    When a 500 error message occurs render the 500.html page.
+
+    :param 500: the error code
+    :param e: the error code
+    :type temp: integer
+    :return: 500.html
+    :rtype: n/a
+    """
+
+    if session["user"]:
+        # render 500 page
+        return render_template('404.html'), 500
 
 
 @app.route("/")
