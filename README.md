@@ -552,7 +552,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 Lighthouse was used to test every page in desktop and moblie screens.
 
-### Sumary of issues found
+### Sumary of Issues 
 
 1. On all pages apart from the Login and Register "Not Secure" displayed in the address 
    and Best Practices had a "Does not use HTTPS - insecure requests found" error. 
@@ -568,16 +568,20 @@ Lighthouse was used to test every page in desktop and moblie screens.
    red as this was in keeping with my style intentions. I did however change it from Crimson
    to a bright red. See User Base page - Accessibility below for more on that issue.
 
-3. Lighthouse gave me an accessibility note  about the sidenav icon not having a name or label but this is
-   also an intentional style choice and one that is common practice.
-   See User Base page - Accessibility below for more on that issue.
-
-4. On the User Base and Departments pages Lighthouse gave me a Best Practices messages 
+3. On the User Base and Departments pages Lighthouse gave me a Best Practices messages 
    regarding the image sizes. See User Base page below for more on that issue.
 
-5. Lighthouse gave me an accessibility note for the select dropdown trigger on the Add Message page
+4. Lighthouse gave me an accessibility note for the select dropdown trigger on the Add Message page
    not having a label but it does have one for the outer select so this is a Materialize issue.
    See Add Message page below for more on that issue.
+
+### Sumary of Issues resolved
+
+1. On first report Lighthouse gave me an accessibility note for the sidenav icon not having a name or label.
+   I added 'aria-label="Menu"' and the issue was resolved.
+
+2. On first report Lighthouse gave me an insecure link warning for the link to Cloudinary 
+   I put rel="noopener" in all links and the issue was resolved.
 
 
 ### Login page
@@ -607,12 +611,14 @@ As above same result for desktop and mobile.
 
  - #### Best Practices
 
-It had originally given me a note for images not being sized with the correct aspect ratio. I resized
-the images to the desire 2:3 ratio.
+On first report Lighthouse gave me a Best Ptactices note for images not being sized with the correct aspect ratio. I resized
+the images to the desire 2:3 ratio. Below is an image detailing the Best Practices
+with only the HTTPS error common to all pages.
 
-<p align="center"><strong> User Base</strong></p>
+
+<p align="center"><strong> User Base page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/u-1.png" width="90%">
+<img src="documentation/readme-images/user1a.png" width="90%">
 </h2>
 
  - Mobile
@@ -626,35 +632,27 @@ That said should the app the taken to a further stage I will investsigate it mor
 
 <p align="center"><strong> Mobile result</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/u-2.png" width="90%">
+<img src="documentation/readme-images/user2b.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
 
  - #### Accessibility
 
-It gave me an accessibility note for the header "Shot Caller" decorative
+Lighthouse gave me an accessibility note for the header "Shot Caller" decorative
 writing in red either side of the header box. As this is purely decorative and is only barely visual limited I left it
 red as this was in keeping with my style intentions. I did however change it from Crimson
-to a bright red. 
+to a bright red.
 
-It also gave me a note about the sidenav icon not having a name or label but this is
-also an intentional style choice and one that is common practice.
-
-These two notes were for every page on the site and accounted solely for the "93" and sometimes "88" scores that
-was given for "Accessibility" on this and all other pages apart from Add Message. I will include images 
-here that will cover this for all pages.
+This report was for every page on the site and accounted solely for the "97" score that
+was given for "Accessibility" on this and all other pages apart from Add Message. I will include 
+the image here that would be similar for all pages.
 
 <p align="center"><strong>Header red text note</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/new-userp.png" width="90%">
+<img src="documentation/readme-images/assp.png" width="90%">
 </h2>
 
-<p align="center"><strong>Sidenav icon note</
-strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/new-userl.png" width="90%">
-</h2>
 
  - The extra buttons on the admin user page did not effect the results.
 
