@@ -3,7 +3,8 @@
 [View the project live here.](https://ms3-shot-caller.herokuapp.com/)
 
 A web application for film production that provides a reliable all encompassing
-means of production collaboration from pre-production to post. The app is designed 
+means of production collaboration f
+rom pre-production to post. The app is designed 
 to provide a simple streamlined means of communication through the different 
 departments channels of film production. It allows both a general and specific 
 means on searching and uploading communications and images to different departments.
@@ -572,10 +573,11 @@ Lighthouse was used to test every page in desktop and moblie screens.
    regarding the image sizes. See User Base page below for more on that issue.
 
 4. Lighthouse gave me an accessibility note for the select dropdown trigger on the Add Message page
-   not having a label but it does have one for the outer select so this is a Materialize issue.
+   and the Edit Message page for not having a label. There is a label seen for select itself so in using Materialize I am aware
+   this issue will occur..
    See Add Message page below for more on that issue.
 
-### Sumary of Issues resolved
+### Issues resolved
 
 1. On first report Lighthouse gave me an accessibility note for the sidenav icon not having a name or label.
    I added 'aria-label="Menu"' and the issue was resolved.
@@ -658,19 +660,23 @@ the image here that would be similar for all pages.
 
  [Back to Table of Content](#table-of-content)
 
+ - ### Add Message page
+
+As regards the label issue above I tried to use "aria-label="Select Department"
+but as expected it had no result as the dropdown is not reachable on the page.
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/mes1a.png" width="90%">
+</h2>
 
  - ### Edit Message page
+
+The Edit Message page had thre same result and issue as the Add Message page.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/.png" width="90%">
-</h2>
-
- - ### Add Message page
-
-<p align="center"><strong>Desktop</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/messy.png" width="90%">
 </h2>
 
 
