@@ -370,6 +370,7 @@ this are found in the Design section.
    just below the Emter Image title that they must fill in the image name box if they
    enter an image SRC. This is to ensure that alt can use this if the SRC is incorrect or an
    error will be logged to the console. 
+   Please see user testing for further details.
 
 <h2 align="center">
 <img src="documentation/readme-images/mes-im.png" width="90%">
@@ -381,6 +382,7 @@ this are found in the Design section.
    messages for them and admin, who has access to all messages. In Edit Message they can edit 
    their message. They can also add an image to their message, change the images or it's name.
    They are given the same instructions as in Add Message. 
+   Please see user testing for further details.
 
 
 [Back to Table of Content](#table-of-content)
@@ -388,9 +390,9 @@ this are found in the Design section.
 ### Admin Page
 
   As discussed above in "Security Measures" defensive programming will only allow
-  access to the admin features if admin is the sesson user and this is inplemented
+  access to the admin features if admin is the session user and this is implemented 
   both in the front-end and back-end. If the user is admin they will be given the 
-  option to delete a user, upload the latest script, upload the latest shotlist 
+  option to delete a user, upload the latest script, upload the latest shot list 
   or upload new images.
 
 <p align="center"><strong>Admin Page 1600px</strong></p>
@@ -412,36 +414,36 @@ Please see admin testing for further details.
 
 MongoDB was used as the site's database and held 14 collections. 
 
-1 - <strong>latest_script</strong> - to hold the script url.
+1 - <strong>latest_script</strong> - to hold the script URL.
 
-2 - <strong>shotlist</strong> - to hold the shotlist url.
+2 - <strong>shotlist</strong> - to hold the shot list URL.
 
 3 - <strong>users</strong> - to hold the user's details.
 
-4 - <strong>images</strong> - to hold the image bank images ref names, descriptions and urls.
+4 - <strong>images</strong> - to hold the image bank images ref names, descriptions and URLs.
 
-5 - <strong>depts</strong> - to hold the departments names, titles and the department images urls for User Base/Department's pages.
+5 - <strong>depts</strong> - to hold the departments names, titles and the department images URLs for User Base/Department's pages.
 
 6-14 - <strong>9 collections</strong> for each of the departments messages.
 
 There is an Entity Relationship between the users collection and the 9 seperate departments
 collections on "username" and "job_title". A third relationship
-is between the concatenated result of the users collection "firstname" and "lastname"
-values and the department collection's "poster". These allow the automatic input 
-of these user valies when a user sends a message.
+is between the concatenated result of the users collection "firstname" and "lastname" attributes
+values and the department collection's "poster" attribute. These allow the automatic input 
+of these user values when a user sends a message.
 
-There is an Entity Relationship between depts and the 9 departments on depts dep_name and
-the actual name of the department collection. This allow for the
-depts dep_name to be passed to app.py when a department is clicked on in the user's
-base page. This sends dep_name as a variable to the get_dep function in app.py allowing
+There is an Entity Relationship between the depts collection and the 9 departments collection on depts dep_name and
+the actual name of each of the department collections. This allow for the
+depts dep_name to be passed to app.py when a department is clicked on in the User
+Base or Departments page. This sends dep_name as a variable to the get_dep function in app.py allowing
 it to be used in the find() method on Mongo and get the messages for the collection of that name.
 
 <strong>Note 1:</strong> In the ER Diagram the last relationship above points to the the dep_name in the example camera
-      collection as it was not technically posssible to have it point to the collection name, which
+      collection as it was not technically possible to have it point to the collection name, which
       is in fact the correct relationship.
 
 <strong>Note 2:</strong>: Only one, "camera", of the 9 department collections is used in the diagram but the same
-      relationships exist for all of the 9 department collections.
+      relationships exist for all 9 department collections.
 
 <strong>Note 3:</strong> Two values in the images collection, image_name and image_src, share the same names as ones
       in the department collection but this is not actually used by any python function. If admin 
