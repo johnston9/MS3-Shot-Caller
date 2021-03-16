@@ -1,22 +1,22 @@
-<h1 align="center">Shot Caller - Movie Production Website</h1>
+<h1 align="center"><strong>Shot Caller - Movie Production Website</strong></h1>
 
 [View the project live here.](https://ms3-shot-caller.herokuapp.com/)
 
-A web application for film production that provides a reliable all encompassing
-means of production collaboration f
-rom pre-production to post. The app is designed 
-to provide a simple streamlined means of communication through the different 
-departments channels of film production. It allows both a general and specific 
-means on searching and uploading communications and images to different departments.
+A web application for film production that provides a comprehensive
+means of production collaboration from pre-production to post-production. The app is designed 
+to provide a simple streamlined means of communication through nine different 
+departments channels. It allows both a general and specific 
+means of searching and uploading communications including images to the different departments.
 
 It has a secure admin facility for site regulation and the upkeep of the image
-bank that includes a simple means of uploading the latest script, shotlist. The site 
+bank that includes a simple means of uploading the latest script, shot list. The site 
 is built with Flask using the Jinja template engine and the Werkzeug WSGI toolkit
 and uses Mongodb as the back-end database.
 
-Currently the app is limited to one production but future developements would
-lead to it being turned into a piece of software that can be downloaded and used
-as a product on an individual basis for each new production and owner.
+Future developments could lead towards the app becomming downloadable
+as a product to be used by ptoduction companies. At this stage the app is being
+deployed on Heroku's basic package so HTTPS is only availabe for the Login and Register
+pages.
 
 <h2 align="center"><img src="documentation/readme-images/user16.png"></h2>
 
@@ -86,28 +86,32 @@ as a product on an individual basis for each new production and owner.
 
 The business goals are to establish the app as a reputable and reliable tool
 that facilitates film production. It provides a communication platform for all 
-areas of film production allowing messages, ideas and images to be sent
-through each department channel. A future goal would be the development of 
-of collaboratative areas for storyboarding, shotlist imaging pre-visualization.
+areas of film production allowing messages and images to be sent
+through each department channel. A future goal would be the inclusion
+of collaboratative areas, and storyboard and shot list imaging pre-visualization tools.
 
 For the user the goal of the app is to enhance and facilitate film production.
-It will allow a simple and enjoyable means on departmental and inter-departmental
+It will allow a simple reliable means of departmental and inter-departmental
 communication. It is streamlined for the exchange of messages by specific areas.
-It will allow the user the means to instantaniously both share and recieve
-ideas and all work related developements as they happen.
+It will allow the user to instantaniously share and receive 
+ideas on all production related developments as they happen.
 
 ### Strategy Plane
 
 The aim of the site is to create an app that facilitates film production and is on a par with the latest trends in digital communication media. It aims to be enjoyable and simple to use and become a “go to” tool in film production.
 The site is designed to give the user, here being specifically the film production team, the necessary tools to communicate their ideas during production collaboration.  
-Clearly separating the production process by department is key to the site’s simplicity and reliability of use where the user can fulfill their needs to find and post communications and images.
+
+Clearly separating the production process by department is key to the site’s simplicity and reliability of use where the user can fulfil their needs to find and post communications and images.
 The owners of the site, here being the production team, have overall control over the site and the necessary tools, unique only to those given admin access, to update the script and the shot list and add and delete image in the image bank.
 Security is a big factor in the site and only those give a key can register, the password functionality is secured through Werkzeug and the admin access id check both in the front and backend.
 
 ### Scope Plane
 
-The features included in the app at present reflect choices made around what is absolutely necessary for the app to deliver it’s basic marketed functionality, which proposed features are buildable and what features are necessary to make
-the app sellable. The buildable aspect was vital for the scope of the app and several more advance features, like a communal workspace and storyboarding facilities were repositioned as future features.
+The features included in the app at present reflect choices made around the following reflections. 
+What is absolutely necessary for the app to deliver it’s basic marketed functionality?
+Which proposed features are buildable?
+What features are necessary to make the app sellable? 
+The buildable aspect was vital for the scope of the app and several more advance features, like a communal workspace and storyboarding facilities were repositioned as future features.
 
 [Back to Table of Content](#table-of-content)
 
@@ -115,10 +119,9 @@ the app sellable. The buildable aspect was vital for the scope of the app and se
 
 The site is structured so the user can navigate in an intuitive way through the different features, all pages keeping a uniformed consistency. 
 The user is taken on a journey into the site, all elements being discoverable as they proceed along.
-The User Base is central to the scructure. Here the user has a number of immediate
-option tools they can click on. Or, as they are being visably encouraged to do so and
-is the primary aspect to the app they can select a department. Once taken there
-they are given different "find messages" choices they can follow.
+The User Base is central to the structure. Here the user is being visibly encouraged to
+select a department or click on one of the other options available to them. When the user selects a department
+they are taken to that page and given several specific "find messages" choices they can follow.
 They will see clear states of change when they interact with the features and be given clear feedback to assure them of their interactive success.
 The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
 
@@ -145,7 +148,7 @@ this are found in the Design section.
 
   - #### Returning User Goals
 
-4. As a Returning User, I want to download the latest shotlist and script
+4. As a Returning User, I want to download the latest shot list and script.
 5. As a Returning User, I want to add a communication in a specific area.
 
   - #### Frequent User Goals
@@ -154,12 +157,12 @@ this are found in the Design section.
 7. As a Frequent User, I want to edit and delete my communications.
 
 8. As a Frequent User, I want to view and post communications and see images relating to style, 
-   shooting and script choices so I can develop my owm choices accordingly.
+   shooting and script choices so I can develop my own choices accordingly.
 
   - #### Admin User Goals
 
 1. As the admin user I want to upload the latest draft of the script.
-2. As the admin user I want to upload the latest shotlist.
+2. As the admin user I want to upload the latest shot list.
 3. As the admin user I want to upload new images.
 4. As the admin user I want to edit images.
 5. As the admin user I want to delete images.
@@ -176,8 +179,8 @@ this are found in the Design section.
 </h2>
 
 ### Colour Scheme
- - The site aims to be minimal streamlined and slick using an offblack background 
-   colour with blue side image panels and an offwhite text. Crimson and blue tones
+ - The site aims to be minimal streamlined and slick using an off-black background 
+   colour with blue side image panels and an off-white text. Crimson and blue tones
    are used minimally against this for a touch of sophisticated flare especially
    the site title in crimson letters running downwards on either side of the header box.
 
@@ -190,11 +193,10 @@ this are found in the Design section.
 
 
 ### Imagery
- - The site was designed to have a minimal straight to business slick slightly cinematic look. This was achieved
-   by the use of right and reversed left narrow side panels on an offblack background.
-   The panels contain an images of a narrow window and it's blue lighting
-   effect which act as a foreground to the complementing seemingly distant dark header box
-   container which also has one of the images to which focus is drawn. The hope is that
+ - The site was designed to have a minimal straight to business slick slightly cinematic look. For this
+   two narrow side panels containing a right and reversed left image of a cinematic lighting effect were placed on an offblack background.
+   The images of a window filtering in blue lighting act as a foreground to the dark header box that contains a small version of the left image.
+   and to which focus is drawn. The hope is that
    this achieves a feeling of cinematic lighting and depth.
 
 ### Wireframes
@@ -212,19 +214,19 @@ this are found in the Design section.
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
-<p align="center"> Large Screen 1600px</p>
+<p align="center"> <strong>Large Screen 1600px</strong></p>
 
 <h2 align="center">
 <img src="documentation/readme-images/post-16.png" width="90%">
 </h2>
 
-<p align="center">  Medium Screen 1000px</p>
+<p align="center"> <strong> Medium Screen 1000px<strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/post-md.png" width="90%">
 </h2>
 
 
-<p align="center"> Small Screen 370px</p>
+<p align="center"> <strong>Small Screen 370px</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/post-sm.png" width="25%">
 </h2>
@@ -234,29 +236,28 @@ this are found in the Design section.
 ### Login/Register Pages and Security Measures
 
   The user is brought first to the login page. From there they will find a 
-  link to register if a new user. One of the core features of the site is it's
-  built-in security measures.
+  link to the Register page. The site has a number of security measures.
 
   The first of which is the need for a register key to register. This will allow
   the owner of the site control over who is able to register. It would then be up to 
-  them to give the necessary instructions to the user toensure that the key is not 
+  them to give the necessary instructions to the user to ensure that the key is not 
   further passed on. 
 
   As a minor security feature the login and register pages are not connected to the base
   page and the other pages.
 
   Werkzeug's security utilities "generate_password_hash" and "check_password_hash"
-  are used run the register and login functions and ensure login security.
+  are used on the register and login functions and ensure login security.
  
-  Other security measures include front-end measures to allow admin access only to admin.
-  This is backed up in the back-end ensuring only these admin functions will run if
-  admin is the sesson user.
+  Other security measures include front end measures to allow admin access only to admin.
+  This is backed up in the back end ensuring only these admin functions will run if
+  admin is the session  user.
 
-  All other functions in the back-end are protected by ensuring that there is a sesson
-  user for them to run, and only registered users would be logged in and set as sesson users.
+  All other functions in the back end are protected by ensuring that there is a session 
+  user for them to run, and only registered users would be logged in and set as session  users.
 
 
-<p align="center">Register Page</p>
+<p align="center"><strong>Register Page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/reg1.png" width="90%">
 </h2>
@@ -267,13 +268,13 @@ this are found in the Design section.
 
 ### User Base Page
 
-  Once loged in the user is taken to their own User Base page which is the center base
-  of the site and along with all other pages had a navbar to take them to any page.
-  They will immediatly see a "Latest Updates" button which they can click on to take
-  then directly to a page showing that dayy's production messages. This in intended a a primary
-  feature in the app that allows all crew members to stay on top of all of current developments.
+  Once logged in the user is taken to their own User Base page which is the central hub
+  of the site and, along with all other pages, has a navbar to take them to any page on the site.
+  They will immediately see a "Latest Updates" button which they can click on to take
+  then directly to a page showing the latest production messages. This in intended as a primary
+  feature of the app allowing all crew members to stay on top of current developments.
 
-<p align="center">Latest Updates</p>
+<p align="center"><strong>Latest Updates</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/la.png" width="90%">
 </h2>
@@ -281,13 +282,13 @@ this are found in the Design section.
 
   The bulk of the page is used to show the different departments on which the user can
   click to view each department's communications. 
-  The core feature of the site is clarity and specificy. The first measure of this is the 
-  seperating of the production communications into different departments.
+  Central to the site is clarity and specificy. The first measure of this is the 
+  separation of all the production communications into nine departments.
 
-  This page also allows the user to download the latest script and shotlist, to add messages 
+  This page also allows the user to download the latest script and shot list, to add messages 
   and provides a link to take them to the images page.
 
-<p align="center">User Base Department Choices</p>
+<p align="center"><strong>User Base Department Choices</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/depts1.png" width="90%">
 </h2>
@@ -296,40 +297,44 @@ this are found in the Design section.
 
 ### Departments Page
 
-  Once the user clicks on a department they are taken to that department 
-  Find by Date Page. That day's communications will automatically be displaying.
-  All messages open on click to reveal the contained message and images contained in
-  it if there were any posted.
+  Once the user clicks on a department they are taken to that department's 
+  Find by Date Page. That day's communications or messages will automatically be displaying.
+  All messages open on click to reveal the contained message and any images in
+  it.
   
-<p align="center">Today's communications</p>
+<p align="center"><strong>Today's Messages</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/dep-1.png" width="90%">
 </h2>
- 
-  The user has the further options of finding all communications in that
-  department.
-  
-<p align="center">All communications</p>
-<h2 align="center">
-<img src="documentation/readme-images/dep-2.png" width="90%">
-</h2>
 
-  Also the user can find them by specific date by using the Datepicker.
+  The user can then search further and find messages by specific date by using the Datepicker.
 
-<p align="center">Pick Date (on small screen</p>
+<p align="center"><strong>Pick Date - on mobile</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/cam23.png" width="25%">
 </h2>
 
-<p align="center">Result of Pick Date (on large screen</p>
+<p align="center"><strong>Result of Pick Date</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/cam22.png" width="50%">
 </h2>
+ 
+  Underneath the Datepicker the user has three further options in the form
+  of three immediately visible buttons.
 
-  The user can also click on a link to take them to the Find by Poster Page where they
+  A. Finding all messages in tha department.
+  
+<p align="center"><strong>All Messsages</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/dep-2.png" width="90%">
+</h2>
+
+  B. Add a message.
+
+  C. Find messages by Poster. This button takes the user to a seperate Find by Poster Page where they
   can find communications by entering the poster's name. 
 
-<p align="center">Find by Poster Page with message open and containing an image</p>
+<p align="center"><strong>Find by Poster Page - message open</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/dep1.png" width="90%">
 </h2>
@@ -339,14 +344,15 @@ this are found in the Design section.
 ### Images Page
     
   The user here can find images by entering a specific image tag name if they have 
-  it or entering a search word relating to the images they wish to see. These image
+  it or entering a search word relating to the images they wish to see. These images
   are only upload by admin so they are intended to be actual style and shooting choices,
-  options of these. Here the admin can set images for users to know what choices
-  have been made and what looks and themes are being uses.  
-  In the Departments posting message option it also allows for the posting of images
-  for discussion and collaboration.
+  or options of these. Users have the option to post their own images in department
+  messages. If these are to be used for the main image bank all the admin has to do 
+  is right click on them and add the URL in the Upload Image page that only they have
+  access to.
 
-<p align="center">Images Page</p>
+
+<p align="center"><strong>Images Page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/hos1.png" width="90%">
 </h2>
@@ -357,19 +363,25 @@ this are found in the Design section.
 <img src="documentation/readme-images/no-im.png" width="90%">
 </h2>
 
-### Add/Edit Message Pages
+### Add Message Page
  
- - Users can post messages. They and they alone apart from admin will have the
-   Edit and Delete buttons display below their own messaages.They can add an 
-   image to their message or in Edit change it or it's name.
+ - In Add Message users can post messages and include an image in their message.
    They are given instructions on how to obtain an image SRC. They are instructed 
    just below the Emter Image title that they must fill in the image name box if they
    enter an image SRC. This is to ensure that alt can use this if the SRC is incorrect or an
    error will be logged to the console. 
 
 <h2 align="center">
-<img src="documentation/readme-images/mes-im.png" width="50%">
+<img src="documentation/readme-images/mes-im.png" width="90%">
 </h2>
+
+### Edit Message Page
+ 
+ - Users can edit their own messages. The Edit and Delete buttons will only display under their
+   messages for them and admin, who has access to all messages. In Edit Message they can edit 
+   their message. They can also add an image to their message, change the images or it's name.
+   They are given the same instructions as in Add Message. 
+
 
 [Back to Table of Content](#table-of-content)
 
@@ -381,12 +393,12 @@ this are found in the Design section.
   option to delete a user, upload the latest script, upload the latest shotlist 
   or upload new images.
 
-<p align="center">Admin Page 1600px</p>
+<p align="center"><strong>Admin Page 1600px</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/admin1.png" width="90%">
 </h2>
 
-<p align="center">Admin Page 375px</p>
+<p align="center"><strong>Admin Page 375px</strong></p>
 
 <h2 align="center">
 <img src="documentation/readme-images/admin2.png" width="25%">
