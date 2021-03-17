@@ -74,6 +74,7 @@
                         <p class="">{{ message.message }}</p>
                         <!-- Message image-->
                         {% if message.image_src %}
+                        {% if message.image_name %}
                         <div class="row margintop-20">
                             <div class="col s10 m6">
                             <div class="message-pic">
@@ -83,6 +84,17 @@
                             </div>
                             </div>
                         </div>
+                        {% else %}
+                        <div class="row margintop-20">
+                            <div class="col s10 m6">
+                            <div class="message-pic">
+                                <img class="margintop-20" src=" {{ message.image_src }} "
+                                    alt="Image">
+                                <p> {{ message.image_name }} </p>
+                            </div>
+                            </div>
+                        </div>
+                        {% endif %}
                         {% endif %}
                         <!--edit/delete-->
                         {% if session.user|lower == message.username|lower %}
