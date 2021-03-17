@@ -220,7 +220,7 @@ this are found in the Design section.
 <img src="documentation/readme-images/post-16.png" width="90%">
 </h2>
 
-<p align="center"> <strong> Medium Screen 1000px<strong></p>
+<p align="center"> <strong> Medium Screen 1000px</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/post-md.png" width="90%">
 </h2>
