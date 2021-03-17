@@ -448,7 +448,7 @@ it to be used in the find() method on Mongo and get the messages for the collect
 <strong>Note 3:</strong> Two values in the images collection, image_name and image_src, share the same names as ones
       in the department collection but this is not actually used by any python function. If admin 
       wants to use one of the message images they would do so manually on the spot by right clicking on it.
-      Also they may wish to alter the image_name for various reasons.
+      Also, they may wish to alter the image_name for various reasons.
 
 <h2 align="center">
 <img src="documentation/readme-images/er.png" width="90%">
@@ -486,14 +486,14 @@ The MongoDB Shot Caller database contains the following collections.
 </h2>
 
 
-<p align="center"><strong>shotlist</strong> - for the shotlist's url</p>
+<p align="center"><strong>shotlist</strong> - for the shot list's URL</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-shotlist.png" width="90%">
 </h2>
 
 
-<p align="center"><strong>script</strong> - for the script's url</p>
+<p align="center"><strong>script</strong> - for the script's URL</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-script.png" width="90%">
@@ -513,28 +513,28 @@ The MongoDB Shot Caller database contains the following collections.
 ## Frameworks, Databases, Libraries & Programs Used
 
 1. [Materialize:](https://materializecss.com/getting-started.html)
-   - Materialize was used to create the overall framework and it's grid based 
-     format for the site and it's primary responsiveness. Also specific 
-     Materialize features were used throughout which include the, collapsable, 
-     the navbar and sidenav, the modals, the tooltipped feature, the datepickers
+   - Materialize with it's grid-based 
+     format was used to create the overall framework for the site and it's primary responsiveness. Also specific 
+     Materialize features were used throughout which include the "Collapsible", 
+     the "Navbar" and "Sidenav", the "Modals", the "Tooltipped" feature, the "Datepickers"
      and the overall styling of the website.
 1. [Flask:](https://en.wikipedia.org/wiki/Flask_(web_framework))
-   - Flask was used along with python to build then site's backend framework and
+   - Flask was used along with python to build then site's back end framework and
      run the app.
 1. [Werkzeug:](https://werkzeug.palletsprojects.com/en/1.0.x/)
    - Flask used Werkzeug to the application to speak with the webserver and 
-     for security purposes mainly with regard to the users's password.
+     for security purposes mainly with regard to the users' password.
 1. [Jinja:](https://en.wikipedia.org/wiki/Jinja_(template_engine))
-   - Flask used the Jinja template engine to build the front-end of the app.
+   - Flask used the Jinja template engine to build the front end of the app.
 1. [MongoDB:](https://en.wikipedia.org/wiki/MongoDB)
-   - MongoDB was used as the app's backend database.
+   - MongoDB was used as the app's back 
+   end database.
 1. [Pymongo:](https://pypi.org/project/pymongo/)
    - Pymongo was used for interacting with MongoDB database from the app.
 1. [Font Awesome:](https://fontawesome.com/)
-   - Font Awesome was used throughout the website for the arrow navigation and
-     a number of other icons.
+   - Font Awesome was used throughout the website for the icons.
 1. [jQuery:](https://jquery.com/)
-   - jQuery was used along with javascript to initialize the Materialize features.
+   - jQuery was used along with Javascript to initialize the Materialize features.
 1. [Git](https://git-scm.com/)
    - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 1. [GitHub:](https://github.com/)
@@ -560,36 +560,40 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 - [W3C Markup Validator](https://validator.w3.org/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - W3C "Direct Input" option was used on each html page. As Jinja was used throughout the site
-    errors displayed where it was used on each page but no other error displayed, documentation -folder "w3c-direct-input".
-    When I validated by URL no errors were shown as seen in documentation "w3c-by-url".
+    errors displayed where it was used on each page - documentation/w3c-direct-input.
+    When I validated by URL no errors were shown - documentation/w3c-by-url.
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
-  - W3C showed no errors and only one warning for the hr rule's background colour
-    being the same as it's colour, which was intentional.
+  - W3C showed no errors and only one warning for the hr rule's background color
+    being the same as it's color, but this was was intentional.
   
-- [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/ms2-apis)
+- [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - JSHint was used with "New JavaScript features (ES6)" and "jQuery" checked in the configuration menu.
     All files were clear of errors and warnings.
     
 - [PEP8 online check](http://pep8online.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
-  - PEP8 approved the app.py page and all python apart from saying "no newline at end of file"
-    but I researched this and found it was a common result and could be ignored.
+  - PEP8 approved the app.py page. The first time I checked it everything was right apart from saying "no newline at end of file".
+    but I researched this and found it was a common result and could be ignored. I explored the matter more and found that if
+    the curser was at the start of the new line, here line 741, I got an All Right result.
+
+- [PythonChecker](https://www.pythonchecker.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
+  - PythonChecker gave 100% result.
 
 [Back to Table of Content](#table-of-content)
 
 ## Lighthouse
 
-Lighthouse was used to test every page in desktop and moblie screens.
+Lighthouse was used to test every page in desktop and mobile screens.
 
 ### Sumary of Issues 
 
 1. On all pages apart from the Login and Register "Not Secure" displayed in the address 
    and Best Practices had a "Does not use HTTPS - insecure requests found" error. 
-   This is because I was using basic Heroku and can fix this if I purchace an SSL certificate.
+   This is because I was using basic Heroku and can fix this if I purchase an SSL certificate.
 
 <p align="center"><strong>Does not use https message</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/not-sec.png" width="90%">
+<img src="documentation/readme-images/uu-1.png" width="90%">
 </h2>
 
 2. Lighthouse gave me an accessibility note for the header "Shot Caller" decorative
@@ -605,7 +609,13 @@ Lighthouse was used to test every page in desktop and moblie screens.
    this issue will occur..
    See Add Message page below for more on that issue.
 
-### Issues resolved
+5. Lighthouse gave me a Best Practices report for SameSite cookie for the Image page
+   and the Latest Updates page and the Department messages pages if they contained images. This was because I was using
+   Cloudinary to get the images. The SameSite cookie will be addressed at a further stage
+   if the site is to develope further.
+   See Image page below for more on that issue.
+
+### Issues Resolved
 
 1. On first report Lighthouse gave me an accessibility note for the sidenav icon not having a name or label.
    I added 'aria-label="Menu"' and the issue was resolved.
@@ -614,7 +624,7 @@ Lighthouse was used to test every page in desktop and moblie screens.
    I put rel="noopener" in all links and the issue was resolved.
 
 
-### Login page
+### Login Page
 
 On first report Lighthouse gave me an accessibility note for the submit button and 
 register link but I changed the colours and the issue was resolved. Desktop and mobile
@@ -626,7 +636,7 @@ results the same.
 </h2>
 
 
-### Register page
+### Register Page
 
 As above same result for desktop and mobile. 
 
@@ -637,12 +647,11 @@ As above same result for desktop and mobile.
 
 [Back to Table of Content](#table-of-content)
 
-### User Base page 
+### User Base Page 
 
  - #### Best Practices
-
-On first report Lighthouse gave me a Best Ptactices note for images not being sized with the correct aspect ratio. I resized
-the images to the desire 2:3 ratio. Below is an image detailing the Best Practices
+On first report Lighthouse gave me a Best Practices note for images not being sized with the correct aspect ratio. I resized
+the images to the desire 2:3 ratio and at desktop this was no longer an issue. Below is an image detailing the Best Practices
 with only the HTTPS error common to all pages.
 
 
@@ -655,10 +664,11 @@ with only the HTTPS error common to all pages.
 
 I also resized the images to the desired 50px by 50px for mobile devices but the only way I could
 use them with the Jinja Template was to create two img elements in the for loop code block
-and set one to display "none" at larger than 600px in CSSand the opposite for the other. I decided against doing this weighing 
-the slight improvment in Best Practices and the improvment in Performance against cleaner, shorter code
+and set one to display "none" at larger than 600px in CSS and the opposite for the other. I decided against doing this weighing 
+the slight improvement  in Best Practices and the improvement  in Performance against cleaner, shorter code
 minimizing any risk no matter how small.
-That said should the app the taken to a further stage I will investsigate it more.
+That said should the app the taken to a further stage I will investigate it more.
+Below is an image for mobile that still has the Best Practices image size issue.
 
 <p align="center"><strong> Mobile result</strong></p>
 <h2 align="center">
@@ -684,11 +694,11 @@ the image here that would be similar for all pages.
 </h2>
 
 
- - The extra buttons on the admin user page did not effect the results.
+ - The extra buttons on the admin user page did not affect the results.
 
  [Back to Table of Content](#table-of-content)
 
- - ### Add Message page
+ - ### Add Message Page
 
 As regards the label issue above I tried to use "aria-label="Select Department"
 but as expected it had no result as the dropdown is not reachable on the page.
@@ -698,7 +708,7 @@ but as expected it had no result as the dropdown is not reachable on the page.
 <img src="documentation/readme-images/mes1a.png" width="90%">
 </h2>
 
- - ### Edit Message page
+ - ### Edit Message Page
 
 The Edit Message page had the same result and issue as the Add Message page.
 
@@ -707,53 +717,90 @@ The Edit Message page had the same result and issue as the Add Message page.
 <img src="documentation/readme-images/ed1a.png" width="90%">
 </h2>
 
-Both pages had same result for moblie
+Both pages had same result for mobile.
 
-<p align="center"><strong>Desktop</strong></p>
+<p align="center"><strong>Edit Page Mobile</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ed2b.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
 
- - ### Departments page
+ - ### Departments Page
 
-   The Departments page had the same results as the User Base page.
+The Departments page had the same results as the User Base page for the Best Practices issue.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/d-lar.png" width="90%">
+<img src="documentation/readme-images/de-1a.png" width="90%">
 </h2>
 
 <p align="center"><strong>Mobile</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/depts-mo.png" width="90%">
+<img src="documentation/readme-images/de-2b.png" width="90%">
+</h2>
+
+ - ### Images Page
+
+The Images page got a SameSite cookie issue for the Best Practices
+along with the HTTPS issue.
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/im-1a.png" width="90%">
+</h2>
+
+<p align="center"><strong>Mobile</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/im-2b.png" width="90%">
+</h2>
+
+ - ### Department Page
+
+The department message pages got a SameSite cookie issue for the Best Practices
+along with the HTTPS issue.
+
+<p align="center"><strong>Desktop with no Images in Messages</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/mess-1a.png" width="90%">
+</h2>
+
+<p align="center"><strong>Desktop with Images in Messages</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/mess-3c.png" width="90%">
+</h2>
+
+<p align="center"><strong>Mobile with Images in Messages</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/mess-mo.png" width="90%">
 </h2>
 
  - ### Latest Production Updates page
 
+ Without images in the messages Best Practices only gave the HTTPS issue.
+
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/late.png" width="90%">
+<img src="documentation/readme-images/l-1a.png" width="90%">
 </h2>
 
- - ### Admin pages - 
+ - ### Admin pages  
 
-   All 4 admin pages had the same results for desktop.
+All 4 admin pages had the same results for desktop.
 
 <p align="center"><strong>Remove User page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ad2b.png" width="90%">
 </h2>
 
-    All 4 admin pages had the same results for mobile.
+All 4 admin pages had the same results for mobile.
 
 <p align="center"><strong>Add Latest Script page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ad1a.png" width="90%">
 </h2>
 
-### Lighthouse internal strange occurance
+### Lighthouse robot.txt once off issue
 
 1. Lighthouse gave me an error for the robot.txt not being valid one time
    but never again.  
