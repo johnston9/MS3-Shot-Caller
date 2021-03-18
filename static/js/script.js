@@ -89,3 +89,12 @@ function poptop() {
 	document.documentElement.scrollTop = 0;
 }
 
+
+/*-----function to give image not loading error for admin-----*/
+
+function image_error() {
+    document.getElementById("image-er").innerText = "Available Soon" ;
+}
+
+
+

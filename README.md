@@ -615,6 +615,14 @@ Lighthouse was used to test every page in desktop and mobile screens.
    if the site is to develope further.
    See Image page below for more on that issue.
 
+6. Lighthouse gave me a Best Practices report for the department message pages and the Images page 
+   saying Browser errors were logged to the console when an image is not found. I added a onerror
+   inline default image to display. On for the message pages to let whoever posted
+   the message containing the image the default image tells them they should check the URL. On the image page
+   the default image just says "Available Soon" which will let admin fix it without
+   letting anyone know they may have made an error. But still an error will log to the 
+   console but all users will be aware of what is happening and what to do.
+
 ### Issues Resolved
 
 1. On first report Lighthouse gave me an accessibility note for the sidenav icon not having a name or label.
@@ -1276,13 +1284,36 @@ sucessful.
 
 ### Known Bugs
 
-- All bugs to date have been dealt with. The only issue is that on my laptop the select department
+- On my laptop the select department
   input box red line warning on the add message page remain red after a department is selected.
-  On all other devices including a number of turors, who I check the issue with it works
-  , i.e. it turns green. Example below from a smart phone of it working correctly.
+  On all other devices including a number of turors, who I check the issue with it works, i.e. it turns green. Example below from a smart phone of it working correctly.
 
 <h2 align="center">
 <img src="documentation/readme-images/select.png" width="25%">
+</h2>
+
+- If a user uploads an incorrect URL the image will not render and an 
+  error is logged to the console but I have default images set by inline onerror code.
+
+<p align="center"><strong>Images page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/image-err.png" width="25%">
+</h2>
+
+<p align="center"><strong>All message pages</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/im-ermes.png" width="25%">
+</h2>
+
+- There is also an if else statement for when a user does 
+  or does not supply an image name as instructed when uploading an image.
+  This is to set a generic default alt in one block
+  and set the image_name as the alt in the other even though this is overwritten above.
+  
+
+<p align="center"><strong>Images page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/image-err.png" width="25%">
 </h2>
 
 ### A Code Note

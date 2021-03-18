@@ -118,9 +118,8 @@
                 {% if message.image_src %}
                 <div class="row margintop-20">
                     <div class="col s10 m6">
-                        <div class="message-pic">
-                            <img class="margintop-20" src=" {{ message.image_src }} "
-                            alt="{{ message.image_name }}">
+                        <div class="message-pic margintop-20">
+                            <img src=" {{ message.image_src }} " onerror="this.onerror=null; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="{{ message.image_name }}">
                             <p> {{ message.image_name }} </p>
                         </div>
                     </div>

@@ -279,7 +279,7 @@ def get_all(dep):
     if session["user"]:
         dep = dep
         # get selected department collection's data from Mongo
-        depart = list(mongo.db[dep].find())
+        depart = list(mongo.db[dep].find().sort('date', -1))
 
         # Render the Department by Date page
         return render_template(
@@ -303,7 +303,7 @@ def find_all(dep):
     if session["user"]:
         dep = dep
         # get selected department collection's data from Mongo
-        depart = list(mongo.db[dep].find())
+        depart = list(mongo.db[dep].find().sort('date', -1))
 
         # Render the Department by Poster page
         return render_template(

@@ -132,6 +132,10 @@ hr.red-line {
 	margin: 5px;
 }
 
+.bor-bot {
+   border-bottom: 2px solid white; 
+}
+
 
 /*return to top button*/
 
@@ -404,6 +408,20 @@ span.caps {
 
 /*---------images page--------------*/
 
+img{
+  color: #BADA55;
+  font-weight: bolder;
+  font-size: 16px ; 
+  
+}
+
+h5.image_des {
+  font-weight: bolder;
+  font-size: 20px ; 
+  text-transform: uppercase;
+  
+}
+
 #explain {
 	padding: 2px 20px 2px 20px;
 }
@@ -415,7 +433,7 @@ span.caps {
 
 .pic {
 	border-top: 2px solid crimson;
-	padding-top: 10px;
+    padding-top: 10px;
 }
 
 /*-------------media queries---------*/
