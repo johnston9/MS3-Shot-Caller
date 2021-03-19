@@ -48,6 +48,7 @@ pages.
 - [Testing](#testing)
 
 - [Lighthouse](#lighthouse)
+  * [Summary of Issues](#summary-of-issues)
   * [Login page](#login-page)
   * [Register page](#register-page)
   * [User Base page](#user-base-page)
@@ -516,8 +517,8 @@ The MongoDB Shot Caller database contains the following collections.
    - Materialize with it's grid-based 
      format was used to create the overall framework for the site This included the primary responsiveness
      and overall styling of the website. Also specific 
-     Materialize features were used throughout which include the "Collapsible", 
-     the "Navbar" and "Sidenav", the "Modals", the "Tooltipped" feature, the "Datepickers".
+     Materialize features, which include the "Collapsible", 
+     the "Navbar" and "Sidenav", "Modals", "Tooltipped" and "Datepickers", were used in the site,.
 1. [Flask:](https://en.wikipedia.org/wiki/Flask_(web_framework))
    - Flask was used along with python to build then site's back end framework and
      run the app.
@@ -565,7 +566,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 - [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - W3C showed no errors and only one warning for the hr rule's background color
-    being the same as it's color, but this was was intentional.
+    being the same as it's color, but this was intentional.
   
 - [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - JSHint was used with "New JavaScript features (ES6)" and "jQuery" checked in the configuration menu.
@@ -575,7 +576,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 - [PEP8 online check](http://pep8online.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - PEP8 approved the app.py page. The first time I checked it everything was right apart from saying "no newline at end of file".
     but I researched this and found it was a common result and could be ignored. I explored the matter more and found that if
-    the curser was at the start of the new line, here line 741, I got an All Right result.
+    the curser was at the start of the new line, here line 741, I got an "All Right" result.
 
 - [PythonChecker](https://www.pythonchecker.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - PythonChecker gave 100% result.
@@ -586,7 +587,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 
 Lighthouse was used to test every page in desktop and mobile screens.
 
-### Sumary of Issues 
+### Summary of Issues 
 
 1. On all pages apart from the Login and Register "Not Secure" displayed in the address 
    and Best Practices had a "Does not use HTTPS - insecure requests found" error. 
@@ -607,13 +608,13 @@ Lighthouse was used to test every page in desktop and mobile screens.
 
 4. Lighthouse gave me an accessibility note for the select dropdown trigger on the Add Message page
    and the Edit Message page for not having a label. There is a label seen for select itself so in using Materialize I am aware
-   this issue will occur..
+   this issue will occur.
    See Add Message page below for more on that issue.
 
 5. Lighthouse gave me a Best Practices report for SameSite cookie for the Image page
    and the Latest Updates page and the Department messages pages if they contained images. This was because I was using
    Cloudinary to get the images. The SameSite cookie will be addressed at a further stage
-   if the site is to develope further.
+   if the site is to develop further.
    See Image page below for more on that issue.
 
 
@@ -627,20 +628,20 @@ Lighthouse was used to test every page in desktop and mobile screens.
 
 3. Lighthouse gave me a Best Practices report for the department message pages and the Images page 
    saying Browser errors were logged to the console when an image is not found. 
-   To deal with this I firstly added an image url checker for the admin Add Images page
+   To deal with this I firstly added an image URL checker for the admin Add Images page
    and for the Add Message page so the user can make sure they submit a correct URL.
    Secondly, in case something does cause an image loading error or somehow an incorrect
    URL did get submitted I added an inline onerror check to display default message images instead of the generic little
    green square. For the message pages the message image tells the poster they should check the URL. On the image page
    the default image just says "Available Soon" which will let admin know to fix it without
-   letting anyone being acutly aware admin may have made an error. Still an error will log to the 
-   console but all users will be aware of what is happening and what to do.
+   letting anyone being acutely aware of any error. Still an error will log to the 
+   console, but all users will be aware of what is happening and what to do.
 
 
 ### Login Page
 
 On first report Lighthouse gave me an accessibility note for the submit button and 
-register link but I changed the colours and the issue was resolved. Desktop and mobile
+register link, but I changed the colours and the issue was resolved. Desktop and mobile
 results the same.
 
 <p align="center"><strong>Desktop</strong></p>
@@ -846,7 +847,7 @@ All 5 admin pages had the same results for mobile.
 
 1. #### As a First Time User, I want to learn what the site has to offer and how to use the site quickly.
 
-    1. The site is designed for first time learning. It is streamlined for specicic
+    1. The site is designed for first time learning. It is streamlined for specific
        user goals that after first use are so simple that with a few clicks after entering
        the site the user will be able to get to any specific area or tool. At the top of the 
        User Base Page and throughout the site the navbar displays all options for the user
