@@ -307,7 +307,7 @@ def find_all(dep):
 
         # Render the Department by Poster page
         return render_template(
-            "dep-poster.html", dep=dep, depart=depart, day="All Messages")
+            "dep-poster.html", dep=dep, depart=depart, day="Latest")
 
 
 @app.route("/all_images/")
