@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <!--top-box with red "Shot Caller" sides decoration-->
+<!--top-box with red "Shot Caller" sides decoration-->
 <div class="row">
    <div class="col s1 offset-s1 m1 offset-m3">
       <div class="long-boxl">
@@ -65,25 +65,25 @@
             </div>
             <!--Check Image-->
             <div class="row margintop-20 ">
-                <div class="center-align">
-                    <div onclick="check_image()" class="white-text pad-25 blueBack-sea btn-small text-shadow">
-                        <strong>Check Image</strong>
-                    </div>
-                </div>
+               <div class="center-align">
+                  <div onclick="check_image()" class="white-text pad-25 blueBack-sea btn-small text-shadow">
+                     <strong>Check Image</strong>
+                  </div>
+               </div>
             </div>
             <div class="row">
                <!-- cancel button -->
                <div class="col s12 m6 margintop-20 center-align">
-               <a href="{{ url_for('get_image') }}"  class="pad-50 white-text btn-small blueBack-sea">
-               <strong>Cancel </strong>
-               </a>
+                  <a href="{{ url_for('get_image') }}"  class="pad-50 white-text btn-small blueBack-sea">
+                  <strong>Cancel </strong>
+                  </a>
                </div>
-                    <div class="col s12 m6 margintop-20 center-align">
-               <!--submit-->
-               <button type="submit" class="pad-50 btn-small white-text blueBack-sea">
-               <strong>Submit</strong> 
-               </button>
-            </div>
+               <div class="col s12 m6 margintop-20 center-align">
+                  <!--submit-->
+                  <button type="submit" class="pad-50 btn-small white-text blueBack-sea">
+                  <strong>Submit</strong> 
+                  </button>
+               </div>
             </div>
          </form>
       </div>

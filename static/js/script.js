@@ -1,12 +1,12 @@
 /*jQuery for Materialize initialization of the sidenav, collapsible, tooltipped,
-  modal, select and datepicker features*/
+  modal, select and datepicker features. Also setTimeout for Flash messages.*/
 
 $(document).ready(function () {
     setTimeout(function() {
     $('.flashes').fadeOut('fast');
     }, 5000);
 	$('.sidenav').sidenav({
-		edge: "right"
+		edge: "right" 
 	});
 	$('.collapsible').collapsible();
 	$('.tooltipped').tooltip();
@@ -21,12 +21,12 @@ $(document).ready(function () {
 		}
 	});
 
-    /* Function to fix Materialize bug to show red line warning if department not 
-       selected in add message*/
+/*Function to fix Materialize bug to show red line warning if department not 
+       selected in add message. All this code is taken from a Code Institute example*/
 
-	validateMaterializeSelect();
+validateMaterializeSelect();
 
-	function validateMaterializeSelect() {
+function validateMaterializeSelect() {
 		let classValid = {
 			"border-bottom": "1px solid #4caf50",
 			"box-shadow": "0 1px 0 0 #4caf50"
@@ -66,7 +66,9 @@ $(document).ready(function () {
 	}
 });
 
-/*-----function to create the return to top button-----*/
+
+/*function to create the return to top button created from code found on 
+       W3schools.com*/
 
 const topbutton = document.getElementById("topbut");
 
@@ -78,7 +80,7 @@ window.onscroll = function () {
 
 function buttonDisplay() {
 	if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-		topbutton.style.display = "block";
+        topbutton.style.display = "block";
 	} else {
 		topbutton.style.display = "none";
 	}
@@ -89,36 +91,20 @@ function poptop() {
 	document.documentElement.scrollTop = 0;
 }
 
-/*-----function to check image url for all pages-----*/
+
+/*function to check image url for all pages gettin image src from form then
+       using the Image() constructor to create a new HTMLImageElement instance*/
 
 function check_image() {
     var im = document.getElementById("image_form").elements.namedItem("image_src").value;
+
     var image = new Image();
     image.src = im;
+
     image.onload = function() {
     if (this.width > 0) {
-        alert("IMAGE SRC OK - CLICK 'ADD IMAGE' TO SUBMIT");   }}
+        alert("IMAGE SRC OK - CLICK 'ADD IMAGE' TO SUBMIT");   }};
+
     image.onerror = function() {
-        alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  } 
+        alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  }; 
 }
-
-/*-----function to check image url in Add Message page-----
-
-function check_message_image() {
-    var im = document.getElementById("message_form").elements.namedItem("image_src").value;
-    var image = new Image();
-    image.src = im;
-    image.onload = function() {
-    if (this.width > 0) {
-        alert("IMAGE SRC OK - CLICK 'ADD MESSAGE' TO SUBMIT");   }}
-    image.onerror = function() {
-        alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  } 
-}*/
-    
-
-
-
-
-
-
-

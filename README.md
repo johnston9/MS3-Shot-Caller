@@ -368,7 +368,7 @@ this are found in the Design section.
  - In Add Message users can post messages and include an image in their message.
    They are given instructions on how to obtain an image SRC. They are instructed 
    just below the Enter Image title that they must fill in the image name box if they
-   enter an image SRC. This is to ensure that alt can use this if the SRC is incorrect.
+   enter an image SRC as alt can use this. 
    They are also instructed to use the image check button to ensure that the URL is correct. 
    Please see user testing for further details.
 
@@ -393,7 +393,7 @@ this are found in the Design section.
   access to the admin features if admin is the session user and this is implemented 
   both in the front-end and back-end. If the user is admin they will be given the 
   option to delete a user, upload the latest script, upload the latest shot list 
-  or upload new images.
+  or upload new images. There is an image UrL checker also on this page.
 
 <p align="center"><strong>Admin Page 1600px</strong></p>
 <h2 align="center">
@@ -569,7 +569,8 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
   
 - [JSHint](https://jshint.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - JSHint was used with "New JavaScript features (ES6)" and "jQuery" checked in the configuration menu.
-    All files were clear of errors and warnings.
+    All clear apart from one unused variable message for "check_image" but the function,
+    is called from the page onclick.
     
 - [PEP8 online check](http://pep8online.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - PEP8 approved the app.py page. The first time I checked it everything was right apart from saying "no newline at end of file".
@@ -710,6 +711,21 @@ the image here that would be similar for all pages.
 
  [Back to Table of Content](#table-of-content)
 
+ - ### Departments Page
+
+The Departments page had the same results as the User Base page for the Best Practices issue.
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/de-1a.png" width="90%">
+</h2>
+
+<p align="center"><strong>Mobile</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/de-2b.png" width="90%">
+</h2>
+
+
  - ### Add Message Page
 
 As regards the label issue above I tried to use "aria-label="Select Department"
@@ -717,7 +733,7 @@ but as expected it had no result as the dropdown is not reachable on the page.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/mes1a.png" width="90%">
+<img src="documentation/readme-images/mes-a1.png" width="90%">
 </h2>
 
  - ### Edit Message Page
@@ -738,36 +754,8 @@ Both pages had same result for mobile.
 
 [Back to Table of Content](#table-of-content)
 
- - ### Departments Page
 
-The Departments page had the same results as the User Base page for the Best Practices issue.
-
-<p align="center"><strong>Desktop</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/de-1a.png" width="90%">
-</h2>
-
-<p align="center"><strong>Mobile</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/de-2b.png" width="90%">
-</h2>
-
- - ### Images Page
-
-The Images page got a SameSite cookie issue for the Best Practices
-along with the HTTPS issue.
-
-<p align="center"><strong>Desktop</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/im-1a.png" width="90%">
-</h2>
-
-<p align="center"><strong>Mobile</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/im-2b.png" width="90%">
-</h2>
-
- - ### Department Page
+ - ### Department Messages Pages
 
 The department message pages got a SameSite cookie issue for the Best Practices
 along with the HTTPS issue.
@@ -787,6 +775,22 @@ along with the HTTPS issue.
 <img src="documentation/readme-images/mess-mo.png" width="90%">
 </h2>
 
+ - ### Images Page
+
+The Images page got a SameSite cookie issue for the Best Practices
+along with the HTTPS issue.
+
+<p align="center"><strong>Desktop</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/im-1a.png" width="90%">
+</h2>
+
+<p align="center"><strong>Mobile</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/im-2b.png" width="90%">
+</h2>
+
+
  - ### Latest Production Updates page
 
  Without images in the messages Best Practices only gave the HTTPS issue.
@@ -805,11 +809,21 @@ All 4 admin pages had the same results for desktop.
 <img src="documentation/readme-images/ad2b.png" width="90%">
 </h2>
 
-All 4 admin pages had the same results for mobile.
+All 5 admin pages had the same results for mobile.
 
 <p align="center"><strong>Add Latest Script page</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/ad1a.png" width="90%">
+</h2>
+
+<p align="center"><strong>Add Image page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/adim-li.png" width="90%">
+</h2>
+
+<p align="center"><strong>Edit Image page</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/edit-im.png" width="90%">
 </h2>
 
 ### Lighthouse robot.txt once off issue
