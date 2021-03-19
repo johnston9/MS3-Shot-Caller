@@ -11,11 +11,11 @@ means of searching and uploading communications including images to the differen
 It has a secure admin facility for site regulation and the upkeep of the image
 bank that includes a simple means of uploading the latest script, shot list. The site 
 is built with Flask using the Jinja template engine and the Werkzeug WSGI toolkit
-and uses Mongodb as the back-end database.
+and uses MongoDB as the back-end database.
 
-Future developments could lead towards the app becomming downloadable
-as a product to be used by ptoduction companies. At this stage the app is being
-deployed on Heroku's basic package so HTTPS is only availabe for the Login and Register
+Future developments could lead towards the app being downloadable 
+as a product to be used by production companies. At this stage, the app is being
+deployed on Heroku's basic package, so HTTPS is only available for the Login and Register
 pages.
 
 <h2 align="center"><img src="documentation/readme-images/user16.png"></h2>
@@ -90,10 +90,10 @@ areas of film production allowing messages and images to be sent
 through each department channel. A future goal would be the inclusion
 of collaboratative areas, and storyboard and shot list imaging pre-visualization tools.
 
-For the user the goal of the app is to enhance and facilitate film production.
+For the user, the goal of the app is to enhance and facilitate film production.
 It will allow a simple reliable means of departmental and inter-departmental
 communication. It is streamlined for the exchange of messages by specific areas.
-It will allow the user to instantaniously share and receive 
+It will allow the user to instantaneously share and receive 
 ideas on all production related developments as they happen.
 
 ### Strategy Plane
@@ -120,7 +120,7 @@ The buildable aspect was vital for the scope of the app and several more advance
 The site is structured so the user can navigate in an intuitive way through the different features, all pages keeping a uniformed consistency. 
 The user is taken on a journey into the site, all elements being discoverable as they proceed along.
 The User Base is central to the structure. Here the user is being visibly encouraged to
-select a department or click on one of the other options available to them. When the user selects a department
+select a department or click on one of the other options available to them. When the user selects a department,
 they are taken to that page and given several specific "find messages" choices they can follow.
 They will see clear states of change when they interact with the features and be given clear feedback to assure them of their interactive success.
 The information architecture is a tree structure allowing users to move through content quickly and simply becoming aware of the site’s inherent structure as they go. 
@@ -194,7 +194,7 @@ this are found in the Design section.
 
 ### Imagery
  - The site was designed to have a minimal straight to business slick slightly cinematic look. For this
-   two narrow side panels containing a right and reversed left image of a cinematic lighting effect were placed on an offblack background.
+   two narrow side panels containing a right and reversed left image of a cinematic lighting effect were placed on an off-black background.
    The images of a window filtering in blue lighting act as a foreground to the dark header box that contains a small version of the left image.
    and to which focus is drawn. The hope is that
    this achieves a feeling of cinematic lighting and depth.
@@ -282,7 +282,7 @@ this are found in the Design section.
 
   The bulk of the page is used to show the different departments on which the user can
   click to view each department's communications. 
-  Central to the site is clarity and specificy. The first measure of this is the 
+  Central to the site is clarity and specificity. The first measure of this is the 
   separation of all the production communications into nine departments.
 
   This page also allows the user to download the latest script and shot list, to add messages 
@@ -295,7 +295,7 @@ this are found in the Design section.
 
 [Back to Table of Content](#table-of-content)
 
-### Departments Page
+### Department Messages Pages
 
   Once the user clicks on a department they are taken to that department's 
   Find by Date Page. That day's communications or messages will automatically be displaying.
@@ -322,7 +322,7 @@ this are found in the Design section.
   Underneath the Datepicker the user has three further options in the form
   of three immediately visible buttons.
 
-  A. Finding all messages in tha department.
+  A. Finding all messages in that department.
   
 <p align="center"><strong>All Messsages</strong></p>
 <h2 align="center">
@@ -331,7 +331,7 @@ this are found in the Design section.
 
   B. Add a message.
 
-  C. Find messages by Poster. This button takes the user to a seperate Find by Poster Page where they
+  C. Find messages by Poster. This button takes the user to a separate Find by Poster Page where they
   can find communications by entering the poster's name. 
 
 <p align="center"><strong>Find by Poster Page - message open</strong></p>
@@ -347,8 +347,8 @@ this are found in the Design section.
   it or entering a search word relating to the images they wish to see. These images
   are only upload by admin so they are intended to be actual style and shooting choices,
   or options of these. Users have the option to post their own images in department
-  messages. If these are to be used for the main image bank all the admin has to do 
-  is right click on them and add the URL in the Upload Image page that only they have
+  messages. If any of these are to be used for the main image bank all the admin can 
+  right click on it and add the URL in the Upload Image page that only they have
   access to.
 
 
@@ -393,7 +393,7 @@ this are found in the Design section.
   access to the admin features if admin is the session user and this is implemented 
   both in the front-end and back-end. If the user is admin they will be given the 
   option to delete a user, upload the latest script, upload the latest shot list 
-  or upload new images. There is an image UrL checker also on this page.
+  or upload new images. There is an image URL checker also on this page.
 
 <p align="center"><strong>Admin Page 1600px</strong></p>
 <h2 align="center">
@@ -424,9 +424,9 @@ MongoDB was used as the site's database and held 14 collections.
 
 5 - <strong>depts</strong> - to hold the departments names, titles and the department images URLs for User Base/Department's pages.
 
-6-14 - <strong>9 collections</strong> for each of the departments messages.
+6-14 - <strong>9 collections</strong> for each of the departments' messages.
 
-There is an Entity Relationship between the users collection and the 9 seperate departments
+There is an Entity Relationship between the users collection and the 9 separate departments
 collections on "username" and "job_title". A third relationship
 is between the concatenated result of the users collection "firstname" and "lastname" attributes
 values and the department collection's "poster" attribute. These allow the automatic input 
@@ -438,7 +438,7 @@ depts dep_name to be passed to app.py when a department is clicked on in the Use
 Base or Departments page. This sends dep_name as a variable to the get_dep function in app.py allowing
 it to be used in the find() method on Mongo and get the messages for the collection of that name.
 
-<strong>Note 1:</strong> In the ER Diagram the last relationship above points to the the dep_name in the example camera
+<strong>Note 1:</strong> In the ER Diagram the last relationship above points to the dep_name in the example camera
       collection as it was not technically possible to have it point to the collection name, which
       is in fact the correct relationship.
 
@@ -472,7 +472,7 @@ The MongoDB Shot Caller database contains the following collections.
 </h2>
 
 
-<p align="center"><strong>9 department collections, e.g. camera</strong> - each containing that department's messages</p>
+<p align="center"><strong>9 department collections, e.g., camera</strong> - each containing that department's messages</p>
 
 <h2 align="center">
 <img src="documentation/readme-images/m-dep1.png" width="90%">
@@ -514,10 +514,10 @@ The MongoDB Shot Caller database contains the following collections.
 
 1. [Materialize:](https://materializecss.com/getting-started.html)
    - Materialize with it's grid-based 
-     format was used to create the overall framework for the site and it's primary responsiveness. Also specific 
+     format was used to create the overall framework for the site This included the primary responsiveness
+     and overall styling of the website. Also specific 
      Materialize features were used throughout which include the "Collapsible", 
-     the "Navbar" and "Sidenav", the "Modals", the "Tooltipped" feature, the "Datepickers"
-     and the overall styling of the website.
+     the "Navbar" and "Sidenav", the "Modals", the "Tooltipped" feature, the "Datepickers".
 1. [Flask:](https://en.wikipedia.org/wiki/Flask_(web_framework))
    - Flask was used along with python to build then site's back end framework and
      run the app.
