@@ -33,10 +33,12 @@
     </div>
     <div class="col s10">
         <h5 class="white-text center-align">Enter Message</h5>
-        <p class="antiquewhite center-align">If adding an image SRC the name box below it is required</p>
+        <p class="antiquewhite center-align">If adding an Image SRC the Image Name box below it is required. <br>
+                                            Please click the Check Image button before submitting message
+                                            to ensure the image URL is correct.</p>
         <!--add message form-->
         <div class="row">
-            <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
+            <form id="message_form" class="card-panel matt-black offwhite col s12 m8 offset-m2" method="POST" action="{{ url_for('add_message') }}">
                 <!--select department-->
                 <div class="row margintop-20">
                 <div class="input-field col s12 m8 offset-m2">
@@ -93,16 +95,24 @@
                         <i class="fas fa-minus prefix blue-sea"></i>
                         <label for="is_priority">
                         <input type="checkbox" id="is_priority" name="is_priority">
-                        <span class="lever"></span>
                         Is Priority
+                        <span class="lever"></span>
                         </label>
                     </div>
                 </div>
                 </div>
+                <!--Check Image-->
+                    <div class="row margintop-20 ">
+                        <div class="center-align">
+                            <div onclick="check_message_image()" class="pad-20 blueBack-sea btn-small text-shadow">
+                            <strong>Check Image</strong> 
+                            </div>
+                        </div>
+                    </div>
                 <!--submit-->
-                <div class="row margintop-20">
+                <div class="row margintop-10 mar-bot">
                 <div class="center-align">
-                    <button type="submit" class="btn-small white-text blueBack-sea text-shadow">
+                    <button type="submit" class=" btn-small white-text blueBack-sea text-shadow">
                     <strong>Add Message </strong> 
                     </button>
                 </div>
@@ -111,7 +121,7 @@
         </div>
         <!--instructions-->
         <div class="row">
-            <div class="col s10 offset-s1 m8 offset-m2">
+            <div class="col s12">
                 <p class="find antiquewhite center-align">To upload an image simply first upload and create an url for it with
                 <span><a rel="noopener" class="link-color" href="https://cloudinary.com/" target="_blank">Cloudinary</a></span>
                 or a similar url generating site and enter it in the image SRC input box above. Please 

@@ -1294,6 +1294,7 @@ sucessful.
 
 - If a user uploads an incorrect URL the image will not render and an 
   error is logged to the console but I have default images set by inline onerror code.
+  I also have a aria label with the same message as the default image for screen readers.
 
 <p align="center"><strong>Images page</strong></p>
 <h2 align="center">
@@ -1490,7 +1491,12 @@ to install packages without requirements.txt and how to create the Procfile.
   selected in add message is taken from Tim Nelson's Task Manager app.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/): 
   Here I got the code for the 404 custome error message.
-
+- [stackoverflow.com](https://stackoverflow.com/questions/7995080/html-if-image-is-not-found)
+  Here I learnt how to set a default image if the original one throws an error.
+- [stackoverflow.com](https://stackoverflow.com/questions/55880196/is-there-a-way-to-easily-check-if-the-image-url-is-valid-or-not/55880263)
+  Here I learnt how to use image src checker code.
+  [w3schools.com](https://www.w3schools.com/jsref/coll_form_elements.asp)
+- Here I found out how to get the image_src value from form
 ### Content
 
 All content was written by the developer.

@@ -29,6 +29,10 @@ hr.red-line {
 	color: crimson;
 }
 
+.mar-bot {
+    margin-bottom: 10px;
+}
+
 .margin-top {
 	margin-top: 40px;
 }

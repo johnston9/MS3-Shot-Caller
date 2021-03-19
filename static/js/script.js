@@ -89,12 +89,36 @@ function poptop() {
 	document.documentElement.scrollTop = 0;
 }
 
+/*-----function to check image url for Add Image page-----*/
 
-/*-----function to give image not loading error for admin-----*/
-
-function image_error() {
-    document.getElementById("image-er").innerText = "Available Soon" ;
+function check_image() {
+    var im = document.getElementById("image_form").elements.namedItem("image_src").value;
+    var image = new Image();
+    image.src = im;
+    image.onload = function() {
+    if (this.width > 0) {
+        alert("IMAGE SRC OK - CLICK 'ADD IMAGE' TO SUBMIT");   }}
+    image.onerror = function() {
+        alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  } 
 }
+
+/*-----function to check image url in Add Message page-----*/
+
+function check_message_image() {
+    var im = document.getElementById("message_form").elements.namedItem("image_src").value;
+    var image = new Image();
+    image.src = im;
+    image.onload = function() {
+    if (this.width > 0) {
+        alert("IMAGE SRC OK - CLICK 'ADD MESSAGE' TO SUBMIT");   }}
+    image.onerror = function() {
+        alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  } 
+}
+    
+
+
+
+
 
 
 

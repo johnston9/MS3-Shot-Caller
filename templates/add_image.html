@@ -33,10 +33,10 @@
     </div>
 
         <div class="col s10">
-
+            <p class="margintop-20 center-align antiquewhite">Please click the Check Image button before submiting.</p>
             <!--add image form-->
             <div class="row">
-                <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST"
+                <form id="image_form" class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST"
                     action="{{ url_for('add_image') }}">
                     <!--enter image_name-->
                     <div class="row">
@@ -61,14 +61,23 @@
                         <div class="input-field col s12 m8 offset-m2">
                             <i class="fas fa-minus prefix blue-text text-darken-4"></i>
                             <input id="image_src" name="image_src" minlength="10" type="text" class="validate"
-                                style="color:whitesmoke !important;" required>
+                                style="color:whitesmoke !important;" value="" required>
                             <label for="image_src">Image SRC</label>
                         </div>
                     </div>
+                    <!--Check Image-->
+                    <div class="row">
+                        <div class="center-align">
+                            <div onclick="check_image()" class="btn-small text-shadow">
+                                Check Image
+                            </div>
+                        </div>
+                    </div>
+                     
                     <!--submit-->
                     <div class="row">
                         <div class="center-align">
-                            <button type="submit" class="btn-small text-shadow">
+                            <button type="submit" class="btn-small pad-25 text-shadow">
                                 Add Image
                             </button>
                         </div>
@@ -92,6 +101,8 @@
                         or a similar url generating site.
                         Alternativly if you wish to use an image already uploaded by a user in department
                         messages right click on the image, copy and paste it in the box.
+                        <br>  Important! Please click the "Check Image" button before submit to make sure
+                        the URL is correct.
                     </p>
                 </div>
             </div>
