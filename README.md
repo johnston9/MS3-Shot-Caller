@@ -367,9 +367,9 @@ this are found in the Design section.
  
  - In Add Message users can post messages and include an image in their message.
    They are given instructions on how to obtain an image SRC. They are instructed 
-   just below the Emter Image title that they must fill in the image name box if they
-   enter an image SRC. This is to ensure that alt can use this if the SRC is incorrect or an
-   error will be logged to the console. 
+   just below the Enter Image title that they must fill in the image name box if they
+   enter an image SRC. This is to ensure that alt can use this if the SRC is incorrect.
+   They are also instructed to use the image check button to ensure that the URL is correct. 
    Please see user testing for further details.
 
 <h2 align="center">
@@ -615,13 +615,6 @@ Lighthouse was used to test every page in desktop and mobile screens.
    if the site is to develope further.
    See Image page below for more on that issue.
 
-6. Lighthouse gave me a Best Practices report for the department message pages and the Images page 
-   saying Browser errors were logged to the console when an image is not found. I added a onerror
-   inline default image to display. On for the message pages to let whoever posted
-   the message containing the image the default image tells them they should check the URL. On the image page
-   the default image just says "Available Soon" which will let admin fix it without
-   letting anyone know they may have made an error. But still an error will log to the 
-   console but all users will be aware of what is happening and what to do.
 
 ### Issues Resolved
 
@@ -630,6 +623,17 @@ Lighthouse was used to test every page in desktop and mobile screens.
 
 2. On first report Lighthouse gave me an insecure link warning for the link to Cloudinary 
    I put rel="noopener" in all links and the issue was resolved.
+
+3. Lighthouse gave me a Best Practices report for the department message pages and the Images page 
+   saying Browser errors were logged to the console when an image is not found. 
+   To deal with this I firstly added an image url checker for the admin Add Images page
+   and for the Add Message page so the user can make sure they submit a correct URL.
+   Secondly, in case something does cause an image loading error or somehow an incorrect
+   URL did get submitted I added an inline onerror check to display default message images instead of the generic little
+   green square. For the message pages the message image tells the poster they should check the URL. On the image page
+   the default image just says "Available Soon" which will let admin know to fix it without
+   letting anyone being acutly aware admin may have made an error. Still an error will log to the 
+   console but all users will be aware of what is happening and what to do.
 
 
 ### Login Page

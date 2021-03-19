@@ -34,11 +34,11 @@
    <div class="col s10">
       <!--add image form-->
       <div class="row margintop-20">
-         <form class="card-panel matt-black offwhite col s10 offset-s1 m8 offset-m2" method="POST"
+         <form id="image_form" class="card-panel matt-black offwhite col s12 m10 offset-m1" method="POST"
             action="{{ url_for('edit_image', image_id=image._id) }}">
             <!--enter image_name-->
             <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
+               <div class="input-field col s12 m10 offset-m1">
                   <i class="fas fa-minus prefix blue-text text-darken-4"></i>
                   <input id="image_name" name="image_name" minlength="1" type="text" class="validate"
                      value="{{ image.image_name }}" style="color:whitesmoke !important;" required>
@@ -47,7 +47,7 @@
             </div>
             <!--enter image description-->
             <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
+               <div class="input-field col s12 m10 offset-m1">
                   <i class="fas fa-minus prefix blue-text text-darken-4"></i>
                   <input id="image_des" name="image_des" minlength="1" type="text" class="validate"
                      value="{{ image.image_des }}"  style="color:whitesmoke !important;" required>
@@ -56,22 +56,34 @@
             </div>
             <!--enter image src-->
             <div class="row">
-               <div class="input-field col s12 m8 offset-m2">
+               <div class="input-field col s12 m10 offset-m1">
                   <i class="fas fa-minus prefix blue-text text-darken-4"></i>
                   <input id="image_src" name="image_src" minlength="10" type="text" class="validate"
                      value="{{ image.image_src }}" style="color:whitesmoke !important;" required>
                   <label for="image_src">Image SRC</label>
                </div>
             </div>
-            <div class="row center-align">
+            <!--Check Image-->
+            <div class="row margintop-20 ">
+                <div class="center-align">
+                    <div onclick="check_image()" class="white-text pad-25 blueBack-sea btn-small text-shadow">
+                        <strong>Check Image</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                <!-- cancel button -->
-               <a href="{{ url_for('get_image') }}"  class="btn-small offwhite blueBack-sea shadow-light">
-               Cancel 
+               <div class="col s12 m6 margintop-20 center-align">
+               <a href="{{ url_for('get_image') }}"  class="pad-50 white-text btn-small blueBack-sea">
+               <strong>Cancel </strong>
                </a>
+               </div>
+                    <div class="col s12 m6 margintop-20 center-align">
                <!--submit-->
-               <button type="submit" class="btn-small text-shadow">
-               Submit
+               <button type="submit" class="pad-50 btn-small white-text blueBack-sea">
+               <strong>Submit</strong> 
                </button>
+            </div>
             </div>
          </form>
       </div>

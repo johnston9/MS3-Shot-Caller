@@ -89,7 +89,7 @@ function poptop() {
 	document.documentElement.scrollTop = 0;
 }
 
-/*-----function to check image url for Add Image page-----*/
+/*-----function to check image url for all pages-----*/
 
 function check_image() {
     var im = document.getElementById("image_form").elements.namedItem("image_src").value;
@@ -102,7 +102,7 @@ function check_image() {
         alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  } 
 }
 
-/*-----function to check image url in Add Message page-----*/
+/*-----function to check image url in Add Message page-----
 
 function check_message_image() {
     var im = document.getElementById("message_form").elements.namedItem("image_src").value;
@@ -113,7 +113,7 @@ function check_message_image() {
         alert("IMAGE SRC OK - CLICK 'ADD MESSAGE' TO SUBMIT");   }}
     image.onerror = function() {
         alert("IMAGE SRC INCORRECT - CHECK URL AND RE-ENTER");  } 
-}
+}*/
     
 
 
