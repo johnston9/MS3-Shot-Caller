@@ -1082,17 +1082,14 @@ All 5 admin pages had the same results for mobile.
      or a similar app, and enter an SRC here. They will also be told that if they
      want to use an image already uploaded by a user in the department messages they
      can right click on the image and enter it here. They can also click on the
-     "Check Image" button to ensure the URL is correct.
-     
-<h2 align="center">
-<img src="documentation/readme-images/st-1.png" width="90%">
-</h2>
+     "Check Image" button to ensure the URL is correct. 
 
 - They will get a flash message to tell them if it was successful.
-
+     
 <h2 align="center">
-<img src="documentation/readme-images/st-2.png" width="90%">
+<img src="documentation/readme-images/adimage.png" width="90%">
 </h2>
+
 
 4. #### As the admin user I want to edit images.
 
@@ -1122,16 +1119,13 @@ All 5 admin pages had the same results for mobile.
    - On the images page under every image a delete button will display for
      the admin and the admin only. On clicking they will be given a modal
      asking them to confirm. On doing so they will get a flash message.
-     
-<h2 align="center">
-<img src="documentation/readme-images/delet.png" width="90%">
-</h2>
 
 - They will get a flash message to tell them if it was successful.
 
 <h2 align="center">
-<img src="documentation/readme-images/sc-2.png" width="90%">
+<img src="documentation/readme-images/delet.png" width="90%">
 </h2>
+
 
 6. #### As the admin user I want to delete a user.
 
@@ -1139,16 +1133,13 @@ All 5 admin pages had the same results for mobile.
      will be taken to the "Remove User" page. They must enter the user's firstname in one box
      then user's lastname in another, then press submit. They will get a flash message on
      completion. No modal use deemed necessary as this is an already involved process.
-     
-<h2 align="center">
-<img src="documentation/readme-images/rm.png" width="90%">
-</h2>
 
 - They will get a flash message to tell them if it was successful.
 
 <h2 align="center">
-<img src="documentation/readme-images/st-2.png" width="90%">
+<img src="documentation/readme-images/rm.png" width="90%">
 </h2>
+
 
 7. #### As the admin user I want control over material posted on the site for legal and other purposes.
 
@@ -1340,8 +1331,8 @@ so it could get the id and pass that back to the Flask as an argument.
 For the add_shotlist function I just set the object_id for the document directly in
 the function.
 
-The reason for this is just to have options for further development of the app as to which
-method wold be most appropriate.
+The reason for this is just to have options in further developments of the app as to which
+method would be most appropriate.
 
 
 [Back to Table of Content](#table-of-content)
@@ -1368,20 +1359,18 @@ By forking we make a copy of the GitHub Repository in our Github account.
 #### Making a Local Clone
 
 1. Log in to GitHub and locate the [GitHub Repository](https://github.com/johnston9/MS3-Shot-Caller)
-2. Under the repository name, click "Code" beside the Gitpod bitton.
+2. Under the repository name, click "Code" beside the Gitpod button.
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash.
 5. Set the current working directory to the location where you want the cloned directory to be made.
 6. Type git clone, and then paste the URL copied above.
 7. Press enter and a local clone will be created.
 8. You may want to unpack the everything from the containing "MS3-Shot-Caller" folder.
-9. The clone will include two file needed for set up and Heroku.
-
-  1. The requirements.txt which contains all packages to be installed to run the app. These are  
-  Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
-  will need these to run the app.
-
-  2. The Procfile which tells Heroku what language the app is using.
+9. The clone will include two files needed for set up and Heroku.
+   -  The requirements.txt file which contains all packages to be installed to run the app. These are  
+      Flask-PyMongo, dnspython and Flask and it's dependencies. Heroku
+      will need these to run the app.
+   -  The Procfile which tells Heroku what language the app is using.
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
@@ -1435,7 +1424,7 @@ will be necessary to create them.
 
  - As mentioned in the "Clone" section above a requirements.txt and Procfile are needed
 by Heroku to run the app. If not already created make sure to do so. In the terminal
-type they following commands.
+type the following commands.
 
    - pip3 freeze --local > requirements.txt
    - echo web: python3 app.py > Procfile
@@ -1504,20 +1493,20 @@ to install packages without requirements.txt and how to create the Procfile.
 - The code to fix Materialize bug to show red line warning if department not 
   selected in add message is taken from Tim Nelson's Task Manager app.
 - [Flask](https://flask.palletsprojects.com/en/1.1.x/patterns/errorpages/): 
-  Here I got the code for the 404 custome error message.
+  Here I got the code for the 404 and 500 custom error messages.
 - [stackoverflow.com](https://stackoverflow.com/questions/7995080/html-if-image-is-not-found)
   Here I learnt how to set a default image if the original one throws an error.
 - [stackoverflow.com](https://stackoverflow.com/questions/55880196/is-there-a-way-to-easily-check-if-the-image-url-is-valid-or-not/55880263)
-  Here I learnt how to use image src checker code.
+  Here I learnt how to use image SRC checker code.
   [w3schools.com](https://www.w3schools.com/jsref/coll_form_elements.asp)
-- Here I found out how to get the image_src value from form
+- Here I found out how to get the image_src value from the form
 ### Content
 
 All content was written by the developer.
 
 ### Media
 
-The photos used in the image bank and used for messages Sthis site were obtained from;
+The photos used in the image bank and for messages for site were obtained from.
 
   1.  [FreeImages.com](https://www.freeimages.com/)
 
@@ -1533,15 +1522,15 @@ to be made in any way public.
 
 I researched the topic of copyright when it comes to the use of screenshots of tv shows
 used for non-profit purposes and concluded that the use of fragments of these images 
-in this manner in the app come under the "Fair Use Doctrine". Also in terms
+in this manner in the app come under the "Fair Use Doctrine". In terms
 of the 4-factor balancing test that it is accessed under the usage in this project is fair.
 I also cleared it with the college staff.
 
 
 ### Acknowledgements
    
-- I'd like to thank the Code Institute tutor team for their support and  
-Aaron Sinnott for his insights.
+- I would  like to thank the Code Institute tutor team for their support and  
+  Aaron Sinnott for his insights.
 
 [Back to Table of Content](#table-of-content)
 
