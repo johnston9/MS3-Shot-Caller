@@ -157,8 +157,7 @@ this are found in the Design section.
 6. As a Frequent User, I want to view the latest production updates.
 7. As a Frequent User, I want to edit and delete my communications.
 
-8. As a Frequent User, I want to view and post communications and see images relating to style, 
-   shooting and script choices so I can develop my own choices accordingly.
+8. As a Frequent User, I want to view and post communications relating to style and shooting choices.
 
   - #### Admin User Goals
 
@@ -854,14 +853,14 @@ All 5 admin pages had the same results for mobile.
        so they can select their desired destination quickly.
     2. Upon entering the user is taken to their home base and greeted with image
        links for each production department and the message to "Choose Department".
-       Upon clicking on a department they are taken to that departments "Find by Date Page"
+       Upon clicking on a department, they are taken to that department's "Find by Date Page"
        where that day's communications are automatically showing.
        They are given further choices to find all messages or go to the "Find by Poster Page".
        The user will become automatically aware of what is on offer and how to find a particular
-       field in a few click. The user will see the choices on offer and learn how best 
+       field with a few clicks. The user will see the choices on offer and learn how best 
        to use them for their needs.
     3. Below the departments on the User Base Page the user will see further options
-       to add messages, search images, download the script or download the shotlist.
+       to add messages, search images, download the script or download the shot list.
 
 <p align="center"><strong>User Base</strong></p>   
 <h2 align="center">
@@ -871,16 +870,19 @@ All 5 admin pages had the same results for mobile.
 
 2. #### As a First Time User, I want to find communications in my or other departments.
 
-    1. Upon opening a department page the user will see the latest messages displayed.
-       They will see the option to open all messages and a more specicic option
-       to find messages by a particular date.
-    2. The user will see a further option to go to "Find messages by Poster" and on clicking
-       they will be taken to the "Find messages by Poster Page" where they can get all messages
+    1. Upon clicking on a department, the user is taken to the "Find by Date" page
+       where that day's messages automatically display.
+       They will see a form at the top allowing them to find messages 
+       by a particular date.
+    2. Below that are three buttons, the first to find all messages. 
+       The second to add a message.
+    3. The third button will offer a further option to go to "Find messages by Poster" page. 
+    5. On clicking this button the user will be taken to the "Find messages by Poster Page" where they can get all messages
        from a particular team member by typing in their full name as instructed.
-    3. The user will see all chosen messages each displaying,in the header the name and position
-       of the poster, the subject and whether it is a priority or not. On clicking on a message box
+    6. In the actual messages container, each message displays the name and position
+       of the poster, the subject and whether it is a priority or not in the header. On clicking on a message box
        it will open to show the message and an image if one has been posted.
-    4. If there are no messages for a particular request a message will display
+    7. If there are no messages for a particular request a message will display
        advising the user of this.
 
 <p align="center"><strong>Departments</strong></p>
@@ -897,8 +899,8 @@ All 5 admin pages had the same results for mobile.
 
     1. In the navbar and on their home base the user will see a link to search images
        which on clicking will take them to the images page.
-    2. The user will see instruction on how to search for images. They can use a specicic
-       image reference tag, if thet have one or they can input search words relevent
+    2. The user will see instruction on how to search for images. They can use a specific
+       image reference tag, if they have one or they can input search words relevant
        to what they are looking for.
     3. The image bank is uploaded by the production team only so only contains sanctioned
        images of style choices, locations and other images all in keeping with the choices
@@ -923,13 +925,13 @@ All 5 admin pages had the same results for mobile.
 
 ### Returning User Goals
 
-4. #### As a Returning User, I want to download the latest shotlist and script.
+4. #### As a Returning User, I want to download the latest shot list and script.
 
     1. On clicking download script the script is downloaded to the user's device.
 
-    1. On clicking download shotlist the shotlist is downloaded to the user's device.
+    1. On clicking download shot list the shot list is downloaded to the user's device.
 
-<p align="center"><strong>Result for downloaded shotlist</strong></p>
+<p align="center"><strong>Result for downloaded shot list</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/shot1.png" width="90%">
 </h2>
@@ -944,8 +946,8 @@ All 5 admin pages had the same results for mobile.
 
     1. In the navbar, on the User's Base page and in all the department
        pages the user will see a button to "Add Message". 
-    2. On clicking the button the user is brought to the "Add Messsage" page
-       where they can post a new communication. A flash message will displayed
+    2. On clicking the button, the user is brought to the "Add Message" page
+       where they can post a new communication. A flash message will display
        if their message has been added successfully.
     3. They are also given the option to add an image and instructions on how to do 
        so are supplied. 
@@ -974,11 +976,9 @@ All 5 admin pages had the same results for mobile.
 
 6. #### As a Frequent User, I want to view the latest production updates.
 
-   1. When the user clicks on the Latest Updates buttton on their home base page they are taken to the Today's
-      Latest Production Updates Page. All the production communications from that day are
-      shown there.
-      There is also a link to take them straight to all other departments to see their latest
-      updates which are always displaying for that day.
+   1. When the user clicks on the Latest Updates button on their home base page they are taken to the
+      Latest Production Updates Page to do just that.
+      There is also a link to take them straight to all other departments.
 
   
 <p align="center"><strong>Latest Updates Page</strong></p>
@@ -988,9 +988,8 @@ All 5 admin pages had the same results for mobile.
 
 7. #### As a Frequent User, I want to edit and delete my communications.
 
-    1. The user and strictly only the user, not even the admin, will have
-       edit and delete buttons display under the messages that they themselves have
-       posted. 
+    1. The user will have edit and delete buttons display under the messages that they themselves have
+       posted. Only they and admin will have these display.
     2. With a click they will be taken to the "Edit Message" page where they can edit their message.
        They will get a flash message to tell them if the edit was a success.
 
@@ -1028,15 +1027,14 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/del-f.png" width="90%">
 </h2>
 
-8. #### As a Frequent User, I want to view and post communications and images relating to my style, 
-   shooting and script choices.
+8. #### As a Frequent User, I want to view and post communications relating to style and shooting choices.
 
-   1. Having used the app once the user will be easily able to navigate
-       through it to locate desired fields of messages by date, department and poster. 
-   2. Having used the app once the user will be easily find how to post all communications
+   1. After first use the user will be easily able to navigate
+       through the approved to locate desired fields of messages by date, department and Poster. 
+   2. After first use the user will be easily able to post all communications
        and images.
-   3. Having used the app once the user will be easily able to download the script
-       and shotlist. 
+   3. After first use the user will be easily able to download the script
+       and shot list. 
 
 ### Admin User Goals
 
@@ -1052,16 +1050,16 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/sc-1.png" width="90%">
 </h2>
 
-- They will get a flash message to tell them if it was sucessful. 
+- They will get a flash message to tell them if it was successful. 
 
 <h2 align="center">
 <img src="documentation/readme-images/sc-2.png" width="90%">
 </h2>
 
-2. #### As the admin user I want to upload the latest shotlist.
+2. #### As the admin user I want to upload the latest shot list.
 
-   - If the admin user clicks the upload shotlist button available only to them they
-     will be taken to the "Add Latest shotlist" page. They can follow the instructions
+   - If the admin user clicks the upload shot list button available only to them they
+     will be taken to the "Add Latest shot list" page. They can follow the instructions
      telling them how to upload and get an SRC for the new file from Cloudinary, 
      or a similar app, and enter an SRC here.
      
@@ -1069,7 +1067,7 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/st-1.png" width="90%">
 </h2>
 
-- They will get a flash message to tell them if it was sucessful. 
+- They will get a flash message to tell them if it was successful. 
 
 <h2 align="center">
 <img src="documentation/readme-images/st-2.png" width="90%">
@@ -1081,14 +1079,15 @@ All 5 admin pages had the same results for mobile.
      will be taken to the "Add New Images" page. They can follow the instructions
      telling them how to upload and get an SRC for the new file from Cloudinary, 
      or a similar app, and enter an SRC here. They will also be told that if they
-     want to use an image already uploades by a user in the department messages they
-     can just right click on the image and enter it here.
+     want to use an image already uploaded by a user in the department messages they
+     can right click on the image and enter it here. They can also click on the
+     "Check Image" button to ensure the URL is correct.
      
 <h2 align="center">
 <img src="documentation/readme-images/st-1.png" width="90%">
 </h2>
 
-- They will get a flash message to tell them if it was sucessful.
+- They will get a flash message to tell them if it was successful.
 
 <h2 align="center">
 <img src="documentation/readme-images/st-2.png" width="90%">
@@ -1104,13 +1103,14 @@ All 5 admin pages had the same results for mobile.
 </h2>
           
    - On clicking it they will be taken to the
-     "Edit Image" page where they can update any of the three image values.
+     "Edit Image" page where they can update any of the three image values
+     and again check the new image URL.
      
 <h2 align="center">
 <img src="documentation/readme-images/ee-2.png" width="90%">
 </h2>
 
-- They will get a flash message to tell them if it was sucessful.
+- They will get a flash message to tell them if it was successful.
 
 <h2 align="center">
 <img src="documentation/readme-images/ee-4.png" width="90%">
@@ -1126,7 +1126,7 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/delet.png" width="90%">
 </h2>
 
-- They will get a flash message to tell them if it was sucessful.
+- They will get a flash message to tell them if it was successful.
 
 <h2 align="center">
 <img src="documentation/readme-images/sc-2.png" width="90%">
@@ -1135,26 +1135,24 @@ All 5 admin pages had the same results for mobile.
 6. #### As the admin user I want to delete a user.
 
    - If the admin user clicks the "Remove User" button available only to them they
-     will be taken to the "Remove User" page. They must enter the user's firstname they
-     seperatly the user's lastname then press submit. They will get a flash message on
+     will be taken to the "Remove User" page. They must enter the user's firstname in one box
+     then user's lastname in another, then press submit. They will get a flash message on
      completion. No modal use deemed necessary as this is an already involved process.
      
 <h2 align="center">
 <img src="documentation/readme-images/rm.png" width="90%">
 </h2>
 
-- They will get a flash message to tell them if it was sucessful.
+- They will get a flash message to tell them if it was successful.
 
 <h2 align="center">
 <img src="documentation/readme-images/st-2.png" width="90%">
 </h2>
 
-7. #### As the admin user I want control over material posted on the site for legal
-   and other purposes.
+7. #### As the admin user I want control over material posted on the site for legal and other purposes.
 
-   - Admin will have access to the edit and delete functions for every message
-     along with the user who posted the message. This along with the remove user function
-     will allow admin full control of the site;
+   - Admin will have access to the edit and delete functions for every message on the site. 
+     This along with the "Remove User" function will give admin full control of the site.
 
 <h2 align="center">
 <img src="documentation/readme-images/ad-4.png" width="90%">
@@ -1173,9 +1171,10 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/brut-user.png" width="50%">
 </h2>
 
-- If a user tries a brute-force entry using a known view, e.g. get_depts, 
-  or a view that takes an argument without the argument, e.g. get_dep,
-  or a view that takes an argument with a correct argument, e.g. get_dep/camera
+- If a user tries a brute-force entry using; <br>
+  1. A known view, e.g., /get_image.<br>
+  2. A view that takes an argument but without the argument, e.g., /get_dep.<br>
+  3. A view that takes an argument with a correct argument, e.g., get_dep/camera. <br>
   they will get an Internal Server Error message.
   
 <h2 align="center">
@@ -1190,9 +1189,9 @@ All 5 admin pages had the same results for mobile.
 
 ### 404 Error Handling
 
-- If a user is logged in as a sesson user and they get a 404 error they will be directed to a custom page
+- If a user is logged in as a session  user and they get a 404 error they will be directed to a custom page
   with a link back to their home base page. This page was build without 
-  a favicone link or any the other pages' metadata in the head intentionally.
+  a favicon link or any of the other pages' metadata, in the head, intentionally.
 
 <h2 align="center">
 <img src="documentation/readme-images/page-n.png" width="50%">
