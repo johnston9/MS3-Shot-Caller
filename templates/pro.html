@@ -78,8 +78,8 @@
                         <div class="row margintop-20">
                             <div class="col s10 m6">
                             <div class="message-pic">
-                                <img class="margintop-20" src=" {{ message.image_src }} "
-                                    alt="{{ message.image_name }}">
+                                <!-- Display image or on error display message image-->
+                                <img src=" {{ message.image_src }} " onerror="this.onerror=null; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="{{ message.image_name }}">
                                 <p> {{ message.image_name }} </p>
                             </div>
                             </div>
@@ -88,8 +88,8 @@
                         <div class="row margintop-20">
                             <div class="col s10 m6">
                             <div class="message-pic">
-                                <img class="margintop-20" src=" {{ message.image_src }} "
-                                    alt="Image">
+                                <!-- Display image or on error display message image-->
+                                <img src=" {{ message.image_src }} " onerror="this.onerror=null; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="Image">
                             </div>
                             </div>
                         </div>

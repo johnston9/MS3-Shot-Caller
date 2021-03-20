@@ -1189,9 +1189,9 @@ All 5 admin pages had the same results for mobile.
 
 ### 404 Error Handling
 
-- If a user is logged in as a session  user and they get a 404 error they will be directed to a custom page
-  with a link back to their home base page. This page was build without 
-  a favicon link or any of the other pages' metadata, in the head, intentionally.
+- If a user is logged in as a session user and they get a 404 error they will be directed to a custom page
+  with a link back to their home base page. This page was built without 
+  a favicon link or any metadata intentionally..
 
 <h2 align="center">
 <img src="documentation/readme-images/page-n.png" width="50%">
@@ -1205,9 +1205,9 @@ All 5 admin pages had the same results for mobile.
 
 ### 500 Error Handling
 
-- If a user is logged in as a sesson user and they get a 500 error they will be directed to a custom page
-  with a link back to their home base page. This page was build without 
-  a favicone link or any the other pages' metadata in the head intentionally.
+- If a user is logged in as a session user and they get a 500 error they will be directed to a custom page
+  with a link back to their home base page. This page was built without 
+  a favicon link or metadata intentionally.
 
 
 ### Login Page
