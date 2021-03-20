@@ -1207,7 +1207,7 @@ All 5 admin pages had the same results for mobile.
 
 - If a user is logged in as a session user and they get a 500 error they will be directed to a custom page
   with a link back to their home base page. This page was built without 
-  a favicon link or metadata intentionally.
+  a favicon link or any metadata intentionally.
 
 
 ### Login Page
@@ -1282,37 +1282,34 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/regk2.png" width="50%">
 </h2>
 
-
-- The app was tested on Google Chrome, Internet Explorer, and Safari browsers.
-
-- The app was viewed on a variety of devices such as Desktop, Laptop, iPhone and various other smartphones.
-
-- Friends and family members were asked to review the site and to point out any bugs and/or user experience issues. These were taken on board and changes were made if necessary or to give a better user experience.
-
-[Back to Table of Content](#table-of-content)
-
 ### Logout
 
-The logout button remove the user from sesson user and displays a Flash message if this is
+The logout button removes the user from session user and displays a Flash message if this is
 sucessful.
 
 <h2 align="center">
 <img src="documentation/readme-images/logout.png" width="50%">
 </h2>
 
+
+[Back to Table of Content](#table-of-content)
+
+
 ### Known Bugs
 
 - On my laptop the select department
-  input box red line warning on the add message page remain red after a department is selected.
-  On all other devices including a number of turors, who I check the issue with it works, i.e. it turns green. Example below from a smart phone of it working correctly.
+  input box red line warning on the add message page remains red after a department is selected.
+  On all other devices that the app was tested on, including those of a number of tutors, who I check the issue with, it turns green
+  as it is meant to do. Example below of it working correctly.
 
 <h2 align="center">
 <img src="documentation/readme-images/select.png" width="25%">
 </h2>
 
-- If a user uploads an incorrect URL the image will not render and an 
-  error is logged to the console but I have default images set by inline onerror code.
-  I also have a aria label with the same message as the default image for screen readers.
+- If a user uploads an incorrect URL, despite the instructions to use the Image Checker the image will not render, and an 
+  error will log to the console when an attempt to display the image occurs. I have default images, set to display by inline onerror code,
+  advising the user there is an issue to display if this happens.
+  I also have an aria labels with the same messages as the default images for screen readers.
 
 <p align="center"><strong>Images page</strong></p>
 <h2 align="center">

@@ -77,17 +77,14 @@
                 </p>
             </div>
         </div>
-
-    <hr class="red-line margintop-20">
-    <h5 class="margintop-20 center-align antiquewhite">{{ day }}</h5>
-            
+        <hr class="red-line margintop-20">
+        <h5 class="margintop-20 center-align antiquewhite">{{ day }}</h5>
     </div>
     <!--panel right-->
     <div class="col s1">
         <div class="panel-right"></div>
     </div>
     </div>
-
     {% if depart |length > 0 %}
     <div class="row">
     <div class="col mar-10 s12 m10 offset-m1">
@@ -126,23 +123,23 @@
                 <div class="row margintop-20">
                     <div class="col s10 m6 offset-m3">
                         <div class="message-pic">
-                            <!-- Display image or on error display message image-->
-                            <img src=" {{ message.image_src }} " onerror="this.onerror=null; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="{{ message.image_name }}">
+                            <!-- Display image or on error display default message image-->
+                            <img src=" {{ message.image_src }} " onerror="this.onerror=null; this['aria-label']='Image not found. If poster check URL'; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="{{ message.image_name }}">
                             <p> {{ message.image_name }} </p>
                         </div>
                     </div>
                 </div>
                 {% else %}
-                <!-- Loop to run if user has not set an image name so alt can use this default one-->
-                        <div class="row margintop-20">
-                            <div class="col s10 m6">
-                            <div class="message-pic">
-                                <!-- Display image or on error display message image-->
-                                <img src=" {{ message.image_src }} " onerror="this.onerror=null; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="Image">
-                            </div>
-                            </div>
+                <!-- Loop to run if user has not set an image name so alt can use default one-->
+                <div class="row margintop-20">
+                    <div class="col s10 m6">
+                        <div class="message-pic">
+                            <!-- Display image or on error display default message image-->
+                            <img src=" {{ message.image_src }} " onerror="this.onerror=null; this['aria-label']='Image not found. If poster check URL'; this.src=`{{ url_for('static', filename='css/images/im-er.png') }}`" alt="Image">
                         </div>
-                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
                 {% endif %}
                 <!--edit/delete-->
                 {% if session.user|lower == message.username|lower or session.user|lower == "admin"|lower %}
@@ -169,9 +166,8 @@
         </ul>
     </div>
     </div>
-
     {% else %}
-        <h5 class="offwhite matt-black center-align">No Messages Found</h5>
+    <h5 class="offwhite matt-black center-align">No Messages Found</h5>
     {% endif %}
 
 {% endblock %}
