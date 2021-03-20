@@ -634,7 +634,8 @@ Lighthouse was used to test every page in desktop and mobile screens.
    green square. For the message pages the message image tells the poster they should check the URL. On the image page
    the default image just says "Available Soon" which will let admin know to fix it without
    letting anyone being acutely aware of any error. Still an error will log to the 
-   console, but all users will be aware of what is happening and what to do.
+   console, but all users will be aware of what is happening and what to do. See Known 
+   Bugs below for images.
 
 
 ### Login Page
@@ -1306,10 +1307,11 @@ sucessful.
 <img src="documentation/readme-images/select.png" width="25%">
 </h2>
 
-- If a user uploads an incorrect URL, despite the instructions to use the Image Checker the image will not render, and an 
-  error will log to the console when an attempt to display the image occurs. I have default images, set to display by inline onerror code,
-  advising the user there is an issue to display if this happens.
-  I also have an aria labels with the same messages as the default images for screen readers.
+- If a user uploads an incorrect URL despite the instructions to use the Image Checker the image will not render
+  when an attempt to display the image occurs.
+  I have set, by inline onerror code, default images to display instead. These advise the user about the issue.
+  I also have set aria labels with the same messages as the default images for screen readers.
+  I'm noting this as a bug because and an error will still log to the console.
 
 <p align="center"><strong>Images page</strong></p>
 <h2 align="center">
@@ -1318,19 +1320,16 @@ sucessful.
 
 <p align="center"><strong>All message pages</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/im-ermes.png" width="25%">
+<img src="documentation/readme-images/imer-ni.png" width="25%">
 </h2>
 
-- There is also an if else statement for when a user does 
-  or does not supply an image name as instructed when uploading an image.
-  This is to set a generic default alt in one block
-  and set the image_name as the alt in the other even though this is overwritten above.
+#### Bug Fixed
+
+- As the alts for all message images are taken from the user's image name input if the user 
+  does not supply one as instructed there would be no alt. To make sure all image have alts
+  I used an if/else statement to have one code block run if there is an image name
+  another to run if not that will set a generic default alt.
   
-
-<p align="center"><strong>Images page</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/image-err.png" width="25%">
-</h2>
 
 ### A Code Note
 
