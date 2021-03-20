@@ -1,23 +1,7 @@
-/*---------general ----------*/
+/*--------------------------general ------------------------*/
 
 .row {
 	margin-bottom: 0px;
-}
-
-.pad-findl {
-	padding: 5px 10px 5px 5px;
-}
-
-.pad-findm {
-	padding: 5px 5px 5px 5px;
-}
-
-.pad-findr {
-	padding: 5px 5px 5px 0px;
-}
-
-.pad-findrd {
-	padding: 5px 5px 5px 10px;
 }
 
 hr.red-line {
@@ -126,6 +110,22 @@ hr.red-line {
 	padding: 0px 10px 0px 0px !important;
 }
 
+.pad-findl {
+	padding: 5px 10px 5px 5px;
+}
+
+.pad-findm {
+	padding: 5px 5px 5px 5px;
+}
+
+.pad-findr {
+	padding: 5px 5px 5px 0px;
+}
+
+.pad-findrd {
+	padding: 5px 5px 5px 10px;
+}
+
 .username {
 	font-size: 36px;
 }
@@ -146,7 +146,7 @@ hr.red-line {
 }
 
 
-/*return to top button*/
+/*---------------return to top button----------------------*/
 
 #topbut {
 	display: none;
@@ -170,12 +170,12 @@ hr.red-line {
 	background-color: crimson;
 }
 
-/*-----sidenav ----------*/
+/*-----------------sidenav ----------------------*/
 .sidenav li>a {
     color: #fafafa;
 }
 
-/*-----container boxes----------*/
+/*--------------container boxes---========-------*/
 
 .card-panel {
 	margin-top: 20px;
@@ -248,7 +248,7 @@ hr.red-line {
 	height: 120px;
 }
 
-/*---------colours----------*/
+/*---------------------colours----------------------------*/
 
 .shadow-light {
 	text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
@@ -327,7 +327,7 @@ hr.red-line {
 }
 
 
-/*---------register/login pages----------*/
+/*--------------------register/login pages-----------------------*/
 
 .input-field {
 	position: relative;
@@ -415,20 +415,18 @@ span.caps {
     color: rgb(170 231 255);
 }
 
-/*---------images page--------------*/
+/*----------------images page------------------------*/
 
 img{
   color: #BADA55;
   font-weight: bolder;
-  font-size: 16px ; 
-  
+  font-size: 16px ;  
 }
 
 h5.image_des {
   font-weight: bolder;
   font-size: 20px ; 
-  text-transform: uppercase;
-  
+  text-transform: uppercase;  
 }
 
 #explain {
@@ -445,8 +443,7 @@ h5.image_des {
     padding-top: 10px;
 }
 
-/*-------------media queries---------*/
-
+/*------------------media queries-------------------*/
 
 @media only screen and (max-width: 600px) {
 	.smallPanel-l {
@@ -486,7 +483,7 @@ h5.image_des {
     }
 }
 
-/*-------------department images-----------*/
+/*--------------------department images-----------------*/
 
 @media only screen and (max-width: 1500px) {
 	.dep-img {
@@ -516,4 +513,3 @@ h5.image_des {
 		border-radius: 25px;
 	}
 }
-

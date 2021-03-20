@@ -1514,17 +1514,10 @@ The photos used in the image bank and for messages for site were obtained from.
 
 
 The nine images used for the departments in this site were all created by myself 
-using a small portion of different screenshots I took from the TV series "Arrow" 
+using fragments, far less than 10%, of different screenshots I took from the TV series "Arrow" 
 created by "The CW Network", USA and the TV series "Gotham" created by "The Fox Broadcasting Company", USA.
-
-These are only being used for the MS3 project and will be replaced if the app is
-to be made in any way public.
-
-I researched the topic of copyright when it comes to the use of screenshots of tv shows
-used for non-profit purposes and concluded that the use of fragments of these images 
-in this manner in the app come under the "Fair Use Doctrine". In terms
-of the 4-factor balancing test that it is accessed under the usage in this project is fair.
-I also cleared it with the college staff.
+For the app at it's present stage, and taking into account the 4-factor balancing test this comes 
+under the "Fair Use Doctrine". I also cleared it with the college staff.
 
 
 ### Acknowledgements
