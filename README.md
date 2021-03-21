@@ -994,7 +994,8 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/ed-a.png" width="90%">
 </h2>
 
-3. On clicking delete will be given a modal warning asking if they are sure
+
+    3. On clicking the delete button the user will be given a modal warning asking if they are sure
        they want to delete the message and a flash message telling them if the 
        delete was a success should they click OK.
 
@@ -1254,17 +1255,17 @@ All 5 admin pages had the same results for mobile.
   when they upload or edit a message and for admin when they upload or edit 
   an image for the image bank.
   
-<p align="center"><strong>Add Message - Image Incorrect</strong></p>
+<p align="center"><strong>Add Message Page - Image Incorrect</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/check-me2.png" width="90%">
 </h2>
 
-<p align="center"><strong>Add Image - Image OK</strong></p>
+<p align="center"><strong>Add Image Page - Image OK</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/check-ad1.png" width="90%">
 </h2>
 
-<p align="center"><strong>Edit Image - Image Incorrect</strong></p>
+<p align="center"><strong>Edit Image Page - Image Incorrect</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/check-ad2.png" width="90%">
 </h2>
