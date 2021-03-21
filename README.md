@@ -995,7 +995,7 @@ All 5 admin pages had the same results for mobile.
 </h2>
 
 
-    3. On clicking the delete button the user will be given a modal warning asking if they are sure
+3. On clicking the delete button the user will be given a modal warning asking if they are sure
        they want to delete the message and a flash message telling them if the 
        delete was a success should they click OK.
 
