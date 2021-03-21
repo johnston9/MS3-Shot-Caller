@@ -18,7 +18,7 @@ as a product to be used by production companies. At this stage, the app is being
 deployed on Heroku's basic package, so HTTPS is only available for the Login and Register
 pages.
 
-<h2 align="center"><img src="documentation/readme-images/user16.png"></h2>
+<h2 align="center"><img src="documentation/readme-images/res.png"></h2>
 
 # Table of Content
 
@@ -364,6 +364,18 @@ this are found in the Design section.
 
 
 [Back to Table of Content](#table-of-content)
+
+### Image Checker
+
+  As the users and admin upload images using a URl from Cloudinary or a similiar site
+  all pages where this is done have an image checker. That is the Add and Edit Message
+  pages for the user and the Add and Edit Images for the admin. See Further Testing section
+  for more images.
+  
+<p align="center"><strong>Add Message - Image OK</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/dep-1.png" width="90%">
+</h2>
 
 ### Admin Page
 
@@ -1239,6 +1251,28 @@ All 5 admin pages had the same results for mobile.
 <h2 align="center">
 <img src="documentation/readme-images/regk2.png" width="50%">
 </h2>
+
+### Image Checker
+
+  This allows users and admin to ensure they have inputted a correct URL for they user
+  when they upload or edit a message and for admin when they upload or edit 
+  an image for the image bank.
+  
+<p align="center"><strong>Add Message - Image Incorrect</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/check-me2.png" width="90%">
+</h2>
+
+<p align="center"><strong>Add Image - Image OK</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/check-ad1.png" width="90%">
+</h2>
+
+<p align="center"><strong>Edit Image - Image Incorrect</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/check-ad2.png" width="90%">
+</h2>
+
 
 ### Logout
 
