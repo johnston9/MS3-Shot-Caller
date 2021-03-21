@@ -214,9 +214,6 @@ this are found in the Design section.
 
   The site is responsive to all sizes and the images remain whole and in proportion at all sizes.
 
-<p align="center"> <strong>Large Screen 1600px</strong></p>
-
-
 <p align="center"> <strong>Small Screen 370px</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/post-sm.png" width="25%">
@@ -864,18 +861,12 @@ All 5 admin pages had the same results for mobile.
     6. In the actual messages container, each message displays the name and position
        of the poster, the subject and whether it is a priority or not in the header. On clicking on a message box
        it will open to show the message and an image if one has been posted.
-    7. If there are no messages for a particular request a message will display
-       advising the user of this.
 
 <p align="center"><strong>Departments</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/dep-post.png" width="90%">
 </h2>
 
-<p align="center"><strong>No Messages Display</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/no-mes.png" width="90%">
-</h2>
 
 3. #### As a First Time User, I want to view images.
 
