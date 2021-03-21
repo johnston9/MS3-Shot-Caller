@@ -131,8 +131,7 @@ def user_home(username):
     script = list(mongo.db.latest_script.find())
     depts = list(mongo.db.depts.find())
     shotlist = list(mongo.db.shotlist.find())
-    username = mongo.db.users.find_one(
-        {"username": session["user"]})["username"]
+    username = "Clift"
     # render the User Base page
     return render_template(
         "user_home.html", username=username,
