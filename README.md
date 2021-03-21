@@ -372,9 +372,9 @@ this are found in the Design section.
   pages for the user and the Add and Edit Images for the admin. See Further Testing section
   for more images.
   
-<p align="center"><strong>Add Message - Image OK</strong></p>
+<p align="center"><strong>Add Message Page- Image OK</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/dep-1.png" width="90%">
+<img src="documentation/readme-images/check_me1.png" width="90%">
 </h2>
 
 ### Admin Page
