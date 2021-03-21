@@ -943,10 +943,6 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/add-11.png" width="25%">
 </h2>
 
-<p align="center"><strong>Success Flash message</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/add-13.png" width="90%">
-</h2>
 
 <p align="center"><strong>Result</strong></p>
 <h2 align="center">
@@ -985,17 +981,17 @@ All 5 admin pages had the same results for mobile.
 
 <p align="center"><strong>Edit page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/edit.png" width="90%">
-</h2>
-
-<p align="center"><strong>Message after edit</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/ed-a.png" width="90%">
+<img src="documentation/readme-images/ed55.png" width="90%">
 </h2>
 
 <p align="center"><strong>Flash message</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/edit-fl.png" width="90%">
+</h2>
+
+<p align="center"><strong>Message after edit</strong></p>
+<h2 align="center">
+<img src="documentation/readme-images/ed-a.png" width="90%">
 </h2>
 
 3. On clicking delete will be given a modal warning asking if they are sure
