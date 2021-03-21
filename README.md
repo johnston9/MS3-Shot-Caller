@@ -216,15 +216,6 @@ this are found in the Design section.
 
 <p align="center"> <strong>Large Screen 1600px</strong></p>
 
-<h2 align="center">
-<img src="documentation/readme-images/post-16.png" width="90%">
-</h2>
-
-<p align="center"> <strong> Medium Screen 1000px</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/post-md.png" width="90%">
-</h2>
-
 
 <p align="center"> <strong>Small Screen 370px</strong></p>
 <h2 align="center">
@@ -290,7 +281,7 @@ this are found in the Design section.
 
 <p align="center"><strong>User Base Department Choices</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/depts1.png" width="90%">
+<img src="documentation/readme-images/newd.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -311,23 +302,13 @@ this are found in the Design section.
 
 <p align="center"><strong>Pick Date - on mobile</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/cam23.png" width="25%">
-</h2>
-
-<p align="center"><strong>Result of Pick Date</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/cam22.png" width="50%">
+<img src="documentation/readme-images/date1.png" width="25%">
 </h2>
  
   Underneath the Datepicker the user has three further options in the form
   of three immediately visible buttons.
 
   A. Finding all messages in that department.
-  
-<p align="center"><strong>All Messsages</strong></p>
-<h2 align="center">
-<img src="documentation/readme-images/dep-2.png" width="90%">
-</h2>
 
   B. Add a message.
 
@@ -336,7 +317,7 @@ this are found in the Design section.
 
 <p align="center"><strong>Find by Poster Page - message open</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/dep1.png" width="90%">
+<img src="documentation/readme-images/pos1.png" width="90%">
 </h2>
 
 [Back to Table of Content](#table-of-content)
@@ -373,7 +354,7 @@ this are found in the Design section.
    Please see user testing for further details.
 
 <h2 align="center">
-<img src="documentation/readme-images/mes-im.png" width="90%">
+<img src="documentation/readme-images/mes-a1.png" width="90%">
 </h2>
 
 ### Edit Message Page
@@ -734,7 +715,7 @@ but as expected it had no result as the dropdown is not reachable on the page.
 
 <p align="center"><strong>Desktop</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/mes-a1.png" width="90%">
+<img src="documentation/readme-images/mes-li.png" width="90%">
 </h2>
 
  - ### Edit Message Page
@@ -891,7 +872,7 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/dep-post.png" width="90%">
 </h2>
 
-<p align="center"><strong>No Dessages Display</strong></p>
+<p align="center"><strong>No Messages Display</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/no-mes.png" width="90%">
 </h2>
@@ -1183,16 +1164,10 @@ All 5 admin pages had the same results for mobile.
 
 - If a user is logged in as a session user and they get a 404 error they will be directed to a custom page
   with a link back to their home base page. This page was built without 
-  a favicon link or any metadata intentionally..
+  a favicon link or any metadata intentionally.
 
 <h2 align="center">
-<img src="documentation/readme-images/page-n.png" width="50%">
-</h2>
-
-- When they click on the link on the page they are brought back to their home base.
-
-<h2 align="center">
-<img src="documentation/readme-images/back.png" width="50%">
+<img src="documentation/readme-images/notf.png" width="50%">
 </h2>
 
 ### 500 Error Handling
@@ -1280,7 +1255,7 @@ The logout button removes the user from session user and displays a Flash messag
 sucessful.
 
 <h2 align="center">
-<img src="documentation/readme-images/logout.png" width="50%">
+<img src="documentation/readme-images/logout.png" width="90%">
 </h2>
 
 
@@ -1306,12 +1281,12 @@ sucessful.
 
 <p align="center"><strong>Images page</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/image-err.png" width="25%">
+<img src="documentation/readme-images/image-err.png" width="90%">
 </h2>
 
 <p align="center"><strong>All message pages</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/imer-ni.png" width="25%">
+<img src="documentation/readme-images/imer-ni.png" width="90%">
 </h2>
 
 #### Bug Fixed
@@ -1460,7 +1435,7 @@ type the following commands.
 
  - Click "View" to launch the app.
 
-#### Clarification
+### Clarification
 
 Clarification on steps taken in the terminal to create the app using pip3 
 to install packages without requirements.txt and how to create the Procfile. 
@@ -1516,8 +1491,8 @@ The photos used in the image bank and for messages for site were obtained from.
 The nine images used for the departments in this site were all created by myself 
 using fragments, far less than 10%, of different screenshots I took from the TV series "Arrow" 
 created by "The CW Network", USA and the TV series "Gotham" created by "The Fox Broadcasting Company", USA.
-For the app at it's present stage, and taking into account the 4-factor balancing test this comes 
-under the "Fair Use Doctrine". I also cleared it with the college staff.
+For the app at it's present stage, taking into account the 4-factor balancing test this comes 
+under the "Fair Use Doctrine". This was also approved by the college staff.
 
 
 ### Acknowledgements
@@ -1526,16 +1501,3 @@ under the "Fair Use Doctrine". I also cleared it with the college staff.
   Aaron Sinnott for his insights.
 
 [Back to Table of Content](#table-of-content)
-
-
-
-
-
-
-
-
-
-
-
-
-
