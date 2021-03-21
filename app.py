@@ -115,29 +115,28 @@ def register():
 @app.route("/user_home/<username>")
 def user_home(username):
     """Render the User Base page.
-
     Renders the User Base page setting the value
     in the header box to the passed username parameter,
     getting the department's name values from Mongo
     along with the script and shot list data.
-
-
     :param username: the user's username
     :type username: str
     :return: user_home.html
     :rtype: n/a
     """
 
-    script = list(mongo.db.latest_script.find())
-    depts = list(mongo.db.depts.find())
-    shotlist = list(mongo.db.shotlist.find())
-    username = "Clift"
-    # render the User Base page
-    return render_template(
-        "user_home.html", username=username,
-        script=script, shotlist=shotlist, depts=depts)
-
-        
+    if session["user"]:
+        # get depts, latest_script, shotlist and users
+        # collections data from Mongo
+        script = list(mongo.db.latest_script.find())
+        depts = list(mongo.db.depts.find())
+        shotlist = list(mongo.db.shotlist.find())
+        username = mongo.db.users.find_one(
+            {"username": session["user"]})["username"]
+        # render the User Base page
+        return render_template(
+            "user_home.html", username=username,
+            script=script, shotlist=shotlist, depts=depts)
 
 
 @app.route("/get_depts")
