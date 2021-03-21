@@ -32,7 +32,18 @@
         <div class="panel-left"></div>
     </div>
     <div class="col s10">
-        <div class="row margintop-50">
+
+        <!--instructions-->
+            <div class="row margintop-100">
+                <div class="col s10 offset-s1 m8 offset-m2">
+                    <p class="find antiquewhite center-align">To remove a user input user's First name
+                        then user's Last Name and hit submit. To find these look on an message they sent
+                        as these name are linked to their register form.
+                    </p>
+                </div>
+            </div>
+
+        <div class="row">
             <!--remove user form-->
             <form class="card-panel matt-black col s10 offset-s1 col m8 offset-m2" method="POST"
                 action="{{ url_for('remove_user') }}">
