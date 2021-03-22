@@ -568,7 +568,7 @@ W3C Markup Validator, W3C CSS Validator. PEP8 and JSHint were used to validate e
 - [PEP8 online check](http://pep8online.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - PEP8 approved the app.py page. The first time I checked it everything was right apart from saying "no newline at end of file".
     but I researched this and found it was a common result and could be ignored. I explored the matter more and found that if
-    the curser was at the start of the new line, here line 741, I got an "All Right" result.
+    the curser was at the start of the new line, here line 738, I got an "All Right" result.
 
 - [PythonChecker](https://www.pythonchecker.com/) - [Results](https://github.com/johnston9/MS3-Shot-Caller)
   - PythonChecker gave 100% result.

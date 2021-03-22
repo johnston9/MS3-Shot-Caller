@@ -115,10 +115,12 @@ def register():
 @app.route("/user_home/<username>")
 def user_home(username):
     """Render the User Base page.
+
     Renders the User Base page setting the value
     in the header box to the passed username parameter,
     getting the department's name values from Mongo
     along with the script and shot list data.
+
     :param username: the user's username
     :type username: str
     :return: user_home.html
@@ -186,7 +188,6 @@ def get_dep(dep):
     messages showing for each department
     depending on which department name is passed as a parameter
     getting that department's messages from Mongo.
-
     On Post renders the Department messages page for each department
     depending on which department name is passed as a parameter
     getting that department's messages from Mongo
@@ -228,7 +229,6 @@ def get_poster(dep):
     messages showing for each department
     depending on which department name is passed as a parameter
     getting that department's messages from Mongo.
-
     On Post renders the Department messages page for each department
     depending on which department name is passed as a parameter
     getting that department's messages from Mongo
@@ -734,4 +734,4 @@ def server_er(e):
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True)
+            debug=False)
