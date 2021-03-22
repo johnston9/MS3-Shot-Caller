@@ -1063,12 +1063,12 @@ All 5 admin pages had the same results for mobile.
      or a similar app, and enter an SRC here. They will also be told that if they
      want to use an image already uploaded by a user in the department messages they
      can right click on the image and enter it here. They can also click on the
-     "Check Image" button to ensure the URL is correct. 
-
-- They will get a flash message to tell them if it was successful.
+     "Check Image" button to ensure the URL is correct. They will get a flash message 
+     to tell them if it was successful. See "Further Testing - Image Checker" for 
+     images.
      
 <h2 align="center">
-<img src="documentation/readme-images/adimage.png" width="90%">
+<img src="documentation/readme-images/imad33.png" width="90%">
 </h2>
 
 
@@ -1126,10 +1126,6 @@ All 5 admin pages had the same results for mobile.
 
    - Admin will have access to the edit and delete functions for every message on the site. 
      This along with the "Remove User" function will give admin full control of the site.
-
-<h2 align="center">
-<img src="documentation/readme-images/ad-4.png" width="90%">
-</h2>
 
 
 ## Further Testing
