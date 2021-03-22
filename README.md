@@ -1260,12 +1260,12 @@ All 5 admin pages had the same results for mobile.
 <img src="documentation/readme-images/c-me1.png" width="90%">
 </h2>
 
-<p align="center"><strong>Add Image Page - Image OK</strong></p>
+<p align="center"><strong>Add Image Page - Image Incorrect</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/okim.png" width="90%">
 </h2>
 
-<p align="center"><strong>Add Image Page - Image Incorrect</strong></p>
+<p align="center"><strong>Add Image Page - Image OK</strong></p>
 <h2 align="center">
 <img src="documentation/readme-images/noim.png" width="90%">
 </h2>
