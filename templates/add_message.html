@@ -109,13 +109,20 @@
                             </div>
                         </div>
                     </div>
-                <!--submit-->
-                <div class="row margintop-10 mar-bot">
-                <div class="center-align">
-                    <button type="submit" class=" btn-small white-text blueBack-sea text-shadow">
-                    <strong>Add Message </strong> 
-                    </button>
-                </div>
+                    <div class="row">
+                    <div class="col s12 m6 margintop-20 center-align">
+                    <!-- cancel button -->
+                        <a href="{{ url_for('user_home', username=session['user']) }}"
+                            class="pad-50 btn-small white-text blueBack-sea">
+                            <strong>Cancel </strong>
+                        </a>
+                    </div>
+                    <div class="col s12 m6 margintop-20 center-align">
+                        <!-- submit button -->
+                        <button type="submit" class=" pad-50 btn-small white-text blueBack-sea">
+                            <strong>Submit </strong>
+                        </button>
+                    </div>
                 </div>
             </form>
         </div>

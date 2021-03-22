@@ -374,7 +374,7 @@ this are found in the Design section.
   
 <p align="center"><strong>Add Message Page- Image OK</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/check_me1.png" width="90%">
+<img src="documentation/readme-images/c-me2.png" width="90%">
 </h2>
 
 ### Admin Page
@@ -1257,17 +1257,17 @@ All 5 admin pages had the same results for mobile.
   
 <p align="center"><strong>Add Message Page - Image Incorrect</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/check-me2.png" width="90%">
+<img src="documentation/readme-images/c-me1.png" width="90%">
 </h2>
 
 <p align="center"><strong>Add Image Page - Image OK</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/check-ad1.png" width="90%">
+<img src="documentation/readme-images/c-ad2.png" width="90%">
 </h2>
 
 <p align="center"><strong>Edit Image Page - Image Incorrect</strong></p>
 <h2 align="center">
-<img src="documentation/readme-images/check-ad2.png" width="90%">
+<img src="documentation/readme-images/c-ad1.png" width="90%">
 </h2>
 
 
