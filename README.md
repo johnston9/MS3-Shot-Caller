@@ -377,13 +377,16 @@ this are found in the Design section.
 <img src="documentation/readme-images/c-me2.png" width="90%">
 </h2>
 
-### Admin Page
+### Admin's Base Page
 
   As discussed above in "Security Measures" defensive programming will only allow
   access to the admin features if admin is the session user and this is implemented 
-  both in the front-end and back-end. If the user is admin they will be given the 
+  both in the front-end and back-end. If the user is admin four buttons are displayed
+  on their home base page. These will be given the 
   option to delete a user, upload the latest script, upload the latest shot list 
-  or upload new images. There is an image URL checker also on this page.
+  or upload new images. Edit and delete buttons also display for them under all 
+  messages and images. When the admin goes to the Add/Edit Image and Message pages they will also
+  be able to use the Image Checker there.
 
 <p align="center"><strong>Admin Page 1600px</strong></p>
 <h2 align="center">
