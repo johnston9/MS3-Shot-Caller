@@ -1389,8 +1389,10 @@ will be necessary to create them.
 - .gitignore is used to store sensitive variables and keys that do not get sent to github.
   Type pycach.py and env.py in the .gitignore file.
 
+
 ##### Create a env.py file 
-- In env.py set the app's environment variables and keys needed during development.
+- Type touch env.py in the terminal.
+  In env.py set the app's environment variables and keys needed during development.
   These will later be set in Heroku.
 
 
