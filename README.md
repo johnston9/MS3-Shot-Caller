@@ -500,16 +500,15 @@ The MongoDB Shot Caller database contains the following collections.
 - [HTML5](https://en.wikipedia.org/wiki/HTML5)
 - [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 - [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
-- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
+- [PYTHON](https://en.wikipedia.org/wiki/Python(programming_language))
 - [JINJA](https://en.wikipedia.org/wiki/Jinja_(template_engine))
 
 ## Frameworks, Databases, Libraries & Programs Used
 
-1. [Materialize:](https://materializecss.com/getting-started.html)
-   - Materialize with it's grid-based 
-     format was used to create the overall framework for the site This included the primary responsiveness
-     and overall styling of the website. Also specific 
-     Materialize features, which include the "Collapsible", 
+1. [materialize:](https://materializecss.com/getting-started.html)
+   - materialize with it's grid-based format was used to create the  
+    overall framework for the site This included the primary responsiveness and overall styling of the website. Also specific 
+     Bootstrap features, which include the "Collapsible", 
      the "Navbar" and "Sidenav", "Modals", "Tooltipped" and "Datepickers", were used in the site,.
 1. [Flask:](https://en.wikipedia.org/wiki/Flask_(web_framework))
    - Flask was used along with python to build then site's back end framework and
